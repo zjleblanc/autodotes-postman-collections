@@ -1,5 +1,5 @@
 $kind: http-request
-url: "{{snow_instance_url}}/api/now/table/cmdb_ci_server?sysparm_fields=name,classification,manufacturer,os,os_version,cpu_type"
+url: "{{snow_base_url}}/api/now/table/cmdb_ci_server?sysparm_fields=name,classification,manufacturer,os,os_version,cpu_type"
 method: GET
 queryParams:
   sysparm_fields: name,classification,manufacturer,os,os_version,cpu_type

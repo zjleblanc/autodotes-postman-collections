@@ -27,11 +27,7 @@ cloudResources:
   documents:
     ../postman/documents/WORKSPACE-README.md: 15983030-8792-4452-8e16-2db265c3810a
   environments:
-    ../postman/environments/Cansible.environment.yaml: 15706575-de55a725-7878-4e05-a6f8-08a8b8578d86
-    ../postman/environments/Demo.environment.yaml: 15706575-ac795dad-2c09-4e09-afc6-a40f8c48cc4d
-    ../postman/environments/RHPDS.environment.yaml: 15706575-ff3bfdeb-5968-42d1-98df-8d0068e53449
-    ../postman/environments/The Movie DB API.environment.yaml: 15706575-3ea2f51a-a5d2-40ce-af61-24b16181b460
-    ../postman/environments/XOM.environment.yaml: 15706575-b91c7273-675c-4867-966a-b973681f8c99
+    ../postman/environments/zleblanc-main.environment.yaml: 15706575-89eec271-5b67-4fd0-9c58-3856ad8d251c
   globals:
     ../postman/globals/workspace.globals.yaml: 170311bf-db56-42be-8bf6-40f3802963cd
 workspace:

@@ -1,5 +1,5 @@
 $kind: http-request
-url: "{{snow_instance_url}}/api/now/table/sys_db_object/eb502ff733a14a10792c131fad5c7ba3"
+url: "{{snow_base_url}}/api/now/table/sys_db_object/eb502ff733a14a10792c131fad5c7ba3"
 method: GET
 settings: {}
 order: 12000

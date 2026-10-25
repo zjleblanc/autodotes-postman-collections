@@ -4,5 +4,5 @@ auth:
     type: apikey
     name: apikey auth
     credentials:
-      value: PVEAPIToken=root@pam!postman={{pve_api_token}}
+      value: PVEAPIToken=root@pam!postman={{pve_token}}
       key: Authorization

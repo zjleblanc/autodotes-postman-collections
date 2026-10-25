@@ -1,5 +1,5 @@
 $kind: http-request
-url: "{{snow_instance_url}}/api/now/table/wf_workflow/dfee794b47332110cea484d7536d4329"
+url: "{{snow_base_url}}/api/now/table/wf_workflow/dfee794b47332110cea484d7536d4329"
 method: GET
 settings: {}
 order: 10000

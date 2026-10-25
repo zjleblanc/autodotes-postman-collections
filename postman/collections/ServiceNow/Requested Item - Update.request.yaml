@@ -1,5 +1,5 @@
 $kind: http-request
-url: "{{snow_instance_url}}/api/now/table/sc_req_item/160f798547403110cea484d7536d4331"
+url: "{{snow_base_url}}/api/now/table/sc_req_item/160f798547403110cea484d7536d4331"
 method: PATCH
 body:
   type: json

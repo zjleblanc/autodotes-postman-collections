@@ -4,5 +4,5 @@ auth:
     type: basic
     name: basic auth
     credentials:
-      username: zach-leblanc
-      password: "{{bitbucket_app_pw}}"
+      username: "{{bitbucket_username}}"
+      password: "{{bitbucket_password}}"

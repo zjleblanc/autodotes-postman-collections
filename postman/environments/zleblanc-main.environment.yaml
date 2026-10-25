@@ -1,58 +1,57 @@
-name: Cansible
+name: zleblanc-main
 values:
-  - key: aap_bearer_token
-    value: ""
-    type: secret
-  - key: slack_bearer_token
+  - key: aap_token
     value: ""
     type: secret
   - key: aap_base_url
-    value: https://699qp.example.opentlc.com/
-  - key: pve_api_token
+    value: https://ansible.autodotes.com
+  - key: aap_admin_password
     value: ""
     type: secret
-  - key: pve_api_base_url
+  - key: pve_token
+    value: ""
+    type: secret
+  - key: pve_base_url
     value: https://pve.autodotes.com/api2/json
-  - key: pve_api_base_url_ext
+  - key: pve_base_url_ext
     value: https://pve.autodotes.com/api2/extjs
-  - key: grafana_admin_token
+  - key: grafana_token
     value: ""
     type: secret
   - key: grafana_base_url
     value: https://zleblanc.grafana.net/
-  - key: snow_instance_url
+  - key: snow_base_url
     value: https://dev29577.service-now.com
+  - key: snow_username
+    value: zleblanc
+  - key: snow_password
+    value: ""
+    type: secret
   - key: rh_console_token
     value: ""
     type: secret
   - key: pah_base_url
     value: https://automation-hub.autodotes.com
-  - key: dynatrace_host
+  - key: dynatrace_base_url
     value: https://lft20855.apps.dynatrace.com/
   - key: dynatrace_token
     value: ""
     type: secret
-  - key: bitbucket_app_pw
+  - key: bitbucket_username
+    value: zach-leblanc
+  - key: bitbucket_password
     value: ""
     type: secret
-  - key: bitbucket_app_user
-    value: Pipelines
-  - key: bitbucket_ws
+  - key: bitbucket_workspace
     value: zach-leblanc
   - key: bitbucket_repo
     value: ansible-execution-environments
-  - key: snow_instance_pw
+  - key: slack_token
     value: ""
     type: secret
-  - key: aap_admin_pw
+  - key: demo_webhook_token
     value: ""
     type: secret
-  - key: demo_webhook_event_stream_token
+  - key: demo_oauth_token
     value: ""
     type: secret
-  - key: demo_oauth_event_stream_token
-    value: ""
-    type: secret
-  - key: accessTokenExpiry
-    value: ""
-    type: any

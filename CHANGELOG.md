@@ -1,5 +1,21 @@
 # Changelog
 
+## 2026-10-25 — Consolidate environments into zleblanc-main with standard variable naming
+
+### Changed
+
+- Merged Cansible, Demo, RHPDS, XOM, and The Movie DB API environments into a single `zleblanc-main` environment.
+- Renamed variables to a consistent `<api>_<type>` convention (e.g. `aap_bearer_token` → `aap_token`, `snow_instance_pw` → `snow_password`, `bitbucket_app_pw` → `bitbucket_password`).
+- Parametrized previously hardcoded ServiceNow (`zleblanc`) and Bitbucket (`zach-leblanc`) usernames as `snow_username` / `bitbucket_username`.
+- Resolved `aap_base_url` collision (differed between Cansible/Demo and RHPDS) to a single canonical value: `https://ansible.autodotes.com`.
+- Updated all `{{variable}}` references across Grafana, Slack, Proxmox VE, Dynatrace, ServiceNow, and Bitbucket collections to match renamed variables.
+- Cleared a previously undetected live secret (`rhsm_offline_token`) in `postman/globals/workspace.globals.yaml` and fixed its invalid `description` field schema.
+
+### Removed
+
+- Dropped unused/orphaned variables: `accessTokenExpiry`, TMDB's leftover `value`/`key`/`in` keys, and the unreferenced `bitbucket_app_user` (conflicting with the actually-used username value).
+- Deleted environment files: Cansible, Demo, RHPDS, XOM, The Movie DB API (both locally and in the Postman workspace).
+
 ## 2026-10-25 — Strip hardcoded secrets from all Postman files
 
 ### Changed

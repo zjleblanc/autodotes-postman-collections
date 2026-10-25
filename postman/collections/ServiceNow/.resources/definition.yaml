@@ -4,5 +4,5 @@ auth:
     type: basic
     name: basic auth
     credentials:
-      username: zleblanc
-      password: "{{snow_instance_pw}}"
+      username: "{{snow_username}}"
+      password: "{{snow_password}}"

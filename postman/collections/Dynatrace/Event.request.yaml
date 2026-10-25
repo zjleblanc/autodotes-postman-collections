@@ -1,5 +1,5 @@
 $kind: http-request
-url: "{{dynatrace_host}}/api/v2/events/ingest"
+url: "{{dynatrace_base_url}}/api/v2/events/ingest"
 method: POST
 body:
   type: json

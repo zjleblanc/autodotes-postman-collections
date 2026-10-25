@@ -1,6 +1,0 @@
-name: XOM
-values:
-  - key: aap_bearer_token
-    value: ""
-  - key: aap_base_url
-    value: ""

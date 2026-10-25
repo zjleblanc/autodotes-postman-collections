@@ -1,5 +1,5 @@
 $kind: http-request
-url: "{{pve_api_base_url}}/nodes/pve/qemu/405/status/stop"
+url: "{{pve_base_url}}/nodes/pve/qemu/405/status/stop"
 method: POST
 settings: {}
 order: 8000
