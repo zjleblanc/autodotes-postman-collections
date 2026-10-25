@@ -1,0 +1,15 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+*.swp
+*.swo
+*~
+
+# Node (if using postman-cli via local install)
+node_modules/
+
+# Postman sensitive data — never commit API keys or secrets
+# Adjust if your environments contain secrets that shouldn't be tracked
+# postman/environments/*-secrets.yaml
