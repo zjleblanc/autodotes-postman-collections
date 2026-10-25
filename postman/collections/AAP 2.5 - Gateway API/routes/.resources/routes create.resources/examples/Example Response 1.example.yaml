@@ -1,0 +1,73 @@
+$kind: http-example
+request:
+  url: "{{instance_fqdn}}/api/gateway/v1/routes/"
+  method: POST
+  headers:
+    - key: Content-Type
+      value: application/json
+    - key: Accept
+      value: application/json
+    - key: gateway_sessionid
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  body:
+    type: json
+    content: |-
+      {
+        "gateway_path": "<string>",
+        "http_port": "<integer>",
+        "is_service_https": "<boolean>",
+        "name": "<string>",
+        "service_cluster": "<integer>",
+        "service_path": "<string>",
+        "service_port": "<integer>",
+        "description": "<string>",
+        "enable_gateway_auth": "<boolean>",
+        "node_tags": "<string>",
+        "created": "commodo ex n",
+        "created_by": "esse",
+        "id": false,
+        "modified": false,
+        "modified_by": 9065989
+      }
+response:
+  statusCode: 201
+  statusText: Created
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "created": "<dateTime>",
+        "created_by": "<integer>",
+        "gateway_path": "<string>",
+        "http_port": "<integer>",
+        "id": "<integer>",
+        "is_service_https": "<boolean>",
+        "modified": "<dateTime>",
+        "modified_by": "<integer>",
+        "name": "<string>",
+        "related": {
+          "non_794": "<string>",
+          "esse63e": "<string>",
+          "id7_a": "<string>",
+          "ipsum_e23": "<string>"
+        },
+        "service_cluster": "<integer>",
+        "service_path": "<string>",
+        "service_port": "<integer>",
+        "summary_fields": {
+          "Utd94": {
+            "dolore_2": {},
+            "in02f": {},
+            "adipisicingd5": {},
+            "fugiat5": {}
+          }
+        },
+        "url": "<string>",
+        "description": "<string>",
+        "enable_gateway_auth": "<boolean>",
+        "node_tags": "<string>"
+      }
+order: 1000

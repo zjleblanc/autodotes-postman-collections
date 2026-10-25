@@ -1,0 +1,21 @@
+$kind: http-request
+description: You can use this method to create a fully valid session ID once a user has validated the request token. More information about how this works can be found [here](#docTextSection:NSZtgz7zptsiLYxXZ).
+url: "{{baseUrl}}/authentication/session/new"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+        "request_token": "REDACTED_REQUEST_TOKEN"
+    }
+auth:
+  type: apikey
+  credentials:
+    key: api_key
+    value: "{{api_key}}"
+    in: query
+settings: {}
+examples: ./.resources/Create Session.resources/examples
+order: 2000

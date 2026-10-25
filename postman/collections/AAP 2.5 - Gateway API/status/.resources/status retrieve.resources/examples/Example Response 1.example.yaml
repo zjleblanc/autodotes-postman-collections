@@ -1,0 +1,19 @@
+$kind: http-example
+request:
+  url: "{{instance_fqdn}}/api/gateway/v1/status/?service_keys=<boolean>"
+  method: GET
+  headers:
+    - key: gateway_sessionid
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  queryParams:
+    - key: service_keys
+      value: <boolean>
+      description: Use a dictionary to describe services instead of a list
+response:
+  statusCode: 200
+  statusText: OK
+  body:
+    type: text
+    content: ""
+order: 1000

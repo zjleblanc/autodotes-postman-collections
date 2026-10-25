@@ -1,0 +1,22 @@
+$kind: http-request
+description: List all fired rules
+url: "{{instance_fqdn}}/api/eda/v1/audit-rules/?page=<integer>&page_size=<integer>&dolord=97248925&Ut_69=19164933.114217237"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  - key: page
+    value: <integer>
+    description: A page number within the paginated result set.
+  - key: page_size
+    value: <integer>
+    description: Number of results to return per page.
+  - key: dolord
+    value: "97248925"
+    description: A free formatted query string with Django semantics for filtering and ordering
+  - key: Ut_69
+    value: "19164933.114217237"
+    description: A free formatted query string with Django semantics for filtering and ordering
+settings: {}
+examples: ./.resources/audit rules list.resources/examples
+order: 2000

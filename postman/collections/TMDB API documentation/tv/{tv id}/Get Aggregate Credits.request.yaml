@@ -1,0 +1,20 @@
+$kind: http-request
+description: |-
+  Get the aggregate credits (cast and crew) that have been added to a TV show.
+
+  This call differs from the main `credits` call in that it does not return the newest season but rather, is a view of all the entire cast & crew for all episodes belonging to a TV show.
+url: "{{baseUrl}}/tv/:tv_id/aggregate_credits"
+method: GET
+pathVariables:
+  - key: tv_id
+    value: "24717925"
+    description: "(Required) "
+auth:
+  type: apikey
+  credentials:
+    key: api_key
+    value: "{{api_key}}"
+    in: query
+settings: {}
+examples: ./.resources/Get Aggregate Credits.resources/examples
+order: 5000

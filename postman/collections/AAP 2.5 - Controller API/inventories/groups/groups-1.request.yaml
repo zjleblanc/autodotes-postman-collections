@@ -1,0 +1,6 @@
+$kind: http-request
+name: groups
+url: https://{{instance_fqdn}}/api/controller/v2/inventories/{id}/groups/
+method: POST
+settings: {}
+order: 2000

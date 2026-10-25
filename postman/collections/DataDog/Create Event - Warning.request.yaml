@@ -1,0 +1,17 @@
+$kind: http-request
+url: https://{{dd_region}}/api/{{dd_api_version}}/events
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "title": "EDA Test Event - DD Poll",
+      "text": "This is a dummy event generated to test a 3rd-party integration polling mechanism.",
+      "priority": "normal",
+      "tags": [
+        "environment:dev",
+        "integration:eda"
+      ],
+      "alert_type": "warning"
+    }
+order: 1000

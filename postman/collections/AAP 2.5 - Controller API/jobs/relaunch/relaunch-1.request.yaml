@@ -1,0 +1,6 @@
+$kind: http-request
+name: relaunch
+url: https://{{instance_fqdn}}/api/controller/v2/jobs/{id}/relaunch/
+method: POST
+settings: {}
+order: 2000

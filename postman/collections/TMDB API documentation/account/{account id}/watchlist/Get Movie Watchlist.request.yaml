@@ -1,0 +1,21 @@
+$kind: http-request
+description: Get a list of all the movies you have added to your watchlist.
+url: "{{baseUrl}}/account/:account_id/watchlist/movies?session_id="
+method: GET
+queryParams:
+  - key: session_id
+    value: ""
+    description: "(Required) "
+pathVariables:
+  - key: account_id
+    value: "24717925"
+    description: "(Required) "
+auth:
+  type: apikey
+  credentials:
+    key: api_key
+    value: "{{api_key}}"
+    in: query
+settings: {}
+examples: ./.resources/Get Movie Watchlist.resources/examples
+order: 3000

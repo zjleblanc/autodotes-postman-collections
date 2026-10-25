@@ -1,0 +1,13 @@
+$kind: http-request
+description: Get the most newly created person. This is a live response and will continuously change.
+url: "{{baseUrl}}/person/latest"
+method: GET
+auth:
+  type: apikey
+  credentials:
+    key: api_key
+    value: "{{api_key}}"
+    in: query
+settings: {}
+examples: ./.resources/Get Latest.resources/examples
+order: 2000

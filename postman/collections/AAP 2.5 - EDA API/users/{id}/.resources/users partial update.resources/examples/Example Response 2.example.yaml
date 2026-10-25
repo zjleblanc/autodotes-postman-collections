@@ -1,0 +1,25 @@
+$kind: http-example
+request:
+  url: "{{instance_fqdn}}/users/:id/"
+  method: PATCH
+  headers:
+    - key: Content-Type
+      value: application/json
+    - key: sessionid
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  pathVariables:
+    id: ""
+  body:
+    type: json
+    content: |-
+      {
+        "is_superuser": "<boolean>"
+      }
+response:
+  statusCode: 403
+  statusText: Forbidden
+  body:
+    type: text
+    content: ""
+order: 2000

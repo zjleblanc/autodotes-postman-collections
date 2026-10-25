@@ -1,0 +1,27 @@
+$kind: http-example
+name: response
+request:
+  url: "{{baseUrl}}/movie/:movie_id/account_states?session_id=&guest_session_id=in fugiat&session_id=in fugiat"
+  method: GET
+  queryParams:
+    - key: session_id
+      value: ""
+    - key: guest_session_id
+      value: in fugiat
+    - key: session_id
+      value: in fugiat
+  pathVariables:
+    movie_id: ""
+response:
+  statusCode: 404
+  statusText: Not Found
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+       "status_message": "laboris quis officia",
+       "status_code": 17219857
+      }
+order: 3000

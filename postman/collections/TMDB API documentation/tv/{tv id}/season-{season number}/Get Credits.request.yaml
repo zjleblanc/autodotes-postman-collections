@@ -1,0 +1,20 @@
+$kind: http-request
+description: Get the credits for TV season.
+url: "{{baseUrl}}/tv/:tv_id/season/:season_number/credits"
+method: GET
+pathVariables:
+  - key: tv_id
+    value: "24717925"
+    description: "(Required) "
+  - key: season_number
+    value: "24717925"
+    description: "(Required) "
+auth:
+  type: apikey
+  credentials:
+    key: api_key
+    value: "{{api_key}}"
+    in: query
+settings: {}
+examples: ./.resources/Get Credits.resources/examples
+order: 7000

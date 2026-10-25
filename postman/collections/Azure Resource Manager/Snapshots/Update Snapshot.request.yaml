@@ -1,0 +1,19 @@
+$kind: http-request
+url: https://management.azure.com/subscriptions/{{subscription_id}}/resourceGroups/dev-rg/providers/Microsoft.Compute/snapshots/dev-disk-1-20231219-145036?api-version=2023-04-02
+method: PATCH
+queryParams:
+  api-version: 2023-04-02
+body:
+  type: json
+  content: |-
+    {
+        "tags": {
+            "setter": "postman"
+        }
+    }
+auth:
+  type: bearer
+  credentials:
+    token: "{{az_token}}"
+settings: {}
+order: 1000

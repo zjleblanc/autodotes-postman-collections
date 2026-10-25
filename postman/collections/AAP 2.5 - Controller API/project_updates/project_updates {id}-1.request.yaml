@@ -1,0 +1,6 @@
+$kind: http-request
+name: project_updates {id}
+url: https://{{instance_fqdn}}/api/controller/v2/project_updates/{id}/
+method: GET
+settings: {}
+order: 8000

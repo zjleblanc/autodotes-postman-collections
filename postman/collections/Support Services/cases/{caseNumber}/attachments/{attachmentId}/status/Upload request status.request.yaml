@@ -1,0 +1,17 @@
+$kind: http-request
+url: "{{baseUrl}}/cases/:caseNumber/attachments/:attachmentId/status"
+method: GET
+headers:
+  Accept: application/json
+pathVariables:
+  - key: caseNumber
+    value: string
+    description: "(Required) "
+  - key: attachmentId
+    value: string
+    description: "(Required) "
+auth:
+  type: noauth
+settings: {}
+examples: ./.resources/Upload request status.resources/examples
+order: 1000

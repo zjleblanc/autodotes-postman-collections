@@ -1,0 +1,25 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/tv/:tv_id/season/:season_number/episode/:episode_number/external_ids"
+  method: GET
+  pathVariables:
+    tv_id: ""
+    season_number: ""
+    episode_number: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+       "imdb_id": "tt1480055",
+       "freebase_mid": "/m/0gmc6ph",
+       "freebase_id": "/en/winter_is_coming",
+       "tvdb_id": 3254641,
+       "tvrage_id": 1065008299,
+       "id": 63056
+      }
+order: 1000

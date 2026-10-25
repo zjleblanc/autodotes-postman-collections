@@ -1,0 +1,23 @@
+$kind: http-request
+description: API endpoint that allows users to be viewed or edited.
+url: "{{instance_fqdn}}/api/gateway/v1/authenticators/:id/users/?page=<integer>&page_size=<integer>&search=<string>"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  - key: page
+    value: <integer>
+    description: A page number within the paginated result set.
+  - key: page_size
+    value: <integer>
+    description: Number of results to return per page.
+  - key: search
+    value: <string>
+    description: A search term.
+pathVariables:
+  - key: id
+    value: "1714231316"
+    description: "(Required) "
+settings: {}
+examples: ./.resources/authenticators users list.resources/examples
+order: 1000

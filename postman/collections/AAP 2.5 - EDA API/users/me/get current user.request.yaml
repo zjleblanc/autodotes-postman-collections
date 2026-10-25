@@ -1,0 +1,9 @@
+$kind: http-request
+description: Get current user.
+url: "{{instance_fqdn}}/api/eda/v1/users/me/"
+method: GET
+headers:
+  Accept: application/json
+settings: {}
+examples: ./.resources/get current user.resources/examples
+order: 2000

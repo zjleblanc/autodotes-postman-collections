@@ -1,0 +1,23 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/authentication/session/convert/4"
+  method: POST
+  body:
+    type: text
+    content: |-
+      {
+          "access_token": "REDACTED_ACCESS_TOKEN"
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+       "success": true,
+       "session_id": "2629f70fb498edc263a0adb99118ac41f0053e8c"
+      }
+order: 1000

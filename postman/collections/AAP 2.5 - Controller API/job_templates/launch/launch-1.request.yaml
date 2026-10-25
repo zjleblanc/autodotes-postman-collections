@@ -1,0 +1,12 @@
+$kind: http-request
+name: launch
+url: https://{{instance_fqdn}}/api/controller/v2/job_templates/84/launch/
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "scm_branch": "test/branch-override"
+    }
+settings: {}
+order: 2000

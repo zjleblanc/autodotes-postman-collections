@@ -1,0 +1,6 @@
+$kind: http-request
+name: workflow_job_template_nodes
+url: https://{{instance_fqdn}}/api/controller/v2/workflow_job_template_nodes/
+method: POST
+settings: {}
+order: 9000

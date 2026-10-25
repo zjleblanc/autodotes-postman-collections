@@ -1,0 +1,53 @@
+$kind: collection
+description: |-
+  Swagger documentation for external users
+
+  Contact Support:
+   Name: Hydra Team
+   Email: hydra-dev@redhat.com
+variables:
+  baseUrl: https://api.access.redhat.com/support
+scripts:
+  - type: http:beforeRequest
+    code: |-
+      let check_expiry_date = new Date();
+      check_expiry_date.setMinutes(check_expiry_date.getMinutes() + 2);
+      let check_expiry_value = check_expiry_date.toISOString();
+
+      if(!(check_expiry_value > pm.globals.get('rhsm_access_token_expiry'))){
+          return;
+      }
+
+      const echoPostRequest = {
+        url: 'https://sso.redhat.com/auth/realms/redhat-external/protocol/openid-connect/token',
+        method: 'POST',
+        header: 'application/x-www-form-urlencoded',
+        body: {
+          mode: 'urlencoded',
+          urlencoded: [
+              {'key': 'client_id', 'value': 'rhsm-api'},
+              {'key': 'refresh_token', 'value': pm.globals.get('rhsm_offline_token')},
+              {'key': 'grant_type', 'value':'refresh_token'}
+          ]
+        }
+      };
+
+      pm.sendRequest(echoPostRequest, function (err, res) {
+          console.log(err ? err : res.json());
+              if (err === null) {
+                  console.log('Saving the token and expiry date')
+                  var resj = res.json();
+                  pm.globals.set('rhsm_access_token', resj.access_token)
+
+                  var new_expiry_date = new Date();
+                  new_expiry_date.setSeconds(new_expiry_date.getSeconds() + resj.expires_in);
+                  pm.globals.set('rhsm_access_token_expiry', new_expiry_date.toISOString());
+              }
+          });
+    language: text/javascript
+auth:
+  - id: 30d0711a-f077-42f5-b0c3-4b8863b020b0
+    type: bearer
+    name: bearer auth
+    credentials:
+      token: "{{rhsm_access_token}}"

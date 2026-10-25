@@ -1,0 +1,5 @@
+$kind: http-request
+url: "{{aap24_base_url}}/api/v2/organizations/"
+method: GET
+settings: {}
+order: 1000

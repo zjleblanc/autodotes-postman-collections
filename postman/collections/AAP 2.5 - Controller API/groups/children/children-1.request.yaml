@@ -1,0 +1,6 @@
+$kind: http-request
+name: children
+url: https://{{instance_fqdn}}/api/controller/v2/groups/{id}/children/
+method: POST
+settings: {}
+order: 2000

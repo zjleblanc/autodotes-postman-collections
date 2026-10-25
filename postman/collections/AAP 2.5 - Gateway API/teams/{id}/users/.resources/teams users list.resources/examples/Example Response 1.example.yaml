@@ -1,0 +1,97 @@
+$kind: http-example
+request:
+  url: "{{instance_fqdn}}/api/gateway/v1/teams/:id/users/?page=<integer>&page_size=<integer>&search=<string>"
+  method: GET
+  headers:
+    - key: Accept
+      value: application/json
+    - key: gateway_sessionid
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  queryParams:
+    - key: page
+      value: <integer>
+      description: A page number within the paginated result set.
+    - key: page_size
+      value: <integer>
+      description: Number of results to return per page.
+    - key: search
+      value: <string>
+      description: A search term.
+  pathVariables:
+    id: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "count": "<integer>",
+        "results": [
+          {
+            "created": "<dateTime>",
+            "created_by": "<integer>",
+            "id": "<integer>",
+            "is_platform_auditor": "<boolean>",
+            "last_login": "<dateTime>",
+            "managed": "<boolean>",
+            "modified": "<dateTime>",
+            "modified_by": "<integer>",
+            "related": {
+              "voluptate__": "<string>",
+              "ipsum_4": "<string>"
+            },
+            "summary_fields": {
+              "reprehenderit8": {
+                "velit_15": {}
+              },
+              "laboris_077": {
+                "idd": {},
+                "tempor_6": {}
+              }
+            },
+            "url": "<string>",
+            "username": "FQf9X",
+            "email": "<email>",
+            "first_name": "<string>",
+            "last_name": "<string>",
+            "password": "<string>",
+            "is_superuser": "<boolean>"
+          },
+          {
+            "created": "<dateTime>",
+            "created_by": "<integer>",
+            "id": "<integer>",
+            "is_platform_auditor": "<boolean>",
+            "last_login": "<dateTime>",
+            "managed": "<boolean>",
+            "modified": "<dateTime>",
+            "modified_by": "<integer>",
+            "related": {
+              "in_5": "<string>",
+              "laboris30_": "<string>",
+              "utab6": "<string>",
+              "dolor_": "<string>"
+            },
+            "summary_fields": {
+              "velit79": {
+                "do_f1": {},
+                "dolor2d4": {}
+              }
+            },
+            "url": "<string>",
+            "username": "4rnJTGeWC.I",
+            "email": "<email>",
+            "first_name": "<string>",
+            "last_name": "<string>",
+            "password": "<string>",
+            "is_superuser": "<boolean>"
+          }
+        ],
+        "next": "<uri>",
+        "previous": "<uri>"
+      }
+order: 1000

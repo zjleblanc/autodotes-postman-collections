@@ -1,0 +1,73 @@
+$kind: http-example
+request:
+  url: "{{instance_fqdn}}/eda-credentials/:id/"
+  method: PATCH
+  headers:
+    - key: Content-Type
+      value: application/json
+    - key: Accept
+      value: application/json
+    - key: sessionid
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  pathVariables:
+    id: ""
+  body:
+    type: json
+    content: |-
+      {
+        "name": "<string>",
+        "description": "<string>",
+        "inputs": {
+          "in_ad": false
+        },
+        "organization_id": "<integer>"
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "created_at": "<dateTime>",
+        "created_by": "<integer>",
+        "id": "<integer>",
+        "inputs": {
+          "aute_e": 40204447.010979325,
+          "irure_c9": true
+        },
+        "managed": "<boolean>",
+        "modified_at": "<dateTime>",
+        "modified_by": "<integer>",
+        "name": "<string>",
+        "organization": {
+          "id": "<integer>",
+          "name": "<string>",
+          "description": "<string>"
+        },
+        "description": "<string>",
+        "credential_type": {
+          "id": "<integer>",
+          "name": "<string>",
+          "namespace": "<string>",
+          "kind": "<string>"
+        },
+        "references": [
+          {
+            "id": "<integer>",
+            "name": "<string>",
+            "type": "<string>",
+            "uri": "<uri>"
+          },
+          {
+            "id": "<integer>",
+            "name": "<string>",
+            "type": "<string>",
+            "uri": "<uri>"
+          }
+        ]
+      }
+order: 1000

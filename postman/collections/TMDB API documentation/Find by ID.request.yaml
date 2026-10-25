@@ -1,0 +1,46 @@
+$kind: http-request
+description: |-
+  The find method makes it easy to search for objects in our database by an external id.
+
+  This method will search all objects (movies, TV shows and people) and return the results in a single response.
+
+  The supported external sources for each object are as follows.
+
+  #### Media Databases
+
+  |              | Movies | TV Shows | TV Seasons | TV Episodes | People |
+  | ------------ | ------ | -------- | ---------- | ----------- | ------ |
+  | IMDb ID      | ✓      | ✓        | ✗          | ✓           | ✓      |
+  | TVDB ID      | ✗      | ✓        | ✓          | ✓           | ✗      |
+  | Freebase MID*| ✗      | ✓        | ✓          | ✓           | ✓      |
+  | Freebase ID* | ✗      | ✓        | ✓          | ✓           | ✓      |
+  | TVRage ID*   | ✗      | ✓        | ✓          | ✓           | ✓      |
+
+  #### Social IDs
+
+  |              | Movies | TV Shows | TV Seasons | TV Episodes | People |
+  | ------------ | ------ | -------- | ---------- | ----------- | ------ |
+  | Facebook     | ✓      | ✓        | ✗          | ✗           | ✓      |
+  | Instagram    | ✓      | ✓        | ✗          | ✗           | ✓      |
+  | Twitter      | ✓      | ✓        | ✗          | ✗           | ✓      |
+
+  *Defunct or no longer available as a service.
+url: "{{baseUrl}}/find/:external_id?external_source=twitter_id"
+method: GET
+queryParams:
+  - key: external_source
+    value: twitter_id
+    description: "(Required) "
+pathVariables:
+  - key: external_id
+    value: in fugiat
+    description: "(Required) "
+auth:
+  type: apikey
+  credentials:
+    key: api_key
+    value: "{{api_key}}"
+    in: query
+settings: {}
+examples: ./.resources/Find by ID.resources/examples
+order: 21000

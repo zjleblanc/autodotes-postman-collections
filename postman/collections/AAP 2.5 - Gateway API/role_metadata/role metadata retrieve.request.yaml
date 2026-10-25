@@ -1,0 +1,16 @@
+$kind: http-request
+description: |-
+  General data about models and permissions tracked by django-ansible-base RBAC
+
+  Information from this endpoint should be static given a server version.
+  This reflects model definitions, registrations with the permission registry,
+  and enablement of RBAC features in settings.
+
+  allowed_permissions: Valid permissions for a role of a given content_type
+url: "{{instance_fqdn}}/api/gateway/v1/role_metadata/"
+method: GET
+headers:
+  Accept: application/json
+settings: {}
+examples: ./.resources/role metadata retrieve.resources/examples
+order: 1000

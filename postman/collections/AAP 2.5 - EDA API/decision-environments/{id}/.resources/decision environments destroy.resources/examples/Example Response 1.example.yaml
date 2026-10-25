@@ -1,0 +1,21 @@
+$kind: http-example
+request:
+  url: "{{instance_fqdn}}/decision-environments/:id/?force=<boolean>"
+  method: DELETE
+  headers:
+    - key: sessionid
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  queryParams:
+    - key: force
+      value: <boolean>
+      description: Force deletion if there are dependent objects
+  pathVariables:
+    id: ""
+response:
+  statusCode: 204
+  statusText: No Content
+  body:
+    type: text
+    content: ""
+order: 1000

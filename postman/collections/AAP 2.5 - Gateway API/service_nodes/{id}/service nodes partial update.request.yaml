@@ -1,0 +1,23 @@
+$kind: http-request
+description: API endpoint that allows groups to be viewed or edited.
+url: "{{instance_fqdn}}/api/gateway/v1/service_nodes/:id/"
+method: PATCH
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: <integer>
+    description: (Required) A unique integer value identifying this service node.
+body:
+  type: json
+  content: |-
+    {
+      "name": "<string>",
+      "address": "<string>",
+      "service_cluster": "<integer>",
+      "tags": "<string>"
+    }
+settings: {}
+examples: ./.resources/service nodes partial update.resources/examples
+order: 3000

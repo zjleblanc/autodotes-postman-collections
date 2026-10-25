@@ -1,0 +1,27 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/v1/cases/:caseNumber/comments/:commentId"
+  method: GET
+  headers:
+    Accept: application/json
+  pathVariables:
+    caseNumber: ""
+    commentId: ""
+response:
+  statusCode: 404
+  statusText: Not Found
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "internalErrorCode": "string",
+        "message": "string",
+        "detailMessage": "string",
+        "recommendations": [
+          "string",
+          "string"
+        ]
+      }
+order: 3000

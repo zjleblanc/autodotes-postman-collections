@@ -1,0 +1,23 @@
+$kind: http-request
+description: Update the corresponding resource in each service.
+url: "{{instance_fqdn}}/api/gateway/v1/users/:id/organizations/?page=<integer>&page_size=<integer>&search=<string>"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  - key: page
+    value: <integer>
+    description: A page number within the paginated result set.
+  - key: page_size
+    value: <integer>
+    description: Number of results to return per page.
+  - key: search
+    value: <string>
+    description: A search term.
+pathVariables:
+  - key: id
+    value: "1714231316"
+    description: "(Required) "
+settings: {}
+examples: ./.resources/users organizations list.resources/examples
+order: 1000

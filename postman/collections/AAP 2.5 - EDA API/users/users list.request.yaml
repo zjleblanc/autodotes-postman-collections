@@ -1,0 +1,27 @@
+$kind: http-request
+description: List users
+url: "{{instance_fqdn}}/api/eda/v1/users/?is_superuser=<boolean>&name=<string>&page=<integer>&page_size=<integer>&resource__ansible_id=<string>&username=<string>"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  - key: is_superuser
+    value: <boolean>
+    description: Filter by superuser status.
+  - key: name
+    value: <string>
+    description: Filter by Username.
+  - key: page
+    value: <integer>
+    description: A page number within the paginated result set.
+  - key: page_size
+    value: <integer>
+    description: Number of results to return per page.
+  - key: resource__ansible_id
+    value: <string>
+    description: Filter by resource ansible ID.
+  - key: username
+    value: <string>
+settings: {}
+examples: ./.resources/users list.resources/examples
+order: 3000

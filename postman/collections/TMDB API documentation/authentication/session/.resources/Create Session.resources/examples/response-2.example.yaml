@@ -1,0 +1,24 @@
+$kind: http-example
+name: response
+request:
+  url: "{{baseUrl}}/authentication/session/new"
+  method: POST
+  body:
+    type: text
+    content: |-
+      {
+          "request_token": "REDACTED_REQUEST_TOKEN"
+      }
+response:
+  statusCode: 404
+  statusText: Not Found
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+       "status_message": "laboris quis officia",
+       "status_code": 17219857
+      }
+order: 3000

@@ -1,0 +1,59 @@
+$kind: http-example
+request:
+  url: "{{instance_fqdn}}/api/gateway/v1/teams/"
+  method: POST
+  headers:
+    - key: Content-Type
+      value: application/json
+    - key: Accept
+      value: application/json
+    - key: gateway_sessionid
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  body:
+    type: json
+    content: |-
+      {
+        "name": "<string>",
+        "organization": "<integer>",
+        "description": "<string>",
+        "created": false,
+        "created_by": true,
+        "id": 91164256,
+        "modified": "amet adipi",
+        "modified_by": 38985071,
+        "related": 39199813.59431782,
+        "summary_fields": false
+      }
+response:
+  statusCode: 201
+  statusText: Created
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "created": "<dateTime>",
+        "created_by": "<integer>",
+        "id": "<integer>",
+        "modified": "<dateTime>",
+        "modified_by": "<integer>",
+        "name": "<string>",
+        "organization": "<integer>",
+        "related": {
+          "non860": "<string>",
+          "occaecatb2d": "<string>",
+          "pariatur_85": "<string>",
+          "ex06": "<string>"
+        },
+        "summary_fields": {
+          "ut_7ad": {
+            "esse68": {},
+            "officia21": {}
+          }
+        },
+        "url": "<string>",
+        "description": "<string>"
+      }
+order: 1000

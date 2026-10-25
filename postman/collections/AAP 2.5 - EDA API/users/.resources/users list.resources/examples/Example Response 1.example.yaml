@@ -1,0 +1,69 @@
+$kind: http-example
+request:
+  url: "{{instance_fqdn}}/users/?is_superuser=<boolean>&name=<string>&page=<integer>&page_size=<integer>&resource__ansible_id=<string>&username=<string>"
+  method: GET
+  headers:
+    - key: Accept
+      value: application/json
+    - key: sessionid
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  queryParams:
+    - key: is_superuser
+      value: <boolean>
+      description: Filter by superuser status.
+    - key: name
+      value: <string>
+      description: Filter by Username.
+    - key: page
+      value: <integer>
+      description: A page number within the paginated result set.
+    - key: page_size
+      value: <integer>
+      description: Number of results to return per page.
+    - key: resource__ansible_id
+      value: <string>
+      description: Filter by resource ansible ID.
+    - key: username
+      value: <string>
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "count": "<integer>",
+        "next": "<uri>",
+        "previous": "<uri>",
+        "page_size": "<integer>",
+        "page": "<integer>",
+        "results": [
+          {
+            "first_name": "<string>",
+            "id": "<integer>",
+            "is_superuser": "<boolean>",
+            "last_name": "<string>",
+            "resource": {
+              "aliqua_a": 28858273.62671143,
+              "Ut_9": 11169113.121353552
+            },
+            "username": "<string>"
+          },
+          {
+            "first_name": "<string>",
+            "id": "<integer>",
+            "is_superuser": "<boolean>",
+            "last_name": "<string>",
+            "resource": {
+              "consectetur_": "commodo mollit magna labore",
+              "voluptate45": true,
+              "quisa": "et"
+            },
+            "username": "<string>"
+          }
+        ]
+      }
+order: 1000

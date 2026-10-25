@@ -1,0 +1,28 @@
+$kind: http-request
+description: |-
+  Manage Role Team Assignment objects in the 'team_assignments' relationship of this particular Role Definition.
+
+  Starting from the detail URL:
+
+  GET /:id/team_assignments/ to show role team assignments currently in the relationship
+url: "{{instance_fqdn}}/api/eda/v1/role_definitions/:id/team_assignments/?page=<integer>&page_size=<integer>&search=<string>"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  - key: page
+    value: <integer>
+    description: A page number within the paginated result set.
+  - key: page_size
+    value: <integer>
+    description: Number of results to return per page.
+  - key: search
+    value: <string>
+    description: A search term.
+pathVariables:
+  - key: id
+    value: <integer>
+    description: (Required) A unique integer value identifying this assignment.
+settings: {}
+examples: ./.resources/role definitions team assignments list.resources/examples
+order: 1000

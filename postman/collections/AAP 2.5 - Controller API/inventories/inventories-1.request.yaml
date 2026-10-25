@@ -1,0 +1,6 @@
+$kind: http-request
+name: inventories
+url: https://{{instance_fqdn}}/api/controller/v2/inventories/
+method: POST
+settings: {}
+order: 19000

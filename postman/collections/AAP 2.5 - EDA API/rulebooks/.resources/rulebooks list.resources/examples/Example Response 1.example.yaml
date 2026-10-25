@@ -1,0 +1,61 @@
+$kind: http-example
+request:
+  url: "{{instance_fqdn}}/rulebooks/?name=<string>&page=<integer>&page_size=<integer>&project_id=<number>"
+  method: GET
+  headers:
+    - key: Accept
+      value: application/json
+    - key: sessionid
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  queryParams:
+    - key: name
+      value: <string>
+      description: Filter by rulebook name.
+    - key: page
+      value: <integer>
+      description: A page number within the paginated result set.
+    - key: page_size
+      value: <integer>
+      description: Number of results to return per page.
+    - key: project_id
+      value: <number>
+      description: Filter by rulebook's project id.
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "count": "<integer>",
+        "next": "<uri>",
+        "previous": "<uri>",
+        "page_size": "<integer>",
+        "page": "<integer>",
+        "results": [
+          {
+            "created_at": "<dateTime>",
+            "id": "<integer>",
+            "modified_at": "<dateTime>",
+            "name": "<string>",
+            "organization_id": "<integer>",
+            "description": "<string>",
+            "rulesets": "<string>",
+            "project_id": "<integer>"
+          },
+          {
+            "created_at": "<dateTime>",
+            "id": "<integer>",
+            "modified_at": "<dateTime>",
+            "name": "<string>",
+            "organization_id": "<integer>",
+            "description": "<string>",
+            "rulesets": "<string>",
+            "project_id": "<integer>"
+          }
+        ]
+      }
+order: 1000

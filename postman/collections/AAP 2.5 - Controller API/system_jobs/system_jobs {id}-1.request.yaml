@@ -1,0 +1,6 @@
+$kind: http-request
+name: system_jobs {id}
+url: https://{{instance_fqdn}}/api/controller/v2/system_jobs/{id}/
+method: GET
+settings: {}
+order: 6000

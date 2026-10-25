@@ -1,0 +1,90 @@
+$kind: http-example
+request:
+  url: "{{instance_fqdn}}/api/gateway/v1/role_definitions/:id/user_assignments/?page=<integer>&page_size=<integer>&search=<string>"
+  method: GET
+  headers:
+    - key: Accept
+      value: application/json
+    - key: gateway_sessionid
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  queryParams:
+    - key: page
+      value: <integer>
+      description: A page number within the paginated result set.
+    - key: page_size
+      value: <integer>
+      description: Number of results to return per page.
+    - key: search
+      value: <string>
+      description: A search term.
+  pathVariables:
+    id: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "count": "<integer>",
+        "results": [
+          {
+            "content_type": "shared.organization",
+            "created": "<dateTime>",
+            "created_by": "<integer>",
+            "id": "<integer>",
+            "related": {
+              "culpa689": "<string>"
+            },
+            "role_definition": "<integer>",
+            "summary_fields": {
+              "dolore_1": {
+                "et__": {},
+                "adipisicing_4": {},
+                "occaecat_1": {},
+                "occaecat_": {}
+              },
+              "cupidatat_76": {
+                "ut7f": {}
+              },
+              "commodo_40": {
+                "labore84e": {}
+              }
+            },
+            "url": "<string>",
+            "object_id": "<string>",
+            "object_ansible_id": "<uuid>",
+            "user": "<integer>",
+            "user_ansible_id": "<uuid>"
+          },
+          {
+            "content_type": "shared.team",
+            "created": "<dateTime>",
+            "created_by": "<integer>",
+            "id": "<integer>",
+            "related": {
+              "nostrudc07": "<string>",
+              "incididunt_": "<string>",
+              "exercitationf9": "<string>",
+              "fugiat_51": "<string>"
+            },
+            "role_definition": "<integer>",
+            "summary_fields": {
+              "incfe": {
+                "sint_a0": {}
+              }
+            },
+            "url": "<string>",
+            "object_id": "<string>",
+            "object_ansible_id": "<uuid>",
+            "user": "<integer>",
+            "user_ansible_id": "<uuid>"
+          }
+        ],
+        "next": "<uri>",
+        "previous": "<uri>"
+      }
+order: 1000

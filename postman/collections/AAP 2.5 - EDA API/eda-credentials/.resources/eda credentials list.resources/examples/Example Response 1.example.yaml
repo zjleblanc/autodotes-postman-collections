@@ -1,0 +1,126 @@
+$kind: http-example
+request:
+  url: "{{instance_fqdn}}/eda-credentials/?credential_type__kind=<string>&credential_type_id=<number>&name=<string>&page=<integer>&page_size=<integer>"
+  method: GET
+  headers:
+    - key: Accept
+      value: application/json
+    - key: sessionid
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  queryParams:
+    - key: credential_type__kind
+      value: <string>
+      description: Kind of CredentialType
+    - key: credential_type_id
+      value: <number>
+      description: Filter by Credential Type ID.
+    - key: name
+      value: <string>
+      description: Filter by EDA credential name.
+    - key: page
+      value: <integer>
+      description: A page number within the paginated result set.
+    - key: page_size
+      value: <integer>
+      description: Number of results to return per page.
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "count": "<integer>",
+        "next": "<uri>",
+        "previous": "<uri>",
+        "page_size": "<integer>",
+        "page": "<integer>",
+        "results": [
+          {
+            "created_at": "<dateTime>",
+            "created_by": "<integer>",
+            "id": "<integer>",
+            "inputs": {
+              "Ut4": "Excepteur incididunt dolor",
+              "consecteturbb": -15880570.525512144,
+              "est_6b": -72848414.62917298,
+              "Excepteur1": 53881556.191090375
+            },
+            "managed": "<boolean>",
+            "modified_at": "<dateTime>",
+            "modified_by": "<integer>",
+            "name": "<string>",
+            "organization": {
+              "id": "<integer>",
+              "name": "<string>",
+              "description": "<string>"
+            },
+            "description": "<string>",
+            "credential_type": {
+              "id": "<integer>",
+              "name": "<string>",
+              "namespace": "<string>",
+              "kind": "<string>"
+            },
+            "references": [
+              {
+                "id": "<integer>",
+                "name": "<string>",
+                "type": "<string>",
+                "uri": "<uri>"
+              },
+              {
+                "id": "<integer>",
+                "name": "<string>",
+                "type": "<string>",
+                "uri": "<uri>"
+              }
+            ]
+          },
+          {
+            "created_at": "<dateTime>",
+            "created_by": "<integer>",
+            "id": "<integer>",
+            "inputs": {
+              "mollit__44": 56589828,
+              "occaecat4a9": -20049261.061274707,
+              "ex3f": "qui ea laboris",
+              "sit36e": 51177644
+            },
+            "managed": "<boolean>",
+            "modified_at": "<dateTime>",
+            "modified_by": "<integer>",
+            "name": "<string>",
+            "organization": {
+              "id": "<integer>",
+              "name": "<string>",
+              "description": "<string>"
+            },
+            "description": "<string>",
+            "credential_type": {
+              "id": "<integer>",
+              "name": "<string>",
+              "namespace": "<string>",
+              "kind": "<string>"
+            },
+            "references": [
+              {
+                "id": "<integer>",
+                "name": "<string>",
+                "type": "<string>",
+                "uri": "<uri>"
+              },
+              {
+                "id": "<integer>",
+                "name": "<string>",
+                "type": "<string>",
+                "uri": "<uri>"
+              }
+            ]
+          }
+        ]
+      }
+order: 1000

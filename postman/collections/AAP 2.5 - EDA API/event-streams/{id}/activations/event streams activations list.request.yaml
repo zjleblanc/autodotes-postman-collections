@@ -1,0 +1,29 @@
+$kind: http-request
+description: List all activations for the event stream
+url: "{{instance_fqdn}}/api/eda/v1/event-streams/:id/activations/?decision_environment_id=<number>&name=<string>&page=<integer>&page_size=<integer>&status=<string>"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  - key: decision_environment_id
+    value: <number>
+    description: Filter by Decision Environment ID.
+  - key: name
+    value: <string>
+    description: Filter by activation name.
+  - key: page
+    value: <integer>
+    description: A page number within the paginated result set.
+  - key: page_size
+    value: <integer>
+    description: Number of results to return per page.
+  - key: status
+    value: <string>
+    description: Filter by activation status.
+pathVariables:
+  - key: id
+    value: <integer>
+    description: (Required) A unique integer value identifying this event stream.
+settings: {}
+examples: ./.resources/event streams activations list.resources/examples
+order: 1000

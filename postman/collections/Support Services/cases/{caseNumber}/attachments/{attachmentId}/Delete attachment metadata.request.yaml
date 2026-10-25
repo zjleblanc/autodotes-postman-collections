@@ -1,0 +1,17 @@
+$kind: http-request
+url: "{{baseUrl}}/cases/:caseNumber/attachments/:attachmentId"
+method: DELETE
+headers:
+  Accept: application/json
+pathVariables:
+  - key: caseNumber
+    value: string
+    description: "(Required) "
+  - key: attachmentId
+    value: string
+    description: "(Required) "
+auth:
+  type: noauth
+settings: {}
+examples: ./.resources/Delete attachment metadata.resources/examples
+order: 3000

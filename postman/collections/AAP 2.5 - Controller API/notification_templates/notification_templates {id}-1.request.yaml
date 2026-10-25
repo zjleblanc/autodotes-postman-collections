@@ -1,0 +1,6 @@
+$kind: http-request
+name: notification_templates {id}
+url: https://{{instance_fqdn}}/api/controller/v2/notification_templates/{id}/
+method: GET
+settings: {}
+order: 7000

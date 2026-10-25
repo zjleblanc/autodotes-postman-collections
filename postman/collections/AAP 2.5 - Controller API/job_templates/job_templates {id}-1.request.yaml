@@ -1,0 +1,6 @@
+$kind: http-request
+name: job_templates {id}
+url: https://{{instance_fqdn}}/api/controller/v2/job_templates/84/
+method: GET
+settings: {}
+order: 24000

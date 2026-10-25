@@ -1,0 +1,44 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/tv/:tv_id/content_ratings"
+  method: GET
+  pathVariables:
+    tv_id: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+       "results": [
+        {
+         "iso_3166_1": "DE",
+         "rating": "16"
+        },
+        {
+         "iso_3166_1": "GB",
+         "rating": "18"
+        },
+        {
+         "iso_3166_1": "AU",
+         "rating": "R18+"
+        },
+        {
+         "iso_3166_1": "US",
+         "rating": "TV-MA"
+        },
+        {
+         "iso_3166_1": "CA",
+         "rating": "18+"
+        },
+        {
+         "iso_3166_1": "RU",
+         "rating": "18+"
+        }
+       ],
+       "id": 1399
+      }
+order: 1000

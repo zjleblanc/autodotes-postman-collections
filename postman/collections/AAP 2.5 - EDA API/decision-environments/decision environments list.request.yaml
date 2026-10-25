@@ -1,0 +1,19 @@
+$kind: http-request
+description: List all decision environments
+url: "{{instance_fqdn}}/api/eda/v1/decision-environments/?name=<string>&page=<integer>&page_size=<integer>"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  - key: name
+    value: <string>
+    description: Filter by decision environment name.
+  - key: page
+    value: <integer>
+    description: A page number within the paginated result set.
+  - key: page_size
+    value: <integer>
+    description: Number of results to return per page.
+settings: {}
+examples: ./.resources/decision environments list.resources/examples
+order: 2000

@@ -1,0 +1,5 @@
+$kind: http-request
+url: "{{aap_base_url}}/api/v2/analytics/job_explorer_options/"
+method: POST
+settings: {}
+order: 1000

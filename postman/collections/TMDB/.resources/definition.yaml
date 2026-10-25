@@ -1,0 +1,10 @@
+$kind: collection
+variables:
+  tmdb_read_token: ""
+  tmdb_api_key: ""
+auth:
+  - id: e87ced35-4947-4f4f-974b-a98a39dc530e
+    type: bearer
+    name: bearer auth
+    credentials:
+      token: "{{tmdb_read_token}}"

@@ -1,0 +1,8 @@
+$kind: collection
+auth:
+  - id: 86112c32-d9c3-47d6-b826-33c3a280c447
+    type: basic
+    name: basic auth
+    credentials:
+      username: zleblanc
+      password: "{{snow_instance_pw}}"

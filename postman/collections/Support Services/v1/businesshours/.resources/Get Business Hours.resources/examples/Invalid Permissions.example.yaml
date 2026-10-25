@@ -1,0 +1,28 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/v1/businesshours?timezone=string"
+  method: GET
+  headers:
+    Accept: application/json
+  queryParams:
+    - key: timezone
+      value: string
+      description: (Required) Timezone
+response:
+  statusCode: 403
+  statusText: Forbidden
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "internalErrorCode": "string",
+        "message": "string",
+        "detailMessage": "string",
+        "recommendations": [
+          "string",
+          "string"
+        ]
+      }
+order: 4000

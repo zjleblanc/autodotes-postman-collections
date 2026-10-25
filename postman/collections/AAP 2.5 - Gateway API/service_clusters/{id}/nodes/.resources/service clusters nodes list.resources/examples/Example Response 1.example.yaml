@@ -1,0 +1,89 @@
+$kind: http-example
+request:
+  url: "{{instance_fqdn}}/api/gateway/v1/service_clusters/:id/nodes/?page=<integer>&page_size=<integer>&search=<string>"
+  method: GET
+  headers:
+    - key: Accept
+      value: application/json
+    - key: gateway_sessionid
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  queryParams:
+    - key: page
+      value: <integer>
+      description: A page number within the paginated result set.
+    - key: page_size
+      value: <integer>
+      description: Number of results to return per page.
+    - key: search
+      value: <string>
+      description: A search term.
+  pathVariables:
+    id: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "count": "<integer>",
+        "results": [
+          {
+            "address": "<string>",
+            "created": "<dateTime>",
+            "created_by": "<integer>",
+            "id": "<integer>",
+            "modified": "<dateTime>",
+            "modified_by": "<integer>",
+            "name": "<string>",
+            "related": {
+              "ut9d": "<string>",
+              "sint_41": "<string>"
+            },
+            "service_cluster": "<integer>",
+            "summary_fields": {
+              "reprehenderit__a": {
+                "culpa_": {}
+              }
+            },
+            "url": "<string>",
+            "tags": "<string>"
+          },
+          {
+            "address": "<string>",
+            "created": "<dateTime>",
+            "created_by": "<integer>",
+            "id": "<integer>",
+            "modified": "<dateTime>",
+            "modified_by": "<integer>",
+            "name": "<string>",
+            "related": {
+              "sintd": "<string>",
+              "in32": "<string>",
+              "idb4d": "<string>"
+            },
+            "service_cluster": "<integer>",
+            "summary_fields": {
+              "dof": {
+                "non_91": {}
+              },
+              "et5d": {
+                "eiusmoda3": {}
+              },
+              "incididunt_26": {
+                "aute47": {},
+                "ex_2": {},
+                "pariatur_a": {}
+              }
+            },
+            "url": "<string>",
+            "tags": "<string>"
+          }
+        ],
+        "next": "<uri>",
+        "previous": "<uri>"
+      }
+order: 1000

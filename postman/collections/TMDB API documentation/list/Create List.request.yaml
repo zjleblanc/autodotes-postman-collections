@@ -1,0 +1,27 @@
+$kind: http-request
+description: Create a list.
+url: "{{baseUrl}}/list?session_id="
+method: POST
+headers:
+  Content-Type: application/json
+queryParams:
+  - key: session_id
+    value: ""
+    description: "(Required) "
+body:
+  type: text
+  content: |-
+    {
+        "name": "This is my awesome test list.",
+        "description": "Just an awesome list dawg.",
+        "language": "en"
+    }
+auth:
+  type: apikey
+  credentials:
+    key: api_key
+    value: "{{api_key}}"
+    in: query
+settings: {}
+examples: ./.resources/Create List.resources/examples
+order: 2000

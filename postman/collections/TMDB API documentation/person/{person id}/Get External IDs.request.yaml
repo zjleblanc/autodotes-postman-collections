@@ -1,0 +1,28 @@
+$kind: http-request
+description: |-
+  Get the external ids for a person. We currently support the following external sources.
+
+  | **External Sources** |
+  | ------------     |
+  | IMDB ID          |
+  | Facebook         |
+  | Freebase MID     |
+  | Freebase ID      |
+  | Instagram        |
+  | TVRage ID        |
+  | Twitter          |
+url: "{{baseUrl}}/person/:person_id/external_ids"
+method: GET
+pathVariables:
+  - key: person_id
+    value: "24717925"
+    description: "(Required) "
+auth:
+  type: apikey
+  credentials:
+    key: api_key
+    value: "{{api_key}}"
+    in: query
+settings: {}
+examples: ./.resources/Get External IDs.resources/examples
+order: 2000

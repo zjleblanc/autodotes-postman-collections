@@ -1,0 +1,5 @@
+$kind: http-request
+url: "{{tf_cloud_base_url}}/organizations/{{tf_organization}}/workspaces/ansible-tf-demos"
+method: GET
+settings: {}
+order: 2000

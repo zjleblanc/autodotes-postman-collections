@@ -1,0 +1,17 @@
+$kind: http-example
+request:
+  url: "{{instance_fqdn}}/eda-credentials/:id/copy/"
+  method: POST
+  headers:
+    - key: sessionid
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  pathVariables:
+    id: ""
+response:
+  statusCode: 404
+  statusText: Not Found
+  body:
+    type: text
+    content: ""
+order: 2000

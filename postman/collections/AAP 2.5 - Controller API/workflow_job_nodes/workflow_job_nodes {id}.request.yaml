@@ -1,0 +1,5 @@
+$kind: http-request
+url: https://{{instance_fqdn}}/api/controller/v2/workflow_job_nodes/{id}/
+method: GET
+settings: {}
+order: 8000

@@ -1,0 +1,6 @@
+$kind: http-request
+name: create_approval_template
+url: https://{{instance_fqdn}}/api/controller/v2/workflow_job_template_nodes/{id}/create_approval_template/
+method: POST
+settings: {}
+order: 2000

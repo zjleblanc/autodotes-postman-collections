@@ -1,0 +1,13 @@
+$kind: http-request
+description: |-
+  Revert all preferences in the current category to their default values
+  except for read_only or encrypted settings
+url: "{{instance_fqdn}}/api/gateway/v1/settings/:category_slug/"
+method: DELETE
+pathVariables:
+  - key: category_slug
+    value: lnih0f
+    description: "(Required) "
+settings: {}
+examples: ./.resources/settings destroy.resources/examples
+order: 4000

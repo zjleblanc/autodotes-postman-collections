@@ -1,0 +1,6 @@
+$kind: http-request
+name: health_check
+url: https://{{instance_fqdn}}/api/controller/v2/instances/{id}/health_check/
+method: POST
+settings: {}
+order: 2000

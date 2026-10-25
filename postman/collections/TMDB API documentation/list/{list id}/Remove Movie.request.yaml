@@ -1,0 +1,29 @@
+$kind: http-request
+description: Remove a movie from a list.
+url: "{{baseUrl}}/list/:list_id/remove_item?session_id="
+method: POST
+headers:
+  Content-Type: application/json
+queryParams:
+  - key: session_id
+    value: ""
+    description: "(Required) "
+pathVariables:
+  - key: list_id
+    value: in fugiat
+    description: "(Required) "
+body:
+  type: text
+  content: |-
+    {
+        "media_id": 12
+    }
+auth:
+  type: apikey
+  credentials:
+    key: api_key
+    value: "{{api_key}}"
+    in: query
+settings: {}
+examples: ./.resources/Remove Movie.resources/examples
+order: 4000

@@ -1,0 +1,24 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/network/:network_id/alternative_names"
+  method: GET
+  pathVariables:
+    network_id: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+       "id": 174,
+       "results": [
+        {
+         "name": "American Movie Classics",
+         "type": "1984–2002"
+        }
+       ]
+      }
+order: 1000

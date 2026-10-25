@@ -1,0 +1,6 @@
+$kind: http-request
+name: notification_templates
+url: https://{{instance_fqdn}}/api/controller/v2/organizations/{id}/notification_templates/
+method: POST
+settings: {}
+order: 2000

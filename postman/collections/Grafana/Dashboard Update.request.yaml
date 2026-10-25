@@ -1,0 +1,262 @@
+$kind: http-request
+url: "{{grafana_base_url}}/api/dashboards/db"
+method: POST
+headers:
+  X-Grafana-Org-Id: "1"
+body:
+  type: json
+  content: |-
+    {
+      "dashboard": {
+            "annotations": {
+                "list": [
+                    {
+                        "builtIn": 1,
+                        "datasource": {
+                            "type": "grafana",
+                            "uid": "-- Grafana --"
+                        },
+                        "enable": true,
+                        "hide": true,
+                        "iconColor": "rgba(0, 211, 255, 1)",
+                        "name": "Annotations & Alerts",
+                        "type": "dashboard"
+                    }
+                ]
+            },
+            "editable": true,
+            "fiscalYearStartMonth": 0,
+            "graphTooltip": 0,
+            "id": 11,
+            "links": [],
+            "liveNow": false,
+            "panels": [
+                {
+                    "datasource": {
+                        "type": "prometheus",
+                        "uid": "grafanacloud-prom"
+                    },
+                    "gridPos": {
+                        "h": 10,
+                        "w": 7,
+                        "x": 0,
+                        "y": 0
+                    },
+                    "id": 3,
+                    "options": {
+                        "code": {
+                            "language": "plaintext",
+                            "showLineNumbers": false,
+                            "showMiniMap": false
+                        },
+                        "content": "# SCADA Data Processor\n\n<div style=\"display: flex; gap: 8px;\">\n<div style=\"border-radius: 4px; height: 20px; width: 20px; background-color: ${eda_indicator_color}\"></div>\n<p>${eda_indicator_message}</p>\n<div>",
+                        "mode": "markdown"
+                    },
+                    "pluginVersion": "10.0.1-cloud.1.d4a15e66",
+                    "title": "Event Driven Ansible",
+                    "type": "text"
+                },
+                {
+                    "datasource": {
+                        "type": "prometheus",
+                        "uid": "grafanacloud-prom"
+                    },
+                    "description": "",
+                    "fieldConfig": {
+                        "defaults": {
+                            "color": {
+                                "mode": "continuous-RdYlGr"
+                            },
+                            "decimals": 2,
+                            "mappings": [],
+                            "min": 0,
+                            "thresholds": {
+                                "mode": "absolute",
+                                "steps": [
+                                    {
+                                        "color": "green",
+                                        "value": null
+                                    }
+                                ]
+                            },
+                            "unit": "kwatt"
+                        },
+                        "overrides": []
+                    },
+                    "gridPos": {
+                        "h": 10,
+                        "w": 7,
+                        "x": 7,
+                        "y": 0
+                    },
+                    "id": 1,
+                    "interval": "5s",
+                    "options": {
+                        "orientation": "auto",
+                        "reduceOptions": {
+                            "calcs": [
+                                "lastNotNull"
+                            ],
+                            "fields": "/^wind_turbine_power_metric\\{__proxy_source__=\"influx\", bar_label=\"power_kw\", source=\"grafanacloud\\-zleblanc\\-prom\"\\}$/",
+                            "values": false
+                        },
+                        "showThresholdLabels": true,
+                        "showThresholdMarkers": true
+                    },
+                    "pluginVersion": "10.0.1-cloud.1.d4a15e66",
+                    "targets": [
+                        {
+                            "datasource": {
+                                "type": "prometheus",
+                                "uid": "grafanacloud-prom"
+                            },
+                            "editorMode": "builder",
+                            "expr": "wind_turbine_power_metric{bar_label=\"power_kw\"}",
+                            "instant": false,
+                            "range": true,
+                            "refId": "A"
+                        }
+                    ],
+                    "title": "Power Generation (kW)",
+                    "type": "gauge"
+                },
+                {
+                    "datasource": {
+                        "type": "prometheus",
+                        "uid": "grafanacloud-prom"
+                    },
+                    "fieldConfig": {
+                        "defaults": {
+                            "color": {
+                                "mode": "palette-classic"
+                            },
+                            "custom": {
+                                "axisCenteredZero": false,
+                                "axisColorMode": "text",
+                                "axisLabel": "",
+                                "axisPlacement": "auto",
+                                "barAlignment": 0,
+                                "drawStyle": "line",
+                                "fillOpacity": 0,
+                                "gradientMode": "none",
+                                "hideFrom": {
+                                    "legend": false,
+                                    "tooltip": false,
+                                    "viz": false
+                                },
+                                "lineInterpolation": "linear",
+                                "lineWidth": 1,
+                                "pointSize": 5,
+                                "scaleDistribution": {
+                                    "type": "linear"
+                                },
+                                "showPoints": "auto",
+                                "spanNulls": false,
+                                "stacking": {
+                                    "group": "A",
+                                    "mode": "none"
+                                },
+                                "thresholdsStyle": {
+                                    "mode": "off"
+                                }
+                            },
+                            "displayName": "wind turbine power (kW)",
+                            "mappings": [],
+                            "thresholds": {
+                                "mode": "absolute",
+                                "steps": [
+                                    {
+                                        "color": "green",
+                                        "value": null
+                                    }
+                                ]
+                            }
+                        },
+                        "overrides": []
+                    },
+                    "gridPos": {
+                        "h": 10,
+                        "w": 7,
+                        "x": 14,
+                        "y": 0
+                    },
+                    "id": 2,
+                    "interval": "5s",
+                    "options": {
+                        "legend": {
+                            "calcs": [],
+                            "displayMode": "list",
+                            "placement": "bottom",
+                            "showLegend": true
+                        },
+                        "tooltip": {
+                            "mode": "single",
+                            "sort": "none"
+                        }
+                    },
+                    "pluginVersion": "10.0.0-cloud.3.b04cc88b",
+                    "targets": [
+                        {
+                            "datasource": {
+                                "type": "prometheus",
+                                "uid": "grafanacloud-prom"
+                            },
+                            "editorMode": "builder",
+                            "expr": "wind_turbine_power_metric{source=\"grafanacloud-zleblanc-prom\", bar_label=\"power_kw\"}",
+                            "instant": false,
+                            "range": true,
+                            "refId": "A"
+                        }
+                    ],
+                    "title": "Power Generation",
+                    "type": "timeseries"
+                }
+            ],
+            "refresh": "5s",
+            "schemaVersion": 38,
+            "style": "dark",
+            "tags": [],
+            "templating": {
+                "list": [
+                    {
+                        "current": {
+                            "selected": true,
+                            "text": "#e7b416",
+                            "value": "#e7b416"
+                        },
+                        "hide": 2,
+                        "name": "eda_indicator_color",
+                        "options": [],
+                        "query": "",
+                        "skipUrlSync": false,
+                        "type": "textbox"
+                    },
+                    {
+                        "current": {
+                            "Text": "(Warning) Power generation change between 50 and 200 kW",
+                            "selected": true,
+                            "value": "(Warning) Power generation change between 50 and 200 kW"
+                        },
+                        "hide": 2,
+                        "name": "eda_indicator_message",
+                        "options": [],
+                        "query": "",
+                        "skipUrlSync": false,
+                        "type": "textbox"
+                    }
+                ]
+            },
+            "time": {
+                "from": "now-6h",
+                "to": "now"
+            },
+            "timepicker": {},
+            "timezone": "",
+            "title": "EDA: SCADA Demo",
+            "uid": "ceb2207e-0d9a-4cc1-8430-ce910511de40",
+            "version": 53,
+            "weekStart": ""
+        }
+    }
+settings: {}
+order: 2000

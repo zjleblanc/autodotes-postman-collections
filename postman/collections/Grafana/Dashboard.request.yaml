@@ -1,0 +1,7 @@
+$kind: http-request
+url: "{{grafana_base_url}}/api/dashboards/db/eda-scada-demo"
+method: GET
+headers:
+  X-Grafana-Org-Id: "1"
+settings: {}
+order: 1000

@@ -1,0 +1,66 @@
+$kind: http-example
+request:
+  url: "{{instance_fqdn}}/projects/:id/"
+  method: GET
+  headers:
+    - key: Accept
+      value: application/json
+    - key: sessionid
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  pathVariables:
+    id: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "created_at": "<dateTime>",
+        "created_by": "<integer>",
+        "git_hash": "<string>",
+        "id": "<integer>",
+        "import_error": "<string>",
+        "import_state": "running",
+        "modified_at": "<dateTime>",
+        "modified_by": "<integer>",
+        "name": "<string>",
+        "organization": {
+          "id": "<integer>",
+          "name": "<string>",
+          "description": "<string>"
+        },
+        "proxy": "<string>",
+        "scm_type": "git",
+        "url": "<string>",
+        "description": "<string>",
+        "eda_credential": {
+          "credential_type_id": "<integer>",
+          "id": "<integer>",
+          "inputs": {
+            "magna_72": "proident sit anim minim e"
+          },
+          "name": "<string>",
+          "organization_id": "<integer>",
+          "description": "<string>",
+          "managed": "<boolean>"
+        },
+        "signature_validation_credential": {
+          "credential_type_id": "<integer>",
+          "id": "<integer>",
+          "inputs": {
+            "Duis_c": -98313555
+          },
+          "name": "<string>",
+          "organization_id": "<integer>",
+          "description": "<string>",
+          "managed": "<boolean>"
+        },
+        "verify_ssl": "<boolean>",
+        "scm_branch": "<string>",
+        "scm_refspec": "<string>"
+      }
+order: 1000

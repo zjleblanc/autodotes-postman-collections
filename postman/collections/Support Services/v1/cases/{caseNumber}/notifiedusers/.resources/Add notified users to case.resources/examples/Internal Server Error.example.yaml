@@ -1,0 +1,44 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/v1/cases/:caseNumber/notifiedusers"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: "*/*"
+  pathVariables:
+    caseNumber: ""
+  body:
+    type: json
+    content: |-
+      {
+        "user": [
+          {
+            "ssoUsername": "string",
+            "title": "string",
+            "type": "string"
+          },
+          {
+            "ssoUsername": "string",
+            "title": "string",
+            "type": "string"
+          }
+        ]
+      }
+response:
+  statusCode: 500
+  statusText: Internal Server Error
+  headers:
+    Content-Type: "*/*"
+  body:
+    type: text
+    content: |-
+      {
+        "internalErrorCode": "string",
+        "message": "string",
+        "detailMessage": "string",
+        "recommendations": [
+          "string",
+          "string"
+        ]
+      }
+order: 3000

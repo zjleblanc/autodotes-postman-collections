@@ -1,0 +1,20 @@
+$kind: http-request
+description: |-
+  Get the TV show credits for a person.
+
+  You can query for some extra details about the credit with the [credit method](#endpoint:xPWdEBLkvCNZSicLN).
+url: "{{baseUrl}}/person/:person_id/tv_credits"
+method: GET
+pathVariables:
+  - key: person_id
+    value: "24717925"
+    description: "(Required) "
+auth:
+  type: apikey
+  credentials:
+    key: api_key
+    value: "{{api_key}}"
+    in: query
+settings: {}
+examples: ./.resources/Get TV Credits.resources/examples
+order: 5000

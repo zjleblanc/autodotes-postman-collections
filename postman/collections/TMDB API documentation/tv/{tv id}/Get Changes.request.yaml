@@ -1,0 +1,22 @@
+$kind: http-request
+description: |-
+  Get the changes for a TV show. By default only the last 24 hours are returned.
+
+  You can query up to 14 days in a single query by using the `start_date` and `end_date` query parameters.
+
+  TV show changes are different than movie changes in that there are some edits on seasons and episodes that will create a change entry at the show level. These can be found under the season and episode keys. These keys will contain a `series_id` and `episode_id`. You can use the [season changes](#endpoint:ZqhtyQbJ4YXz8RSya) and [episode changes](#endpoint:FpqrhBzgf2RJv4bHC) methods to look these up individually.
+url: "{{baseUrl}}/tv/:tv_id/changes"
+method: GET
+pathVariables:
+  - key: tv_id
+    value: "24717925"
+    description: "(Required) "
+auth:
+  type: apikey
+  credentials:
+    key: api_key
+    value: "{{api_key}}"
+    in: query
+settings: {}
+examples: ./.resources/Get Changes.resources/examples
+order: 17000

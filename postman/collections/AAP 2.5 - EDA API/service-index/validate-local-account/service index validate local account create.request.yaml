@@ -1,0 +1,7 @@
+$kind: http-request
+description: Validate a user's username and password.
+url: "{{instance_fqdn}}/api/eda/v1/service-index/validate-local-account/"
+method: POST
+settings: {}
+examples: ./.resources/service index validate local account create.resources/examples
+order: 1000

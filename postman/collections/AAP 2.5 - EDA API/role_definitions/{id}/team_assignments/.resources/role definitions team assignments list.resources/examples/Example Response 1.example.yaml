@@ -1,0 +1,85 @@
+$kind: http-example
+request:
+  url: "{{instance_fqdn}}/role_definitions/:id/team_assignments/?page=<integer>&page_size=<integer>&search=<string>"
+  method: GET
+  headers:
+    - key: Accept
+      value: application/json
+    - key: sessionid
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  queryParams:
+    - key: page
+      value: <integer>
+      description: A page number within the paginated result set.
+    - key: page_size
+      value: <integer>
+      description: Number of results to return per page.
+    - key: search
+      value: <string>
+      description: A search term.
+  pathVariables:
+    id: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "count": "<integer>",
+        "next": "<uri>",
+        "previous": "<uri>",
+        "page_size": "<integer>",
+        "page": "<integer>",
+        "results": [
+          {
+            "content_type": "eda.rulebook",
+            "created": "<dateTime>",
+            "created_by": "<integer>",
+            "id": "<integer>",
+            "related": {
+              "culpa_8": "<string>",
+              "occaecat_2": "<string>",
+              "magna6": "<string>"
+            },
+            "role_definition": "<integer>",
+            "summary_fields": {
+              "exercitation_89": {
+                "cillum_7": true,
+                "ipsum833": "exercitation elit aute amet"
+              }
+            },
+            "url": "<string>",
+            "object_id": "<string>",
+            "object_ansible_id": "<uuid>",
+            "team": "<integer>",
+            "team_ansible_id": "<uuid>"
+          },
+          {
+            "content_type": "eda.decisionenvironment",
+            "created": "<dateTime>",
+            "created_by": "<integer>",
+            "id": "<integer>",
+            "related": {
+              "ad79": "<string>",
+              "exad": "<string>"
+            },
+            "role_definition": "<integer>",
+            "summary_fields": {
+              "laborum07e": {
+                "dolore_8c": 83218270.31436294,
+                "eu_b95": false
+              }
+            },
+            "url": "<string>",
+            "object_id": "<string>",
+            "object_ansible_id": "<uuid>",
+            "team": "<integer>",
+            "team_ansible_id": "<uuid>"
+          }
+        ]
+      }
+order: 1000

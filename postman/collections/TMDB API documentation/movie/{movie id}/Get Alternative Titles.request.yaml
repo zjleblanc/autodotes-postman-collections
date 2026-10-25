@@ -1,0 +1,26 @@
+$kind: http-request
+description: |-
+  Get all of the alternative titles for a movie.
+
+  #### Recent Changes
+
+  | **Date** | **Change** |
+  | - | - |
+  | March 16, 2018 | Added the `type` field. |
+url: "{{baseUrl}}/movie/:movie_id/alternative_titles?country=in fugiat"
+method: GET
+queryParams:
+  country: in fugiat
+pathVariables:
+  - key: movie_id
+    value: "24717925"
+    description: "(Required) "
+auth:
+  type: apikey
+  credentials:
+    key: api_key
+    value: "{{api_key}}"
+    in: query
+settings: {}
+examples: ./.resources/Get Alternative Titles.resources/examples
+order: 6000

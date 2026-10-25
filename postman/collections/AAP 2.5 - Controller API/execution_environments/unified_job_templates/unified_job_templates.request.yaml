@@ -1,0 +1,5 @@
+$kind: http-request
+url: https://{{instance_fqdn}}/api/controller/v2/execution_environments/{id}/unified_job_templates/
+method: GET
+settings: {}
+order: 1000

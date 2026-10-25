@@ -1,0 +1,18 @@
+$kind: http-request
+description: Remove the user specified by the ssoUsername parameter from the case.
+url: "{{baseUrl}}/v1/cases/:caseNumber/notifiedusers/:delUsername"
+method: DELETE
+headers:
+  Accept: "*/*"
+pathVariables:
+  - key: caseNumber
+    value: string
+    description: (Required) CaseNumber
+  - key: delUsername
+    value: string
+    description: (Required) Case notified user to delete
+auth:
+  type: noauth
+settings: {}
+examples: ./.resources/Delete notified user from case.resources/examples
+order: 1000

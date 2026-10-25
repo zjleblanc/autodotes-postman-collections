@@ -1,0 +1,16 @@
+$kind: http-request
+description: |-
+  Get  a list of all of the movie ids that have been changed in the past 24 hours.
+
+  You can query it for up to 14 days worth of changed IDs at a time with the `start_date` and `end_date` query parameters. 100 items are returned per page.
+url: "{{baseUrl}}/movie/changes"
+method: GET
+auth:
+  type: apikey
+  credentials:
+    key: api_key
+    value: "{{api_key}}"
+    in: query
+settings: {}
+examples: ./.resources/Get Movie Change List.resources/examples
+order: 7000

@@ -1,0 +1,24 @@
+$kind: http-request
+description: Partially update a decision environment
+url: "{{instance_fqdn}}/api/eda/v1/decision-environments/:id/"
+method: PATCH
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: <integer>
+    description: (Required) A unique integer value identifying this decision environment.
+body:
+  type: json
+  content: |-
+    {
+      "name": "<string>",
+      "description": "<string>",
+      "image_url": "<string>",
+      "organization_id": "<integer>",
+      "eda_credential_id": "<integer>"
+    }
+settings: {}
+examples: ./.resources/decision environments partial update.resources/examples
+order: 2000

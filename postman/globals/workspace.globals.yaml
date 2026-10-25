@@ -1,0 +1,2 @@
+name: Globals
+values: [ { key: rhsm_offline_token, value: ***REMOVED***, enabled: true, type: secret, description: { content: "", type: text/plain } }, { key: rhsm_access_token_expiry, value: "0", enabled: true, description: { content: "", type: text/plain } }, { key: rhsm_access_token, value: "", enabled: true, type: secret } ]

@@ -1,0 +1,44 @@
+$kind: http-example
+request:
+  url: "{{instance_fqdn}}/users/:id/"
+  method: PATCH
+  headers:
+    - key: Content-Type
+      value: application/json
+    - key: Accept
+      value: application/json
+    - key: sessionid
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  pathVariables:
+    id: ""
+  body:
+    type: json
+    content: |-
+      {
+        "is_superuser": "<boolean>"
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "created_at": "<dateTime>",
+        "id": "<integer>",
+        "modified_at": "<dateTime>",
+        "resource": {
+          "pariatur_29": "laboris aliquip",
+          "voluptate_02f": true,
+          "dolor3ff": "enim amet"
+        },
+        "username": "<string>",
+        "email": "<email>",
+        "first_name": "<string>",
+        "last_name": "<string>",
+        "is_superuser": "<boolean>"
+      }
+order: 1000

@@ -1,0 +1,24 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/movie/:movie_id/external_ids?api_key=in fugiat"
+  method: GET
+  queryParams:
+    api_key: in fugiat
+  pathVariables:
+    movie_id: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+       "imdb_id": "tt1856101",
+       "facebook_id": "BladeRunner2049",
+       "instagram_id": "bladerunnermovie",
+       "twitter_id": "bladerunner",
+       "id": 335984
+      }
+order: 1000

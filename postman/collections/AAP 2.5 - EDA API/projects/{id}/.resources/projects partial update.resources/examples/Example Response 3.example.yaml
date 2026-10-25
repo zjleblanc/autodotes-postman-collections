@@ -1,0 +1,33 @@
+$kind: http-example
+request:
+  url: "{{instance_fqdn}}/projects/:id/"
+  method: PATCH
+  headers:
+    - key: Content-Type
+      value: application/json
+    - key: sessionid
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  pathVariables:
+    id: ""
+  body:
+    type: json
+    content: |-
+      {
+        "name": "<string>",
+        "description": "<string>",
+        "organization_id": "<integer>",
+        "eda_credential_id": "<integer>",
+        "signature_validation_credential_id": "<integer>",
+        "scm_branch": "<string>",
+        "scm_refspec": "<string>",
+        "verify_ssl": "<boolean>",
+        "proxy": "<string>"
+      }
+response:
+  statusCode: 409
+  statusText: Conflict
+  body:
+    type: text
+    content: ""
+order: 3000

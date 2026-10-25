@@ -1,0 +1,13 @@
+$kind: http-request
+description: Search for keywords.
+url: "{{baseUrl}}/search/keyword"
+method: GET
+auth:
+  type: apikey
+  credentials:
+    key: api_key
+    value: "{{api_key}}"
+    in: query
+settings: {}
+examples: ./.resources/Search Keywords.resources/examples
+order: 1000

@@ -1,0 +1,15 @@
+$kind: http-request
+description: Delete a decision environment by id
+url: "{{instance_fqdn}}/api/eda/v1/decision-environments/:id/?force=<boolean>"
+method: DELETE
+queryParams:
+  - key: force
+    value: <boolean>
+    description: Force deletion if there are dependent objects
+pathVariables:
+  - key: id
+    value: <integer>
+    description: (Required) A unique integer value identifying this decision environment.
+settings: {}
+examples: ./.resources/decision environments destroy.resources/examples
+order: 3000

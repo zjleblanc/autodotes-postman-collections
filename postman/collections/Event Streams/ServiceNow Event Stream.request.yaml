@@ -1,0 +1,16 @@
+$kind: http-request
+url: https://ansible.autodotes.com:443/eda-event-streams/api/eda/v1/external_event_stream/1e227fb1-79ec-4da1-8c23-2cd5bcae28a6/post/
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "cat_item": "3dfcbfc687633e106a094046cebb3507",
+        "number": "RITM-TEST"
+    }
+auth:
+  type: bearer
+  credentials:
+    token: "{{event_stream_snow_token}}"
+settings: {}
+order: 1000

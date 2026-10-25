@@ -1,0 +1,6 @@
+$kind: http-request
+name: ad_hoc_commands
+url: https://{{instance_fqdn}}/api/controller/v2/inventories/{id}/ad_hoc_commands/
+method: POST
+settings: {}
+order: 2000

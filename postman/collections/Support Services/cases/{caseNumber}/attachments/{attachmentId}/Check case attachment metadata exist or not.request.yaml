@@ -1,0 +1,17 @@
+$kind: http-request
+url: "{{baseUrl}}/cases/:caseNumber/attachments/:attachmentId"
+method: HEAD
+headers:
+  Accept: application/json
+pathVariables:
+  - key: caseNumber
+    value: string
+    description: (Required) Case number
+  - key: attachmentId
+    value: string
+    description: (Required) attachment Id
+auth:
+  type: noauth
+settings: {}
+examples: ./.resources/Check case attachment metadata exist or not.resources/examples
+order: 2000

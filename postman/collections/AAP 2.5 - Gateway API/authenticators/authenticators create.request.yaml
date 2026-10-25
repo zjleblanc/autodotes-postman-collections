@@ -1,0 +1,28 @@
+$kind: http-request
+description: API endpoint that allows authenticators to be viewed or edited.
+url: "{{instance_fqdn}}/api/gateway/v1/authenticators/"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+body:
+  type: json
+  content: |-
+    {
+      "name": "<string>",
+      "type": "aap_gateway_api.authentication.authenticator_plugins.legacy_base",
+      "enabled": "<boolean>",
+      "create_objects": "<boolean>",
+      "remove_users": "<boolean>",
+      "configuration": {
+        "sint1f7": {}
+      },
+      "order": "<integer>",
+      "auto_migrate_users_to": "<integer>",
+      "created": 87141851.65260693,
+      "created_by": 28433617,
+      "id": "non"
+    }
+settings: {}
+examples: ./.resources/authenticators create.resources/examples
+order: 3000

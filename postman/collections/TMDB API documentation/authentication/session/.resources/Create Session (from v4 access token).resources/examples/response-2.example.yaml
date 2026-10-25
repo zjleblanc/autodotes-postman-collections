@@ -1,0 +1,24 @@
+$kind: http-example
+name: response
+request:
+  url: "{{baseUrl}}/authentication/session/convert/4"
+  method: POST
+  body:
+    type: text
+    content: |-
+      {
+          "access_token": "REDACTED_ACCESS_TOKEN"
+      }
+response:
+  statusCode: 404
+  statusText: Not Found
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+       "status_message": "laboris quis officia",
+       "status_code": 17219857
+      }
+order: 3000

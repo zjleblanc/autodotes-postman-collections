@@ -1,0 +1,37 @@
+$kind: http-request
+description: |-
+  Rate a TV episode.
+
+  A valid session or guest session ID is required. You can read more about how this works [here](#docTextSection:NSZtgz7zptsiLYxXZ).
+url: "{{baseUrl}}/tv/:tv_id/season/:season_number/episode/:episode_number/rating?guest_session_id=in fugiat&session_id=in fugiat"
+method: POST
+headers:
+  Content-Type: application/json
+queryParams:
+  guest_session_id: in fugiat
+  session_id: in fugiat
+pathVariables:
+  - key: tv_id
+    value: "24717925"
+    description: "(Required) "
+  - key: season_number
+    value: "24717925"
+    description: "(Required) "
+  - key: episode_number
+    value: "24717925"
+    description: "(Required) "
+body:
+  type: text
+  content: |-
+    {
+        "value": 8.5
+    }
+auth:
+  type: apikey
+  credentials:
+    key: api_key
+    value: "{{api_key}}"
+    in: query
+settings: {}
+examples: ./.resources/Rate TV Episode.resources/examples
+order: 2000

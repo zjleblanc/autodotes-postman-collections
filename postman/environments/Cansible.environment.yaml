@@ -1,0 +1,58 @@
+name: Cansible
+values:
+  - key: aap_bearer_token
+    value: ""
+    type: secret
+  - key: slack_bearer_token
+    value: ""
+    type: secret
+  - key: aap_base_url
+    value: https://699qp.example.opentlc.com/
+  - key: pve_api_token
+    value: ""
+    type: secret
+  - key: pve_api_base_url
+    value: https://pve.autodotes.com/api2/json
+  - key: pve_api_base_url_ext
+    value: https://pve.autodotes.com/api2/extjs
+  - key: grafana_admin_token
+    value: ""
+    type: secret
+  - key: grafana_base_url
+    value: https://zleblanc.grafana.net/
+  - key: snow_instance_url
+    value: https://dev29577.service-now.com
+  - key: rh_console_token
+    value: ""
+    type: secret
+  - key: pah_base_url
+    value: https://automation-hub.autodotes.com
+  - key: dynatrace_host
+    value: https://lft20855.apps.dynatrace.com/
+  - key: dynatrace_token
+    value: ""
+    type: secret
+  - key: bitbucket_app_pw
+    value: ""
+    type: secret
+  - key: bitbucket_app_user
+    value: Pipelines
+  - key: bitbucket_ws
+    value: zach-leblanc
+  - key: bitbucket_repo
+    value: ansible-execution-environments
+  - key: snow_instance_pw
+    value: ""
+    type: secret
+  - key: aap_admin_pw
+    value: ""
+    type: secret
+  - key: demo_webhook_event_stream_token
+    value: ""
+    type: secret
+  - key: demo_oauth_event_stream_token
+    value: ""
+    type: secret
+  - key: accessTokenExpiry
+    value: ""
+    type: any

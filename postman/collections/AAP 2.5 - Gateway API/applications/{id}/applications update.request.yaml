@@ -1,0 +1,32 @@
+$kind: http-request
+url: "{{instance_fqdn}}/api/gateway/v1/applications/:id/"
+method: PUT
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: <integer>
+    description: (Required) A unique integer value identifying this application.
+body:
+  type: json
+  content: |-
+    {
+      "authorization_grant_type": "authorization-code",
+      "client_type": "public",
+      "name": "<string>",
+      "organization": "<integer>",
+      "redirect_uris": "<string>",
+      "post_logout_redirect_uris": "<string>",
+      "algorithm": "RS256",
+      "user": "<integer>",
+      "description": "<string>",
+      "skip_authorization": "<boolean>",
+      "client_id": 53359076.1166248,
+      "client_secret": true,
+      "created": 51100152,
+      "created_by": "reprehenderit do Lorem sunt exercitation"
+    }
+settings: {}
+examples: ./.resources/applications update.resources/examples
+order: 3000

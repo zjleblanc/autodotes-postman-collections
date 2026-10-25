@@ -1,0 +1,26 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/authentication/token/validate_with_login"
+  method: POST
+  body:
+    type: text
+    content: |-
+      {
+          "username": "johnny_appleseed",
+          "password": "REDACTED",
+          "request_token": "REDACTED_REQUEST_TOKEN"
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+       "success": true,
+       "expires_at": "2018-07-24 04:10:26 UTC",
+       "request_token": "REDACTED_REQUEST_TOKEN"
+      }
+order: 1000

@@ -1,0 +1,6 @@
+$kind: http-request
+name: labels
+url: https://{{instance_fqdn}}/api/controller/v2/job_templates/{id}/labels/
+method: POST
+settings: {}
+order: 2000

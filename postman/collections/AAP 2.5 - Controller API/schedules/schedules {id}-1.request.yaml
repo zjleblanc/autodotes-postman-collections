@@ -1,0 +1,6 @@
+$kind: http-request
+name: schedules {id}
+url: https://{{instance_fqdn}}/api/controller/v2/schedules/{id}/
+method: GET
+settings: {}
+order: 10000

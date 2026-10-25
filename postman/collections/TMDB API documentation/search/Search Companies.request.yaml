@@ -1,0 +1,13 @@
+$kind: http-request
+description: Search for companies.
+url: "{{baseUrl}}/search/company"
+method: GET
+auth:
+  type: apikey
+  credentials:
+    key: api_key
+    value: "{{api_key}}"
+    in: query
+settings: {}
+examples: ./.resources/Search Companies.resources/examples
+order: 4000

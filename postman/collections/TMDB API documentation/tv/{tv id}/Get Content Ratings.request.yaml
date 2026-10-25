@@ -1,0 +1,17 @@
+$kind: http-request
+description: Get the list of content ratings (certifications) that have been added to a TV show.
+url: "{{baseUrl}}/tv/:tv_id/content_ratings"
+method: GET
+pathVariables:
+  - key: tv_id
+    value: "24717925"
+    description: "(Required) "
+auth:
+  type: apikey
+  credentials:
+    key: api_key
+    value: "{{api_key}}"
+    in: query
+settings: {}
+examples: ./.resources/Get Content Ratings.resources/examples
+order: 7000

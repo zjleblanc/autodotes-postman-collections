@@ -1,0 +1,21 @@
+$kind: http-request
+url: "{{instance_fqdn}}/api/gateway/v1/tokens/:id/"
+method: PATCH
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: <integer>
+    description: (Required) A unique integer value identifying this access token.
+body:
+  type: json
+  content: |-
+    {
+      "application": "<integer>",
+      "description": "<string>",
+      "scope": "<string>"
+    }
+settings: {}
+examples: ./.resources/tokens partial update.resources/examples
+order: 3000

@@ -1,0 +1,17 @@
+$kind: http-request
+description: Get the images for a collection by id.
+url: "{{baseUrl}}/collection/:collection_id/images"
+method: GET
+pathVariables:
+  - key: collection_id
+    value: "24717925"
+    description: "(Required) "
+auth:
+  type: apikey
+  credentials:
+    key: api_key
+    value: "{{api_key}}"
+    in: query
+settings: {}
+examples: ./.resources/Get Images.resources/examples
+order: 2000

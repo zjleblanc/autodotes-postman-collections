@@ -1,0 +1,17 @@
+$kind: http-request
+description: Get a list of similar TV shows. These items are assembled by looking at keywords and genres.
+url: "{{baseUrl}}/tv/:tv_id/similar"
+method: GET
+pathVariables:
+  - key: tv_id
+    value: "24717925"
+    description: "(Required) "
+auth:
+  type: apikey
+  credentials:
+    key: api_key
+    value: "{{api_key}}"
+    in: query
+settings: {}
+examples: ./.resources/Get Similar TV Shows.resources/examples
+order: 6000

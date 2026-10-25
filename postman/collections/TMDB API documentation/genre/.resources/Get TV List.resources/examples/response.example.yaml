@@ -1,0 +1,21 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/genre/tv/list"
+  method: GET
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+       "genres": [
+        {
+         "id": 10759,
+         "name": "Action & Adventure"
+        }
+       ]
+      }
+order: 1000

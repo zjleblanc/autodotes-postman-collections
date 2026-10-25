@@ -1,0 +1,38 @@
+$kind: http-example
+request:
+  url: "{{instance_fqdn}}/api/gateway/v1/teams/:id/admins/disassociate/"
+  method: POST
+  headers:
+    - key: Content-Type
+      value: application/json
+    - key: Accept
+      value: application/json
+    - key: gateway_sessionid
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  pathVariables:
+    id: ""
+  body:
+    type: json
+    content: |-
+      {
+        "instances": [
+          "<integer>",
+          "<integer>"
+        ]
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "instances": [
+          "<integer>",
+          "<integer>"
+        ]
+      }
+order: 1000

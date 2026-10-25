@@ -1,0 +1,29 @@
+$kind: http-request
+description: API endpoint that allows groups to be viewed or edited.
+url: "{{instance_fqdn}}/api/gateway/v1/http_ports/:id/"
+method: PUT
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: <integer>
+    description: (Required) A unique integer value identifying this http port.
+body:
+  type: json
+  content: |-
+    {
+      "name": "<string>",
+      "number": "<integer>",
+      "use_https": "<boolean>",
+      "is_api_port": "<boolean>",
+      "created": -34819080,
+      "created_by": -16571802,
+      "id": false,
+      "modified": 12789688.379813313,
+      "modified_by": 44696790.87610906,
+      "related": 57038886
+    }
+settings: {}
+examples: ./.resources/http ports update.resources/examples
+order: 3000

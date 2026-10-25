@@ -1,0 +1,18 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/v1/sftp/attachments/?path=string&includeAll=false"
+  method: GET
+  queryParams:
+    - key: path
+      value: string
+      description: Absolute Path for which you want to list files
+    - key: includeAll
+      value: "false"
+      description: Recursively lists all files if true. Allowed only for internal users
+response:
+  statusCode: 204
+  statusText: No Content
+  body:
+    type: text
+    content: ""
+order: 2000

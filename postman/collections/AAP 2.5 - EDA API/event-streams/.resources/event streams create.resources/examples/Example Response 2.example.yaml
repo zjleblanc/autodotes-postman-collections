@@ -1,0 +1,27 @@
+$kind: http-example
+request:
+  url: "{{instance_fqdn}}/event-streams/"
+  method: POST
+  headers:
+    - key: Content-Type
+      value: application/json
+    - key: sessionid
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  body:
+    type: json
+    content: |-
+      {
+        "eda_credential_id": "<integer>",
+        "name": "<string>",
+        "organization_id": "<integer>",
+        "test_mode": "<boolean>",
+        "additional_data_headers": "<string>"
+      }
+response:
+  statusCode: 400
+  statusText: Bad Request
+  body:
+    type: text
+    content: ""
+order: 2000

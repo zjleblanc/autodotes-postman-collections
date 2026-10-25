@@ -1,0 +1,13 @@
+$kind: http-request
+url: https://{{dd_region}}/api/{{dd_api_version}}/events
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "title": "Test Integration Alert Event (2) - RESOLVED",
+      "text": "Closing out the custom integration alert test entry.",
+      "aggregation_key": "AaFAMwspAADMaPOC52CeCAAA",
+      "alert_type": "success"
+    }
+order: 2000

@@ -1,0 +1,6 @@
+$kind: http-request
+name: instances
+url: https://{{instance_fqdn}}/api/controller/v2/instances/
+method: POST
+settings: {}
+order: 8000

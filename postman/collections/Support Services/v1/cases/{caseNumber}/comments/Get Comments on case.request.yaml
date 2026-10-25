@@ -1,0 +1,28 @@
+$kind: http-request
+description: Retrieve the comments on the case number specified in the path.
+url: "{{baseUrl}}/v1/cases/:caseNumber/comments?startDate=string&endDate=string&sortField=string&sortOrder=string"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  - key: startDate
+    value: string
+    description: Start Date
+  - key: endDate
+    value: string
+    description: End Date
+  - key: sortField
+    value: string
+    description: Sort Field
+  - key: sortOrder
+    value: string
+    description: Sort Order
+pathVariables:
+  - key: caseNumber
+    value: string
+    description: (Required) Case Number
+auth:
+  type: noauth
+settings: {}
+examples: ./.resources/Get Comments on case.resources/examples
+order: 2000

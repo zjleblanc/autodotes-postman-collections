@@ -1,0 +1,13 @@
+$kind: http-request
+description: Retrieves the list of documents from Solr based on the input request
+url: "{{baseUrl}}/search/kcs?q=string"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  - key: q
+    value: string
+    description: (Required) Solr query
+settings: {}
+examples: ./.resources/Search based on Search Criteria.resources/examples
+order: 1000

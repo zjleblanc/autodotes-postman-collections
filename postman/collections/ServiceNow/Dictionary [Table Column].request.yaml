@@ -1,0 +1,5 @@
+$kind: http-request
+url: "{{snow_instance_url}}/api/now/table/sys_dictionary/f780eff733a14a10792c131fad5c7b62"
+method: GET
+settings: {}
+order: 11000

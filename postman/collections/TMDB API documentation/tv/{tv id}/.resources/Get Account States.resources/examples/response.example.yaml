@@ -1,0 +1,26 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/tv/:tv_id/account_states?guest_session_id=in fugiat&session_id=in fugiat"
+  method: GET
+  queryParams:
+    guest_session_id: in fugiat
+    session_id: in fugiat
+  pathVariables:
+    tv_id: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+       "id": 1399,
+       "favorite": true,
+       "rated": {
+        "value": 9
+       },
+       "watchlist": false
+      }
+order: 1000

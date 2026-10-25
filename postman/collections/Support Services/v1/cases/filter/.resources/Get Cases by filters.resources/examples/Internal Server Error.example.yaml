@@ -1,0 +1,110 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/v1/cases/filter"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "maxResults": 5140,
+        "associateSSOName": "string",
+        "contributor": false,
+        "endDate": "1963-08-23T18:56:11.381Z",
+        "ftsRole": false,
+        "includeClosed": false,
+        "includeSecureSupport": false,
+        "isLocked": false,
+        "offset": 9276,
+        "owner": false,
+        "includeAllCustomerCases": false,
+        "severity": "string",
+        "sortField": "string",
+        "sortOrder": "string",
+        "startDate": "1970-02-20T11:17:43.837Z",
+        "status": "string",
+        "translator": false,
+        "view": "string",
+        "accountNumber": "string",
+        "resourceType": "string",
+        "id": "string",
+        "uri": "string",
+        "viewUri": "string",
+        "caseNumbers": [
+          "string",
+          "string"
+        ],
+        "commentIds": [
+          "string",
+          "string"
+        ],
+        "createdBySSOName": "string",
+        "groupNumber": "string",
+        "groupNumbers": [
+          "string",
+          "string"
+        ],
+        "includePrivate": false,
+        "keyword": "string",
+        "onlyUngrouped": false,
+        "ownerSSOName": "string",
+        "product": "string",
+        "recordType": "string",
+        "reducedInformation": false,
+        "type": "string",
+        "accountNumbers": [
+          "string",
+          "string"
+        ],
+        "internalStatuses": [
+          "string",
+          "string"
+        ],
+        "maxDateOpened": "1968-04-24T15:54:59.435Z",
+        "maxSBT": 3617,
+        "minDateOpened": "2022-10-05T14:21:39.118Z",
+        "minSBT": 9939,
+        "only24X7": false,
+        "only24X7HandoverReady": false,
+        "onlyEscalated": false,
+        "products": [
+          "string",
+          "string"
+        ],
+        "sbrs": [
+          "string",
+          "string"
+        ],
+        "severities": [
+          "string",
+          "string"
+        ],
+        "statuses": [
+          "string",
+          "string"
+        ],
+        "versions": [
+          "string",
+          "string"
+        ]
+      }
+response:
+  statusCode: 500
+  statusText: Internal Server Error
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "internalErrorCode": "string",
+        "message": "string",
+        "detailMessage": "string",
+        "recommendations": [
+          "string",
+          "string"
+        ]
+      }
+order: 3000

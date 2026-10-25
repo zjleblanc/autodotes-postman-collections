@@ -1,0 +1,18 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/search/cases?q=string&partnerSearch=true"
+  method: GET
+  queryParams:
+    - key: q
+      value: string
+      description: (Required) Solr query
+    - key: partnerSearch
+      value: "true"
+      description: If you want to include partners accounts as well
+response:
+  statusCode: 200
+  statusText: OK
+  body:
+    type: text
+    content: ""
+order: 1000

@@ -1,0 +1,26 @@
+$kind: http-request
+description: Index of all the resources in the system.
+url: "{{instance_fqdn}}/api/eda/v1/service-index/resources/:ansible_id/"
+method: PATCH
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: ansible_id
+    value: <uuid>
+    description: "(Required) "
+body:
+  type: json
+  content: |-
+    {
+      "ansible_id": "<uuid>",
+      "service_id": "<uuid>",
+      "is_partially_migrated": "<boolean>",
+      "resource_type": "<string>",
+      "resource_data": {
+        "fugiat1_": "laborum voluptate"
+      }
+    }
+settings: {}
+examples: ./.resources/service index resources partial update.resources/examples
+order: 3000

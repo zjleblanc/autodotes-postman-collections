@@ -1,0 +1,11 @@
+$kind: collection
+description: AAP 2.5 - Gateway API
+variables:
+  instance_fqdn: https://aap.autodotes.com
+  admin_token: ""
+auth:
+  - id: 0dbb579c-f9b6-493e-b407-9ebcea340d09
+    type: bearer
+    name: bearer auth
+    credentials:
+      token: "{{admin_token}}"

@@ -1,0 +1,279 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/v1/accounts/current"
+  method: GET
+  headers:
+    Accept: application/json
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "accountId": "string",
+        "accountKey": "string",
+        "accountNumber": "string",
+        "accountAlias": "string",
+        "accountMembers": [
+          {
+            "id": "string",
+            "createdBy": {
+              "value": "<Circular reference to #/components/schemas/User detected>"
+            },
+            "createdById": "string",
+            "createdDate": "1998-09-06T13:10:27.262Z",
+            "lastModifiedBy": {
+              "value": "<Circular reference to #/components/schemas/User detected>"
+            },
+            "lastModifiedById": "string",
+            "lastModifiedDate": "2005-09-13T17:01:43.286Z",
+            "name": "string",
+            "ownerId": "string",
+            "isDeleted": false,
+            "isAddToCaseTeam": false,
+            "isEmailOnUpdates": false,
+            "minimumSeverity": "string",
+            "isNotifyOfNewCases": false,
+            "tamCaseStatus": "string",
+            "account": {
+              "value": "<Circular reference to #/components/schemas/Account detected>"
+            },
+            "member": {
+              "value": "<Circular reference to #/components/schemas/User detected>"
+            },
+            "role": "string",
+            "tamEntitlement": {
+              "id": "string",
+              "createdBy": {
+                "value": "<Circular reference to #/components/schemas/User detected>"
+              },
+              "createdById": "string",
+              "createdDate": "1946-07-21T18:28:35.968Z",
+              "lastModifiedBy": {
+                "value": "<Circular reference to #/components/schemas/User detected>"
+              },
+              "lastModifiedById": "string",
+              "lastModifiedDate": "1973-05-14T22:40:43.459Z",
+              "name": "string",
+              "isDeleted": false,
+              "account": {
+                "value": "<Circular reference to #/components/schemas/Account detected>"
+              },
+              "accountId": "string",
+              "assetId": "string",
+              "isAssociatedWithNoEngineeringProducts": false,
+              "businessHoursId": "string",
+              "businessUnit": "string",
+              "casesPerEntitlement": 5276,
+              "isConsiderSupported": false,
+              "contractLineItemId": "string",
+              "contractLineItemSubscriptionProductNum": "string",
+              "endDate": "1998-11-22T12:29:59.361Z",
+              "entitlementProcessRule": "string",
+              "externalAccountNumber": "string",
+              "externalContractId": "string",
+              "externalContractLineItemId": "string",
+              "externalEntitlementId": "string",
+              "externalProductCode": "string",
+              "installBaseNumber": "string",
+              "isPerIncident": false,
+              "isActive": 4056.848434606972,
+              "isL3": false,
+              "isLayered": false,
+              "isManuallySelectedEntitlementProcess": false,
+              "isTAMEntitlement": false,
+              "lastReferencedDate": "2008-11-14T11:28:17.276Z",
+              "lastViewedDate": false,
+              "levelTypeConcat": "string",
+              "oracleStatus": "string",
+              "quantity": 1986.325156818296,
+              "remainingCases": 1092,
+              "serviceContractId": "string",
+              "serviceLevel": "string",
+              "serviceType": "string",
+              "serviceLevelLabel": "string",
+              "serviceValue": 489.01595634488706,
+              "slaProcessId": "string",
+              "startDate": "1976-07-22T12:03:33.686Z",
+              "status": "string",
+              "statusAndStartDate": 7242.478301022104,
+              "subscriptionNumber": "string",
+              "subscriptionProductNumber": "string",
+              "supportLevel": "string",
+              "type": "string",
+              "coordinates": "string"
+            }
+          },
+          {
+            "id": "string",
+            "createdBy": {
+              "value": "<Circular reference to #/components/schemas/User detected>"
+            },
+            "createdById": "string",
+            "createdDate": "1988-12-31T12:41:18.885Z",
+            "lastModifiedBy": {
+              "value": "<Circular reference to #/components/schemas/User detected>"
+            },
+            "lastModifiedById": "string",
+            "lastModifiedDate": "1951-03-08T16:25:59.103Z",
+            "name": "string",
+            "ownerId": "string",
+            "isDeleted": false,
+            "isAddToCaseTeam": false,
+            "isEmailOnUpdates": false,
+            "minimumSeverity": "string",
+            "isNotifyOfNewCases": false,
+            "tamCaseStatus": "string",
+            "account": {
+              "value": "<Circular reference to #/components/schemas/Account detected>"
+            },
+            "member": {
+              "value": "<Circular reference to #/components/schemas/User detected>"
+            },
+            "role": "string",
+            "tamEntitlement": {
+              "id": "string",
+              "createdBy": {
+                "value": "<Circular reference to #/components/schemas/User detected>"
+              },
+              "createdById": "string",
+              "createdDate": "1977-05-11T02:03:50.254Z",
+              "lastModifiedBy": {
+                "value": "<Circular reference to #/components/schemas/User detected>"
+              },
+              "lastModifiedById": "string",
+              "lastModifiedDate": "1990-03-03T08:36:48.807Z",
+              "name": "string",
+              "isDeleted": false,
+              "account": {
+                "value": "<Circular reference to #/components/schemas/Account detected>"
+              },
+              "accountId": "string",
+              "assetId": "string",
+              "isAssociatedWithNoEngineeringProducts": false,
+              "businessHoursId": "string",
+              "businessUnit": "string",
+              "casesPerEntitlement": 9007,
+              "isConsiderSupported": false,
+              "contractLineItemId": "string",
+              "contractLineItemSubscriptionProductNum": "string",
+              "endDate": "2002-09-05T01:36:27.242Z",
+              "entitlementProcessRule": "string",
+              "externalAccountNumber": "string",
+              "externalContractId": "string",
+              "externalContractLineItemId": "string",
+              "externalEntitlementId": "string",
+              "externalProductCode": "string",
+              "installBaseNumber": "string",
+              "isPerIncident": false,
+              "isActive": 3406.235064582015,
+              "isL3": false,
+              "isLayered": false,
+              "isManuallySelectedEntitlementProcess": false,
+              "isTAMEntitlement": false,
+              "lastReferencedDate": "2008-01-07T20:57:14.319Z",
+              "lastViewedDate": false,
+              "levelTypeConcat": "string",
+              "oracleStatus": "string",
+              "quantity": 7867.628103187772,
+              "remainingCases": 7703,
+              "serviceContractId": "string",
+              "serviceLevel": "string",
+              "serviceType": "string",
+              "serviceLevelLabel": "string",
+              "serviceValue": 4107.26344950118,
+              "slaProcessId": "string",
+              "startDate": "2003-07-01T14:59:43.920Z",
+              "status": "string",
+              "statusAndStartDate": 3694.993678150573,
+              "subscriptionNumber": "string",
+              "subscriptionProductNumber": "string",
+              "supportLevel": "string",
+              "type": "string",
+              "coordinates": "string"
+            }
+          }
+        ],
+        "accountStatus": "string",
+        "additionalEnhancedEntitlementCount": 5167.465614872364,
+        "businessHoursId": "string",
+        "csm": "string",
+        "csmUser": {
+          "value": "<Circular reference to #/components/schemas/User detected>"
+        },
+        "cannotAddAttachments": false,
+        "caseCount": 5933.280272724113,
+        "customerSegment": 2025.6934524623737,
+        "description": "string",
+        "escalateToHomeGeoWith1StTouch": false,
+        "escalateToHomeGeoWithoutFirstTouch": false,
+        "escalationsInLast30Days": 8139.973076448761,
+        "escalationsInLast60Days": 2982.4200589733896,
+        "expectsQuickInitialResponse": false,
+        "gscsmSegment": "string",
+        "salesSegment": "string",
+        "hardwarePartner": false,
+        "hasAvailableEnhancedSLA": false,
+        "hasChat": false,
+        "hasConfirmedStatesideSupport": false,
+        "hasEnhancedSLA": false,
+        "hasGroupACLs": false,
+        "hasPreferredSecureSupportAccount": false,
+        "holdSupport": false,
+        "identifyingAddressCountry": "string",
+        "identifyingAddressSuperRegion": "string",
+        "isPartner": false,
+        "isFocusedPartner": false,
+        "isActive": false,
+        "npsScore": 5401.532277356325,
+        "name": "string",
+        "owner": {
+          "value": "<Circular reference to #/components/schemas/User detected>"
+        },
+        "ownerId": "string",
+        "parent": {
+          "value": "<Circular reference to #/components/schemas/Account detected>"
+        },
+        "parentId": "string",
+        "remainingEnhancedEntitlementCases": 8661.081660648637,
+        "requireCGroupOnCreate": false,
+        "responseTime": 4378.210721583726,
+        "secureSupport": false,
+        "securedEnvironment": false,
+        "specialHandlingRequired": false,
+        "strategic": false,
+        "superRegion": "string",
+        "supportPartner": false,
+        "tactical": false,
+        "totalNumberOfEscalations": 862.5670705619482,
+        "watchlist": false,
+        "isInternal": false,
+        "csmUserId": "string",
+        "csmUserName": "string",
+        "csmUserSSOName": "string",
+        "subTerritory": "string",
+        "accountNumberLink": "string",
+        "informManagement": false,
+        "gcsActiveUserCount": 4888.875364415657,
+        "gcsDescription": "string",
+        "gcsEngagementStartDate": "2013-08-12T15:16:18.997Z",
+        "gcsHealth": 635.3463212671384,
+        "gcsHealthExplanation": "string",
+        "gcsHighTouchModel": "string",
+        "gcsLocalization": "string",
+        "gcsOnboardingStatus": "string",
+        "gcsOptOutReason": "string",
+        "gcsSSICenter": "string",
+        "gcsStatus": "string",
+        "gcsMasterRenewalDate": "1980-05-23T22:59:42.247Z",
+        "gcsWelcomedDate": "1984-02-26T02:46:02.935Z",
+        "hasGoldenTicket": false,
+        "enhancedDelivery": false,
+        "restrictAttachmentDownloads": false,
+        "subscriptionAbuse": false,
+        "remoteSessionTermsAcked": false
+      }
+order: 1000

@@ -1,0 +1,83 @@
+$kind: http-example
+request:
+  url: "{{instance_fqdn}}/projects/?name=<string>&page=<integer>&page_size=<integer>&url=<string>"
+  method: GET
+  headers:
+    - key: Accept
+      value: application/json
+    - key: sessionid
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  queryParams:
+    - key: name
+      value: <string>
+      description: Filter by project name.
+    - key: page
+      value: <integer>
+      description: A page number within the paginated result set.
+    - key: page_size
+      value: <integer>
+      description: Number of results to return per page.
+    - key: url
+      value: <string>
+      description: Filter by project url.
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "count": "<integer>",
+        "next": "<uri>",
+        "previous": "<uri>",
+        "page_size": "<integer>",
+        "page": "<integer>",
+        "results": [
+          {
+            "created_at": "<dateTime>",
+            "created_by": "<integer>",
+            "git_hash": "<string>",
+            "id": "<integer>",
+            "import_error": "<string>",
+            "import_state": "completed",
+            "modified_at": "<dateTime>",
+            "modified_by": "<integer>",
+            "name": "<string>",
+            "organization_id": "<integer>",
+            "proxy": "<string>",
+            "scm_type": "git",
+            "signature_validation_credential_id": "<integer>",
+            "url": "<string>",
+            "description": "<string>",
+            "eda_credential_id": "<integer>",
+            "scm_branch": "<string>",
+            "scm_refspec": "<string>",
+            "verify_ssl": "<boolean>"
+          },
+          {
+            "created_at": "<dateTime>",
+            "created_by": "<integer>",
+            "git_hash": "<string>",
+            "id": "<integer>",
+            "import_error": "<string>",
+            "import_state": "completed",
+            "modified_at": "<dateTime>",
+            "modified_by": "<integer>",
+            "name": "<string>",
+            "organization_id": "<integer>",
+            "proxy": "<string>",
+            "scm_type": "git",
+            "signature_validation_credential_id": "<integer>",
+            "url": "<string>",
+            "description": "<string>",
+            "eda_credential_id": "<integer>",
+            "scm_branch": "<string>",
+            "scm_refspec": "<string>",
+            "verify_ssl": "<boolean>"
+          }
+        ]
+      }
+order: 1000

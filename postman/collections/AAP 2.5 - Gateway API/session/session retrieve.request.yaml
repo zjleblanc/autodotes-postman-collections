@@ -1,0 +1,6 @@
+$kind: http-request
+url: "{{instance_fqdn}}/api/gateway/v1/session/"
+method: GET
+settings: {}
+examples: ./.resources/session retrieve.resources/examples
+order: 1000

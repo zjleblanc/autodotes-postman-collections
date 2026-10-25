@@ -1,0 +1,28 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/tv/:tv_id/season/:season_number/episode/:episode_number/rating?guest_session_id=in fugiat&session_id=in fugiat"
+  method: POST
+  headers:
+    - key: Content-Type
+      value: application/json;charset=utf-8
+      description: "(Required) "
+  queryParams:
+    guest_session_id: in fugiat
+    session_id: in fugiat
+  pathVariables:
+    tv_id: ""
+    season_number: ""
+    episode_number: ""
+response:
+  statusCode: 201
+  statusText: Created
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+       "status_code": 1,
+       "status_message": "Success."
+      }
+order: 1000

@@ -1,0 +1,13 @@
+$kind: http-request
+description: Get a list of the top rated TV shows on TMDB.
+url: "{{baseUrl}}/tv/top_rated"
+method: GET
+auth:
+  type: apikey
+  credentials:
+    key: api_key
+    value: "{{api_key}}"
+    in: query
+settings: {}
+examples: ./.resources/Get Top Rated.resources/examples
+order: 2000

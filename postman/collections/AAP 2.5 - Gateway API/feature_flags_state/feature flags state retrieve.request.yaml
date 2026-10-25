@@ -1,0 +1,7 @@
+$kind: http-request
+description: A view class for displaying feature flags
+url: "{{instance_fqdn}}/api/gateway/v1/feature_flags_state/"
+method: GET
+settings: {}
+examples: ./.resources/feature flags state retrieve.resources/examples
+order: 1000

@@ -1,0 +1,67 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/v1/accounts/:accountNumber/contacts"
+  method: GET
+  headers:
+    Accept: application/json
+  pathVariables:
+    accountNumber: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      [
+        {
+          "access": false,
+          "canAccessAllAccounts": false,
+          "canAddAttachments": false,
+          "email": "string",
+          "firstName": "string",
+          "hasChat": false,
+          "hasUser": false,
+          "isDefault": false,
+          "isEntitled": false,
+          "isInternal": false,
+          "isOrgAdmin": false,
+          "lastName": "string",
+          "name": "string",
+          "normalizedTZ": "string",
+          "phone": "string",
+          "secureSupportTech": false,
+          "ssoUsername": "string",
+          "supportPhoneNumber": "string",
+          "supportPhoneCountryCode": "string",
+          "supportPhoneAreaCodePrefixLineNumber": "string",
+          "timezone": "string",
+          "write": false
+        },
+        {
+          "access": false,
+          "canAccessAllAccounts": false,
+          "canAddAttachments": false,
+          "email": "string",
+          "firstName": "string",
+          "hasChat": false,
+          "hasUser": false,
+          "isDefault": false,
+          "isEntitled": false,
+          "isInternal": false,
+          "isOrgAdmin": false,
+          "lastName": "string",
+          "name": "string",
+          "normalizedTZ": "string",
+          "phone": "string",
+          "secureSupportTech": false,
+          "ssoUsername": "string",
+          "supportPhoneNumber": "string",
+          "supportPhoneCountryCode": "string",
+          "supportPhoneAreaCodePrefixLineNumber": "string",
+          "timezone": "string",
+          "write": false
+        }
+      ]
+order: 1000

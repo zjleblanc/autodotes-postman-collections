@@ -1,0 +1,31 @@
+$kind: http-request
+description: Add a movie or TV show to your watchlist.
+url: "{{baseUrl}}/account/:account_id/watchlist?session_id="
+method: POST
+headers:
+  Content-Type: application/json
+queryParams:
+  - key: session_id
+    value: ""
+    description: "(Required) "
+pathVariables:
+  - key: account_id
+    value: "24717925"
+    description: "(Required) "
+body:
+  type: text
+  content: |-
+    {
+        "media_type": "movie",
+        "media_id": 11,
+        "watchlist": true
+    }
+auth:
+  type: apikey
+  credentials:
+    key: api_key
+    value: "{{api_key}}"
+    in: query
+settings: {}
+examples: ./.resources/Add to Watchlist.resources/examples
+order: 1000

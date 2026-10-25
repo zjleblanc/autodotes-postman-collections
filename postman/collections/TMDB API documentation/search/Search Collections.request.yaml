@@ -1,0 +1,13 @@
+$kind: http-request
+description: Search for collections.
+url: "{{baseUrl}}/search/collection"
+method: GET
+auth:
+  type: apikey
+  credentials:
+    key: api_key
+    value: "{{api_key}}"
+    in: query
+settings: {}
+examples: ./.resources/Search Collections.resources/examples
+order: 3000

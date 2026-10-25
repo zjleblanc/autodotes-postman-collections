@@ -1,0 +1,50 @@
+$kind: http-example
+request:
+  url: "{{instance_fqdn}}/api/gateway/v1/service-index/resources/:ansible_id/"
+  method: PATCH
+  headers:
+    - key: Content-Type
+      value: application/json
+    - key: Accept
+      value: application/json
+    - key: gateway_sessionid
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  pathVariables:
+    ansible_id: ""
+  body:
+    type: json
+    content: |-
+      {
+        "ansible_id": "<uuid>",
+        "service_id": "<uuid>",
+        "is_partially_migrated": "<boolean>",
+        "resource_type": "<string>",
+        "resource_data": {
+          "tempor5": {},
+          "proident_ce": {}
+        }
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "additional_data": "<string>",
+        "has_serializer": "<boolean>",
+        "name": "<string>",
+        "object_id": "<string>",
+        "resource_data": {
+          "sint_9": {}
+        },
+        "url": "<string>",
+        "ansible_id": "<uuid>",
+        "service_id": "<uuid>",
+        "is_partially_migrated": "<boolean>",
+        "resource_type": "<string>"
+      }
+order: 1000

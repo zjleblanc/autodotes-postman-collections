@@ -1,0 +1,30 @@
+$kind: http-request
+description: API endpoint that allows groups to be viewed or edited.
+url: "{{instance_fqdn}}/api/gateway/v1/services/:id/"
+method: PATCH
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: <integer>
+    description: (Required) A unique integer value identifying this service api route.
+body:
+  type: json
+  content: |-
+    {
+      "name": "<string>",
+      "http_port": "<integer>",
+      "service_cluster": "<integer>",
+      "service_port": "<integer>",
+      "is_service_https": "<boolean>",
+      "service_path": "<string>",
+      "description": "<string>",
+      "api_slug": "U2C6KY",
+      "enable_gateway_auth": "<boolean>",
+      "order": "<integer>",
+      "node_tags": "<string>"
+    }
+settings: {}
+examples: ./.resources/services partial update.resources/examples
+order: 3000

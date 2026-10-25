@@ -1,0 +1,6 @@
+$kind: http-request
+name: workflow_approvals {id}
+url: https://{{instance_fqdn}}/api/controller/v2/workflow_approvals/{id}/
+method: GET
+settings: {}
+order: 5000

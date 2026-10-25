@@ -1,0 +1,37 @@
+$kind: http-example
+request:
+  url: "{{instance_fqdn}}/users/me/awx-tokens/"
+  method: POST
+  headers:
+    - key: Content-Type
+      value: application/json
+    - key: Accept
+      value: application/json
+    - key: sessionid
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  body:
+    type: json
+    content: |-
+      {
+        "name": "<string>",
+        "token": "<string>",
+        "description": "<string>"
+      }
+response:
+  statusCode: 201
+  statusText: Created
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "created_at": "<dateTime>",
+        "id": "<integer>",
+        "modified_at": "<dateTime>",
+        "name": "<string>",
+        "user_id": "<integer>",
+        "description": "<string>"
+      }
+order: 1000

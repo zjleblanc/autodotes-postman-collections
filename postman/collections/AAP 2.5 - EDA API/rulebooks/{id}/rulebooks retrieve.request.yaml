@@ -1,0 +1,13 @@
+$kind: http-request
+description: Get the rulebook by its id
+url: "{{instance_fqdn}}/api/eda/v1/rulebooks/:id/"
+method: GET
+headers:
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: <integer>
+    description: (Required) A unique integer value identifying this rulebook.
+settings: {}
+examples: ./.resources/rulebooks retrieve.resources/examples
+order: 3000

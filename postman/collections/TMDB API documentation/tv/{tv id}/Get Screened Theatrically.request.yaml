@@ -1,0 +1,17 @@
+$kind: http-request
+description: Get a list of seasons or episodes that have been screened in a film festival or theatre.
+url: "{{baseUrl}}/tv/:tv_id/screened_theatrically"
+method: GET
+pathVariables:
+  - key: tv_id
+    value: "24717925"
+    description: "(Required) "
+auth:
+  type: apikey
+  credentials:
+    key: api_key
+    value: "{{api_key}}"
+    in: query
+settings: {}
+examples: ./.resources/Get Screened Theatrically.resources/examples
+order: 19000

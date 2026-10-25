@@ -1,0 +1,6 @@
+$kind: http-request
+name: projects
+url: https://{{instance_fqdn}}/api/controller/v2/organizations/{id}/projects/
+method: POST
+settings: {}
+order: 2000

@@ -1,0 +1,5 @@
+$kind: http-request
+url: "{{aap_base_url}}/api/v2/job_templates/43/labels/"
+method: GET
+settings: {}
+order: 9000

@@ -1,0 +1,13 @@
+$kind: http-request
+description: Get a list of the current popular TV shows on TMDB. This list updates daily.
+url: "{{baseUrl}}/tv/popular"
+method: GET
+auth:
+  type: apikey
+  credentials:
+    key: api_key
+    value: "{{api_key}}"
+    in: query
+settings: {}
+examples: ./.resources/Get Popular.resources/examples
+order: 6000

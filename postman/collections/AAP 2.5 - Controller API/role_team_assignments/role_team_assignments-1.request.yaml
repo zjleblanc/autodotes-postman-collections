@@ -1,0 +1,6 @@
+$kind: http-request
+name: role_team_assignments
+url: https://{{instance_fqdn}}/api/controller/v2/role_team_assignments/
+method: POST
+settings: {}
+order: 2000

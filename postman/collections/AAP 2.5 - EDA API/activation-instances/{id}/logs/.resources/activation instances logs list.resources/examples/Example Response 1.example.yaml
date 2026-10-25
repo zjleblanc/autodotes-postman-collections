@@ -1,0 +1,52 @@
+$kind: http-example
+request:
+  url: "{{instance_fqdn}}/activation-instances/:id/logs/?log=<string>&page=<integer>&page_size=<integer>"
+  method: GET
+  headers:
+    - key: Accept
+      value: application/json
+    - key: sessionid
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  queryParams:
+    - key: log
+      value: <string>
+      description: Filter by activation instance log.
+    - key: page
+      value: <integer>
+      description: A page number within the paginated result set.
+    - key: page_size
+      value: <integer>
+      description: Number of results to return per page.
+  pathVariables:
+    id: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "count": "<integer>",
+        "next": "<uri>",
+        "previous": "<uri>",
+        "page_size": "<integer>",
+        "page": "<integer>",
+        "results": [
+          {
+            "activation_instance": "<integer>",
+            "id": "<integer>",
+            "log": "<string>",
+            "log_timestamp": "<long>"
+          },
+          {
+            "activation_instance": "<integer>",
+            "id": "<integer>",
+            "log": "<string>",
+            "log_timestamp": "<long>"
+          }
+        ]
+      }
+order: 1000

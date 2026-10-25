@@ -1,0 +1,9 @@
+$kind: http-request
+url: "{{dynatrace_host}}/api/v2/problems?fields=recentComments&from=now-10m&to=now"
+method: GET
+queryParams:
+  fields: recentComments
+  from: now-10m
+  to: now
+settings: {}
+order: 2000

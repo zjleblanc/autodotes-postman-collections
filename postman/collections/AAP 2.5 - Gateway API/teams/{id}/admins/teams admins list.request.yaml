@@ -1,0 +1,32 @@
+$kind: http-request
+description: |-
+  Manage User objects in the 'admins' relationship of this particular Team.
+
+  Starting from the detail URL:
+
+  GET /:id/admins/ to show users currently in the relationship
+
+  POST a list of instances to /:id/admins/associate/ to add those users to the relationship
+
+  POST a list of instances to /:id/admins/disassociate/ to remove those users from the relationshp
+url: "{{instance_fqdn}}/api/gateway/v1/teams/:id/admins/?page=<integer>&page_size=<integer>&search=<string>"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  - key: page
+    value: <integer>
+    description: A page number within the paginated result set.
+  - key: page_size
+    value: <integer>
+    description: Number of results to return per page.
+  - key: search
+    value: <string>
+    description: A search term.
+pathVariables:
+  - key: id
+    value: "1714231316"
+    description: "(Required) "
+settings: {}
+examples: ./.resources/teams admins list.resources/examples
+order: 3000

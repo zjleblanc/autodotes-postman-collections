@@ -1,0 +1,6 @@
+$kind: http-request
+name: notification_templates_error
+url: https://{{instance_fqdn}}/api/controller/v2/job_templates/{id}/notification_templates_error/
+method: POST
+settings: {}
+order: 2000

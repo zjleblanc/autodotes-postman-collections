@@ -1,0 +1,13 @@
+$kind: http-request
+description: Get a decision environment by id
+url: "{{instance_fqdn}}/api/eda/v1/decision-environments/:id/"
+method: GET
+headers:
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: <integer>
+    description: (Required) A unique integer value identifying this decision environment.
+settings: {}
+examples: ./.resources/decision environments retrieve.resources/examples
+order: 1000

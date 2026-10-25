@@ -1,0 +1,8 @@
+$kind: collection
+auth:
+  - id: eab6bbc9-a792-4e98-aea6-9178bdc9dbfc
+    type: basic
+    name: basic auth
+    credentials:
+      username: zach-leblanc
+      password: "{{bitbucket_app_pw}}"

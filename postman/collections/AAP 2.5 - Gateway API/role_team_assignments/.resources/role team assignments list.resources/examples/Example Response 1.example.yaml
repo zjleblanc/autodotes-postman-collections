@@ -1,0 +1,93 @@
+$kind: http-example
+request:
+  url: "{{instance_fqdn}}/api/gateway/v1/role_team_assignments/?page=<integer>&page_size=<integer>&search=<string>"
+  method: GET
+  headers:
+    - key: Accept
+      value: application/json
+    - key: gateway_sessionid
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  queryParams:
+    - key: page
+      value: <integer>
+      description: A page number within the paginated result set.
+    - key: page_size
+      value: <integer>
+      description: Number of results to return per page.
+    - key: search
+      value: <string>
+      description: A search term.
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "count": "<integer>",
+        "results": [
+          {
+            "content_type": "shared.team",
+            "created": "<dateTime>",
+            "created_by": "<integer>",
+            "id": "<integer>",
+            "related": {
+              "mollit_12": "<string>",
+              "minimc": "<string>",
+              "Duis_c7": "<string>",
+              "in_3": "<string>"
+            },
+            "role_definition": "<integer>",
+            "summary_fields": {
+              "proident_8": {
+                "ex32": {},
+                "eiusmod44": {}
+              },
+              "qui_e25": {
+                "consequat__f0": {}
+              },
+              "laboris6fb": {
+                "nisi_5": {},
+                "magna_dd": {}
+              }
+            },
+            "url": "<string>",
+            "object_id": "<string>",
+            "object_ansible_id": "<uuid>",
+            "team": "<integer>",
+            "team_ansible_id": "<uuid>"
+          },
+          {
+            "content_type": "shared.team",
+            "created": "<dateTime>",
+            "created_by": "<integer>",
+            "id": "<integer>",
+            "related": {
+              "labore3": "<string>"
+            },
+            "role_definition": "<integer>",
+            "summary_fields": {
+              "et_2": {
+                "irure3a": {},
+                "cillum1d": {},
+                "Duis_e": {}
+              },
+              "ex5b": {
+                "labore5": {},
+                "ipsum_e": {}
+              }
+            },
+            "url": "<string>",
+            "object_id": "<string>",
+            "object_ansible_id": "<uuid>",
+            "team": "<integer>",
+            "team_ansible_id": "<uuid>"
+          }
+        ],
+        "next": "<uri>",
+        "previous": "<uri>"
+      }
+order: 1000

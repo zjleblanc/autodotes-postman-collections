@@ -1,0 +1,9 @@
+$kind: http-request
+url: https://api.access.redhat.com/management/v1/images/cset/
+method: GET
+auth:
+  type: bearer
+  credentials:
+    token: "{{rhsm_access_token}}"
+settings: {}
+order: 2000

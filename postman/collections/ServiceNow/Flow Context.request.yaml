@@ -1,0 +1,5 @@
+$kind: http-request
+url: "{{snow_instance_url}}/api/now/table/cmdb_ci_vm_object/78ec51fac38eb110384c216dc00131b6"
+method: GET
+settings: {}
+order: 2000

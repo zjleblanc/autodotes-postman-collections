@@ -1,0 +1,17 @@
+$kind: http-request
+description: Get the cast and crew for a movie.
+url: "{{baseUrl}}/movie/:movie_id/credits"
+method: GET
+pathVariables:
+  - key: movie_id
+    value: "24717925"
+    description: "(Required) "
+auth:
+  type: apikey
+  credentials:
+    key: api_key
+    value: "{{api_key}}"
+    in: query
+settings: {}
+examples: ./.resources/Get Credits.resources/examples
+order: 16000

@@ -1,0 +1,5 @@
+$kind: http-request
+url: "{{dynatrace_host}}/api/v2/problems"
+method: GET
+settings: {}
+order: 3000

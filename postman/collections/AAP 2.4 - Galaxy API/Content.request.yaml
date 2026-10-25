@@ -1,0 +1,5 @@
+$kind: http-request
+url: "{{pah_base_url}}/api/galaxy/pulp/api/v3/content"
+method: GET
+settings: {}
+order: 5000

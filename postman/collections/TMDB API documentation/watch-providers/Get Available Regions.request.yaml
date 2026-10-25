@@ -1,0 +1,13 @@
+$kind: http-request
+description: Returns a list of all of the countries we have watch provider (OTT/streaming) data for.
+url: "{{baseUrl}}/watch/providers/regions"
+method: GET
+auth:
+  type: apikey
+  credentials:
+    key: api_key
+    value: "{{api_key}}"
+    in: query
+settings: {}
+examples: ./.resources/Get Available Regions.resources/examples
+order: 1000

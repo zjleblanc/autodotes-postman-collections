@@ -1,0 +1,7 @@
+$kind: collection
+variables:
+  tenant_id: ""
+  client_id: ""
+  client_secret: ""
+  subscription_id: ""
+  az_token: ""

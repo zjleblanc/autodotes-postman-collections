@@ -1,0 +1,19 @@
+$kind: http-request
+url: "{{baseUrl}}/v2/sftp/token/"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+body:
+  type: json
+  content: |-
+    {
+      "expiryInDays": 60,
+      "isAnonymous": true,
+      "isOneTime": true
+    }
+auth:
+  type: noauth
+settings: {}
+examples: ./.resources/Create token for SFTP User.resources/examples
+order: 1000

@@ -1,0 +1,15 @@
+$kind: http-example
+request:
+  url: "{{instance_fqdn}}/api/gateway/v1/service-index/metadata/"
+  method: GET
+  headers:
+    - key: gateway_sessionid
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+response:
+  statusCode: 200
+  statusText: OK
+  body:
+    type: text
+    content: ""
+order: 1000

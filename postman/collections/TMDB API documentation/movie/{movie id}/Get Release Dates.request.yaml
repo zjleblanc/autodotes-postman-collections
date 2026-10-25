@@ -1,0 +1,29 @@
+$kind: http-request
+description: |-
+  Get the release date along with the certification for a movie.
+
+  Release dates support different types:
+
+  1. Premiere
+  2. Theatrical (limited)
+  3. Theatrical
+  4. Digital
+  5. Physical
+  6. TV
+url: "{{baseUrl}}/movie/:movie_id/release_dates?api_key=in fugiat"
+method: GET
+queryParams:
+  api_key: in fugiat
+pathVariables:
+  - key: movie_id
+    value: "24717925"
+    description: "(Required) "
+auth:
+  type: apikey
+  credentials:
+    key: api_key
+    value: "{{api_key}}"
+    in: query
+settings: {}
+examples: ./.resources/Get Release Dates.resources/examples
+order: 14000

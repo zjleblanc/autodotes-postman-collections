@@ -1,0 +1,20 @@
+$kind: http-request
+description: Create a RoleTeamAssignment.
+url: "{{instance_fqdn}}/api/eda/v1/role_team_assignments/"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+body:
+  type: json
+  content: |-
+    {
+      "role_definition": "<integer>",
+      "object_id": "<string>",
+      "object_ansible_id": "<uuid>",
+      "team": "<integer>",
+      "team_ansible_id": "<uuid>"
+    }
+settings: {}
+examples: ./.resources/role team assignments create.resources/examples
+order: 3000

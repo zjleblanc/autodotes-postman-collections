@@ -1,0 +1,103 @@
+$kind: http-example
+request:
+  url: "{{instance_fqdn}}/api/gateway/v1/service_clusters/?page=<integer>&page_size=<integer>&search=<string>"
+  method: GET
+  headers:
+    - key: Accept
+      value: application/json
+    - key: gateway_sessionid
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  queryParams:
+    - key: page
+      value: <integer>
+      description: A page number within the paginated result set.
+    - key: page_size
+      value: <integer>
+      description: Number of results to return per page.
+    - key: search
+      value: <string>
+      description: A search term.
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "count": "<integer>",
+        "results": [
+          {
+            "created": "<dateTime>",
+            "created_by": "<integer>",
+            "id": "<integer>",
+            "modified": "<dateTime>",
+            "modified_by": "<integer>",
+            "name": "<string>",
+            "related": {
+              "voluptate_5": "<string>",
+              "velit31f": "<string>",
+              "nulla_9": "<string>",
+              "ullamco1": "<string>"
+            },
+            "service_id": "<uuid>",
+            "service_type": "hub",
+            "summary_fields": {
+              "elit_fd": {
+                "eu_8": {},
+                "culpaa": {}
+              },
+              "commodo_3_": {
+                "officia0": {},
+                "tempor_c8": {}
+              }
+            },
+            "url": "<string>",
+            "outlier_detection_enabled": "<boolean>",
+            "outlier_detection_consecutive_5xx": "<integer>",
+            "outlier_detection_interval_seconds": "<integer>",
+            "outlier_detection_base_ejection_time_seconds": "<integer>",
+            "outlier_detection_max_ejection_percent": "<integer>",
+            "health_checks_enabled": "<boolean>",
+            "health_check_timeout_seconds": "<integer>",
+            "health_check_interval_seconds": "<integer>",
+            "health_check_unhealthy_threshold": "<integer>",
+            "health_check_healthy_threshold": "<integer>"
+          },
+          {
+            "created": "<dateTime>",
+            "created_by": "<integer>",
+            "id": "<integer>",
+            "modified": "<dateTime>",
+            "modified_by": "<integer>",
+            "name": "<string>",
+            "related": {
+              "veniamdc8": "<string>",
+              "nisi833": "<string>"
+            },
+            "service_id": "<uuid>",
+            "service_type": "eda",
+            "summary_fields": {
+              "incididunt4fb": {
+                "Ut4c": {}
+              }
+            },
+            "url": "<string>",
+            "outlier_detection_enabled": "<boolean>",
+            "outlier_detection_consecutive_5xx": "<integer>",
+            "outlier_detection_interval_seconds": "<integer>",
+            "outlier_detection_base_ejection_time_seconds": "<integer>",
+            "outlier_detection_max_ejection_percent": "<integer>",
+            "health_checks_enabled": "<boolean>",
+            "health_check_timeout_seconds": "<integer>",
+            "health_check_interval_seconds": "<integer>",
+            "health_check_unhealthy_threshold": "<integer>",
+            "health_check_healthy_threshold": "<integer>"
+          }
+        ],
+        "next": "<uri>",
+        "previous": "<uri>"
+      }
+order: 1000

@@ -1,0 +1,11 @@
+$kind: http-request
+description: Restart the Activation
+url: "{{instance_fqdn}}/api/eda/v1/activations/:id/restart/"
+method: POST
+pathVariables:
+  - key: id
+    value: <integer>
+    description: (Required) A unique integer value identifying this activation.
+settings: {}
+examples: ./.resources/activations restart create.resources/examples
+order: 1000

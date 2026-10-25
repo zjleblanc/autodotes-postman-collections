@@ -1,0 +1,5 @@
+$kind: http-request
+url: "{{pve_api_base_url}}/nodes/pve/storage/local/content"
+method: GET
+settings: {}
+order: 4000

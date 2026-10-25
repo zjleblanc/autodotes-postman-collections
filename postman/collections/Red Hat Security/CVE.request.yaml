@@ -1,0 +1,7 @@
+$kind: http-request
+url: https://access.redhat.com/hydra/rest/securitydata/cve/CVE-2024-10033.json
+method: GET
+auth:
+  type: noauth
+settings: {}
+order: 1000

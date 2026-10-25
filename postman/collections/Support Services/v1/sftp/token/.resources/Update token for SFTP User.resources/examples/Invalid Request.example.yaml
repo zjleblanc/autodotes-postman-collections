@@ -1,0 +1,33 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/v1/sftp/token/"
+  method: PUT
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "expiryInDays": 60,
+        "isAnonymous": true,
+        "isOneTime": true
+      }
+response:
+  statusCode: 400
+  statusText: Bad Request
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "internalErrorCode": "string",
+        "message": "string",
+        "detailMessage": "string",
+        "recommendations": [
+          "string",
+          "string"
+        ]
+      }
+order: 2000

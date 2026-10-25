@@ -1,0 +1,10 @@
+$kind: collection
+variables:
+  tf_cloud_base_url: ""
+  tf_organization: ""
+auth:
+  - id: a6b347f3-c09f-45d2-88ca-e09a8ad34731
+    type: bearer
+    name: bearer auth
+    credentials:
+      token: ""

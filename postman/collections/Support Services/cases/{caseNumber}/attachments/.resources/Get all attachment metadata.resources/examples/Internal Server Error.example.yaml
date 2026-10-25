@@ -1,0 +1,36 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/cases/:caseNumber/attachments/?includeDeleted=string&sortingField=string&sortBy=string"
+  method: GET
+  headers:
+    Accept: application/json
+  queryParams:
+    - key: includeDeleted
+      value: string
+      description: flag to include deleted attachments in the response
+    - key: sortingField
+      value: string
+      description: Sorting Field Name like id, lastModifiedDate,createDate,sizeKB except size
+    - key: sortBy
+      value: string
+      description: Sort by desc/asc
+  pathVariables:
+    caseNumber: ""
+response:
+  statusCode: 500
+  statusText: Internal Server Error
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "internalErrorCode": "string",
+        "message": "string",
+        "detailMessage": "string",
+        "recommendations": [
+          "string",
+          "string"
+        ]
+      }
+order: 3000

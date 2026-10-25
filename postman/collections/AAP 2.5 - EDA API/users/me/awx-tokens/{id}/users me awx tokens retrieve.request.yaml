@@ -1,0 +1,13 @@
+$kind: http-request
+description: Get current user AWX token by ID.
+url: "{{instance_fqdn}}/api/eda/v1/users/me/awx-tokens/:id/"
+method: GET
+headers:
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: <integer>
+    description: (Required) A unique integer value identifying this token.
+settings: {}
+examples: ./.resources/users me awx tokens retrieve.resources/examples
+order: 1000

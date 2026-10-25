@@ -1,0 +1,6 @@
+$kind: http-request
+name: role_user_assignments
+url: https://{{instance_fqdn}}/api/controller/v2/role_user_assignments/
+method: POST
+settings: {}
+order: 2000

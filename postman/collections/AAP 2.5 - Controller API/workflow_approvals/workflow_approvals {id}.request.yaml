@@ -1,0 +1,5 @@
+$kind: http-request
+url: https://{{instance_fqdn}}/api/controller/v2/workflow_approvals/{id}/
+method: DELETE
+settings: {}
+order: 4000

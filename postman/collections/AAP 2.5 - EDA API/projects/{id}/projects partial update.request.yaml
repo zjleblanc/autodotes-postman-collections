@@ -1,0 +1,28 @@
+$kind: http-request
+description: Partial update of a project
+url: "{{instance_fqdn}}/api/eda/v1/projects/:id/"
+method: PATCH
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: <integer>
+    description: (Required) A unique integer value identifying this project.
+body:
+  type: json
+  content: |-
+    {
+      "name": "<string>",
+      "description": "<string>",
+      "organization_id": "<integer>",
+      "eda_credential_id": "<integer>",
+      "signature_validation_credential_id": "<integer>",
+      "scm_branch": "<string>",
+      "scm_refspec": "<string>",
+      "verify_ssl": "<boolean>",
+      "proxy": "<string>"
+    }
+settings: {}
+examples: ./.resources/projects partial update.resources/examples
+order: 3000

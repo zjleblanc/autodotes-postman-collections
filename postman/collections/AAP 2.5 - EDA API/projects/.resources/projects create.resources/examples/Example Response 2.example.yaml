@@ -1,0 +1,33 @@
+$kind: http-example
+request:
+  url: "{{instance_fqdn}}/projects/"
+  method: POST
+  headers:
+    - key: Content-Type
+      value: application/json
+    - key: sessionid
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  body:
+    type: json
+    content: |-
+      {
+        "name": "<string>",
+        "organization_id": "<integer>",
+        "url": "<string>",
+        "proxy": "<string>",
+        "description": "<string>",
+        "eda_credential_id": "<integer>",
+        "signature_validation_credential_id": "<integer>",
+        "verify_ssl": "<boolean>",
+        "scm_type": "git",
+        "scm_branch": "<string>",
+        "scm_refspec": "<string>"
+      }
+response:
+  statusCode: 409
+  statusText: Conflict
+  body:
+    type: text
+    content: ""
+order: 2000

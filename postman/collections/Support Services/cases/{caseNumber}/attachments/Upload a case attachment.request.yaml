@@ -1,0 +1,14 @@
+$kind: http-request
+url: "{{baseUrl}}/cases/:caseNumber/attachments/"
+method: POST
+headers:
+  Accept: application/json
+pathVariables:
+  - key: caseNumber
+    value: string
+    description: (Required) Case number
+auth:
+  type: noauth
+settings: {}
+examples: ./.resources/Upload a case attachment.resources/examples
+order: 4000

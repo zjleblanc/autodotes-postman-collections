@@ -1,0 +1,15 @@
+$kind: http-request
+url: https://otv67502.apps.dynatrace.com/platform/storage/query/v1/query:execute
+method: GET
+body:
+  type: json
+  content: |-
+    {
+        "query": "fetch `dt.entity.palo-alto:device-attributes`\n| fieldsAdd id, DevicePort, tags"
+    }
+auth:
+  type: bearer
+  credentials:
+    token: "{{dynatrace_access_token}}"
+settings: {}
+order: 7000

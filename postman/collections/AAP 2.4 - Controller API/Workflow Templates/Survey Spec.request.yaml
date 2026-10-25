@@ -1,0 +1,5 @@
+$kind: http-request
+url: "{{aap_base_url}}/api/v2/workflow_job_templates/17/survey_spec"
+method: GET
+settings: {}
+order: 2000

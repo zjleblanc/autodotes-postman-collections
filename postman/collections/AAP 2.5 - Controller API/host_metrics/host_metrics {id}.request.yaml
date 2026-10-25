@@ -1,0 +1,5 @@
+$kind: http-request
+url: https://{{instance_fqdn}}/api/controller/v2/host_metrics/{id}/
+method: DELETE
+settings: {}
+order: 2000

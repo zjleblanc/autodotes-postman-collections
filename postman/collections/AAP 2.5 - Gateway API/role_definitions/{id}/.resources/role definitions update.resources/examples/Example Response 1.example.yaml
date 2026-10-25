@@ -1,0 +1,82 @@
+$kind: http-example
+request:
+  url: "{{instance_fqdn}}/api/gateway/v1/role_definitions/:id/"
+  method: PUT
+  headers:
+    - key: Content-Type
+      value: application/json
+    - key: Accept
+      value: application/json
+    - key: gateway_sessionid
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  pathVariables:
+    id: ""
+  body:
+    type: json
+    content: |-
+      {
+        "content_type": "shared.team",
+        "name": "<string>",
+        "permissions": [
+          "shared.member_team",
+          "shared.view_organization"
+        ],
+        "description": "<string>",
+        "created": "quis",
+        "created_by": false,
+        "id": 76141531,
+        "managed": 81095772.48289835,
+        "modified": "dolor enim",
+        "modified_by": "id sit eiusmod sunt ut",
+        "related": -18167123.066333085,
+        "summary_fields": false
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "content_type": "shared.team",
+        "created": "<dateTime>",
+        "created_by": "<integer>",
+        "id": "<integer>",
+        "managed": "<boolean>",
+        "modified": "<dateTime>",
+        "modified_by": "<integer>",
+        "name": "<string>",
+        "permissions": [
+          "shared.change_organization",
+          "shared.member_team"
+        ],
+        "related": {
+          "amet938": "<string>",
+          "Duisa": "<string>",
+          "aute33c": "<string>",
+          "ut02c": "<string>"
+        },
+        "summary_fields": {
+          "cupidatata6": {
+            "esse_a25": {}
+          },
+          "sede2d": {
+            "id23d": {},
+            "consectetur_5": {},
+            "nulla_915": {}
+          },
+          "nisi15": {
+            "consectetur_b": {}
+          },
+          "consequate46": {
+            "dolore8": {},
+            "tempor9": {}
+          }
+        },
+        "url": "<string>",
+        "description": "<string>"
+      }
+order: 1000

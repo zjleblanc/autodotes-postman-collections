@@ -1,0 +1,32 @@
+$kind: http-example
+name: response
+request:
+  url: "{{baseUrl}}/list/:list_id/remove_item?session_id="
+  method: POST
+  headers:
+    - key: Content-Type
+      value: application/json;charset=utf-8
+      description: "(Required) "
+  queryParams:
+    session_id: ""
+  pathVariables:
+    list_id: ""
+  body:
+    type: text
+    content: |-
+      {
+          "media_id": 12
+      }
+response:
+  statusCode: 401
+  statusText: Unauthorized
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+       "status_message": "laboris quis officia",
+       "status_code": 17219857
+      }
+order: 2000

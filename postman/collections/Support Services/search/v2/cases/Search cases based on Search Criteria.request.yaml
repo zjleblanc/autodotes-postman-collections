@@ -1,0 +1,23 @@
+$kind: http-request
+description: Retrieves the list of cases from Solr based on the input request
+url: "{{baseUrl}}/search/v2/cases"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+body:
+  type: json
+  content: |-
+    {
+      "q": "string",
+      "expression": "string",
+      "start": 4349,
+      "rows": 6530,
+      "clientName": "string",
+      "partnerSearch": true
+    }
+auth:
+  type: noauth
+settings: {}
+examples: ./.resources/Search cases based on Search Criteria.resources/examples
+order: 1000

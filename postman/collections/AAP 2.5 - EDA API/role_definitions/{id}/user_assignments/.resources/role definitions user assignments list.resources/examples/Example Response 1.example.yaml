@@ -1,0 +1,89 @@
+$kind: http-example
+request:
+  url: "{{instance_fqdn}}/role_definitions/:id/user_assignments/?page=<integer>&page_size=<integer>&search=<string>"
+  method: GET
+  headers:
+    - key: Accept
+      value: application/json
+    - key: sessionid
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  queryParams:
+    - key: page
+      value: <integer>
+      description: A page number within the paginated result set.
+    - key: page_size
+      value: <integer>
+      description: Number of results to return per page.
+    - key: search
+      value: <string>
+      description: A search term.
+  pathVariables:
+    id: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "count": "<integer>",
+        "next": "<uri>",
+        "previous": "<uri>",
+        "page_size": "<integer>",
+        "page": "<integer>",
+        "results": [
+          {
+            "content_type": "eda.auditrule",
+            "created": "<dateTime>",
+            "created_by": "<integer>",
+            "id": "<integer>",
+            "related": {
+              "in52": "<string>",
+              "ut_769": "<string>"
+            },
+            "role_definition": "<integer>",
+            "summary_fields": {
+              "qui2": {
+                "ametf1": true,
+                "consequat6": -59444817
+              },
+              "Excepteur_d9": {
+                "magnaa": "nisi ullamco fugiat",
+                "etae4": false
+              }
+            },
+            "url": "<string>",
+            "object_id": "<string>",
+            "object_ansible_id": "<uuid>",
+            "user": "<integer>",
+            "user_ansible_id": "<uuid>"
+          },
+          {
+            "content_type": "eda.eventstream",
+            "created": "<dateTime>",
+            "created_by": "<integer>",
+            "id": "<integer>",
+            "related": {
+              "nisi067": "<string>",
+              "commodo1": "<string>"
+            },
+            "role_definition": "<integer>",
+            "summary_fields": {
+              "aute__3e": {
+                "aliquab": "dolore dolore culpa",
+                "sunt_f": true,
+                "labore363": -89340283
+              }
+            },
+            "url": "<string>",
+            "object_id": "<string>",
+            "object_ansible_id": "<uuid>",
+            "user": "<integer>",
+            "user_ansible_id": "<uuid>"
+          }
+        ]
+      }
+order: 1000

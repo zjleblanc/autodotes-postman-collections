@@ -1,0 +1,31 @@
+$kind: http-request
+description: API endpoint that allows groups to be viewed or edited.
+url: "{{instance_fqdn}}/api/gateway/v1/service_clusters/:id/"
+method: PUT
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: <integer>
+    description: (Required) A unique integer value identifying this service cluster.
+body:
+  type: json
+  content: |-
+    {
+      "name": "<string>",
+      "service_type": "hub",
+      "outlier_detection_enabled": "<boolean>",
+      "outlier_detection_consecutive_5xx": "<integer>",
+      "outlier_detection_interval_seconds": "<integer>",
+      "outlier_detection_base_ejection_time_seconds": "<integer>",
+      "outlier_detection_max_ejection_percent": "<integer>",
+      "health_checks_enabled": "<boolean>",
+      "health_check_timeout_seconds": "<integer>",
+      "health_check_interval_seconds": "<integer>",
+      "health_check_unhealthy_threshold": "<integer>",
+      "health_check_healthy_threshold": "<integer>"
+    }
+settings: {}
+examples: ./.resources/service clusters update.resources/examples
+order: 5000

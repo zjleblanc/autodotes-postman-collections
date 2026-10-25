@@ -1,0 +1,7 @@
+$kind: http-request
+description: Use this method to set a CSRF cookie.
+url: "{{instance_fqdn}}/api/eda/v1/auth/session/login/"
+method: GET
+settings: {}
+examples: ./.resources/auth session preflight.resources/examples
+order: 1000

@@ -1,0 +1,3 @@
+$kind: collection
+name: season/{season number}
+order: 1000

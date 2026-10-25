@@ -1,0 +1,30 @@
+$kind: http-request
+description: |-
+  This method allows an application to validate a request token by entering a username and password.
+
+  Not all applications have access to a web view so this can be used as a substitute.
+
+  Please note, the preferred method of validating a request token is to have a user authenticate the request via the TMDB website. You can read about that method [here](#docTextSection:NSZtgz7zptsiLYxXZ).
+
+  If you decide to use this method please **use HTTPS**.
+url: "{{baseUrl}}/authentication/token/validate_with_login"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+        "username": "zleblanc",
+        "password": "REDACTED",
+        "request_token": "REDACTED_REQUEST_TOKEN"
+    }
+auth:
+  type: apikey
+  credentials:
+    key: api_key
+    value: "{{api_key}}"
+    in: query
+settings: {}
+examples: ./.resources/Create Session With Login.resources/examples
+order: 2000

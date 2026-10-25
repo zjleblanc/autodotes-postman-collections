@@ -1,0 +1,63 @@
+$kind: http-example
+request:
+  url: "{{instance_fqdn}}/role_definitions/:id/"
+  method: PUT
+  headers:
+    - key: Content-Type
+      value: application/json
+    - key: Accept
+      value: application/json
+    - key: sessionid
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  pathVariables:
+    id: ""
+  body:
+    type: json
+    content: |-
+      {
+        "name": "<string>",
+        "permissions": [
+          "eda.view_rulebook",
+          "shared.change_team"
+        ],
+        "content_type": "eda.project",
+        "description": "<string>"
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "created": "<dateTime>",
+        "created_by": "<integer>",
+        "id": "<integer>",
+        "managed": "<boolean>",
+        "modified": "<dateTime>",
+        "modified_by": "<integer>",
+        "name": "<string>",
+        "permissions": [
+          "eda.sync_project",
+          "shared.view_team"
+        ],
+        "related": {
+          "in0": "<string>",
+          "mollitad": "<string>",
+          "cillum_fb7": "<string>",
+          "utd": "<string>"
+        },
+        "summary_fields": {
+          "nostrud_4": {
+            "cillumca": "est aliqu",
+            "aliqua_3e": "laborum ex"
+          }
+        },
+        "url": "<string>",
+        "content_type": "shared.team",
+        "description": "<string>"
+      }
+order: 1000

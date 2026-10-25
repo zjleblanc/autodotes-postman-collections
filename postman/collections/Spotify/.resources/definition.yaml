@@ -1,0 +1,11 @@
+$kind: collection
+variables:
+  spotify_client_id: ""
+  spotify_client_secret: ""
+  spotify_token: ""
+auth:
+  - id: 6e56ed46-18b0-49e7-a45a-7bb798cd4679
+    type: bearer
+    name: bearer auth
+    credentials:
+      token: "{{spotify_token}}"

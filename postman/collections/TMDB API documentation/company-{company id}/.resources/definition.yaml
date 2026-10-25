@@ -1,0 +1,3 @@
+$kind: collection
+name: company/{company id}
+order: 7000

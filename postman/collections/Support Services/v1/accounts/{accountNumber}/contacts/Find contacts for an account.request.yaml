@@ -1,0 +1,15 @@
+$kind: http-request
+description: Retrieve the users associated with the account specified in the path.
+url: "{{baseUrl}}/v1/accounts/:accountNumber/contacts"
+method: GET
+headers:
+  Accept: application/json
+pathVariables:
+  - key: accountNumber
+    value: string
+    description: (Required) account number
+auth:
+  type: noauth
+settings: {}
+examples: ./.resources/Find contacts for an account.resources/examples
+order: 1000

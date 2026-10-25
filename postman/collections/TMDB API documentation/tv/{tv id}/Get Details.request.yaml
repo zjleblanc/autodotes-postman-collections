@@ -1,0 +1,30 @@
+$kind: http-request
+description: |-
+  Get the primary TV show details by id.
+
+  Supports `append_to_response`. Read more about this [here](#docTextSection:JdZq8ctmcxNqyLQjp).
+
+  #### Recent Changes
+
+  | **Date** | **Change** |
+  | - | - |
+  | November 20, 2020 | A `watch/providers` method has been added to show what providers (eg. streaming) are available and where.|
+  | November 14, 2020 | The `tagline` has been added to the default response, and is also available as part of the translations method. |
+  | July 17, 2018 | We now return `last_episode_to_air` and `next_episode_to_air` fields. |
+  | March 12, 2018 | Networks return proper logos and we introduced SVG support. |
+  | March 8, 2018 | The `seasons` field now returns the translated names and overviews. |
+url: "{{baseUrl}}/tv/:tv_id"
+method: GET
+pathVariables:
+  - key: tv_id
+    value: "24717925"
+    description: "(Required) "
+auth:
+  type: apikey
+  credentials:
+    key: api_key
+    value: "{{api_key}}"
+    in: query
+settings: {}
+examples: ./.resources/Get Details.resources/examples
+order: 3000

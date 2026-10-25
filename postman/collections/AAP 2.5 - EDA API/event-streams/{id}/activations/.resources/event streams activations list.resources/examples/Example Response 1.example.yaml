@@ -1,0 +1,388 @@
+$kind: http-example
+request:
+  url: "{{instance_fqdn}}/event-streams/:id/activations/?decision_environment_id=<number>&name=<string>&page=<integer>&page_size=<integer>&status=<string>"
+  method: GET
+  headers:
+    - key: Accept
+      value: application/json
+    - key: sessionid
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  queryParams:
+    - key: decision_environment_id
+      value: <number>
+      description: Filter by Decision Environment ID.
+    - key: name
+      value: <string>
+      description: Filter by activation name.
+    - key: page
+      value: <integer>
+      description: A page number within the paginated result set.
+    - key: page_size
+      value: <integer>
+      description: Number of results to return per page.
+    - key: status
+      value: <string>
+      description: Filter by activation status.
+  pathVariables:
+    id: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "count": "<integer>",
+        "next": "<uri>",
+        "previous": "<uri>",
+        "page_size": "<integer>",
+        "page": "<integer>",
+        "results": [
+          {
+            "awx_token_id": "<integer>",
+            "created_at": "<dateTime>",
+            "decision_environment_id": "<integer>",
+            "id": "<integer>",
+            "modified_at": "<dateTime>",
+            "name": "<string>",
+            "organization_id": "<integer>",
+            "project_id": "<integer>",
+            "rulebook_id": "<integer>",
+            "rulebook_name": "<string>",
+            "rules_count": "<integer>",
+            "rules_fired_count": "<integer>",
+            "description": "<string>",
+            "is_enabled": "<boolean>",
+            "status": "error",
+            "extra_var": "<string>",
+            "restart_policy": "never",
+            "restart_count": "<integer>",
+            "current_job_id": "<string>",
+            "status_message": "<string>",
+            "log_level": "error",
+            "eda_credentials": [
+              {
+                "created_at": "<dateTime>",
+                "created_by": "<integer>",
+                "id": "<integer>",
+                "inputs": {
+                  "veniam_28": true
+                },
+                "managed": "<boolean>",
+                "modified_at": "<dateTime>",
+                "modified_by": "<integer>",
+                "name": "<string>",
+                "organization": {
+                  "id": "<integer>",
+                  "name": "<string>",
+                  "description": "<string>"
+                },
+                "description": "<string>",
+                "credential_type": {
+                  "id": "<integer>",
+                  "name": "<string>",
+                  "namespace": "<string>",
+                  "kind": "<string>"
+                },
+                "references": [
+                  {
+                    "id": "<integer>",
+                    "name": "<string>",
+                    "type": "<string>",
+                    "uri": "<uri>"
+                  },
+                  {
+                    "id": "<integer>",
+                    "name": "<string>",
+                    "type": "<string>",
+                    "uri": "<uri>"
+                  }
+                ]
+              },
+              {
+                "created_at": "<dateTime>",
+                "created_by": "<integer>",
+                "id": "<integer>",
+                "inputs": {
+                  "Duisb1": "eiusmod dolor pariatur amet"
+                },
+                "managed": "<boolean>",
+                "modified_at": "<dateTime>",
+                "modified_by": "<integer>",
+                "name": "<string>",
+                "organization": {
+                  "id": "<integer>",
+                  "name": "<string>",
+                  "description": "<string>"
+                },
+                "description": "<string>",
+                "credential_type": {
+                  "id": "<integer>",
+                  "name": "<string>",
+                  "namespace": "<string>",
+                  "kind": "<string>"
+                },
+                "references": [
+                  {
+                    "id": "<integer>",
+                    "name": "<string>",
+                    "type": "<string>",
+                    "uri": "<uri>"
+                  },
+                  {
+                    "id": "<integer>",
+                    "name": "<string>",
+                    "type": "<string>",
+                    "uri": "<uri>"
+                  }
+                ]
+              }
+            ],
+            "k8s_service_name": "<string>",
+            "event_streams": [
+              {
+                "created_at": "<dateTime>",
+                "created_by": "<integer>",
+                "eda_credential": {
+                  "credential_type_id": "<integer>",
+                  "id": "<integer>",
+                  "inputs": {
+                    "mollit_a": "quis Excepteur adipisicing officia ullamco",
+                    "incididunt5_": true
+                  },
+                  "name": "<string>",
+                  "organization_id": "<integer>",
+                  "description": "<string>",
+                  "managed": "<boolean>"
+                },
+                "events_received": "<integer>",
+                "id": "<integer>",
+                "last_event_received_at": "<dateTime>",
+                "modified_at": "<dateTime>",
+                "modified_by": "<integer>",
+                "name": "<string>",
+                "organization": "<string>",
+                "owner": "<string>",
+                "test_content": "<string>",
+                "test_content_type": "<string>",
+                "test_error_message": "<string>",
+                "test_headers": "<string>",
+                "url": "<string>",
+                "test_mode": "<boolean>",
+                "additional_data_headers": "<string>",
+                "event_stream_type": "<string>"
+              },
+              {
+                "created_at": "<dateTime>",
+                "created_by": "<integer>",
+                "eda_credential": {
+                  "credential_type_id": "<integer>",
+                  "id": "<integer>",
+                  "inputs": {
+                    "ea_3d": "Excep",
+                    "sintbe0": false,
+                    "minimb7": 39076471.94525796
+                  },
+                  "name": "<string>",
+                  "organization_id": "<integer>",
+                  "description": "<string>",
+                  "managed": "<boolean>"
+                },
+                "events_received": "<integer>",
+                "id": "<integer>",
+                "last_event_received_at": "<dateTime>",
+                "modified_at": "<dateTime>",
+                "modified_by": "<integer>",
+                "name": "<string>",
+                "organization": "<string>",
+                "owner": "<string>",
+                "test_content": "<string>",
+                "test_content_type": "<string>",
+                "test_error_message": "<string>",
+                "test_headers": "<string>",
+                "url": "<string>",
+                "test_mode": "<boolean>",
+                "additional_data_headers": "<string>",
+                "event_stream_type": "<string>"
+              }
+            ],
+            "source_mappings": "<string>",
+            "skip_audit_events": "<boolean>"
+          },
+          {
+            "awx_token_id": "<integer>",
+            "created_at": "<dateTime>",
+            "decision_environment_id": "<integer>",
+            "id": "<integer>",
+            "modified_at": "<dateTime>",
+            "name": "<string>",
+            "organization_id": "<integer>",
+            "project_id": "<integer>",
+            "rulebook_id": "<integer>",
+            "rulebook_name": "<string>",
+            "rules_count": "<integer>",
+            "rules_fired_count": "<integer>",
+            "description": "<string>",
+            "is_enabled": "<boolean>",
+            "status": "completed",
+            "extra_var": "<string>",
+            "restart_policy": "always",
+            "restart_count": "<integer>",
+            "current_job_id": "<string>",
+            "status_message": "<string>",
+            "log_level": "debug",
+            "eda_credentials": [
+              {
+                "created_at": "<dateTime>",
+                "created_by": "<integer>",
+                "id": "<integer>",
+                "inputs": {
+                  "ad_a2": -14579343.938382432
+                },
+                "managed": "<boolean>",
+                "modified_at": "<dateTime>",
+                "modified_by": "<integer>",
+                "name": "<string>",
+                "organization": {
+                  "id": "<integer>",
+                  "name": "<string>",
+                  "description": "<string>"
+                },
+                "description": "<string>",
+                "credential_type": {
+                  "id": "<integer>",
+                  "name": "<string>",
+                  "namespace": "<string>",
+                  "kind": "<string>"
+                },
+                "references": [
+                  {
+                    "id": "<integer>",
+                    "name": "<string>",
+                    "type": "<string>",
+                    "uri": "<uri>"
+                  },
+                  {
+                    "id": "<integer>",
+                    "name": "<string>",
+                    "type": "<string>",
+                    "uri": "<uri>"
+                  }
+                ]
+              },
+              {
+                "created_at": "<dateTime>",
+                "created_by": "<integer>",
+                "id": "<integer>",
+                "inputs": {
+                  "euc": -21555373.04156314,
+                  "incididunt8a": 35256342,
+                  "ind38": 16627459.096381351
+                },
+                "managed": "<boolean>",
+                "modified_at": "<dateTime>",
+                "modified_by": "<integer>",
+                "name": "<string>",
+                "organization": {
+                  "id": "<integer>",
+                  "name": "<string>",
+                  "description": "<string>"
+                },
+                "description": "<string>",
+                "credential_type": {
+                  "id": "<integer>",
+                  "name": "<string>",
+                  "namespace": "<string>",
+                  "kind": "<string>"
+                },
+                "references": [
+                  {
+                    "id": "<integer>",
+                    "name": "<string>",
+                    "type": "<string>",
+                    "uri": "<uri>"
+                  },
+                  {
+                    "id": "<integer>",
+                    "name": "<string>",
+                    "type": "<string>",
+                    "uri": "<uri>"
+                  }
+                ]
+              }
+            ],
+            "k8s_service_name": "<string>",
+            "event_streams": [
+              {
+                "created_at": "<dateTime>",
+                "created_by": "<integer>",
+                "eda_credential": {
+                  "credential_type_id": "<integer>",
+                  "id": "<integer>",
+                  "inputs": {
+                    "enim_a": false
+                  },
+                  "name": "<string>",
+                  "organization_id": "<integer>",
+                  "description": "<string>",
+                  "managed": "<boolean>"
+                },
+                "events_received": "<integer>",
+                "id": "<integer>",
+                "last_event_received_at": "<dateTime>",
+                "modified_at": "<dateTime>",
+                "modified_by": "<integer>",
+                "name": "<string>",
+                "organization": "<string>",
+                "owner": "<string>",
+                "test_content": "<string>",
+                "test_content_type": "<string>",
+                "test_error_message": "<string>",
+                "test_headers": "<string>",
+                "url": "<string>",
+                "test_mode": "<boolean>",
+                "additional_data_headers": "<string>",
+                "event_stream_type": "<string>"
+              },
+              {
+                "created_at": "<dateTime>",
+                "created_by": "<integer>",
+                "eda_credential": {
+                  "credential_type_id": "<integer>",
+                  "id": "<integer>",
+                  "inputs": {
+                    "magnaa69": -83174499,
+                    "ut03": 24354178
+                  },
+                  "name": "<string>",
+                  "organization_id": "<integer>",
+                  "description": "<string>",
+                  "managed": "<boolean>"
+                },
+                "events_received": "<integer>",
+                "id": "<integer>",
+                "last_event_received_at": "<dateTime>",
+                "modified_at": "<dateTime>",
+                "modified_by": "<integer>",
+                "name": "<string>",
+                "organization": "<string>",
+                "owner": "<string>",
+                "test_content": "<string>",
+                "test_content_type": "<string>",
+                "test_error_message": "<string>",
+                "test_headers": "<string>",
+                "url": "<string>",
+                "test_mode": "<boolean>",
+                "additional_data_headers": "<string>",
+                "event_stream_type": "<string>"
+              }
+            ],
+            "source_mappings": "<string>",
+            "skip_audit_events": "<boolean>"
+          }
+        ]
+      }
+order: 1000

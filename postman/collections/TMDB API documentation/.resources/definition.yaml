@@ -1,0 +1,16 @@
+$kind: collection
+description: |-
+  ## Get started
+  > This collection was generated from TMDB API OpenAPI specification file available in the [official API documentation](https://developers.themoviedb.org/3/getting-started/introduction).
+  - Get your own API key from TMDB
+  - Replace `your-tmdb-api-key` placeholder text with your own API key under the collection variable called `api_key`. This will update the query parameter submitted with each API call to authenticate and authorize your requests.
+
+  ## Welcome
+
+  This is a place to put general notes and extra information, for internal use.
+
+  To get started designing/documenting this API, select a version on the left. # Title
+  No Description
+variables:
+  baseUrl: https://api.themoviedb.org/3
+  api_key: your-tmdb-api-key

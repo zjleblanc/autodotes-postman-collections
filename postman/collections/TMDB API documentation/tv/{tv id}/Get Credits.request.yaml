@@ -1,0 +1,17 @@
+$kind: http-request
+description: Get the credits (cast and crew) that have been added to a TV show.
+url: "{{baseUrl}}/tv/:tv_id/credits"
+method: GET
+pathVariables:
+  - key: tv_id
+    value: "24717925"
+    description: "(Required) "
+auth:
+  type: apikey
+  credentials:
+    key: api_key
+    value: "{{api_key}}"
+    in: query
+settings: {}
+examples: ./.resources/Get Credits.resources/examples
+order: 18000

@@ -1,0 +1,28 @@
+$kind: http-request
+description: |-
+  Manage Authenticator Map objects in the 'authenticator_maps' relationship of this particular Authenticator.
+
+  Starting from the detail URL:
+
+  GET /:id/authenticator_maps/ to show authenticator maps currently in the relationship
+url: "{{instance_fqdn}}/api/gateway/v1/authenticators/:id/authenticator_maps/?page=<integer>&page_size=<integer>&search=<string>"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  - key: page
+    value: <integer>
+    description: A page number within the paginated result set.
+  - key: page_size
+    value: <integer>
+    description: Number of results to return per page.
+  - key: search
+    value: <string>
+    description: A search term.
+pathVariables:
+  - key: id
+    value: "1714231316"
+    description: "(Required) "
+settings: {}
+examples: ./.resources/authenticators authenticator maps list.resources/examples
+order: 1000

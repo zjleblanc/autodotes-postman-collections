@@ -1,0 +1,33 @@
+$kind: http-request
+description: API endpoint that allows authenticator maps to be viewed or edited.
+url: "{{instance_fqdn}}/api/gateway/v1/authenticator_maps/:id/"
+method: PUT
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: <integer>
+    description: (Required) A unique integer value identifying this authenticator map.
+body:
+  type: json
+  content: |-
+    {
+      "authenticator": "<integer>",
+      "name": "<string>",
+      "map_type": "role",
+      "role": "<string>",
+      "organization": "<string>",
+      "team": "<string>",
+      "revoke": "<boolean>",
+      "triggers": {
+        "eiusmod_e": {},
+        "culpa_325": {},
+        "ullamco_94": {}
+      },
+      "order": "<integer>",
+      "created": 10203307
+    }
+settings: {}
+examples: ./.resources/authenticator maps update.resources/examples
+order: 3000

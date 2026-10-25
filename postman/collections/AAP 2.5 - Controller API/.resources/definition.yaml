@@ -1,0 +1,10 @@
+$kind: collection
+variables:
+  instance_fqdn: aap.autodotes.com
+  admin_token: ""
+auth:
+  - id: 323c884f-461c-4cce-b1f8-08376ac51d2e
+    type: bearer
+    name: bearer auth
+    credentials:
+      token: "{{admin_token}}"

@@ -1,0 +1,7 @@
+$kind: http-request
+description: Link other resource registry endpoints
+url: "{{instance_fqdn}}/api/eda/v1/service-index/"
+method: GET
+settings: {}
+examples: ./.resources/service index retrieve.resources/examples
+order: 5000

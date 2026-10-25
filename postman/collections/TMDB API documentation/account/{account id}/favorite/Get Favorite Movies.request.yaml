@@ -1,0 +1,19 @@
+$kind: http-request
+description: Get the list of your favorite movies.
+url: "{{baseUrl}}/account/:account_id/favorite/movies?session_id=05be09af5a72ec087add5a67474410b6b4e6b8fa"
+method: GET
+queryParams:
+  - key: session_id
+    value: 05be09af5a72ec087add5a67474410b6b4e6b8fa
+    description: "(Required) "
+pathVariables:
+  account_id: ""
+auth:
+  type: apikey
+  credentials:
+    key: api_key
+    value: "{{api_key}}"
+    in: query
+settings: {}
+examples: ./.resources/Get Favorite Movies.resources/examples
+order: 3000

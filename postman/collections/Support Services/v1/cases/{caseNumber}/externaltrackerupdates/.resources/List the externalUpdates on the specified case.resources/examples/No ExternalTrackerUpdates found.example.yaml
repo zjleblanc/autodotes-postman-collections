@@ -1,0 +1,42 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/v1/cases/:caseNumber/externaltrackerupdates?startDate=string&endDate=string&sortField=string&sortOrder=string&originatingSystem=string"
+  method: GET
+  headers:
+    Accept: application/json
+  queryParams:
+    - key: startDate
+      value: string
+      description: Start Date
+    - key: endDate
+      value: string
+      description: End Date
+    - key: sortField
+      value: string
+      description: Sort Field
+    - key: sortOrder
+      value: string
+      description: Sort Order
+    - key: originatingSystem
+      value: string
+      description: Originating system
+  pathVariables:
+    caseNumber: ""
+response:
+  statusCode: 404
+  statusText: Not Found
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "internalErrorCode": "string",
+        "message": "string",
+        "detailMessage": "string",
+        "recommendations": [
+          "string",
+          "string"
+        ]
+      }
+order: 3000

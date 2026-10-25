@@ -1,0 +1,35 @@
+$kind: http-request
+description: API endpoint that allows groups to be viewed or edited.
+url: "{{instance_fqdn}}/api/gateway/v1/services/:id/"
+method: PUT
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: <integer>
+    description: (Required) A unique integer value identifying this service api route.
+body:
+  type: json
+  content: |-
+    {
+      "api_slug": "jtxs",
+      "http_port": "<integer>",
+      "is_service_https": "<boolean>",
+      "name": "<string>",
+      "service_cluster": "<integer>",
+      "service_path": "<string>",
+      "service_port": "<integer>",
+      "description": "<string>",
+      "enable_gateway_auth": "<boolean>",
+      "order": "<integer>",
+      "node_tags": "<string>",
+      "created": 67175967,
+      "created_by": "cupidatat qui mollit",
+      "gateway_path": false,
+      "id": 95647114,
+      "modified": "Lorem ea id"
+    }
+settings: {}
+examples: ./.resources/services update.resources/examples
+order: 2000

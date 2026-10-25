@@ -1,0 +1,29 @@
+$kind: http-example
+request:
+  url: "{{instance_fqdn}}/users/me/awx-tokens/:id/"
+  method: GET
+  headers:
+    - key: Accept
+      value: application/json
+    - key: sessionid
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  pathVariables:
+    id: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "created_at": "<dateTime>",
+        "id": "<integer>",
+        "modified_at": "<dateTime>",
+        "name": "<string>",
+        "user_id": "<integer>",
+        "description": "<string>"
+      }
+order: 1000

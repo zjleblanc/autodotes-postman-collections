@@ -1,0 +1,30 @@
+$kind: http-example
+request:
+  url: "{{instance_fqdn}}/rulebooks/:id/sources/?name=<string>&page=<integer>&page_size=<integer>&project_id=<number>"
+  method: GET
+  headers:
+    - key: sessionid
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  queryParams:
+    - key: name
+      value: <string>
+      description: Filter by rulebook name.
+    - key: page
+      value: <integer>
+      description: A page number within the paginated result set.
+    - key: page_size
+      value: <integer>
+      description: Number of results to return per page.
+    - key: project_id
+      value: <number>
+      description: Filter by rulebook's project id.
+  pathVariables:
+    id: ""
+response:
+  statusCode: 400
+  statusText: Bad Request
+  body:
+    type: text
+    content: ""
+order: 2000

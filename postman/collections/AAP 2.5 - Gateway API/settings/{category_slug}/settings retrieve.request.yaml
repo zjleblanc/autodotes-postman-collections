@@ -1,0 +1,17 @@
+$kind: http-request
+description: |-
+  A view class for managing and displaying a group of settings for a specific category.
+  Endpoint: '/api/gateway/v1/settings/<category_slug>/'
+  Parameters:
+  - category_slug: The category of the setting (e.g., 'proxy', 'configuration').
+url: "{{instance_fqdn}}/api/gateway/v1/settings/:category_slug/"
+method: GET
+headers:
+  Accept: application/json
+pathVariables:
+  - key: category_slug
+    value: lnih0f
+    description: "(Required) "
+settings: {}
+examples: ./.resources/settings retrieve.resources/examples
+order: 2000

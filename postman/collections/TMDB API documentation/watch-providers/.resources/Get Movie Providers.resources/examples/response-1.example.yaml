@@ -1,0 +1,20 @@
+$kind: http-example
+name: response
+request:
+  url: "{{baseUrl}}/watch/providers/movie?watch_region=in fugiat"
+  method: GET
+  queryParams:
+    watch_region: in fugiat
+response:
+  statusCode: 401
+  statusText: Unauthorized
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+       "status_message": "laboris quis officia",
+       "status_code": 17219857
+      }
+order: 2000

@@ -1,0 +1,6 @@
+$kind: http-request
+name: webhook_key
+url: https://{{instance_fqdn}}/api/controller/v2/workflow_job_templates/{id}/webhook_key/
+method: POST
+settings: {}
+order: 2000

@@ -1,0 +1,55 @@
+$kind: http-example
+request:
+  url: "{{instance_fqdn}}/api/gateway/v1/activitystream/:id/"
+  method: GET
+  headers:
+    - key: Accept
+      value: application/json
+    - key: gateway_sessionid
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  pathVariables:
+    id: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "changes": {
+          "mollit6": {
+            "aliquipe": {},
+            "reprehenderita8": {}
+          },
+          "laboris3": {
+            "adcd": {},
+            "adb_": {}
+          }
+        },
+        "content_type": "<integer>",
+        "content_type_model": "<string>",
+        "created": "<dateTime>",
+        "created_by": "<integer>",
+        "id": "<integer>",
+        "operation": "disassociate",
+        "related": {
+          "elit_65c": "<string>",
+          "dolore_c9": "<string>",
+          "labore_1": "<string>",
+          "nisiace": "<string>"
+        },
+        "related_content_type_model": "<string>",
+        "summary_fields": {
+          "cillum_bf1": {
+            "dolore_6ad": {}
+          }
+        },
+        "url": "<string>",
+        "object_id": "<string>",
+        "related_content_type": "<integer>",
+        "related_object_id": "<string>"
+      }
+order: 1000

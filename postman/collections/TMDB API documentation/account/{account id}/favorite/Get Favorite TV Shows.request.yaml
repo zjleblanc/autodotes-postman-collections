@@ -1,0 +1,21 @@
+$kind: http-request
+description: Get the list of your favorite TV shows.
+url: "{{baseUrl}}/account/:account_id/favorite/tv?session_id="
+method: GET
+queryParams:
+  - key: session_id
+    value: ""
+    description: "(Required) "
+pathVariables:
+  - key: account_id
+    value: "24717925"
+    description: "(Required) "
+auth:
+  type: apikey
+  credentials:
+    key: api_key
+    value: "{{api_key}}"
+    in: query
+settings: {}
+examples: ./.resources/Get Favorite TV Shows.resources/examples
+order: 2000

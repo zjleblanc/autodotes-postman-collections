@@ -1,0 +1,102 @@
+$kind: http-example
+request:
+  url: "{{instance_fqdn}}/api/gateway/v1/authenticators/:id/authenticator_maps/?page=<integer>&page_size=<integer>&search=<string>"
+  method: GET
+  headers:
+    - key: Accept
+      value: application/json
+    - key: gateway_sessionid
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  queryParams:
+    - key: page
+      value: <integer>
+      description: A page number within the paginated result set.
+    - key: page_size
+      value: <integer>
+      description: Number of results to return per page.
+    - key: search
+      value: <string>
+      description: A search term.
+  pathVariables:
+    id: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "count": "<integer>",
+        "results": [
+          {
+            "authenticator": "<integer>",
+            "created": "<dateTime>",
+            "created_by": "<integer>",
+            "id": "<integer>",
+            "modified": "<dateTime>",
+            "modified_by": "<integer>",
+            "name": "<string>",
+            "related": {
+              "sint8": "<string>",
+              "enim_4": "<string>"
+            },
+            "summary_fields": {
+              "do63b": {
+                "Excepteur_01": {},
+                "cillumb6e": {}
+              },
+              "incididunt_d": {
+                "ullamco1": {}
+              }
+            },
+            "url": "<string>",
+            "map_type": "allow",
+            "role": "<string>",
+            "organization": "<string>",
+            "team": "<string>",
+            "revoke": "<boolean>",
+            "triggers": {
+              "dolore_a": {},
+              "magna_2": {}
+            },
+            "order": "<integer>"
+          },
+          {
+            "authenticator": "<integer>",
+            "created": "<dateTime>",
+            "created_by": "<integer>",
+            "id": "<integer>",
+            "modified": "<dateTime>",
+            "modified_by": "<integer>",
+            "name": "<string>",
+            "related": {
+              "sed_533": "<string>",
+              "eiusmod0_2": "<string>",
+              "cillum_4b": "<string>",
+              "in_c0_": "<string>"
+            },
+            "summary_fields": {
+              "Ut1_7": {
+                "Excepteurc68": {}
+              }
+            },
+            "url": "<string>",
+            "map_type": "allow",
+            "role": "<string>",
+            "organization": "<string>",
+            "team": "<string>",
+            "revoke": "<boolean>",
+            "triggers": {
+              "consequat_1": {},
+              "irure_8f": {}
+            },
+            "order": "<integer>"
+          }
+        ],
+        "next": "<uri>",
+        "previous": "<uri>"
+      }
+order: 1000

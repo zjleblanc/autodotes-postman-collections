@@ -1,0 +1,17 @@
+$kind: http-example
+request:
+  url: "{{instance_fqdn}}/service-index/resources/:ansible_id/"
+  method: DELETE
+  headers:
+    - key: sessionid
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  pathVariables:
+    ansible_id: ""
+response:
+  statusCode: 204
+  statusText: No Content
+  body:
+    type: text
+    content: ""
+order: 1000

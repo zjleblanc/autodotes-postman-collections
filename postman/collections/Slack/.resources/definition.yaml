@@ -1,0 +1,7 @@
+$kind: collection
+auth:
+  - id: 6346fb47-39af-451a-9005-68a9bbeb09eb
+    type: bearer
+    name: bearer auth
+    credentials:
+      token: "{{slack_bearer_token}}"

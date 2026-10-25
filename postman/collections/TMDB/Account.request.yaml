@@ -1,0 +1,5 @@
+$kind: http-request
+url: https://api.themoviedb.org/3/account/20850360
+method: GET
+settings: {}
+order: 1000

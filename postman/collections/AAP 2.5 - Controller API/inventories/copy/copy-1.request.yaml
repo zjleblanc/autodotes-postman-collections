@@ -1,0 +1,6 @@
+$kind: http-request
+name: copy
+url: https://{{instance_fqdn}}/api/controller/v2/inventories/{id}/copy/
+method: POST
+settings: {}
+order: 2000

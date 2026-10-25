@@ -1,0 +1,34 @@
+$kind: http-example
+name: response
+request:
+  url: "{{baseUrl}}/account/:account_id/favorite?session_id="
+  method: POST
+  headers:
+    - key: Content-Type
+      value: application/json;charset=utf-8
+      description: "(Required) "
+  queryParams:
+    session_id: ""
+  pathVariables:
+    account_id: ""
+  body:
+    type: text
+    content: |-
+      {
+          "media_type": "movie",
+          "media_id": 550,
+          "favorite": true
+      }
+response:
+  statusCode: 404
+  statusText: Not Found
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+       "status_message": "laboris quis officia",
+       "status_code": 17219857
+      }
+order: 3000

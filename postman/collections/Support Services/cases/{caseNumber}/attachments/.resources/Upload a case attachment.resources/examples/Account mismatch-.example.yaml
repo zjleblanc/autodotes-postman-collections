@@ -1,0 +1,27 @@
+$kind: http-example
+name: Account mismatch.
+request:
+  url: "{{baseUrl}}/cases/:caseNumber/attachments/"
+  method: POST
+  headers:
+    Accept: application/json
+  pathVariables:
+    caseNumber: ""
+response:
+  statusCode: 403
+  statusText: Forbidden
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "internalErrorCode": "string",
+        "message": "string",
+        "detailMessage": "string",
+        "recommendations": [
+          "string",
+          "string"
+        ]
+      }
+order: 2000

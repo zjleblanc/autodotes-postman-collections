@@ -1,0 +1,24 @@
+$kind: http-example
+name: response
+request:
+  url: "{{baseUrl}}/authentication/session"
+  method: DELETE
+  body:
+    type: text
+    content: |-
+      {
+          "session_id": "2629f70fb498edc263a0adb99118ac41f0053e8c"
+      }
+response:
+  statusCode: 401
+  statusText: Unauthorized
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+       "status_code": -70389388,
+       "status_message": "minim e"
+      }
+order: 2000

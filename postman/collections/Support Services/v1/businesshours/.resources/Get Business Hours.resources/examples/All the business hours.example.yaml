@@ -1,0 +1,45 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/v1/businesshours?timezone=string"
+  method: GET
+  headers:
+    Accept: application/json
+  queryParams:
+    - key: timezone
+      value: string
+      description: (Required) Timezone
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "id": "string",
+        "createdById": "string",
+        "createdDate": "1968-08-18T09:29:10.853Z",
+        "isActive": false,
+        "isDefault": false,
+        "lastModifiedById": "string",
+        "lastModifiedDate": "2016-10-31T23:52:28.512Z",
+        "name": "string",
+        "systemModstamp": "1950-03-18T00:14:43.379Z",
+        "timeZoneSidKey": "string",
+        "mondayEndTime": "18:00:00.000Z",
+        "mondayStartTime": "string",
+        "tuesdayEndTime": "string",
+        "tuesdayStartTime": "string",
+        "wednesdayEndTime": "string",
+        "wednesdayStartTime": "string",
+        "thursdayEndTime": "string",
+        "thursdayStartTime": "string",
+        "fridayEndTime": "string",
+        "fridayStartTime": "string",
+        "saturdayEndTime": "string",
+        "saturdayStartTime": "string",
+        "sundayEndTime": "string",
+        "sundayStartTime": "string"
+      }
+order: 1000

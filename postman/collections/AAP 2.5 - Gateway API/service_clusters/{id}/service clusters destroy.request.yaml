@@ -1,0 +1,11 @@
+$kind: http-request
+description: API endpoint that allows groups to be viewed or edited.
+url: "{{instance_fqdn}}/api/gateway/v1/service_clusters/:id/"
+method: DELETE
+pathVariables:
+  - key: id
+    value: <integer>
+    description: (Required) A unique integer value identifying this service cluster.
+settings: {}
+examples: ./.resources/service clusters destroy.resources/examples
+order: 7000

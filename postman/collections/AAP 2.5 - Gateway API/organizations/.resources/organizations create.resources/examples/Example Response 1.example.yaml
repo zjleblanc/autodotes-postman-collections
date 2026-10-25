@@ -1,0 +1,59 @@
+$kind: http-example
+request:
+  url: "{{instance_fqdn}}/api/gateway/v1/organizations/"
+  method: POST
+  headers:
+    - key: Content-Type
+      value: application/json
+    - key: Accept
+      value: application/json
+    - key: gateway_sessionid
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  body:
+    type: json
+    content: |-
+      {
+        "name": "<string>",
+        "description": "<string>",
+        "created": "aliquip",
+        "created_by": "laboris non ullamco",
+        "id": "nulla ut",
+        "managed": false,
+        "modified": "labore do sint Lore",
+        "modified_by": 84808546,
+        "related": "incididunt enim dolor ea",
+        "summary_fields": -50014201.327751316
+      }
+response:
+  statusCode: 201
+  statusText: Created
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "created": "<dateTime>",
+        "created_by": "<integer>",
+        "id": "<integer>",
+        "managed": "<boolean>",
+        "modified": "<dateTime>",
+        "modified_by": "<integer>",
+        "name": "<string>",
+        "related": {
+          "non0e": "<string>",
+          "ullamco84c": "<string>",
+          "cillum_be": "<string>"
+        },
+        "summary_fields": {
+          "amete0": {
+            "dolore_6d9": {},
+            "eiusmod_60": {},
+            "nulla_1": {}
+          }
+        },
+        "url": "<string>",
+        "description": "<string>"
+      }
+order: 1000

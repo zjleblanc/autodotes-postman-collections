@@ -1,0 +1,21 @@
+$kind: http-request
+description: Use this method to create a v3 session ID if you already have a valid v4 access token. The v4 token needs to be authenticated by the user. Your standard "read token" will not validate to create a session ID.
+url: "{{baseUrl}}/authentication/session/convert/4"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+        "access_token": "REDACTED_ACCESS_TOKEN"
+    }
+auth:
+  type: apikey
+  credentials:
+    key: api_key
+    value: "{{api_key}}"
+    in: query
+settings: {}
+examples: ./.resources/Create Session (from v4 access token).resources/examples
+order: 3000

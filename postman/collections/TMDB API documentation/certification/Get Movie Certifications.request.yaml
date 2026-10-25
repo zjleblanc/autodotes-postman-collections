@@ -1,0 +1,13 @@
+$kind: http-request
+description: Get an up to date list of the officially supported movie certifications on TMDB.
+url: "{{baseUrl}}/certification/movie/list"
+method: GET
+auth:
+  type: apikey
+  credentials:
+    key: api_key
+    value: "{{api_key}}"
+    in: query
+settings: {}
+examples: ./.resources/Get Movie Certifications.resources/examples
+order: 1000

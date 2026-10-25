@@ -1,0 +1,6 @@
+$kind: http-request
+name: users
+url: https://{{instance_fqdn}}/api/controller/v2/roles/{id}/users/
+method: POST
+settings: {}
+order: 2000

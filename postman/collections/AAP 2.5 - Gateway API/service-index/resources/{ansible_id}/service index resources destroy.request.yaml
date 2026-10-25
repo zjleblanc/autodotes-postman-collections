@@ -1,0 +1,11 @@
+$kind: http-request
+description: Index of all the resources in the system.
+url: "{{instance_fqdn}}/api/gateway/v1/service-index/resources/:ansible_id/"
+method: DELETE
+pathVariables:
+  - key: ansible_id
+    value: <uuid>
+    description: "(Required) "
+settings: {}
+examples: ./.resources/service index resources destroy.resources/examples
+order: 4000

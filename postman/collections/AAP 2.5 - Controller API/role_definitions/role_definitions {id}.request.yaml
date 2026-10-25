@@ -1,0 +1,5 @@
+$kind: http-request
+url: https://{{instance_fqdn}}/api/controller/v2/role_definitions/{id}/
+method: DELETE
+settings: {}
+order: 5000

@@ -1,0 +1,13 @@
+$kind: http-request
+description: Get the EventStream by its id
+url: "{{instance_fqdn}}/api/eda/v1/event-streams/:id/"
+method: GET
+headers:
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: <integer>
+    description: (Required) A unique integer value identifying this event stream.
+settings: {}
+examples: ./.resources/event streams retrieve.resources/examples
+order: 2000

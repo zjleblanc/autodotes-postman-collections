@@ -1,0 +1,25 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/company/:company_id"
+  method: GET
+  pathVariables:
+    company_id: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+       "description": "",
+       "headquarters": "San Francisco, California, United States",
+       "homepage": "http://www.lucasfilm.com",
+       "id": 1,
+       "logo_path": "/o86DbpburjxrqAzEDhXZcyE8pDb.png",
+       "name": "Lucasfilm",
+       "origin_country": "US",
+       "parent_company": null
+      }
+order: 1000

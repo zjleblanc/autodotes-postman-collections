@@ -1,0 +1,13 @@
+$kind: http-request
+description: API endpoint that allows for read-only access to activity stream entries.
+url: "{{instance_fqdn}}/api/gateway/v1/activitystream/:id/"
+method: GET
+headers:
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: <integer>
+    description: (Required) A unique integer value identifying this entry.
+settings: {}
+examples: ./.resources/activitystream retrieve.resources/examples
+order: 1000

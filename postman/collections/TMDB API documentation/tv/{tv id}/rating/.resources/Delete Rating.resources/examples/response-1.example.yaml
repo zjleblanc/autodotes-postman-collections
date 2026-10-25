@@ -1,0 +1,27 @@
+$kind: http-example
+name: response
+request:
+  url: "{{baseUrl}}/tv/:tv_id/rating?guest_session_id=in fugiat&session_id=in fugiat"
+  method: DELETE
+  headers:
+    - key: Content-Type
+      value: application/json;charset=utf-8
+      description: "(Required) "
+  queryParams:
+    guest_session_id: in fugiat
+    session_id: in fugiat
+  pathVariables:
+    tv_id: ""
+response:
+  statusCode: 401
+  statusText: Unauthorized
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+       "status_code": -70389388,
+       "status_message": "minim e"
+      }
+order: 2000

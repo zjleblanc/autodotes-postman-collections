@@ -1,0 +1,6 @@
+$kind: http-request
+name: inventory_updates {id}
+url: https://{{instance_fqdn}}/api/controller/v2/inventory_updates/{id}/
+method: GET
+settings: {}
+order: 9000

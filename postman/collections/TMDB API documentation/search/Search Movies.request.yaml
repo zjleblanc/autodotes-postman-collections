@@ -1,0 +1,16 @@
+$kind: http-request
+description: Search for movies.
+url: "{{baseUrl}}/search/movie?year=24717925&primary_release_year=24717925"
+method: GET
+queryParams:
+  year: "24717925"
+  primary_release_year: "24717925"
+auth:
+  type: apikey
+  credentials:
+    key: api_key
+    value: "{{api_key}}"
+    in: query
+settings: {}
+examples: ./.resources/Search Movies.resources/examples
+order: 6000

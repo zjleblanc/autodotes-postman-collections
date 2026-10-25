@@ -1,0 +1,103 @@
+$kind: http-request
+description: |-
+  Discover TV shows by different types of data like average rating, number of votes, genres, the network they aired on and air dates.
+
+  Discover also supports a nice list of sort options. See below for all of the available options.
+
+  Also note that a number of filters support being comma (`,`) or pipe (`|`) separated. Comma's are treated like an `AND` and query while pipe's are an `OR`. 
+
+  Some examples of what can be done with discover can be found [here](https://www.themoviedb.org/documentation/api/discover).
+
+  #### Recent Changes
+
+  | **Date** | **Change** |
+  | - | - |
+  | April 13, 2021 | A new `with_watch_monetization_types` filter is available to use with `watch_region`.|
+  | January 2, 2021 | A new set of filters are available for watch provider filtering. Check out `with_watch_providers` and `watch_region`.|
+url: "{{baseUrl}}/discover/tv?sort_by=popularity.desc&air_date.gte=1982-08-06&air_date.lte=1982-08-06&first_air_date.gte=1982-08-06&first_air_date.lte=1982-08-06&first_air_date_year=24717925&language=en-US&page=1&timezone=America/New_York&vote_average.gte=11524863.63350107&vote_count.gte=91687897&with_genres=in fugiat&with_networks=in fugiat&without_genres=in fugiat&with_runtime.gte=24717925&with_runtime.lte=24717925&include_null_first_air_dates=false&with_original_language=in fugiat&without_keywords=in fugiat&screened_theatrically=false&with_companies=in fugiat&with_keywords=in fugiat&with_watch_providers=in fugiat&watch_region=in fugiat&with_watch_monetization_types=ads"
+method: GET
+queryParams:
+  - key: sort_by
+    value: popularity.desc
+    description: Choose from one of the many available sort options.
+  - key: air_date.gte
+    value: 1982-08-06
+    description: Filter and only include TV shows that have a air date (by looking at all episodes) that is greater or equal to the specified value.
+  - key: air_date.lte
+    value: 1982-08-06
+    description: Filter and only include TV shows that have a air date (by looking at all episodes) that is less than or equal to the specified value.
+  - key: first_air_date.gte
+    value: 1982-08-06
+    description: Filter and only include TV shows that have a original air date that is greater or equal to the specified value. Can be used in conjunction with the "include_null_first_air_dates" filter if you want to include items with no air date.
+  - key: first_air_date.lte
+    value: 1982-08-06
+    description: Filter and only include TV shows that have a original air date that is less than or equal to the specified value. Can be used in conjunction with the "include_null_first_air_dates" filter if you want to include items with no air date.
+  - key: first_air_date_year
+    value: "24717925"
+    description: Filter and only include TV shows that have a original air date year that equal to the specified value. Can be used in conjunction with the "include_null_first_air_dates" filter if you want to include items with no air date.
+  - key: language
+    value: en-US
+    description: Specify a language to query translatable fields with.
+  - key: page
+    value: "1"
+    description: Specify the page of results to query.
+  - key: timezone
+    value: America/New_York
+    description: Used in conjunction with the air_date.gte/lte filter to calculate the proper UTC offset.
+  - key: vote_average.gte
+    value: "11524863.63350107"
+    description: Filter and only include movies that have a rating that is greater or equal to the specified value.
+  - key: vote_count.gte
+    value: "91687897"
+    description: Filter and only include movies that have a rating that is less than or equal to the specified value.
+  - key: with_genres
+    value: in fugiat
+    description: Comma separated value of genre ids that you want to include in the results.
+  - key: with_networks
+    value: in fugiat
+    description: Comma separated value of network ids that you want to include in the results.
+  - key: without_genres
+    value: in fugiat
+    description: Comma separated value of genre ids that you want to exclude from the results.
+  - key: with_runtime.gte
+    value: "24717925"
+    description: Filter and only include TV shows with an episode runtime that is greater than or equal to a value.
+  - key: with_runtime.lte
+    value: "24717925"
+    description: Filter and only include TV shows with an episode runtime that is less than or equal to a value.
+  - key: include_null_first_air_dates
+    value: "false"
+    description: Use this filter to include TV shows that don't have an air date while using any of the "first_air_date" filters.
+  - key: with_original_language
+    value: in fugiat
+    description: Specify an ISO 639-1 string to filter results by their original language value.
+  - key: without_keywords
+    value: in fugiat
+    description: Exclude items with certain keywords. You can comma and pipe seperate these values to create an 'AND' or 'OR' logic.
+  - key: screened_theatrically
+    value: "false"
+    description: Filter results to include items that have been screened theatrically.
+  - key: with_companies
+    value: in fugiat
+    description: A comma separated list of production company ID's. Only include movies that have one of the ID's added as a production company.
+  - key: with_keywords
+    value: in fugiat
+    description: A comma separated list of keyword ID's. Only includes TV shows that have one of the ID's added as a keyword.
+  - key: with_watch_providers
+    value: in fugiat
+    description: A comma or pipe separated list of watch provider ID's. Combine this filter with `watch_region` in order to filter your results by a specific watch provider in a specific region.
+  - key: watch_region
+    value: in fugiat
+    description: An ISO 3166-1 code. Combine this filter with `with_watch_providers` in order to filter your results by a specific watch provider in a specific region.
+  - key: with_watch_monetization_types
+    value: ads
+    description: In combination with `watch_region`, you can filter by monetization type.
+auth:
+  type: apikey
+  credentials:
+    key: api_key
+    value: "{{api_key}}"
+    in: query
+settings: {}
+examples: ./.resources/TV Discover.resources/examples
+order: 1000

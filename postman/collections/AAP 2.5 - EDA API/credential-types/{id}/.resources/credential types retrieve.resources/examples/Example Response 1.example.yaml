@@ -1,0 +1,39 @@
+$kind: http-example
+request:
+  url: "{{instance_fqdn}}/credential-types/:id/"
+  method: GET
+  headers:
+    - key: Accept
+      value: application/json
+    - key: sessionid
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  pathVariables:
+    id: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "created_at": "<dateTime>",
+        "id": "<integer>",
+        "managed": "<boolean>",
+        "modified_at": "<dateTime>",
+        "name": "<string>",
+        "namespace": "<string>",
+        "kind": "<string>",
+        "description": "<string>",
+        "inputs": {
+          "deserunt_8": false,
+          "voluptate_c0": "aliquip voluptate esse consectetur velit",
+          "dolor961": "magna"
+        },
+        "injectors": {
+          "nulla_9a3": true
+        }
+      }
+order: 1000

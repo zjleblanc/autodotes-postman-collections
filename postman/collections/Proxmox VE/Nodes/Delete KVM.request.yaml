@@ -1,0 +1,8 @@
+$kind: http-request
+url: "{{pve_api_base_url}}/nodes/pve/qemu/109?purge=1&destroy-unreferenced-disks=1"
+method: DELETE
+queryParams:
+  purge: "1"
+  destroy-unreferenced-disks: "1"
+settings: {}
+order: 5000

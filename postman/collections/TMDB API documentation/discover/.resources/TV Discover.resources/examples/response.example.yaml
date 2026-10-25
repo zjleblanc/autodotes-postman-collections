@@ -1,0 +1,65 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/discover/tv?sort_by=popularity.desc&air_date.gte=1982-08-06&air_date.lte=1982-08-06&first_air_date.gte=1982-08-06&first_air_date.lte=1982-08-06&first_air_date_year=24717925&language=en-US&page=1&timezone=America/New_York&vote_average.gte=11524863.63350107&vote_count.gte=91687897&with_genres=in fugiat&with_networks=in fugiat&without_genres=in fugiat&with_runtime.gte=24717925&with_runtime.lte=24717925&include_null_first_air_dates=false&with_original_language=in fugiat&without_keywords=in fugiat&screened_theatrically=true&with_companies=in fugiat&with_keywords=in fugiat&with_watch_providers=in fugiat&watch_region=in fugiat&with_watch_monetization_types=ads"
+  method: GET
+  queryParams:
+    sort_by: popularity.desc
+    air_date.gte: 1982-08-06
+    air_date.lte: 1982-08-06
+    first_air_date.gte: 1982-08-06
+    first_air_date.lte: 1982-08-06
+    first_air_date_year: "24717925"
+    language: en-US
+    page: "1"
+    timezone: America/New_York
+    vote_average.gte: "11524863.63350107"
+    vote_count.gte: "91687897"
+    with_genres: in fugiat
+    with_networks: in fugiat
+    without_genres: in fugiat
+    with_runtime.gte: "24717925"
+    with_runtime.lte: "24717925"
+    include_null_first_air_dates: "false"
+    with_original_language: in fugiat
+    without_keywords: in fugiat
+    screened_theatrically: "true"
+    with_companies: in fugiat
+    with_keywords: in fugiat
+    with_watch_providers: in fugiat
+    watch_region: in fugiat
+    with_watch_monetization_types: ads
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+       "page": 1,
+       "results": [
+        {
+         "poster_path": "/dDfjzRicTeVaiysRTwx56aM8bC3.jpg",
+         "popularity": 5.4,
+         "id": 61889,
+         "backdrop_path": null,
+         "vote_average": 7.74,
+         "overview": "Lawyer-by-day Matt Murdock uses his heightened senses from being blinded as a young boy to fight crime at night on the streets of Hell’s Kitchen as Daredevil.......",
+         "first_air_date": "2015-04-10",
+         "origin_country": [
+          "US"
+         ],
+         "genre_ids": [
+          28
+         ],
+         "original_language": "en",
+         "vote_count": 19,
+         "name": "Marvel's Daredevil",
+         "original_name": "Marvel's Daredevil"
+        }
+       ],
+       "total_results": 61470,
+       "total_pages": 3074
+      }
+order: 1000

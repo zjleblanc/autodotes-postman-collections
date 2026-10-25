@@ -1,0 +1,43 @@
+$kind: http-example
+request:
+  url: "{{instance_fqdn}}/api/gateway/v1/service_keys/:id/"
+  method: GET
+  headers:
+    - key: Accept
+      value: application/json
+    - key: gateway_sessionid
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  pathVariables:
+    id: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "created": "<dateTime>",
+        "created_by": "<integer>",
+        "id": "<integer>",
+        "modified": "<dateTime>",
+        "modified_by": "<integer>",
+        "related": {
+          "consequat_ed": "<string>"
+        },
+        "secret": "<string>",
+        "service_cluster": "<integer>",
+        "summary_fields": {
+          "ut45": {
+            "sit28a": {},
+            "incididunt_5f8": {}
+          }
+        },
+        "url": "<string>",
+        "name": "<string>",
+        "is_active": "<boolean>",
+        "algorithm": "HS256"
+      }
+order: 1000

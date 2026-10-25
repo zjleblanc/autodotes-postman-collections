@@ -1,0 +1,26 @@
+$kind: http-request
+description: Source list of a rulebook by its id
+url: "{{instance_fqdn}}/api/eda/v1/rulebooks/:id/sources/?name=<string>&page=<integer>&page_size=<integer>&project_id=<number>"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  - key: name
+    value: <string>
+    description: Filter by rulebook name.
+  - key: page
+    value: <integer>
+    description: A page number within the paginated result set.
+  - key: page_size
+    value: <integer>
+    description: Number of results to return per page.
+  - key: project_id
+    value: <number>
+    description: Filter by rulebook's project id.
+pathVariables:
+  - key: id
+    value: <integer>
+    description: (Required) A unique integer value identifying this rulebook.
+settings: {}
+examples: ./.resources/rulebooks sources list.resources/examples
+order: 1000

@@ -1,0 +1,23 @@
+$kind: http-request
+description: Returns all of the user ratings for the season's episodes.
+url: "{{baseUrl}}/tv/:tv_id/season/:season_number/account_states?guest_session_id=in fugiat&session_id=in fugiat"
+method: GET
+queryParams:
+  guest_session_id: in fugiat
+  session_id: in fugiat
+pathVariables:
+  - key: tv_id
+    value: "24717925"
+    description: "(Required) "
+  - key: season_number
+    value: "24717925"
+    description: "(Required) "
+auth:
+  type: apikey
+  credentials:
+    key: api_key
+    value: "{{api_key}}"
+    in: query
+settings: {}
+examples: ./.resources/Get Account States.resources/examples
+order: 3000

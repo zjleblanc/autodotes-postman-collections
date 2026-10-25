@@ -1,0 +1,30 @@
+$kind: http-request
+description: API endpoint that allows users to be viewed or edited.
+url: "{{instance_fqdn}}/api/gateway/v1/users/"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+body:
+  type: json
+  content: |-
+    {
+      "username": "m",
+      "email": "<email>",
+      "first_name": "<string>",
+      "last_name": "<string>",
+      "password": "<string>",
+      "is_superuser": "<boolean>",
+      "authenticators": [
+        4,
+        6
+      ],
+      "authenticator_uid": "<string>",
+      "created": "et ad id laborum",
+      "created_by": "ea velit",
+      "id": false,
+      "is_platform_auditor": -48044686
+    }
+settings: {}
+examples: ./.resources/users create.resources/examples
+order: 3000

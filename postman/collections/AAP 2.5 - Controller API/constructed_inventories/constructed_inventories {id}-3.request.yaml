@@ -1,0 +1,6 @@
+$kind: http-request
+name: constructed_inventories {id}
+url: https://{{instance_fqdn}}/api/controller/v2/constructed_inventories/{id}/
+method: PUT
+settings: {}
+order: 6000

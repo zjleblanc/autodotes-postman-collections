@@ -1,0 +1,21 @@
+$kind: http-example
+name: response
+request:
+  url: "{{baseUrl}}/tv/:tv_id/season/:season_number/images"
+  method: GET
+  pathVariables:
+    tv_id: ""
+    season_number: ""
+response:
+  statusCode: 404
+  statusText: Not Found
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+       "status_message": "laboris quis officia",
+       "status_code": 17219857
+      }
+order: 3000

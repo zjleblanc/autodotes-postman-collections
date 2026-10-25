@@ -1,0 +1,26 @@
+$kind: http-request
+description: Update a RoleDefinition.
+url: "{{instance_fqdn}}/api/eda/v1/role_definitions/:id/"
+method: PUT
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: <integer>
+    description: (Required) A unique integer value identifying this role definition.
+body:
+  type: json
+  content: |-
+    {
+      "name": "<string>",
+      "permissions": [
+        "eda.view_rulebook",
+        "shared.change_team"
+      ],
+      "content_type": "eda.project",
+      "description": "<string>"
+    }
+settings: {}
+examples: ./.resources/role definitions update.resources/examples
+order: 4000

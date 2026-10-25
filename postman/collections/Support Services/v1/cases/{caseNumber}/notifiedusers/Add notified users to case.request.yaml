@@ -1,0 +1,33 @@
+$kind: http-request
+description: Add notified users to the case specified by the case number in the path.
+url: "{{baseUrl}}/v1/cases/:caseNumber/notifiedusers"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: "*/*"
+pathVariables:
+  - key: caseNumber
+    value: string
+    description: (Required) CaseNumber
+body:
+  type: json
+  content: |-
+    {
+      "user": [
+        {
+          "ssoUsername": "string",
+          "title": "string",
+          "type": "string"
+        },
+        {
+          "ssoUsername": "string",
+          "title": "string",
+          "type": "string"
+        }
+      ]
+    }
+auth:
+  type: noauth
+settings: {}
+examples: ./.resources/Add notified users to case.resources/examples
+order: 2000

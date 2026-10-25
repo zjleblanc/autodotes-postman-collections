@@ -1,0 +1,22 @@
+$kind: http-request
+description: List all projects
+url: "{{instance_fqdn}}/api/eda/v1/projects/?name=<string>&page=<integer>&page_size=<integer>&url=<string>"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  - key: name
+    value: <string>
+    description: Filter by project name.
+  - key: page
+    value: <integer>
+    description: A page number within the paginated result set.
+  - key: page_size
+    value: <integer>
+    description: Number of results to return per page.
+  - key: url
+    value: <string>
+    description: Filter by project url.
+settings: {}
+examples: ./.resources/projects list.resources/examples
+order: 2000

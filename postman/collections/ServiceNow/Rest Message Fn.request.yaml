@@ -1,0 +1,5 @@
+$kind: http-request
+url: "{{snow_instance_url}}/api/now/table/sys_rest_message_fn"
+method: GET
+settings: {}
+order: 8000

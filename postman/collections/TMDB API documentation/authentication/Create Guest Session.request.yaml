@@ -1,0 +1,18 @@
+$kind: http-request
+description: |-
+  This method will let you create a new guest session. Guest sessions are a type of session that will let a user rate movies and TV shows but not require them to have a TMDB user account. More information about user authentication can be found [here](#docTextSection:NSZtgz7zptsiLYxXZ).
+
+  Please note, you should only generate a single guest session per user (or device) as you will be able to attach the ratings to a TMDB user account in the future. There is also IP limits in place so you should always make sure it's the end user doing the guest session actions.
+
+  If a guest session is not used for the first time within 24 hours, it will be automatically deleted.
+url: "{{baseUrl}}/authentication/guest_session/new"
+method: GET
+auth:
+  type: apikey
+  credentials:
+    key: api_key
+    value: "{{api_key}}"
+    in: query
+settings: {}
+examples: ./.resources/Create Guest Session.resources/examples
+order: 3000

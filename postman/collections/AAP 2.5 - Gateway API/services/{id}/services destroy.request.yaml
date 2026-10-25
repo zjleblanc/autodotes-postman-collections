@@ -1,0 +1,11 @@
+$kind: http-request
+description: API endpoint that allows groups to be viewed or edited.
+url: "{{instance_fqdn}}/api/gateway/v1/services/:id/"
+method: DELETE
+pathVariables:
+  - key: id
+    value: <integer>
+    description: (Required) A unique integer value identifying this service api route.
+settings: {}
+examples: ./.resources/services destroy.resources/examples
+order: 4000

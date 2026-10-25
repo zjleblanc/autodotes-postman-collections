@@ -1,0 +1,5 @@
+$kind: http-request
+url: "{{aap_base_url}}/api/v2/workflow_job_template_nodes/10"
+method: GET
+settings: {}
+order: 4000

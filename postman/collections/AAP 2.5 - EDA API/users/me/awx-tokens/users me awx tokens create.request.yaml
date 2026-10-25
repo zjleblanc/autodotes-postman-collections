@@ -1,0 +1,18 @@
+$kind: http-request
+description: Create a AWX token for a current user.
+url: "{{instance_fqdn}}/api/eda/v1/users/me/awx-tokens/"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+body:
+  type: json
+  content: |-
+    {
+      "name": "<string>",
+      "token": "<string>",
+      "description": "<string>"
+    }
+settings: {}
+examples: ./.resources/users me awx tokens create.resources/examples
+order: 3000

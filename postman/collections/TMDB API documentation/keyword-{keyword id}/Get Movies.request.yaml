@@ -1,0 +1,20 @@
+$kind: http-request
+description: |-
+  Get the movies that belong to a keyword.
+
+  We **highly recommend** using [movie discover](#endpoint:p5NyoR7dM842S8G9j) instead of this method as it is much more flexible.
+url: "{{baseUrl}}/keyword/:keyword_id/movies"
+method: GET
+pathVariables:
+  - key: keyword_id
+    value: "24717925"
+    description: "(Required) "
+auth:
+  type: apikey
+  credentials:
+    key: api_key
+    value: "{{api_key}}"
+    in: query
+settings: {}
+examples: ./.resources/Get Movies.resources/examples
+order: 2000

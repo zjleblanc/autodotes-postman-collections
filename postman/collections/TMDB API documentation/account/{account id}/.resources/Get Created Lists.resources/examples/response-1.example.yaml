@@ -1,0 +1,23 @@
+$kind: http-example
+name: response
+request:
+  url: "{{baseUrl}}/account/:account_id/lists?api_key=in fugiat&session_id="
+  method: GET
+  queryParams:
+    api_key: in fugiat
+    session_id: ""
+  pathVariables:
+    account_id: ""
+response:
+  statusCode: 401
+  statusText: Unauthorized
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+       "status_message": "laboris quis officia",
+       "status_code": 17219857
+      }
+order: 2000

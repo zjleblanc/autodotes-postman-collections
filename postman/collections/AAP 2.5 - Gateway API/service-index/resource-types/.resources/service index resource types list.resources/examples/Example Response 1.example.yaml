@@ -1,0 +1,44 @@
+$kind: http-example
+request:
+  url: "{{instance_fqdn}}/api/gateway/v1/service-index/resource-types/?page=<integer>"
+  method: GET
+  headers:
+    - key: Accept
+      value: application/json
+    - key: gateway_sessionid
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  queryParams:
+    - key: page
+      value: <integer>
+      description: A page number within the paginated result set.
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "count": "<integer>",
+        "results": [
+          {
+            "externally_managed": "<boolean>",
+            "id": "<integer>",
+            "name": "<string>",
+            "shared_resource_type": "<string>",
+            "url": "<string>"
+          },
+          {
+            "externally_managed": "<boolean>",
+            "id": "<integer>",
+            "name": "<string>",
+            "shared_resource_type": "<string>",
+            "url": "<string>"
+          }
+        ],
+        "next": "<uri>",
+        "previous": "<uri>"
+      }
+order: 1000

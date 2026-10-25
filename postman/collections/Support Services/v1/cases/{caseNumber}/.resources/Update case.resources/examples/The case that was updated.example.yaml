@@ -1,0 +1,57 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/v1/cases/:caseNumber"
+  method: PUT
+  headers:
+    Content-Type: application/json
+  pathVariables:
+    caseNumber: ""
+  body:
+    type: json
+    content: |-
+      {
+        "summary": "string",
+        "description": "string",
+        "status": "string",
+        "product": "string",
+        "version": "string",
+        "caseType": "string",
+        "accountNumberRef": "string",
+        "openshiftClusterID": "string",
+        "openshiftClusterVersion": "string",
+        "notes": "string",
+        "customerEscalation": false,
+        "contactSSOName": "string",
+        "name": "string",
+        "clearPhoneNumber": false,
+        "phone": "string",
+        "phoneCountryCode": "string",
+        "phoneAreaCodePrefixLineNumber": "string",
+        "suppliedPhoneNumberVerified": "string",
+        "emailAddress": "string",
+        "severity": "string",
+        "hostname": "string",
+        "enhancedSLA": false,
+        "groupNumber": "string",
+        "entitlementSla": "string",
+        "fts": false,
+        "caseLanguage": "string",
+        "issue": "string",
+        "environment": "string",
+        "periodicityOfIssue": "string",
+        "timeFramesAndUrgency": "string",
+        "cep": false,
+        "alternateId": "string",
+        "noClusterIdReason": "string",
+        "noClusterIdReasonExplanation": "string",
+        "contactInfo24x7": "string",
+        "screenSessionRequested": false,
+        "reopenedReason": "string"
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  body:
+    type: text
+    content: ""
+order: 1000

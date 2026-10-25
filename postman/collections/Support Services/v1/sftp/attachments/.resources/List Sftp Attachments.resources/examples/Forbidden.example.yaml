@@ -1,0 +1,31 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/v1/sftp/attachments/?path=string&includeAll=false"
+  method: GET
+  headers:
+    Accept: application/json
+  queryParams:
+    - key: path
+      value: string
+      description: Absolute Path for which you want to list files
+    - key: includeAll
+      value: "false"
+      description: Recursively lists all files if true. Allowed only for internal users
+response:
+  statusCode: 403
+  statusText: Forbidden
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "internalErrorCode": "string",
+        "message": "string",
+        "detailMessage": "string",
+        "recommendations": [
+          "string",
+          "string"
+        ]
+      }
+order: 3000

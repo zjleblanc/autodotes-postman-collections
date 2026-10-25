@@ -1,0 +1,3 @@
+$kind: collection
+variables:
+  event_stream_snow_token: ""

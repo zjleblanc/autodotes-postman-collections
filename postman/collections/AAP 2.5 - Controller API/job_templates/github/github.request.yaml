@@ -1,0 +1,5 @@
+$kind: http-request
+url: https://{{instance_fqdn}}/api/controller/v2/job_templates/{id}/github/
+method: POST
+settings: {}
+order: 1000

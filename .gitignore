@@ -10,6 +10,8 @@ Thumbs.db
 # Node (if using postman-cli via local install)
 node_modules/
 
-# Postman sensitive data — never commit API keys or secrets
-# Adjust if your environments contain secrets that shouldn't be tracked
-# postman/environments/*-secrets.yaml
+# Postman workspace binding — contains entity IDs specific to each user's
+# workspace session. Regenerate locally with:
+#   postman workspace connect-git <workspace-id>
+#   postman workspace pull
+.postman/resources.yaml

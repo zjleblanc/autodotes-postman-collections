@@ -1,0 +1,13 @@
+$kind: http-request
+description: Get the top rated movies on TMDB.
+url: "{{baseUrl}}/movie/top_rated"
+method: GET
+auth:
+  type: apikey
+  credentials:
+    key: api_key
+    value: "{{api_key}}"
+    in: query
+settings: {}
+examples: ./.resources/Get Top Rated.resources/examples
+order: 6000

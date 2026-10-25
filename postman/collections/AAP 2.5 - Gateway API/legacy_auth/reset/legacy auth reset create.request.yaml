@@ -1,0 +1,6 @@
+$kind: http-request
+url: "{{instance_fqdn}}/api/gateway/v1/legacy_auth/reset/"
+method: POST
+settings: {}
+examples: ./.resources/legacy auth reset create.resources/examples
+order: 1000

@@ -1,0 +1,6 @@
+$kind: http-request
+name: workflow_job_templates {id}
+url: https://{{instance_fqdn}}/api/controller/v2/workflow_job_templates/{id}/
+method: PUT
+settings: {}
+order: 24000

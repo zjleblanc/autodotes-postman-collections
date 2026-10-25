@@ -1,0 +1,18 @@
+$kind: http-request
+description: |-
+  A view class for managing and displaying all section of settings, with their urls and names
+  Endpoint: '/api/gateway/v1/settings/'
+url: "{{instance_fqdn}}/api/gateway/v1/settings/?page=<integer>&page_size=<integer>"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  - key: page
+    value: <integer>
+    description: A page number within the paginated result set.
+  - key: page_size
+    value: <integer>
+    description: Number of results to return per page.
+settings: {}
+examples: ./.resources/settings list.resources/examples
+order: 3000

@@ -1,0 +1,32 @@
+$kind: http-request
+description: |-
+  Get the TV episode details by id.
+
+  Supports `append_to_response`. Read more about this [here](#docTextSection:JdZq8ctmcxNqyLQjp).
+
+  #### Recent Changes
+
+  | **Date** | **Change** |
+  | - | - |
+  | June 1, 2018 | Added the [translations](#endpoint:5SFwZar3LkP99QMp7) method. |
+url: "{{baseUrl}}/tv/:tv_id/season/:season_number/episode/:episode_number"
+method: GET
+pathVariables:
+  - key: tv_id
+    value: "24717925"
+    description: "(Required) "
+  - key: season_number
+    value: "24717925"
+    description: "(Required) "
+  - key: episode_number
+    value: "24717925"
+    description: "(Required) "
+auth:
+  type: apikey
+  credentials:
+    key: api_key
+    value: "{{api_key}}"
+    in: query
+settings: {}
+examples: ./.resources/Get Details.resources/examples
+order: 2000

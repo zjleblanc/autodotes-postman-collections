@@ -1,0 +1,15 @@
+$kind: http-request
+description: Retrieve the customer accounts for the account specified in the path.
+url: "{{baseUrl}}/v1/accounts/customer/:partnerAccountNumber"
+method: GET
+headers:
+  Accept: application/json
+pathVariables:
+  - key: partnerAccountNumber
+    value: string
+    description: (Required) Partner Account Number
+auth:
+  type: noauth
+settings: {}
+examples: ./.resources/List Customer Accounts for Partner.resources/examples
+order: 1000

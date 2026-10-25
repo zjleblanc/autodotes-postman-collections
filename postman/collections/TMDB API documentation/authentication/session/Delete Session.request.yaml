@@ -1,0 +1,21 @@
+$kind: http-request
+description: If you would like to delete (or "logout") from a session, call this method with a valid session ID.
+url: "{{baseUrl}}/authentication/session"
+method: DELETE
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+        "session_id": "REDACTED_SESSION_ID"
+    }
+auth:
+  type: apikey
+  credentials:
+    key: api_key
+    value: "{{api_key}}"
+    in: query
+settings: {}
+examples: ./.resources/Delete Session.resources/examples
+order: 1000

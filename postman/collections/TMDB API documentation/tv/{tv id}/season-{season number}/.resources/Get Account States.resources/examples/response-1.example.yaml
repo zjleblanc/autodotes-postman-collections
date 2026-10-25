@@ -1,0 +1,24 @@
+$kind: http-example
+name: response
+request:
+  url: "{{baseUrl}}/tv/:tv_id/season/:season_number/account_states?guest_session_id=in fugiat&session_id=in fugiat"
+  method: GET
+  queryParams:
+    guest_session_id: in fugiat
+    session_id: in fugiat
+  pathVariables:
+    tv_id: ""
+    season_number: ""
+response:
+  statusCode: 401
+  statusText: Unauthorized
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+       "status_code": -70389388,
+       "status_message": "minim e"
+      }
+order: 2000

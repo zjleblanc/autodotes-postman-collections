@@ -1,0 +1,6 @@
+$kind: http-request
+url: "{{instance_fqdn}}/api/gateway/v1/ping/"
+method: GET
+settings: {}
+examples: ./.resources/ping retrieve.resources/examples
+order: 1000

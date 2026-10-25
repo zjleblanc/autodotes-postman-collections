@@ -1,0 +1,75 @@
+$kind: http-example
+request:
+  url: "{{instance_fqdn}}/api/gateway/v1/role_definitions/"
+  method: POST
+  headers:
+    - key: Content-Type
+      value: application/json
+    - key: Accept
+      value: application/json
+    - key: gateway_sessionid
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  body:
+    type: json
+    content: |-
+      {
+        "name": "<string>",
+        "permissions": [
+          "shared.delete_team",
+          "shared.delete_organization"
+        ],
+        "content_type": "shared.team",
+        "description": "<string>",
+        "created": -46898769.520568706,
+        "created_by": -84097693,
+        "id": -59396650,
+        "managed": -62826170,
+        "modified": false,
+        "modified_by": -62838783.78337704,
+        "related": "fugiat irure pariatur sint"
+      }
+response:
+  statusCode: 201
+  statusText: Created
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "created": "<dateTime>",
+        "created_by": "<integer>",
+        "id": "<integer>",
+        "managed": "<boolean>",
+        "modified": "<dateTime>",
+        "modified_by": "<integer>",
+        "name": "<string>",
+        "permissions": [
+          "shared.add_team",
+          "shared.add_organization"
+        ],
+        "related": {
+          "laboris_c": "<string>"
+        },
+        "summary_fields": {
+          "voluptateca7": {
+            "incididunt5": {},
+            "autef": {},
+            "ad_ed": {}
+          },
+          "culpae": {
+            "Duis_74": {},
+            "ea1f3": {}
+          },
+          "sit302": {
+            "minim_a": {},
+            "Duis_0d": {},
+            "Lorem_62b": {}
+          }
+        },
+        "url": "<string>",
+        "content_type": "shared.organization",
+        "description": "<string>"
+      }
+order: 1000

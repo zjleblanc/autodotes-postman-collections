@@ -1,0 +1,31 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/search/cases?q=string&partnerSearch=true"
+  method: GET
+  headers:
+    Accept: application/json
+  queryParams:
+    - key: q
+      value: string
+      description: (Required) Solr query
+    - key: partnerSearch
+      value: "true"
+      description: If you want to include partners accounts as well
+response:
+  statusCode: 500
+  statusText: Internal Server Error
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "internalErrorCode": "string",
+        "message": "string",
+        "detailMessage": "string",
+        "recommendations": [
+          "string",
+          "string"
+        ]
+      }
+order: 2000
