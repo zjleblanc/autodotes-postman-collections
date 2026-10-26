@@ -1,0 +1,18 @@
+$kind: http-request
+description: Get the translations for a TV season.
+url: "{{base_url}}/3/tv/:series_id/season/:season_number/translations"
+method: GET
+headers:
+  Accept: application/json
+pathVariables:
+  - key: series_id
+    value: "9736"
+    disabled: false
+    description: "(Required) "
+  - key: season_number
+    value: "9736"
+    disabled: false
+    description: "(Required) "
+settings: {}
+examples: ./.resources/Translations.resources/examples
+order: 7000

@@ -1,0 +1,17 @@
+$kind: http-request
+description: Get the similar TV shows.
+url: "{{base_url}}/3/tv/:series_id/similar?language=en-US&page=1"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  language: en-US
+  page: "1"
+pathVariables:
+  - key: series_id
+    value: string
+    disabled: false
+    description: "(Required) "
+settings: {}
+examples: ./.resources/Similar.resources/examples
+order: 16000

@@ -1,0 +1,17 @@
+$kind: http-request
+description: Use this method to check if an item has already been added to the list.
+url: "{{base_url}}/3/list/:list_id/item_status?language=en-US&movie_id=9736"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  language: en-US
+  movie_id: "9736"
+pathVariables:
+  - key: list_id
+    value: "9736"
+    disabled: false
+    description: "(Required) "
+settings: {}
+examples: ./.resources/Check Item Status.resources/examples
+order: 4000

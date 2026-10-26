@@ -1,0 +1,9 @@
+$kind: http-request
+description: ""
+url: "{{base_url}}/3/authentication/guest_session/new"
+method: GET
+headers:
+  Accept: application/json
+settings: {}
+examples: ./.resources/Create Guest Session.resources/examples
+order: 2000

@@ -1,0 +1,30 @@
+$kind: http-example
+request:
+  url: "{{base_url}}/3/movie/:movie_id/recommendations?language=en-US&page=1"
+  method: GET
+  headers:
+    - key: Authorization
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+    - key: Accept
+      value: application/json
+  queryParams:
+    language: en-US
+    page: "1"
+  pathVariables:
+    - key: movie_id
+      value: "9736"
+      disabled: false
+      description: "(Required) "
+  body:
+    type: text
+    content: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: '"{}"'
+order: 1000

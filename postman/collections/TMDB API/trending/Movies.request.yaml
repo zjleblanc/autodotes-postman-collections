@@ -1,0 +1,19 @@
+$kind: http-request
+description: Get the trending movies on TMDB.
+url: "{{base_url}}/3/trending/movie/:time_window?language=en-US"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  - key: language
+    value: en-US
+    disabled: false
+    description: "`ISO-639-1`-`ISO-3166-1` code"
+pathVariables:
+  - key: time_window
+    value: day
+    disabled: false
+    description: "(Required) "
+settings: {}
+examples: ./.resources/Movies.resources/examples
+order: 2000

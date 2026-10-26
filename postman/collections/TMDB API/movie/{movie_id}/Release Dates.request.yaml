@@ -1,0 +1,14 @@
+$kind: http-request
+description: Get the release dates and certifications for a movie.
+url: "{{base_url}}/3/movie/:movie_id/release_dates"
+method: GET
+headers:
+  Accept: application/json
+pathVariables:
+  - key: movie_id
+    value: "9736"
+    disabled: false
+    description: "(Required) "
+settings: {}
+examples: ./.resources/Release Dates.resources/examples
+order: 11000

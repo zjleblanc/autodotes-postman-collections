@@ -1,0 +1,3 @@
+$kind: collection
+name: keyword/{keyword_id}
+order: 15000

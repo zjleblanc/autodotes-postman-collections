@@ -1,0 +1,17 @@
+$kind: http-request
+description: Search for keywords by their name.
+url: "{{base_url}}/3/search/keyword?query=string&page=1"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  - key: query
+    value: string
+    disabled: false
+    description: "(Required) "
+  - key: page
+    value: "1"
+    disabled: false
+settings: {}
+examples: ./.resources/Keyword.resources/examples
+order: 3000

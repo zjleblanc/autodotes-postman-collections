@@ -1,0 +1,12 @@
+$kind: http-request
+description: Get the list of streaming providers we have for movies.
+url: "{{base_url}}/3/watch/providers/movie?language=en-US&watch_region=string"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  language: en-US
+  watch_region: string
+settings: {}
+examples: ./.resources/Movie Providers.resources/examples
+order: 2000

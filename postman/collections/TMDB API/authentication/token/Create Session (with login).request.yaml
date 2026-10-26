@@ -1,0 +1,18 @@
+$kind: http-request
+description: This method allows an application to validate a request token by entering a username and password.
+url: "{{base_url}}/3/authentication/token/validate_with_login"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+body:
+  type: json
+  content: |-
+    {
+      "username": "johnny_appleseed",
+      "password": "test123",
+      "request_token": "1531f1a558c8357ce8990cf887ff196e8f5402ec"
+    }
+settings: {}
+examples: ./.resources/Create Session (with login).resources/examples
+order: 2000

@@ -1,0 +1,9 @@
+$kind: http-request
+description: Get a list of the officially supported translations on TMDB.
+url: "{{base_url}}/3/configuration/primary_translations"
+method: GET
+headers:
+  Accept: application/json
+settings: {}
+examples: ./.resources/Primary Translations.resources/examples
+order: 5000

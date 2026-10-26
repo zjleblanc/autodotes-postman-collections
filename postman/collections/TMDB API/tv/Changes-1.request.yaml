@@ -1,0 +1,15 @@
+$kind: http-request
+name: Changes
+description: Get the recent changes for a TV episode.
+url: "{{base_url}}/3/tv/episode/:episode_id/changes"
+method: GET
+headers:
+  Accept: application/json
+pathVariables:
+  - key: episode_id
+    value: "9736"
+    disabled: false
+    description: "(Required) "
+settings: {}
+examples: ./.resources/Changes-1.resources/examples
+order: 9000

@@ -1,0 +1,24 @@
+$kind: http-example
+request:
+  url: "{{base_url}}/3/genre/tv/list?language=en"
+  method: GET
+  headers:
+    - key: Authorization
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+    - key: Accept
+      value: application/json
+  queryParams:
+    language: en
+  body:
+    type: text
+    content: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: '"{\"genres\":[{\"id\":10759,\"name\":\"Action & Adventure\"},{\"id\":16,\"name\":\"Animation\"},{\"id\":35,\"name\":\"Komödie\"},{\"id\":80,\"name\":\"Krimi\"},{\"id\":99,\"name\":\"Dokumentarfilm\"},{\"id\":18,\"name\":\"Drama\"},{\"id\":10751,\"name\":\"Familie\"},{\"id\":10762,\"name\":\"Kids\"},{\"id\":9648,\"name\":\"Mystery\"},{\"id\":10763,\"name\":\"News\"},{\"id\":10764,\"name\":\"Reality\"},{\"id\":10765,\"name\":\"Sci-Fi & Fantasy\"},{\"id\":10766,\"name\":\"Soap\"},{\"id\":10767,\"name\":\"Talk\"},{\"id\":10768,\"name\":\"War & Politics\"},{\"id\":37,\"name\":\"Western\"}]}"'
+order: 1000

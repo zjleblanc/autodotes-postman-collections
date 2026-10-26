@@ -1,0 +1,3 @@
+$kind: collection
+name: episode/{episode_number}
+order: 10000

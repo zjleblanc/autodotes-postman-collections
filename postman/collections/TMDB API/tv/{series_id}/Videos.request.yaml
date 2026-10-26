@@ -1,0 +1,22 @@
+$kind: http-request
+description: Get the videos that belong to a TV show.
+url: "{{base_url}}/3/tv/:series_id/videos?include_video_language=string&language=en-US"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  - key: include_video_language
+    value: string
+    disabled: false
+    description: filter the list results by language, supports more than one value by using a comma
+  - key: language
+    value: en-US
+    disabled: false
+pathVariables:
+  - key: series_id
+    value: "9736"
+    disabled: false
+    description: "(Required) "
+settings: {}
+examples: ./.resources/Videos.resources/examples
+order: 18000

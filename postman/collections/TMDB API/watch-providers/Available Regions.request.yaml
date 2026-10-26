@@ -1,0 +1,11 @@
+$kind: http-request
+description: Get the list of the countries we have watch provider (OTT/streaming) data for.
+url: "{{base_url}}/3/watch/providers/regions?language=en-US"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  language: en-US
+settings: {}
+examples: ./.resources/Available Regions.resources/examples
+order: 1000

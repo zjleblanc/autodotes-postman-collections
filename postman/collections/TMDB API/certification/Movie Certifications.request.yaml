@@ -1,0 +1,9 @@
+$kind: http-request
+description: Get an up to date list of the officially supported movie certifications on TMDB.
+url: "{{base_url}}/3/certification/movie/list"
+method: GET
+headers:
+  Accept: application/json
+settings: {}
+examples: ./.resources/Movie Certifications.resources/examples
+order: 1000

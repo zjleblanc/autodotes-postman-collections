@@ -1,0 +1,14 @@
+$kind: http-request
+description: Get the translations for a movie.
+url: "{{base_url}}/3/movie/:movie_id/translations"
+method: GET
+headers:
+  Accept: application/json
+pathVariables:
+  - key: movie_id
+    value: "9736"
+    disabled: false
+    description: "(Required) "
+settings: {}
+examples: ./.resources/Translations.resources/examples
+order: 14000

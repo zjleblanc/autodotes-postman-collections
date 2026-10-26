@@ -1,0 +1,38 @@
+$kind: http-example
+request:
+  url: "{{base_url}}/3/tv/:series_id/season/:season_number/episode/:episode_number/images?include_image_language=string&language=string"
+  method: GET
+  headers:
+    - key: Authorization
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+    - key: Accept
+      value: application/json
+  queryParams:
+    include_image_language: string
+    language: string
+  pathVariables:
+    - key: series_id
+      value: "9736"
+      disabled: false
+      description: "(Required) "
+    - key: season_number
+      value: "9736"
+      disabled: false
+      description: "(Required) "
+    - key: episode_number
+      value: "9736"
+      disabled: false
+      description: "(Required) "
+  body:
+    type: text
+    content: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: '"{\"id\":63056,\"stills\":[{\"aspect_ratio\":1.778,\"height\":1080,\"iso_639_1\":null,\"file_path\":\"/9hGF3WUkBf7cSjMg0cdMDHJkByd.jpg\",\"vote_average\":5.454,\"vote_count\":3,\"width\":1920},{\"aspect_ratio\":1.778,\"height\":1080,\"iso_639_1\":null,\"file_path\":\"/xIfvIM7YgkADTrqp23rm3CLaOVQ.jpg\",\"vote_average\":5.322,\"vote_count\":5,\"width\":1920},{\"aspect_ratio\":1.778,\"height\":1080,\"iso_639_1\":null,\"file_path\":\"/wrGWeW4WKxnaeA8sxJb2T9O6ryo.jpg\",\"vote_average\":5.32,\"vote_count\":7,\"width\":1920},{\"aspect_ratio\":1.778,\"height\":1080,\"iso_639_1\":null,\"file_path\":\"/qYqCWKoiyR845nUOotJ7rKIXGPM.jpg\",\"vote_average\":5.312,\"vote_count\":1,\"width\":1920},{\"aspect_ratio\":1.778,\"height\":1080,\"iso_639_1\":null,\"file_path\":\"/pyp0LgtqjgaeXzPMtXKnkuNBugV.jpg\",\"vote_average\":5.246,\"vote_count\":2,\"width\":1920},{\"aspect_ratio\":1.778,\"height\":1080,\"iso_639_1\":null,\"file_path\":\"/w85NsRYgZQZrICE1kC9q8F2D6wS.jpg\",\"vote_average\":5.246,\"vote_count\":2,\"width\":1920},{\"aspect_ratio\":1.778,\"height\":1080,\"iso_639_1\":null,\"file_path\":\"/g0OnOaBqSepbA8omNTfYBCl4Sbo.jpg\",\"vote_average\":5.246,\"vote_count\":2,\"width\":1920},{\"aspect_ratio\":1.778,\"height\":1080,\"iso_639_1\":null,\"file_path\":\"/v3bGMbT5Ik86ERFBfsXFqpiMTFy.jpg\",\"vote_average\":5.246,\"vote_count\":2,\"width\":1920},{\"aspect_ratio\":1.778,\"height\":1080,\"iso_639_1\":null,\"file_path\":\"/uaSOtAsNrXbKxOVzC31GjYxLRXJ.jpg\",\"vote_average\":5.246,\"vote_count\":2,\"width\":1920},{\"aspect_ratio\":1.778,\"height\":1080,\"iso_639_1\":null,\"file_path\":\"/gDOWFhBTkuwhLKrFqpd7yhAwxVH.jpg\",\"vote_average\":5.246,\"vote_count\":2,\"width\":1920},{\"aspect_ratio\":1.778,\"height\":1080,\"iso_639_1\":null,\"file_path\":\"/9o3HXUmWaZq14tIAbBrn7e34NRZ.jpg\",\"vote_average\":0.0,\"vote_count\":0,\"width\":1920},{\"aspect_ratio\":1.778,\"height\":1080,\"iso_639_1\":null,\"file_path\":\"/wZPID3NddTuH7lBNgsFEiXWB6Bj.jpg\",\"vote_average\":0.0,\"vote_count\":0,\"width\":1920},{\"aspect_ratio\":1.778,\"height\":2160,\"iso_639_1\":null,\"file_path\":\"/lYQyyPoFpFBWQ9cta2zcfZE1axn.jpg\",\"vote_average\":0.0,\"vote_count\":0,\"width\":3840},{\"aspect_ratio\":1.778,\"height\":2160,\"iso_639_1\":null,\"file_path\":\"/nDkA929hW9ePdyvNure6Q0fNBWo.jpg\",\"vote_average\":0.0,\"vote_count\":0,\"width\":3840},{\"aspect_ratio\":1.778,\"height\":2160,\"iso_639_1\":null,\"file_path\":\"/ecDSsfUAgH9VqtdtaDdO2fi5KMF.jpg\",\"vote_average\":0.0,\"vote_count\":0,\"width\":3840}]}"'
+order: 1000

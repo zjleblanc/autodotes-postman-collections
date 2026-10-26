@@ -1,0 +1,31 @@
+$kind: http-request
+description: Search for TV shows by their original, translated and also known as names.
+url: "{{base_url}}/3/search/tv?query=string&first_air_date_year=9736&include_adult=false&language=en-US&page=1&year=9736"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  - key: query
+    value: string
+    disabled: false
+    description: "(Required) "
+  - key: first_air_date_year
+    value: "9736"
+    disabled: false
+    description: "Search only the first air date. Valid values are: 1000..9999"
+  - key: include_adult
+    value: "false"
+    disabled: false
+  - key: language
+    value: en-US
+    disabled: false
+  - key: page
+    value: "1"
+    disabled: false
+  - key: year
+    value: "9736"
+    disabled: false
+    description: "Search the first air date and all episode air dates. Valid values are: 1000..9999"
+settings: {}
+examples: ./.resources/TV.resources/examples
+order: 7000

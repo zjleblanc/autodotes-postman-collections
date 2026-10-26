@@ -1,0 +1,25 @@
+$kind: http-request
+description: Delete your rating on a TV episode.
+url: "{{base_url}}/3/tv/:series_id/season/:season_number/episode/:episode_number/rating?guest_session_id=string&session_id=string"
+method: DELETE
+headers:
+  Accept: application/json
+queryParams:
+  guest_session_id: string
+  session_id: string
+pathVariables:
+  - key: series_id
+    value: "9736"
+    disabled: false
+    description: "(Required) "
+  - key: season_number
+    value: "9736"
+    disabled: false
+    description: "(Required) "
+  - key: episode_number
+    value: "9736"
+    disabled: false
+    description: "(Required) "
+settings: {}
+examples: ./.resources/Delete Rating.resources/examples
+order: 2000

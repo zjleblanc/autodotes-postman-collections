@@ -1,0 +1,28 @@
+$kind: http-example
+request:
+  url: "{{base_url}}/3/search/collection?query=string&include_adult=false&language=en-US&page=1&region=string"
+  method: GET
+  headers:
+    - key: Authorization
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+    - key: Accept
+      value: application/json
+  queryParams:
+    query: string
+    include_adult: "false"
+    language: en-US
+    page: "1"
+    region: string
+  body:
+    type: text
+    content: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: '"{\"page\":1,\"results\":[{\"adult\":false,\"backdrop_path\":\"/zuW6fOiusv4X9nnW3paHGfXcSll.jpg\",\"id\":86311,\"name\":\"The Avengers Collection\",\"original_language\":\"en\",\"original_name\":\"The Avengers Collection\",\"overview\":\"A superhero film series produced by Marvel Studios based on the Marvel Comics superhero team of the same name, and part of the Marvel Cinematic Universe (MCU).  The series features an ensemble cast from the Marvel Cinematic Universe series films, as they join forces for the peacekeeping organization S.H.I.E.L.D. led by Nick Fury.\",\"poster_path\":\"/yFSIUVTCvgYrpalUktulvk3Gi5Y.jpg\"}],\"total_pages\":1,\"total_results\":1}"'
+order: 1000

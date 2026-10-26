@@ -1,0 +1,17 @@
+$kind: http-request
+description: Get the user reviews for a movie.
+url: "{{base_url}}/3/movie/:movie_id/reviews?language=en-US&page=1"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  language: en-US
+  page: "1"
+pathVariables:
+  - key: movie_id
+    value: "9736"
+    disabled: false
+    description: "(Required) "
+settings: {}
+examples: ./.resources/Reviews.resources/examples
+order: 12000

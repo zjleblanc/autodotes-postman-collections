@@ -1,0 +1,19 @@
+$kind: http-request
+description: Delete a list.
+url: "{{base_url}}/3/list/:list_id?session_id=string"
+method: DELETE
+headers:
+  Accept: application/json
+queryParams:
+  - key: session_id
+    value: string
+    disabled: false
+    description: "(Required) "
+pathVariables:
+  - key: list_id
+    value: "9736"
+    disabled: false
+    description: "(Required) "
+settings: {}
+examples: ./.resources/Delete.resources/examples
+order: 1000

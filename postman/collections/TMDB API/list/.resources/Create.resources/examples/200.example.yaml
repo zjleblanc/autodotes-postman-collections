@@ -1,0 +1,29 @@
+$kind: http-example
+request:
+  url: "{{base_url}}/3/list?session_id=string"
+  method: POST
+  headers:
+    - key: Authorization
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+    - key: Accept
+      value: application/json
+  queryParams:
+    session_id: string
+  body:
+    type: json
+    content: |-
+      {
+        "name": "This is my awesome test list.",
+        "description": "Just an awesome list.",
+        "language": "en"
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: '"{\n  \"status_message\": \"The item/record was created successfully.\",\n  \"success\": true,\n  \"status_code\": 1,\n  \"list_id\": 5861\n}"'
+order: 1000

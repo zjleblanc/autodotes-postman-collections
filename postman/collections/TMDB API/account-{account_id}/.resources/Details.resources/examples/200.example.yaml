@@ -1,0 +1,29 @@
+$kind: http-example
+request:
+  url: "{{base_url}}/3/account/:account_id?session_id=string"
+  method: GET
+  headers:
+    - key: Authorization
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+    - key: Accept
+      value: application/json
+  queryParams:
+    session_id: string
+  pathVariables:
+    - key: account_id
+      value: ""
+      disabled: false
+      description: "(Required) "
+  body:
+    type: text
+    content: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: '"{\"avatar\":{\"gravatar\":{\"hash\":\"c9e9fc152ee756a900db85757c29815d\"},\"tmdb\":{\"avatar_path\":\"/xy44UvpbTgzs9kWmp4C3fEaCl5h.png\"}},\"id\":548,\"iso_639_1\":\"en\",\"iso_3166_1\":\"CA\",\"name\":\"Travis Bell\",\"include_adult\":false,\"username\":\"travisbell\"}"'
+order: 1000

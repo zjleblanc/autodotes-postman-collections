@@ -1,0 +1,23 @@
+$kind: http-request
+description: Search for people by their name and also known as names.
+url: "{{base_url}}/3/search/person?query=string&include_adult=false&language=en-US&page=1"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  - key: query
+    value: string
+    disabled: false
+    description: "(Required) "
+  - key: include_adult
+    value: "false"
+    disabled: false
+  - key: language
+    value: en-US
+    disabled: false
+  - key: page
+    value: "1"
+    disabled: false
+settings: {}
+examples: ./.resources/Person.resources/examples
+order: 6000

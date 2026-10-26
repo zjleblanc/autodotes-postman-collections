@@ -1,0 +1,14 @@
+$kind: http-request
+description: ""
+url: "{{base_url}}/3/movie/:movie_id/external_ids"
+method: GET
+headers:
+  Accept: application/json
+pathVariables:
+  - key: movie_id
+    value: "9736"
+    disabled: false
+    description: "(Required) "
+settings: {}
+examples: ./.resources/External IDs.resources/examples
+order: 6000

@@ -1,0 +1,19 @@
+$kind: http-request
+description: Get the alternative titles for a movie.
+url: "{{base_url}}/3/movie/:movie_id/alternative_titles?country=string"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  - key: country
+    value: string
+    disabled: false
+    description: specify a ISO-3166-1 value to filter the results
+pathVariables:
+  - key: movie_id
+    value: "9736"
+    disabled: false
+    description: "(Required) "
+settings: {}
+examples: ./.resources/Alternative Titles.resources/examples
+order: 3000

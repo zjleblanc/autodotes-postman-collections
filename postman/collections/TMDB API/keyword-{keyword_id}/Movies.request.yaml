@@ -1,0 +1,18 @@
+$kind: http-request
+description: ""
+url: "{{base_url}}/3/keyword/:keyword_id/movies?include_adult=false&language=en-US&page=1"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  include_adult: "false"
+  language: en-US
+  page: "1"
+pathVariables:
+  - key: keyword_id
+    value: string
+    disabled: false
+    description: "(Required) "
+settings: {}
+examples: ./.resources/Movies.resources/examples
+order: 2000

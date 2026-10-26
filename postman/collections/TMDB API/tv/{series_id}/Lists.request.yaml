@@ -1,0 +1,17 @@
+$kind: http-request
+description: Get the lists that a TV series has been added to.
+url: "{{base_url}}/3/tv/:series_id/lists?language=en-US&page=1"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  language: en-US
+  page: "1"
+pathVariables:
+  - key: series_id
+    value: "9736"
+    disabled: false
+    description: "(Required) "
+settings: {}
+examples: ./.resources/Lists.resources/examples
+order: 12000

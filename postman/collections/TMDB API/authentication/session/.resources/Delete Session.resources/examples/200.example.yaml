@@ -1,0 +1,25 @@
+$kind: http-example
+request:
+  url: "{{base_url}}/3/authentication/session"
+  method: DELETE
+  headers:
+    - key: Authorization
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+    - key: Accept
+      value: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "session_id": "2629f70fb498edc263a0adb99118ac41f0053e8c"
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: '"{\n  \"success\": true\n}"'
+order: 1000

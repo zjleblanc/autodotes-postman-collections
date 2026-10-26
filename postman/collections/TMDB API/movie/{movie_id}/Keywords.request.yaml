@@ -1,0 +1,14 @@
+$kind: http-request
+description: ""
+url: "{{base_url}}/3/movie/:movie_id/keywords"
+method: GET
+headers:
+  Accept: application/json
+pathVariables:
+  - key: movie_id
+    value: string
+    disabled: false
+    description: "(Required) "
+settings: {}
+examples: ./.resources/Keywords.resources/examples
+order: 8000

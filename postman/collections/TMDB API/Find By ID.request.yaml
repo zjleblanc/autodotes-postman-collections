@@ -1,0 +1,22 @@
+$kind: http-request
+description: Find data by external ID's.
+url: "{{base_url}}/3/find/:external_id?external_source=instagram_id&language=en-US"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  - key: external_source
+    value: instagram_id
+    disabled: false
+    description: "(Required) "
+  - key: language
+    value: en-US
+    disabled: false
+pathVariables:
+  - key: external_id
+    value: string
+    disabled: false
+    description: "(Required) "
+settings: {}
+examples: ./.resources/Find By ID.resources/examples
+order: 12000

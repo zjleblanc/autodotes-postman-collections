@@ -1,0 +1,18 @@
+$kind: http-request
+description: Get the recent changes for a person.
+url: "{{base_url}}/3/person/:person_id/changes?end_date=2001-08-17&page=1&start_date=2001-08-17"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  end_date: 2001-08-17
+  page: "1"
+  start_date: 2001-08-17
+pathVariables:
+  - key: person_id
+    value: "9736"
+    disabled: false
+    description: "(Required) "
+settings: {}
+examples: ./.resources/Changes.resources/examples
+order: 2000

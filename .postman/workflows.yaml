@@ -1,0 +1,4 @@
+workflows:
+  syncSpecToCollection:
+    - spec: ../../../../../private/tmp/tmdb-api.json
+      collection: ../postman/collections/TMDB API

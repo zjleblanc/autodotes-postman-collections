@@ -1,0 +1,14 @@
+$kind: http-request
+description: Get the profile images that belong to a person.
+url: "{{base_url}}/3/person/:person_id/images"
+method: GET
+headers:
+  Accept: application/json
+pathVariables:
+  - key: person_id
+    value: "9736"
+    disabled: false
+    description: "(Required) "
+settings: {}
+examples: ./.resources/Images.resources/examples
+order: 5000

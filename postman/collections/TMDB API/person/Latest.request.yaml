@@ -1,0 +1,9 @@
+$kind: http-request
+description: Get the newest created person. This is a live response and will continuously change.
+url: "{{base_url}}/3/person/latest"
+method: GET
+headers:
+  Accept: application/json
+settings: {}
+examples: ./.resources/Latest.resources/examples
+order: 4000

@@ -1,0 +1,14 @@
+$kind: http-request
+description: Get the list of streaming providers we have for a movie.
+url: "{{base_url}}/3/movie/:movie_id/watch/providers"
+method: GET
+headers:
+  Accept: application/json
+pathVariables:
+  - key: movie_id
+    value: "9736"
+    disabled: false
+    description: "(Required) "
+settings: {}
+examples: ./.resources/Watch Providers.resources/examples
+order: 16000

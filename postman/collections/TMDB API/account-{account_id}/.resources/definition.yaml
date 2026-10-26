@@ -1,0 +1,3 @@
+$kind: collection
+name: account/{account_id}
+order: 2000

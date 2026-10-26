@@ -1,0 +1,17 @@
+$kind: http-request
+description: Search for companies by their original and alternative names.
+url: "{{base_url}}/3/search/company?query=string&page=1"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  - key: query
+    value: string
+    disabled: false
+    description: "(Required) "
+  - key: page
+    value: "1"
+    disabled: false
+settings: {}
+examples: ./.resources/Company.resources/examples
+order: 2000

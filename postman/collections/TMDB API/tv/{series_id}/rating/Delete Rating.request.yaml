@@ -1,0 +1,17 @@
+$kind: http-request
+description: ""
+url: "{{base_url}}/3/tv/:series_id/rating?guest_session_id=string&session_id=string"
+method: DELETE
+headers:
+  Accept: application/json
+queryParams:
+  guest_session_id: string
+  session_id: string
+pathVariables:
+  - key: series_id
+    value: "9736"
+    disabled: false
+    description: "(Required) "
+settings: {}
+examples: ./.resources/Delete Rating.resources/examples
+order: 2000

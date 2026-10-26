@@ -1,0 +1,15 @@
+$kind: http-request
+name: Details
+description: Retrieve the details of a movie or TV show review.
+url: "{{base_url}}/3/review/:review_id"
+method: GET
+headers:
+  Accept: application/json
+pathVariables:
+  - key: review_id
+    value: string
+    disabled: false
+    description: "(Required) "
+settings: {}
+examples: ./.resources/Details-1.resources/examples
+order: 18000

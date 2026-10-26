@@ -1,0 +1,27 @@
+$kind: http-example
+request:
+  url: "{{base_url}}/3/movie/:movie_id/keywords"
+  method: GET
+  headers:
+    - key: Authorization
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+    - key: Accept
+      value: application/json
+  pathVariables:
+    - key: movie_id
+      value: string
+      disabled: false
+      description: "(Required) "
+  body:
+    type: text
+    content: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: '"{\"id\":550,\"keywords\":[{\"id\":818,\"name\":\"based on novel or book\"},{\"id\":825,\"name\":\"support group\"},{\"id\":851,\"name\":\"dual identity\"},{\"id\":1541,\"name\":\"nihilism\"},{\"id\":1721,\"name\":\"fight\"},{\"id\":3927,\"name\":\"rage and hate\"},{\"id\":4142,\"name\":\"insomnia\"},{\"id\":4565,\"name\":\"dystopia\"},{\"id\":9181,\"name\":\"alter ego\"},{\"id\":11687,\"name\":\"breaking the fourth wall\"},{\"id\":34117,\"name\":\"cult film\"},{\"id\":156761,\"name\":\"split personality\"},{\"id\":179173,\"name\":\"quitting a job\"},{\"id\":212803,\"name\":\"dissociative identity disorder\"},{\"id\":260426,\"name\":\"self destructiveness\"}]}"'
+order: 1000

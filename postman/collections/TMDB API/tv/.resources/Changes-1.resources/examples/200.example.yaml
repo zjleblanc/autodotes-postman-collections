@@ -1,0 +1,27 @@
+$kind: http-example
+request:
+  url: "{{base_url}}/3/tv/episode/:episode_id/changes"
+  method: GET
+  headers:
+    - key: Authorization
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+    - key: Accept
+      value: application/json
+  pathVariables:
+    - key: episode_id
+      value: "9736"
+      disabled: false
+      description: "(Required) "
+  body:
+    type: text
+    content: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: "\"{\\n  \\\"changes\\\": [\\n    {\\n      \\\"key\\\": \\\"production_code\\\",\\n      \\\"items\\\": [\\n        {\\n          \\\"id\\\": \\\"54bd9ed7c3a3686c6b00da66\\\",\\n          \\\"action\\\": \\\"added\\\",\\n          \\\"time\\\": \\\"2015-01-20 00:18:31 UTC\\\",\\n          \\\"value\\\": \\\"101\\\"\\n        }\\n      ]\\n    },\\n    {\\n      \\\"key\\\": \\\"overview\\\",\\n      \\\"items\\\": [\\n        {\\n          \\\"id\\\": \\\"54bd9ed7c3a3686c6b00da67\\\",\\n          \\\"action\\\": \\\"updated\\\",\\n          \\\"time\\\": \\\"2015-01-20 00:18:31 UTC\\\",\\n          \\\"iso_639_1\\\": \\\"fr\\\",\\n          \\\"value\\\": \\\"Sur le continent de Westeros, un jeune patrouilleur de la Garde de Nuit, chargée de veiller sur le Mur, est condamné à mort pour désertion par Eddard Stark, seigneur de Winterfell et Gardien du Nord. Mais de sombres nouvelles arrivent de Port-Réal, la capitale des Sept Couronnes : Jon Arryn, ami intime d'Eddard et Main du roi Robert Baratheon, vient de mourir. Le roi Robert et sa cour entreprennent alors un voyage vers Winterfell, pour gratifier son ami Eddard de la charge de Main du roi. Pendant ce temps, les descendants des rois Targaryen en exil, renversés par Robert, fomentent leur retour en Westeros par un jeu d'alliance avec les Dothrakis, une tribu de guerriers nomades.\\\\nAlors qu'à Winterfell les festivités vont bon train durant le séjour du roi, Brandon, l'un des fils d'Eddard Stark, fait une découverte qui lui attire les foudres de la famille royale…\\\",\\n          \\\"original_value\\\": \\\"Sur le continent de Westeros, un jeune patrouilleur de la Garde de Nuit, chargée de veiller sur le Mur, est condamné à mort pour désertion par Eddard Stark, seigneur de Winterfell et Gardien du Nord. Mais de sombres nouvelles arrivent de Port-Réal, la capitale des Sept Couronnes : Jon Arryn, ami intime d'Eddard et Main du roi Robert Baratheon, vient de mourir. Le roi Robert et sa cour entreprennent alors un voyage vers Winterfell, pour gratifier son ami Eddard de la charge de Main du roi. Pendant ce temps, les descendants des rois Targaryen en exil, renversés par Robert, fomentent leur retour en Westeros par un jeu d'alliance avec les Dothrakis, une tribu de guerriers nomades.\\\\n\\\\nAlors qu'à Winterfell les festivités vont bon train durant le séjour du roi, Brandon, l'un des fils d'Eddard Stark, fait une découverte qui lui attire les foudres de la famille royale...\\\"\\n        },\\n        {\\n          \\\"id\\\": \\\"54c53255c3a36814210141d0\\\",\\n          \\\"action\\\": \\\"added\\\",\\n          \\\"time\\\": \\\"2015-01-25 18:13:41 UTC\\\",\\n          \\\"iso_639_1\\\": \\\"es\\\",\\n          \\\"value\\\": \\\"Ned Stark, Señor de Invernalia se entera de que su mentor, Jon Arryn, ha muerto y por esto el Rey Robert se dirige hacia el norte para ofrecerle ser la Mano del Rey. Al otro lado del Mar en Pentos, Viserys Targaryen planea casar a su hermana Daenerys con el lider de los guerreros de la tribu Dothraki, Khal Drogo con el objetivo de forjar una alianza que le permita reclamar el trono.\\\"\\n        }\\n      ]\\n    },\\n    {\\n      \\\"key\\\": \\\"tvrage_id\\\",\\n      \\\"items\\\": [\\n        {\\n          \\\"id\\\": \\\"54bd9ed89251416e9b005079\\\",\\n          \\\"action\\\": \\\"added\\\",\\n          \\\"time\\\": \\\"2015-01-20 00:18:32 UTC\\\",\\n          \\\"value\\\": \\\"1065008299\\\"\\n        }\\n      ]\\n    },\\n    {\\n      \\\"key\\\": \\\"name\\\",\\n      \\\"items\\\": [\\n        {\\n          \\\"id\\\": \\\"54c53255c3a36814210141cf\\\",\\n          \\\"action\\\": \\\"added\\\",\\n          \\\"time\\\": \\\"2015-01-25 18:13:41 UTC\\\",\\n          \\\"iso_639_1\\\": \\\"es\\\",\\n          \\\"value\\\": \\\"Se acerca el invierno\\\"\\n        }\\n      ]\\n    }\\n  ]\\n}\""
+order: 1000

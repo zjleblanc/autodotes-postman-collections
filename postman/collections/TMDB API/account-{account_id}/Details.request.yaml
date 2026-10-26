@@ -1,0 +1,16 @@
+$kind: http-request
+description: Get the public details of an account on TMDB.
+url: "{{base_url}}/3/account/:account_id?session_id=string"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  session_id: string
+pathVariables:
+  - key: account_id
+    value: ""
+    disabled: false
+    description: "(Required) "
+settings: {}
+examples: ./.resources/Details.resources/examples
+order: 1000

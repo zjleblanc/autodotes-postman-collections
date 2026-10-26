@@ -1,0 +1,9 @@
+$kind: http-request
+description: Get the list of timezones used throughout TMDB.
+url: "{{base_url}}/3/configuration/timezones"
+method: GET
+headers:
+  Accept: application/json
+settings: {}
+examples: ./.resources/Timezones.resources/examples
+order: 6000

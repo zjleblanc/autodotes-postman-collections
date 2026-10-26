@@ -1,0 +1,9 @@
+$kind: http-request
+description: ""
+url: "{{base_url}}/3/authentication/token/new"
+method: GET
+headers:
+  Accept: application/json
+settings: {}
+examples: ./.resources/Create Request Token.resources/examples
+order: 1000

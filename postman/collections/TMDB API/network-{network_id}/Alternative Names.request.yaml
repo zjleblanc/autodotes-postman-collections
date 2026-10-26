@@ -1,0 +1,14 @@
+$kind: http-request
+description: Get the alternative names of a network.
+url: "{{base_url}}/3/network/:network_id/alternative_names"
+method: GET
+headers:
+  Accept: application/json
+pathVariables:
+  - key: network_id
+    value: "9736"
+    disabled: false
+    description: "(Required) "
+settings: {}
+examples: ./.resources/Alternative Names.resources/examples
+order: 2000

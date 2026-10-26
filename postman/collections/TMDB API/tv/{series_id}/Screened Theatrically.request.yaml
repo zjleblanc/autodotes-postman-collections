@@ -1,0 +1,14 @@
+$kind: http-request
+description: Get the seasons and episodes that have screened theatrically.
+url: "{{base_url}}/3/tv/:series_id/screened_theatrically"
+method: GET
+headers:
+  Accept: application/json
+pathVariables:
+  - key: series_id
+    value: "9736"
+    disabled: false
+    description: "(Required) "
+settings: {}
+examples: ./.resources/Screened Theatrically.resources/examples
+order: 15000

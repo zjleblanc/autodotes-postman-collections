@@ -1,0 +1,14 @@
+$kind: http-request
+description: Get the content ratings that have been added to a TV show.
+url: "{{base_url}}/3/tv/:series_id/content_ratings"
+method: GET
+headers:
+  Accept: application/json
+pathVariables:
+  - key: series_id
+    value: "9736"
+    disabled: false
+    description: "(Required) "
+settings: {}
+examples: ./.resources/Content Ratings.resources/examples
+order: 6000

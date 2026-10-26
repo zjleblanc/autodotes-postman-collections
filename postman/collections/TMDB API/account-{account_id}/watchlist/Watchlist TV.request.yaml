@@ -1,0 +1,19 @@
+$kind: http-request
+description: Get a list of TV shows added to a users watchlist.
+url: "{{base_url}}/3/account/:account_id/watchlist/tv?language=en-US&page=1&session_id=string&sort_by=created_at.asc"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  language: en-US
+  page: "1"
+  session_id: string
+  sort_by: created_at.asc
+pathVariables:
+  - key: account_id
+    value: ""
+    disabled: false
+    description: "(Required) "
+settings: {}
+examples: ./.resources/Watchlist TV.resources/examples
+order: 3000

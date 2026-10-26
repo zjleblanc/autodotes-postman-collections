@@ -1,0 +1,100 @@
+$kind: http-request
+description: Find movies using over 30 filters and sort options.
+url: '{{base_url}}/3/discover/movie?certification=string&certification.gte=string&certification.lte=string&certification_country=string&include_adult=false&include_video=false&language=en-US&page=1&primary_release_year=9736&primary_release_date.gte=2001-08-17&primary_release_date.lte=2001-08-17&region=string&release_date.gte=2001-08-17&release_date.lte=2001-08-17&sort_by=popularity.desc&vote_average.gte=4923.1993104331195&vote_average.lte=4923.1993104331195&vote_count.gte=4923.1993104331195&vote_count.lte=4923.1993104331195&watch_region=string&with_cast=string&with_companies=string&with_crew=string&with_genres=string&with_keywords=string&with_origin_country=string&with_original_language=string&with_people=string&with_release_type=9736&with_runtime.gte=9736&with_runtime.lte=9736&with_watch_monetization_types=string&with_watch_providers=string&without_companies=string&without_genres=string&without_keywords=string&without_watch_providers=string&year=9736'
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  - key: certification
+    value: string
+    description: use in conjunction with `region`
+  - key: certification.gte
+    value: string
+    description: use in conjunction with `region`
+  - key: certification.lte
+    value: string
+    description: use in conjunction with `region`
+  - key: certification_country
+    value: string
+    description: use in conjunction with the `certification`, `certification.gte` and `certification.lte` filters
+  - key: include_adult
+    value: 'false'
+  - key: include_video
+    value: 'false'
+  - key: language
+    value: en-US
+  - key: page
+    value: '1'
+  - key: primary_release_year
+    value: '9736'
+  - key: primary_release_date.gte
+    value: '2001-08-17'
+  - key: primary_release_date.lte
+    value: '2001-08-17'
+  - key: region
+    value: string
+  - key: release_date.gte
+    value: '2001-08-17'
+  - key: release_date.lte
+    value: '2001-08-17'
+  - key: sort_by
+    value: popularity.desc
+  - key: vote_average.gte
+    value: '4923.1993104331195'
+  - key: vote_average.lte
+    value: '4923.1993104331195'
+  - key: vote_count.gte
+    value: '4923.1993104331195'
+  - key: vote_count.lte
+    value: '4923.1993104331195'
+  - key: watch_region
+    value: string
+    description: use in conjunction with `with_watch_monetization_types ` or `with_watch_providers `
+  - key: with_cast
+    value: string
+    description: can be a comma (`AND`) or pipe (`OR`) separated query
+  - key: with_companies
+    value: string
+    description: can be a comma (`AND`) or pipe (`OR`) separated query
+  - key: with_crew
+    value: string
+    description: can be a comma (`AND`) or pipe (`OR`) separated query
+  - key: with_genres
+    value: string
+    description: can be a comma (`AND`) or pipe (`OR`) separated query
+  - key: with_keywords
+    value: string
+    description: can be a comma (`AND`) or pipe (`OR`) separated query
+  - key: with_origin_country
+    value: string
+  - key: with_original_language
+    value: string
+  - key: with_people
+    value: string
+    description: can be a comma (`AND`) or pipe (`OR`) separated query
+  - key: with_release_type
+    value: '9736'
+    description: 'possible values are: [1, 2, 3, 4, 5, 6] can be a comma (`AND`) or pipe (`OR`) separated query, can be used in conjunction with `region`'
+  - key: with_runtime.gte
+    value: '9736'
+  - key: with_runtime.lte
+    value: '9736'
+  - key: with_watch_monetization_types
+    value: string
+    description: 'possible values are: [flatrate, free, ads, rent, buy] use in conjunction with `watch_region`, can be a comma (`AND`) or pipe (`OR`) separated query'
+  - key: with_watch_providers
+    value: string
+    description: use in conjunction with `watch_region`, can be a comma (`AND`) or pipe (`OR`) separated query
+  - key: without_companies
+    value: string
+  - key: without_genres
+    value: string
+  - key: without_keywords
+    value: string
+  - key: without_watch_providers
+    value: string
+  - key: year
+    value: '9736'
+settings: {}
+examples: ./.resources/Movie.resources/examples
+order: 1000

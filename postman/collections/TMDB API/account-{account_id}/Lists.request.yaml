@@ -1,0 +1,17 @@
+$kind: http-request
+description: Get a users list of custom lists.
+url: "{{base_url}}/3/account/:account_id/lists?page=1&session_id=string"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  page: "1"
+  session_id: string
+pathVariables:
+  - key: account_id
+    value: ""
+    disabled: false
+    description: "(Required) "
+settings: {}
+examples: ./.resources/Lists.resources/examples
+order: 4000

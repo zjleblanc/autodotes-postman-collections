@@ -1,0 +1,17 @@
+$kind: http-request
+description: ""
+url: "{{base_url}}/3/tv/:series_id/recommendations?language=en-US&page=1"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  language: en-US
+  page: "1"
+pathVariables:
+  - key: series_id
+    value: "9736"
+    disabled: false
+    description: "(Required) "
+settings: {}
+examples: ./.resources/Recommendations.resources/examples
+order: 13000

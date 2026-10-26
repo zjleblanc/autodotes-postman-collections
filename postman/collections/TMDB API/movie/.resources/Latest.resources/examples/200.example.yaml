@@ -1,0 +1,22 @@
+$kind: http-example
+request:
+  url: "{{base_url}}/3/movie/latest"
+  method: GET
+  headers:
+    - key: Authorization
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+    - key: Accept
+      value: application/json
+  body:
+    type: text
+    content: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: '"{\"adult\":false,\"backdrop_path\":null,\"belongs_to_collection\":null,\"budget\":0,\"genres\":[],\"homepage\":\"\",\"id\":1119232,\"imdb_id\":null,\"original_language\":\"fr\",\"original_title\":\"König Charles III\",\"overview\":\"\",\"popularity\":0.0,\"poster_path\":null,\"production_companies\":[],\"production_countries\":[],\"release_date\":\"\",\"revenue\":0,\"runtime\":0,\"spoken_languages\":[],\"status\":\"Released\",\"tagline\":\"\",\"title\":\"König Charles III\",\"video\":false,\"vote_average\":0.0,\"vote_count\":0}"'
+order: 1000

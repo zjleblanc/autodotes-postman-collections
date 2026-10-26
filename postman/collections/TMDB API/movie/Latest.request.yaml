@@ -1,0 +1,9 @@
+$kind: http-request
+description: Get the newest movie ID.
+url: "{{base_url}}/3/movie/latest"
+method: GET
+headers:
+  Accept: application/json
+settings: {}
+examples: ./.resources/Latest.resources/examples
+order: 7000

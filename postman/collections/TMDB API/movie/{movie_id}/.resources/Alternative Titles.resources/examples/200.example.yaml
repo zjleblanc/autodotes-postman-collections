@@ -1,0 +1,29 @@
+$kind: http-example
+request:
+  url: "{{base_url}}/3/movie/:movie_id/alternative_titles?country=string"
+  method: GET
+  headers:
+    - key: Authorization
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+    - key: Accept
+      value: application/json
+  queryParams:
+    country: string
+  pathVariables:
+    - key: movie_id
+      value: "9736"
+      disabled: false
+      description: "(Required) "
+  body:
+    type: text
+    content: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: "\"{\\\"id\\\":550,\\\"titles\\\":[{\\\"iso_3166_1\\\":\\\"RS\\\",\\\"title\\\":\\\"Borilački klub\\\",\\\"type\\\":\\\"\\\"},{\\\"iso_3166_1\\\":\\\"IL\\\",\\\"title\\\":\\\"Mo'adon Krav\\\",\\\"type\\\":\\\"romanization\\\"},{\\\"iso_3166_1\\\":\\\"RU\\\",\\\"title\\\":\\\"Boytsovskiy klub\\\",\\\"type\\\":\\\"\\\"},{\\\"iso_3166_1\\\":\\\"BG\\\",\\\"title\\\":\\\"Boen klub\\\",\\\"type\\\":\\\"\\\"},{\\\"iso_3166_1\\\":\\\"GR\\\",\\\"title\\\":\\\"Kláb máchis\\\",\\\"type\\\":\\\"\\\"},{\\\"iso_3166_1\\\":\\\"UA\\\",\\\"title\\\":\\\"Biytsivsʹkyy klub\\\",\\\"type\\\":\\\"\\\"},{\\\"iso_3166_1\\\":\\\"TR\\\",\\\"title\\\":\\\"Dövüş Klubü\\\",\\\"type\\\":\\\"\\\"},{\\\"iso_3166_1\\\":\\\"MX\\\",\\\"title\\\":\\\"El Club de la Pelea\\\",\\\"type\\\":\\\"Hispanoamérica\\\"},{\\\"iso_3166_1\\\":\\\"KR\\\",\\\"title\\\":\\\"파이트 클럽\\\",\\\"type\\\":\\\"\\\"},{\\\"iso_3166_1\\\":\\\"LV\\\",\\\"title\\\":\\\"Cīņas klubs\\\",\\\"type\\\":\\\"\\\"},{\\\"iso_3166_1\\\":\\\"IR\\\",\\\"title\\\":\\\"باشگاه مشت زنی\\\",\\\"type\\\":\\\"\\\"},{\\\"iso_3166_1\\\":\\\"PL\\\",\\\"title\\\":\\\"Podziemny krąg\\\",\\\"type\\\":\\\"\\\"}]}\""
+order: 1000

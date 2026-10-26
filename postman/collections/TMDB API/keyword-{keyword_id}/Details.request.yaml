@@ -1,0 +1,14 @@
+$kind: http-request
+description: ""
+url: "{{base_url}}/3/keyword/:keyword_id"
+method: GET
+headers:
+  Accept: application/json
+pathVariables:
+  - key: keyword_id
+    value: "9736"
+    disabled: false
+    description: "(Required) "
+settings: {}
+examples: ./.resources/Details.resources/examples
+order: 1000

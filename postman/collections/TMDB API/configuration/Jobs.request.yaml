@@ -1,0 +1,9 @@
+$kind: http-request
+description: Get the list of the jobs and departments we use on TMDB.
+url: "{{base_url}}/3/configuration/jobs"
+method: GET
+headers:
+  Accept: application/json
+settings: {}
+examples: ./.resources/Jobs.resources/examples
+order: 3000

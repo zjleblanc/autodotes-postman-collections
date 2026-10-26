@@ -1,0 +1,13 @@
+$kind: http-request
+description: Get a list of all of the movie ids that have been changed in the past 24 hours.
+url: "{{base_url}}/3/movie/changes?end_date=2001-08-17&page=1&start_date=2001-08-17"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  end_date: 2001-08-17
+  page: "1"
+  start_date: 2001-08-17
+settings: {}
+examples: ./.resources/Movie List.resources/examples
+order: 1000

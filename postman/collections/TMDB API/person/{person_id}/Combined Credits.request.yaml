@@ -1,0 +1,16 @@
+$kind: http-request
+description: Get the combined movie and TV credits that belong to a person.
+url: "{{base_url}}/3/person/:person_id/combined_credits?language=en-US"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  language: en-US
+pathVariables:
+  - key: person_id
+    value: string
+    disabled: false
+    description: "(Required) "
+settings: {}
+examples: ./.resources/Combined Credits.resources/examples
+order: 3000

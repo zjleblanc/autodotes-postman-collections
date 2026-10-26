@@ -1,0 +1,20 @@
+$kind: http-request
+description: Get a list of movies that are being released soon.
+url: "{{base_url}}/3/movie/upcoming?language=en-US&page=1&region=string"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  - key: language
+    value: en-US
+    disabled: false
+  - key: page
+    value: "1"
+    disabled: false
+  - key: region
+    value: string
+    disabled: false
+    description: ISO-3166-1 code
+settings: {}
+examples: ./.resources/Upcoming.resources/examples
+order: 5000

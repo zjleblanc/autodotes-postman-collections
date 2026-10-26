@@ -1,0 +1,13 @@
+$kind: http-request
+description: Get a list of TV shows that air in the next 7 days.
+url: "{{base_url}}/3/tv/on_the_air?language=en-US&page=1&timezone=string"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  language: en-US
+  page: "1"
+  timezone: string
+settings: {}
+examples: ./.resources/On The Air.resources/examples
+order: 3000

@@ -1,0 +1,9 @@
+$kind: http-request
+description: Get the list of languages (ISO 639-1 tags) used throughout TMDB.
+url: "{{base_url}}/3/configuration/languages"
+method: GET
+headers:
+  Accept: application/json
+settings: {}
+examples: ./.resources/Languages.resources/examples
+order: 4000

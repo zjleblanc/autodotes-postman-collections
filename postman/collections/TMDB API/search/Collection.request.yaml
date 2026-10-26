@@ -1,0 +1,26 @@
+$kind: http-request
+description: Search for collections by their original, translated and alternative names.
+url: "{{base_url}}/3/search/collection?query=string&include_adult=false&language=en-US&page=1&region=string"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  - key: query
+    value: string
+    disabled: false
+    description: "(Required) "
+  - key: include_adult
+    value: "false"
+    disabled: false
+  - key: language
+    value: en-US
+    disabled: false
+  - key: page
+    value: "1"
+    disabled: false
+  - key: region
+    value: string
+    disabled: false
+settings: {}
+examples: ./.resources/Collection.resources/examples
+order: 1000

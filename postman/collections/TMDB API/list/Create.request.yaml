@@ -1,0 +1,23 @@
+$kind: http-request
+description: ""
+url: "{{base_url}}/3/list?session_id=string"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+queryParams:
+  - key: session_id
+    value: string
+    disabled: false
+    description: "(Required) "
+body:
+  type: json
+  content: |-
+    {
+      "name": "This is my awesome test list.",
+      "description": "Just an awesome list.",
+      "language": "en"
+    }
+settings: {}
+examples: ./.resources/Create.resources/examples
+order: 1000

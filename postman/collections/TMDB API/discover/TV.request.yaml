@@ -1,0 +1,84 @@
+$kind: http-request
+description: Find TV shows using over 30 filters and sort options.
+url: '{{base_url}}/3/discover/tv?air_date.gte=2001-08-17&air_date.lte=2001-08-17&first_air_date.gte=2001-08-17&first_air_date.lte=2001-08-17&first_air_date_year=9736&include_adult=false&include_null_first_air_dates=false&language=en-US&page=1&screen_play=string&timezone=string&sort_by=popularity.desc&vote_average.gte=4923.1993104331195&vote_average.lte=4923.1993104331195&vote_count.gte=4923.1993104331195&vote_count.lte=4923.1993104331195&watch_region=string&with_companies=string&with_genres=string&with_keywords=string&with_networks=9736&with_origin_country=string&with_original_language=string&with_runtime.gte=9736&with_runtime.lte=9736&with_status=string&with_watch_monetization_types=string&with_watch_providers=string&without_companies=string&without_genres=string&without_keywords=string&without_watch_providers=string&with_type=string'
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  - key: air_date.gte
+    value: '2001-08-17'
+  - key: air_date.lte
+    value: '2001-08-17'
+  - key: first_air_date.gte
+    value: '2001-08-17'
+  - key: first_air_date.lte
+    value: '2001-08-17'
+  - key: first_air_date_year
+    value: '9736'
+  - key: include_adult
+    value: 'false'
+  - key: include_null_first_air_dates
+    value: 'false'
+  - key: language
+    value: en-US
+  - key: page
+    value: '1'
+  - key: screen_play
+    value: string
+  - key: timezone
+    value: string
+  - key: sort_by
+    value: popularity.desc
+  - key: vote_average.gte
+    value: '4923.1993104331195'
+  - key: vote_average.lte
+    value: '4923.1993104331195'
+  - key: vote_count.gte
+    value: '4923.1993104331195'
+  - key: vote_count.lte
+    value: '4923.1993104331195'
+  - key: watch_region
+    value: string
+    description: use in conjunction with `with_watch_monetization_types ` or `with_watch_providers `
+  - key: with_companies
+    value: string
+    description: can be a comma (`AND`) or pipe (`OR`) separated query
+  - key: with_genres
+    value: string
+    description: can be a comma (`AND`) or pipe (`OR`) separated query
+  - key: with_keywords
+    value: string
+    description: can be a comma (`AND`) or pipe (`OR`) separated query
+  - key: with_networks
+    value: '9736'
+  - key: with_origin_country
+    value: string
+  - key: with_original_language
+    value: string
+  - key: with_runtime.gte
+    value: '9736'
+  - key: with_runtime.lte
+    value: '9736'
+  - key: with_status
+    value: string
+    description: 'possible values are: [0, 1, 2, 3, 4, 5], can be a comma (`AND`) or pipe (`OR`) separated query'
+  - key: with_watch_monetization_types
+    value: string
+    description: 'possible values are: [flatrate, free, ads, rent, buy] use in conjunction with `watch_region`, can be a comma (`AND`) or pipe (`OR`) separated query'
+  - key: with_watch_providers
+    value: string
+    description: use in conjunction with `watch_region`, can be a comma (`AND`) or pipe (`OR`) separated query
+  - key: without_companies
+    value: string
+  - key: without_genres
+    value: string
+  - key: without_keywords
+    value: string
+  - key: without_watch_providers
+    value: string
+  - key: with_type
+    value: string
+    description: 'possible values are: [0, 1, 2, 3, 4, 5, 6], can be a comma (`AND`) or pipe (`OR`) separated query'
+settings: {}
+examples: ./.resources/TV.resources/examples
+order: 2000

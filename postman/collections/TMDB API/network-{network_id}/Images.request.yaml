@@ -1,0 +1,14 @@
+$kind: http-request
+description: Get the TV network logos by id.
+url: "{{base_url}}/3/network/:network_id/images"
+method: GET
+headers:
+  Accept: application/json
+pathVariables:
+  - key: network_id
+    value: "9736"
+    disabled: false
+    description: "(Required) "
+settings: {}
+examples: ./.resources/Images.resources/examples
+order: 3000

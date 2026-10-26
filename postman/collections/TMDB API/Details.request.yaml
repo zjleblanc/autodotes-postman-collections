@@ -1,0 +1,16 @@
+$kind: http-request
+description: Get a movie or TV credit details by ID.
+url: "{{base_url}}/3/credit/:credit_id?language=en-US"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  language: en-US
+pathVariables:
+  - key: credit_id
+    value: string
+    disabled: false
+    description: "(Required) "
+settings: {}
+examples: ./.resources/Details.resources/examples
+order: 10000

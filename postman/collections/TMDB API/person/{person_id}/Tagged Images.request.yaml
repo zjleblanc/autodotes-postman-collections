@@ -1,0 +1,16 @@
+$kind: http-request
+description: Get the tagged images for a person.
+url: "{{base_url}}/3/person/:person_id/tagged_images?page=1"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  page: "1"
+pathVariables:
+  - key: person_id
+    value: "9736"
+    disabled: false
+    description: "(Required) "
+settings: {}
+examples: ./.resources/Tagged Images.resources/examples
+order: 8000

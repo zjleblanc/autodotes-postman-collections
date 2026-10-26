@@ -1,0 +1,27 @@
+$kind: http-example
+request:
+  url: "{{base_url}}/3/tv/:series_id/external_ids"
+  method: GET
+  headers:
+    - key: Authorization
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+    - key: Accept
+      value: application/json
+  pathVariables:
+    - key: series_id
+      value: "9736"
+      disabled: false
+      description: "(Required) "
+  body:
+    type: text
+    content: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: '"{\"id\":1399,\"imdb_id\":\"tt0944947\",\"freebase_mid\":\"/m/0524b41\",\"freebase_id\":\"/en/game_of_thrones\",\"tvdb_id\":121361,\"tvrage_id\":24493,\"wikidata_id\":\"Q23572\",\"facebook_id\":\"GameOfThrones\",\"instagram_id\":\"gameofthrones\",\"twitter_id\":\"GameOfThrones\"}"'
+order: 1000

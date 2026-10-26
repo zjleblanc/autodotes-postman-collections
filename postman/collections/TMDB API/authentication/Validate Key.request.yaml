@@ -1,0 +1,9 @@
+$kind: http-request
+description: Test your API Key to see if it's valid.
+url: "{{base_url}}/3/authentication"
+method: GET
+headers:
+  Accept: application/json
+settings: {}
+examples: ./.resources/Validate Key.resources/examples
+order: 1000

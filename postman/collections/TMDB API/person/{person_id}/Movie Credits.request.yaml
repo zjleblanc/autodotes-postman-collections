@@ -1,0 +1,16 @@
+$kind: http-request
+description: Get the movie credits for a person.
+url: "{{base_url}}/3/person/:person_id/movie_credits?language=en-US"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  language: en-US
+pathVariables:
+  - key: person_id
+    value: "9736"
+    disabled: false
+    description: "(Required) "
+settings: {}
+examples: ./.resources/Movie Credits.resources/examples
+order: 6000

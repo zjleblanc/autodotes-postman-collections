@@ -1,0 +1,12 @@
+$kind: http-request
+description: Get a list of people ordered by popularity.
+url: "{{base_url}}/3/person/popular?language=en-US&page=1"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  language: en-US
+  page: "1"
+settings: {}
+examples: ./.resources/Popular.resources/examples
+order: 2000

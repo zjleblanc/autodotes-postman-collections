@@ -1,0 +1,31 @@
+$kind: http-example
+request:
+  url: "{{base_url}}/3/movie/:movie_id/changes?end_date=2001-08-17&page=1&start_date=2001-08-17"
+  method: GET
+  headers:
+    - key: Authorization
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+    - key: Accept
+      value: application/json
+  queryParams:
+    end_date: 2001-08-17
+    page: "1"
+    start_date: 2001-08-17
+  pathVariables:
+    - key: movie_id
+      value: "9736"
+      disabled: false
+      description: "(Required) "
+  body:
+    type: text
+    content: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: '"{\"changes\":[{\"key\":\"images\",\"items\":[{\"id\":\"643197b96dea3a00d4377270\",\"action\":\"added\",\"time\":\"2023-04-08 16:35:05 UTC\",\"iso_639_1\":\"\",\"iso_3166_1\":\"\",\"value\":{\"poster\":{\"file_path\":\"/s9ZrHprviFCx3azfWNBtt1LPSnL.jpg\"}}},{\"id\":\"643197bae92d8300f46c92f5\",\"action\":\"added\",\"time\":\"2023-04-08 16:35:06 UTC\",\"iso_639_1\":\"\",\"iso_3166_1\":\"\",\"value\":{\"poster\":{\"file_path\":\"/xQjGTWyNHXqqACOanXwOk1mOnxU.jpg\"}}},{\"id\":\"643197b9e92d8301130781d3\",\"action\":\"added\",\"time\":\"2023-04-08 16:35:06 UTC\",\"iso_639_1\":\"\",\"iso_3166_1\":\"\",\"value\":{\"poster\":{\"file_path\":\"/2wABwAmRQldXQzMeLRmFHFfdR8K.jpg\"}}},{\"id\":\"643197bae92d8301130781d5\",\"action\":\"added\",\"time\":\"2023-04-08 16:35:07 UTC\",\"iso_639_1\":\"\",\"iso_3166_1\":\"\",\"value\":{\"poster\":{\"file_path\":\"/iTzXuEz43pifWGwR6PJZyufOFBT.jpg\"}}},{\"id\":\"6431aa0931032501036ef401\",\"action\":\"added\",\"time\":\"2023-04-08 17:53:13 UTC\",\"iso_639_1\":\"\",\"iso_3166_1\":\"\",\"value\":{\"poster\":{\"file_path\":\"/wsCBoTkV0An7Z6SZ0UQLlxvqG4x.jpg\"}}},{\"id\":\"6431aa0a6dea3a00b54f0fc9\",\"action\":\"added\",\"time\":\"2023-04-08 17:53:14 UTC\",\"iso_639_1\":\"\",\"iso_3166_1\":\"\",\"value\":{\"poster\":{\"file_path\":\"/36q02yK213MtSeicy5ZmnlLba7q.jpg\"}}}]},{\"key\":\"plot_keywords\",\"items\":[{\"id\":\"6431bb5d8289a000b73bd64d\",\"action\":\"added\",\"time\":\"2023-04-08 19:07:09 UTC\",\"iso_639_1\":\"\",\"iso_3166_1\":\"\",\"value\":{\"name\":\"breaking the fourth wall\",\"id\":11687}}]}]}"'
+order: 1000

@@ -1,0 +1,13 @@
+$kind: http-request
+description: Get a list of TV shows airing today.
+url: "{{base_url}}/3/tv/airing_today?language=en-US&page=1&timezone=string"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  language: en-US
+  page: "1"
+  timezone: string
+settings: {}
+examples: ./.resources/Airing Today.resources/examples
+order: 2000

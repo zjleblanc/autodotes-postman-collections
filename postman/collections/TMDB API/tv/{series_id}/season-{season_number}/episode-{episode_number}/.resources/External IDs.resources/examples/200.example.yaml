@@ -1,0 +1,35 @@
+$kind: http-example
+request:
+  url: "{{base_url}}/3/tv/:series_id/season/:season_number/episode/:episode_number/external_ids"
+  method: GET
+  headers:
+    - key: Authorization
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+    - key: Accept
+      value: application/json
+  pathVariables:
+    - key: series_id
+      value: "9736"
+      disabled: false
+      description: "(Required) "
+    - key: season_number
+      value: "9736"
+      disabled: false
+      description: "(Required) "
+    - key: episode_number
+      value: string
+      disabled: false
+      description: "(Required) "
+  body:
+    type: text
+    content: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: '"{\"id\":63056,\"imdb_id\":\"tt1480055\",\"freebase_mid\":\"/m/0gmc6ph\",\"freebase_id\":\"/en/winter_is_coming\",\"tvdb_id\":3254641,\"tvrage_id\":1065008299,\"wikidata_id\":\"Q2614622\"}"'
+order: 1000

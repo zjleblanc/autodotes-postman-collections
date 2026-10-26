@@ -1,0 +1,3 @@
+$kind: collection
+name: network/{network_id}
+order: 17000

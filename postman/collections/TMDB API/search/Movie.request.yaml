@@ -1,0 +1,32 @@
+$kind: http-request
+description: Search for movies by their original, translated and alternative titles.
+url: "{{base_url}}/3/search/movie?query=string&include_adult=false&language=en-US&primary_release_year=string&page=1&region=string&year=string"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  - key: query
+    value: string
+    disabled: false
+    description: "(Required) "
+  - key: include_adult
+    value: "false"
+    disabled: false
+  - key: language
+    value: en-US
+    disabled: false
+  - key: primary_release_year
+    value: string
+    disabled: false
+  - key: page
+    value: "1"
+    disabled: false
+  - key: region
+    value: string
+    disabled: false
+  - key: year
+    value: string
+    disabled: false
+settings: {}
+examples: ./.resources/Movie.resources/examples
+order: 4000

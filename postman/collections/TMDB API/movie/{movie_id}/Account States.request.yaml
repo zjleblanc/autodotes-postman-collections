@@ -1,0 +1,17 @@
+$kind: http-request
+description: Get the rating, watchlist and favourite status of an account.
+url: "{{base_url}}/3/movie/:movie_id/account_states?session_id=string&guest_session_id=string"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  session_id: string
+  guest_session_id: string
+pathVariables:
+  - key: movie_id
+    value: "9736"
+    disabled: false
+    description: "(Required) "
+settings: {}
+examples: ./.resources/Account States.resources/examples
+order: 2000

@@ -1,0 +1,11 @@
+$kind: http-request
+description: Get the list of official genres for movies.
+url: "{{base_url}}/3/genre/movie/list?language=en"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  language: en
+settings: {}
+examples: ./.resources/Movie List.resources/examples
+order: 1000

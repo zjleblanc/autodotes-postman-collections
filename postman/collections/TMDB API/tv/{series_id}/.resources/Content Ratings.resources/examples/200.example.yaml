@@ -1,0 +1,27 @@
+$kind: http-example
+request:
+  url: "{{base_url}}/3/tv/:series_id/content_ratings"
+  method: GET
+  headers:
+    - key: Authorization
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+    - key: Accept
+      value: application/json
+  pathVariables:
+    - key: series_id
+      value: "9736"
+      disabled: false
+      description: "(Required) "
+  body:
+    type: text
+    content: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: '"{\"results\":[{\"descriptors\":[],\"iso_3166_1\":\"DE\",\"rating\":\"16\"},{\"descriptors\":[],\"iso_3166_1\":\"AU\",\"rating\":\"R18+\"},{\"descriptors\":[],\"iso_3166_1\":\"FR\",\"rating\":\"16\"},{\"descriptors\":[],\"iso_3166_1\":\"US\",\"rating\":\"TV-MA\"},{\"descriptors\":[],\"iso_3166_1\":\"CA\",\"rating\":\"18+\"},{\"descriptors\":[],\"iso_3166_1\":\"RU\",\"rating\":\"18+\"},{\"descriptors\":[],\"iso_3166_1\":\"KR\",\"rating\":\"19\"},{\"descriptors\":[],\"iso_3166_1\":\"GB\",\"rating\":\"18\"},{\"descriptors\":[],\"iso_3166_1\":\"BR\",\"rating\":\"16\"},{\"descriptors\":[],\"iso_3166_1\":\"NL\",\"rating\":\"16\"},{\"descriptors\":[],\"iso_3166_1\":\"PT\",\"rating\":\"18\"},{\"descriptors\":[],\"iso_3166_1\":\"HU\",\"rating\":\"18\"},{\"descriptors\":[],\"iso_3166_1\":\"ES\",\"rating\":\"18\"},{\"descriptors\":[],\"iso_3166_1\":\"SG\",\"rating\":\"R21\"},{\"descriptors\":[],\"iso_3166_1\":\"IN\",\"rating\":\"A\"},{\"descriptors\":[],\"iso_3166_1\":\"MX\",\"rating\":\"C\"}],\"id\":1399}"'
+order: 1000

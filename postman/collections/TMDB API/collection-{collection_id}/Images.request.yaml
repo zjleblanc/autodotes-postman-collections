@@ -1,0 +1,22 @@
+$kind: http-request
+description: Get the images that belong to a collection.
+url: "{{base_url}}/3/collection/:collection_id/images?include_image_language=string&language=string"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  - key: include_image_language
+    value: string
+    disabled: false
+    description: "specify a comma separated list of ISO-639-1 values to query, for example: `en-US,null`"
+  - key: language
+    value: string
+    disabled: false
+pathVariables:
+  - key: collection_id
+    value: "9736"
+    disabled: false
+    description: "(Required) "
+settings: {}
+examples: ./.resources/Images.resources/examples
+order: 2000

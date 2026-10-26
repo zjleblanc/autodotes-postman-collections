@@ -1,0 +1,9 @@
+$kind: http-request
+description: Query the API configuration details.
+url: "{{base_url}}/3/configuration"
+method: GET
+headers:
+  Accept: application/json
+settings: {}
+examples: ./.resources/Details.resources/examples
+order: 1000

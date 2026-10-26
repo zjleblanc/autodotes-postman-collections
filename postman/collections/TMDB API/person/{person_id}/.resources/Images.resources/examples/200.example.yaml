@@ -1,0 +1,27 @@
+$kind: http-example
+request:
+  url: "{{base_url}}/3/person/:person_id/images"
+  method: GET
+  headers:
+    - key: Authorization
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+    - key: Accept
+      value: application/json
+  pathVariables:
+    - key: person_id
+      value: "9736"
+      disabled: false
+      description: "(Required) "
+  body:
+    type: text
+    content: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: '"{\n  \"id\": 287,\n  \"profiles\": [\n    {\n      \"aspect_ratio\": 0.666,\n      \"height\": 980,\n      \"iso_639_1\": null,\n      \"file_path\": \"/cckcYc2v0yh1tc9QjRelptcOBko.jpg\",\n      \"vote_average\": 5.288,\n      \"vote_count\": 89,\n      \"width\": 653\n    },\n    {\n      \"aspect_ratio\": 0.667,\n      \"height\": 3000,\n      \"iso_639_1\": null,\n      \"file_path\": \"/eAOtKAc4p2C3DV8TGJQJzw8DeRv.jpg\",\n      \"vote_average\": 5.242,\n      \"vote_count\": 40,\n      \"width\": 2000\n    },\n    {\n      \"aspect_ratio\": 0.666,\n      \"height\": 1019,\n      \"iso_639_1\": null,\n      \"file_path\": \"/pynwU6PGLAdDE840rC9m6jEahWg.jpg\",\n      \"vote_average\": 5.198,\n      \"vote_count\": 7,\n      \"width\": 679\n    },\n    {\n      \"aspect_ratio\": 0.667,\n      \"height\": 1377,\n      \"iso_639_1\": null,\n      \"file_path\": \"/tJiSUYst4ddIaz1zge2LqCtu9tw.jpg\",\n      \"vote_average\": 5.16,\n      \"vote_count\": 42,\n      \"width\": 918\n    },\n    {\n      \"aspect_ratio\": 0.667,\n      \"height\": 2100,\n      \"iso_639_1\": null,\n      \"file_path\": \"/1k9MVNS9M3Y4KejBHusNdbGJwRw.jpg\",\n      \"vote_average\": 5.144,\n      \"vote_count\": 23,\n      \"width\": 1400\n    },\n    {\n      \"aspect_ratio\": 0.667,\n      \"height\": 721,\n      \"iso_639_1\": null,\n      \"file_path\": \"/ajNaPmXVVMJFg9GWmu6MJzTaXdV.jpg\",\n      \"vote_average\": 5.138,\n      \"vote_count\": 75,\n      \"width\": 481\n    },\n    {\n      \"aspect_ratio\": 0.667,\n      \"height\": 631,\n      \"iso_639_1\": null,\n      \"file_path\": \"/w1L55dXNi9UAmw2CURQjQI0DTf2.jpg\",\n      \"vote_average\": 5.134,\n      \"vote_count\": 47,\n      \"width\": 421\n    },\n    {\n      \"aspect_ratio\": 0.666,\n      \"height\": 1572,\n      \"iso_639_1\": null,\n      \"file_path\": \"/kU3B75TyRiCgE270EyZnHjfivoq.jpg\",\n      \"vote_average\": 5.128,\n      \"vote_count\": 71,\n      \"width\": 1047\n    },\n    {\n      \"aspect_ratio\": 0.666,\n      \"height\": 2000,\n      \"iso_639_1\": null,\n      \"file_path\": \"/uGlfGvB9DzmDaDYErPOZ9071sqt.jpg\",\n      \"vote_average\": 5.12,\n      \"vote_count\": 30,\n      \"width\": 1333\n    },\n    {\n      \"aspect_ratio\": 0.667,\n      \"height\": 1764,\n      \"iso_639_1\": null,\n      \"file_path\": \"/g23JKBtr0U46X9VPGjEgwxRG4Vs.jpg\",\n      \"vote_average\": 5.118,\n      \"vote_count\": 4,\n      \"width\": 1176\n    },\n    {\n      \"aspect_ratio\": 0.667,\n      \"height\": 900,\n      \"iso_639_1\": null,\n      \"file_path\": \"/gVtRLNr7MiASuGXO6UZfFBU9Ol4.jpg\",\n      \"vote_average\": 5.112,\n      \"vote_count\": 28,\n      \"width\": 600\n    },\n    {\n      \"aspect_ratio\": 0.667,\n      \"height\": 3000,\n      \"iso_639_1\": null,\n      \"file_path\": \"/oAvLuGuTaNcjY3R5huBQdfrZN6j.jpg\",\n      \"vote_average\": 5.096,\n      \"vote_count\": 24,\n      \"width\": 2000\n    },\n    {\n      \"aspect_ratio\": 0.667,\n      \"height\": 900,\n      \"iso_639_1\": null,\n      \"file_path\": \"/3UmLRKzI9fXONhyad2wdQ3JAKDO.jpg\",\n      \"vote_average\": 5.086,\n      \"vote_count\": 22,\n      \"width\": 600\n    },\n    {\n      \"aspect_ratio\": 0.671,\n      \"height\": 1200,\n      \"iso_639_1\": null,\n      \"file_path\": \"/k36ZQ6RLAr49uzSTd93qoLvcRZR.jpg\",\n      \"vote_average\": 4.908,\n      \"vote_count\": 35,\n      \"width\": 805\n    }\n  ]\n}"'
+order: 1000

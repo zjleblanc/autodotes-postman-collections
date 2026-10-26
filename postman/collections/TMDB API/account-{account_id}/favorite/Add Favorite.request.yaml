@@ -1,0 +1,25 @@
+$kind: http-request
+description: Mark a movie or TV show as a favourite.
+url: "{{base_url}}/3/account/:account_id/favorite?session_id=string"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+queryParams:
+  session_id: string
+pathVariables:
+  - key: account_id
+    value: ""
+    disabled: false
+    description: "(Required) "
+body:
+  type: json
+  content: |-
+    {
+      "media_type": "movie",
+      "media_id": 550,
+      "favorite": true
+    }
+settings: {}
+examples: ./.resources/Add Favorite.resources/examples
+order: 1000

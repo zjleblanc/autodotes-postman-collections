@@ -1,0 +1,30 @@
+$kind: http-request
+description: Query the details of a TV episode.
+url: "{{base_url}}/3/tv/:series_id/season/:season_number/episode/:episode_number?append_to_response=string&language=en-US"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  - key: append_to_response
+    value: string
+    disabled: false
+    description: comma separated list of endpoints within this namespace, 20 items max
+  - key: language
+    value: en-US
+    disabled: false
+pathVariables:
+  - key: series_id
+    value: "9736"
+    disabled: false
+    description: "(Required) "
+  - key: season_number
+    value: "9736"
+    disabled: false
+    description: "(Required) "
+  - key: episode_number
+    value: "9736"
+    disabled: false
+    description: "(Required) "
+settings: {}
+examples: ./.resources/Details.resources/examples
+order: 1000

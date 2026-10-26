@@ -1,0 +1,11 @@
+$kind: http-request
+description: Get the list of countries (ISO 3166-1 tags) used throughout TMDB.
+url: "{{base_url}}/3/configuration/countries?language=en-US"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  language: en-US
+settings: {}
+examples: ./.resources/Countries.resources/examples
+order: 2000

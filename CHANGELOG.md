@@ -1,5 +1,21 @@
 # Changelog
 
+## 2026-10-26 — Add TMDB API collection from OpenAPI spec
+
+### Added
+
+- `postman/collections/TMDB API/`: Postman v3 collection generated from the TMDB OpenAPI spec (v3.1.0), containing 152 endpoints organized by resource.
+- Collection-level Bearer authentication referencing `{{tmdb_bearer_token}}` and placeholder variables for `base_url`, `tmdb_bearer_token`, and `tmdb_api_key` in `.resources/definition.yaml`.
+
+### Changed
+
+- Flattened the collection structure by removing the redundant top-level `3` folder.
+- Renamed generated `baseUrl` to `base_url` across all request files and examples for project consistency.
+
+### Fixed
+
+- `3/discover/Movie.request.yaml` and `3/discover/TV.request.yaml`: resolved query parameter mismatches found during collection linting.
+
 ## 2026-10-26 — Generate AAP collection from live API crawl
 
 ### Added

@@ -1,0 +1,17 @@
+$kind: collection
+name: TMDB API
+description: TMDB API v3 collection generated from OpenAPI spec.
+variables:
+  - key: base_url
+    value: 'https://api.themoviedb.org'
+  - key: tmdb_bearer_token
+    value: ''
+    description: 'TMDB API Read Access Token (v3 auth)'
+  - key: tmdb_api_key
+    value: ''
+    description: 'TMDB v3 API key'
+auth:
+  type: bearer
+  credentials:
+    - key: token
+      value: '{{tmdb_bearer_token}}'
