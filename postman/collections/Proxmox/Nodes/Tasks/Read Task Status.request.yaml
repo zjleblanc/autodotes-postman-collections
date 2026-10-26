@@ -1,0 +1,13 @@
+$kind: http-request
+description: 'Read task status. Permissions: The user needs ''Sys.Audit'' permissions on ''/nodes/<node>'' if they are not the owner of the task.'
+url: '{{base_url}}/nodes/:node/tasks/:upid/status'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: upid
+    value: ''
+    description: The task's unique ID.
+settings: {}
+order: 5000

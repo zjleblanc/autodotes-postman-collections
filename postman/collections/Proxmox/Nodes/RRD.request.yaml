@@ -1,0 +1,23 @@
+$kind: http-request
+description: Read node RRD statistics (returns PNG)
+url: '{{base_url}}/nodes/:node/rrd'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+queryParams:
+  - key: ds
+    value: ''
+    description: The list of datasources you want to display.
+    disabled: true
+  - key: timeframe
+    value: hour
+    description: Specify the time frame you are interested in.
+    disabled: true
+  - key: cf
+    value: AVERAGE
+    description: The RRD consolidation function
+    disabled: true
+settings: {}
+order: 32000

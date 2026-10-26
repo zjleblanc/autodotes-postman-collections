@@ -1,0 +1,33 @@
+$kind: http-request
+description: Set Firewall options.
+url: '{{base_url}}/nodes/:node/qemu/:vmid/firewall/options'
+method: PUT
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+body:
+  type: json
+  content: |-
+    {
+      "delete": "",
+      "dhcp": false,
+      "digest": "",
+      "enable": false,
+      "ipfilter": false,
+      "log_level_in": "emerg",
+      "log_level_out": "emerg",
+      "macfilter": true,
+      "ndp": true,
+      "policy_in": "ACCEPT",
+      "policy_out": "ACCEPT",
+      "radv": false
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 6000

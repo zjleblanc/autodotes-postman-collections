@@ -1,0 +1,19 @@
+$kind: http-request
+description: 'Update existing ACME account information with CA. Note: not specifying any new account information triggers a refresh.'
+url: '{{base_url}}/cluster/acme/account/:name'
+method: PUT
+pathVariables:
+  - key: name
+    value: default
+    description: ACME account config file name.
+body:
+  type: json
+  content: |-
+    {
+      "contact": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 4000

@@ -1,0 +1,52 @@
+$kind: http-request
+description: 'Create new vzdump backup job. Permissions: The ''tmpdir'', ''dumpdir'' and ''script'' parameters are additionally restricted to the ''root@pam'' user.'
+url: '{{base_url}}/cluster/backup'
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "all": false,
+      "bwlimit": 0,
+      "comment": "",
+      "compress": "0",
+      "dow": "mon,tue,wed,thu,fri,sat,sun",
+      "dumpdir": "",
+      "enabled": true,
+      "exclude": "",
+      "exclude-path": [],
+      "fleecing": "",
+      "id": "",
+      "ionice": 7,
+      "lockwait": 180,
+      "mailnotification": "always",
+      "mailto": "",
+      "mode": "snapshot",
+      "node": "",
+      "notes-template": "",
+      "notification-mode": "auto",
+      "pbs-change-detection-mode": "legacy",
+      "performance": "",
+      "pigz": 0,
+      "pool": "",
+      "protected": false,
+      "prune-backups": "keep-all=1",
+      "quiet": false,
+      "remove": true,
+      "repeat-missed": false,
+      "schedule": "",
+      "script": "",
+      "starttime": "",
+      "stdexcludes": true,
+      "stop": false,
+      "stopwait": 10,
+      "storage": "",
+      "tmpdir": "",
+      "vmid": "",
+      "zstd": 1
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 2000

@@ -1,0 +1,20 @@
+$kind: http-request
+description: 'Mark replication job for removal. Permissions: Requires the VM.Replicate permission on /vms/<vmid>.'
+url: '{{base_url}}/cluster/replication/:id'
+method: DELETE
+pathVariables:
+  - key: id
+    value: ''
+    description: 'Replication Job ID. The ID is composed of a Guest ID and a job number, separated by a hyphen, i.e. ''<GUEST>-<JOBNUM>''.'
+body:
+  type: json
+  content: |-
+    {
+      "force": false,
+      "keep": false
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 5000

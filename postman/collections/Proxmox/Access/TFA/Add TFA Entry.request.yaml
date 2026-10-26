@@ -1,0 +1,24 @@
+$kind: http-request
+description: Add a TFA entry for a user.
+url: '{{base_url}}/access/tfa/:userid'
+method: POST
+pathVariables:
+  - key: userid
+    value: ''
+    description: Full User ID, in the `name@realm` format.
+body:
+  type: json
+  content: |-
+    {
+      "type": "totp",
+      "challenge": "",
+      "description": "",
+      "password": "",
+      "totp": "",
+      "value": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 3000

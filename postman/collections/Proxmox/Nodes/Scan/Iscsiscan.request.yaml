@@ -1,0 +1,15 @@
+$kind: http-request
+description: Scan remote iSCSI server.
+url: '{{base_url}}/nodes/:node/scan/iscsi'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+queryParams:
+  - key: portal
+    value: ''
+    description: The iSCSI portal (IP or DNS name with optional port).
+    disabled: true
+settings: {}
+order: 5000

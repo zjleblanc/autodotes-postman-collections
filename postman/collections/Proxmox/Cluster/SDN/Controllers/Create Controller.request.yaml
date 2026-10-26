@@ -1,0 +1,33 @@
+$kind: http-request
+description: Create a new sdn controller object.
+url: '{{base_url}}/cluster/sdn/controllers'
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "controller": "",
+      "type": "bgp",
+      "asn": 0,
+      "bgp-mode": "auto",
+      "bgp-multipath-as-path-relax": false,
+      "ebgp": false,
+      "ebgp-multihop": 0,
+      "fabric": "",
+      "isis-domain": "",
+      "isis-ifaces": "",
+      "isis-net": "",
+      "lock-token": "",
+      "loopback": "",
+      "node": "",
+      "nodes": "",
+      "peer-group-name": "VTEP",
+      "peers": "",
+      "route-map-in": "",
+      "route-map-out": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 2000

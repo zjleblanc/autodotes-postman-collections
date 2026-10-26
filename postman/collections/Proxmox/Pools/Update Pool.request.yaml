@@ -1,0 +1,20 @@
+$kind: http-request
+description: 'Update pool. Permissions: You also need the right to modify permissions on any object you add/delete.'
+url: '{{base_url}}/pools'
+method: PUT
+body:
+  type: json
+  content: |-
+    {
+      "poolid": "",
+      "allow-move": false,
+      "comment": "",
+      "delete": false,
+      "storage": "",
+      "vms": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 3000

@@ -1,0 +1,15 @@
+$kind: http-request
+description: 'Virtual machine index (per node). Permissions: Only list VMs where you have VM.Audit permissions on /vms/<vmid>.'
+url: '{{base_url}}/nodes/:node/qemu'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+queryParams:
+  - key: full
+    value: 'false'
+    description: Determine the full status of active VMs.
+    disabled: true
+settings: {}
+order: 1000

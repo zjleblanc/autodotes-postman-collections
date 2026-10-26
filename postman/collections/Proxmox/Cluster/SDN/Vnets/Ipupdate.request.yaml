@@ -1,0 +1,22 @@
+$kind: http-request
+description: Update IP Mapping in a VNet
+url: '{{base_url}}/cluster/sdn/vnets/:vnet/ips'
+method: PUT
+pathVariables:
+  - key: vnet
+    value: ''
+    description: The SDN vnet object identifier.
+body:
+  type: json
+  content: |-
+    {
+      "ip": "",
+      "zone": "",
+      "mac": "",
+      "vmid": 0
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 9000

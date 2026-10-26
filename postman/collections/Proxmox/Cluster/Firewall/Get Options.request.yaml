@@ -1,0 +1,6 @@
+$kind: http-request
+description: Get Firewall options.
+url: '{{base_url}}/cluster/firewall/options'
+method: GET
+settings: {}
+order: 6000

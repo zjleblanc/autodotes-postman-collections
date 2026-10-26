@@ -1,0 +1,30 @@
+$kind: http-request
+description: Change POOL settings
+url: '{{base_url}}/nodes/:node/ceph/pool/:name'
+method: PUT
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: name
+    value: ''
+    description: The name of the pool. It must be unique.
+body:
+  type: json
+  content: |-
+    {
+      "application": "rbd",
+      "crush_rule": "",
+      "min_size": 0,
+      "pg_autoscale_mode": "on",
+      "pg_num": 0,
+      "pg_num_min": 0,
+      "size": 0,
+      "target_size": "",
+      "target_size_ratio": 0
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 4000

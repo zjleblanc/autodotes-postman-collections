@@ -1,0 +1,6 @@
+$kind: http-request
+description: Directory index.
+url: '{{base_url}}/cluster/ha/status'
+method: GET
+settings: {}
+order: 1000

@@ -1,0 +1,40 @@
+$kind: http-request
+description: Modify rule data.
+url: '{{base_url}}/nodes/:node/qemu/:vmid/firewall/rules/:pos'
+method: PUT
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+  - key: pos
+    value: '0'
+    description: 'Update rule at position <pos>.'
+body:
+  type: json
+  content: |-
+    {
+      "action": "",
+      "comment": "",
+      "delete": "",
+      "dest": "",
+      "digest": "",
+      "dport": "",
+      "enable": 0,
+      "icmp-type": "",
+      "iface": "",
+      "log": "emerg",
+      "macro": "",
+      "moveto": 0,
+      "proto": "",
+      "source": "",
+      "sport": "",
+      "type": "in"
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 4000

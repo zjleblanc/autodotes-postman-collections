@@ -1,0 +1,13 @@
+$kind: http-request
+description: 'Get single rule data. Permissions: Needs SDN.Audit or SDN.Allocate permissions on ''/sdn/zones/<zone>/<vnet>'''
+url: '{{base_url}}/cluster/sdn/vnets/:vnet/firewall/rules/:pos'
+method: GET
+pathVariables:
+  - key: vnet
+    value: ''
+    description: The SDN vnet object identifier.
+  - key: pos
+    value: '0'
+    description: 'Update rule at position <pos>.'
+settings: {}
+order: 3000

@@ -1,0 +1,10 @@
+$kind: http-request
+description: Returns included guests and the backup status of their disks. Optimized to be used in ExtJS tree views.
+url: '{{base_url}}/cluster/backup/:id/included_volumes'
+method: GET
+pathVariables:
+  - key: id
+    value: ''
+    description: The job ID.
+settings: {}
+order: 6000

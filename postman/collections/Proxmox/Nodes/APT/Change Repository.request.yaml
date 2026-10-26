@@ -1,0 +1,22 @@
+$kind: http-request
+description: Change the properties of a repository. Currently only allows enabling/disabling.
+url: '{{base_url}}/nodes/:node/apt/repositories'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+body:
+  type: json
+  content: |-
+    {
+      "index": 0,
+      "path": "",
+      "digest": "",
+      "enabled": false
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 6000

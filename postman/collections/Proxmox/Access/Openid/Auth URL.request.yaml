@@ -1,0 +1,16 @@
+$kind: http-request
+description: Get the OpenId Authorization Url for the specified realm.
+url: '{{base_url}}/access/openid/auth-url'
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "realm": "",
+      "redirect-url": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 2000

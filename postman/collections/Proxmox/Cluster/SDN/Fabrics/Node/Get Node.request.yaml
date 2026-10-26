@@ -1,0 +1,13 @@
+$kind: http-request
+description: Get a node
+url: '{{base_url}}/cluster/sdn/fabrics/node/:fabric_id/:node_id'
+method: GET
+pathVariables:
+  - key: fabric_id
+    value: ''
+    description: Identifier for SDN fabrics
+  - key: node_id
+    value: ''
+    description: Identifier for nodes in an SDN fabric
+settings: {}
+order: 4000

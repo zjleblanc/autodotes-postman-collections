@@ -1,0 +1,25 @@
+$kind: http-request
+description: Delete rule.
+url: '{{base_url}}/nodes/:node/lxc/:vmid/firewall/rules/:pos'
+method: DELETE
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+  - key: pos
+    value: '0'
+    description: 'Update rule at position <pos>.'
+body:
+  type: json
+  content: |-
+    {
+      "digest": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 5000

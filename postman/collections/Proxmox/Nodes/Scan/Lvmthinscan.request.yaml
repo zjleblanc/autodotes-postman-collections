@@ -1,0 +1,14 @@
+$kind: http-request
+description: List local LVM Thin Pools.
+url: '{{base_url}}/nodes/:node/scan/lvmthin'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+queryParams:
+  - key: vg
+    value: ''
+    disabled: true
+settings: {}
+order: 7000

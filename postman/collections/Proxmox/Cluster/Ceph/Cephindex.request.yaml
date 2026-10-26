@@ -1,0 +1,6 @@
+$kind: http-request
+description: Cluster ceph index.
+url: '{{base_url}}/cluster/ceph'
+method: GET
+settings: {}
+order: 1000

@@ -1,0 +1,10 @@
+$kind: http-request
+description: Removes a node from the cluster configuration.
+url: '{{base_url}}/cluster/config/nodes/:node'
+method: DELETE
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+settings: {}
+order: 3000

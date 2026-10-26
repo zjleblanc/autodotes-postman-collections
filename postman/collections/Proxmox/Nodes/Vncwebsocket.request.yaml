@@ -1,0 +1,19 @@
+$kind: http-request
+description: 'Opens a websocket for VNC traffic. Permissions: You also need to pass a valid ticket (vncticket).'
+url: '{{base_url}}/nodes/:node/vncwebsocket'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+queryParams:
+  - key: port
+    value: '0'
+    description: Port number returned by previous 'vncshell' call.
+    disabled: true
+  - key: vncticket
+    value: ''
+    description: Ticket from previous call to 'vncshell'.
+    disabled: true
+settings: {}
+order: 38000

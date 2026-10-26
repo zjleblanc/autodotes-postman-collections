@@ -1,0 +1,9 @@
+$kind: http-request
+description: Remove gotify endpoint
+url: '{{base_url}}/cluster/notifications/endpoints/gotify/:name'
+method: DELETE
+pathVariables:
+  - key: name
+    value: ''
+settings: {}
+order: 5000

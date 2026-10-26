@@ -1,0 +1,15 @@
+$kind: http-request
+description: List all tags for an OCI repository reference.
+url: '{{base_url}}/nodes/:node/query-oci-repo-tags'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+queryParams:
+  - key: reference
+    value: ''
+    description: The reference to the repository to query tags from.
+    disabled: true
+settings: {}
+order: 46000

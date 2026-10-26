@@ -1,0 +1,24 @@
+$kind: http-request
+description: 'Create the initial Ceph default configuration and set up symlinks. Idempotent on re-call: if a [global] section already exists in ceph.conf, the existing fsid / auth / pool defaults are preserved and most parameters are silently ignored.'
+url: '{{base_url}}/nodes/:node/ceph/init'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+body:
+  type: json
+  content: |-
+    {
+      "cluster-network": "",
+      "disable_cephx": false,
+      "min_size": 2,
+      "network": "",
+      "pg_bits": 6,
+      "size": 3
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 10000

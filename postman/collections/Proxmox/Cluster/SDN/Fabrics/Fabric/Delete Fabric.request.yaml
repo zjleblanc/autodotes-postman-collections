@@ -1,0 +1,10 @@
+$kind: http-request
+description: Add a fabric
+url: '{{base_url}}/cluster/sdn/fabrics/fabric/:id'
+method: DELETE
+pathVariables:
+  - key: id
+    value: ''
+    description: Identifier for SDN fabrics
+settings: {}
+order: 5000

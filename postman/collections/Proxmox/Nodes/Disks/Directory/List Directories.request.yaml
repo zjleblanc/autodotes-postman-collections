@@ -1,0 +1,10 @@
+$kind: http-request
+description: PVE Managed Directory storages.
+url: '{{base_url}}/nodes/:node/disks/directory'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+settings: {}
+order: 1000

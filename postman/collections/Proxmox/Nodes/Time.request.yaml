@@ -1,0 +1,10 @@
+$kind: http-request
+description: Read server time and time zone settings.
+url: '{{base_url}}/nodes/:node/time'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+settings: {}
+order: 42000

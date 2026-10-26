@@ -1,0 +1,46 @@
+$kind: http-request
+description: Create network device configuration
+url: '{{base_url}}/nodes/:node/network'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+body:
+  type: json
+  content: |-
+    {
+      "iface": "",
+      "type": "bridge",
+      "address": "",
+      "address6": "",
+      "autostart": false,
+      "bond-primary": "",
+      "bond_mode": "balance-rr",
+      "bond_xmit_hash_policy": "layer2",
+      "bridge_ports": "",
+      "bridge_vids": "",
+      "bridge_vlan_aware": false,
+      "cidr": "",
+      "cidr6": "",
+      "comments": "",
+      "comments6": "",
+      "gateway": "",
+      "gateway6": "",
+      "mtu": 0,
+      "netmask": "",
+      "netmask6": 0,
+      "ovs_bonds": "",
+      "ovs_bridge": "",
+      "ovs_options": "",
+      "ovs_ports": "",
+      "ovs_tag": 0,
+      "slaves": "",
+      "vlan-id": 0,
+      "vlan-raw-device": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 2000

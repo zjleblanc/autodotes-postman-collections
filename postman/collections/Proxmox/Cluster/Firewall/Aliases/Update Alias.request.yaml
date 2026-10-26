@@ -1,0 +1,22 @@
+$kind: http-request
+description: Update IP or Network alias.
+url: '{{base_url}}/cluster/firewall/aliases/:name'
+method: PUT
+pathVariables:
+  - key: name
+    value: ''
+    description: Alias name.
+body:
+  type: json
+  content: |-
+    {
+      "cidr": "",
+      "comment": "",
+      "digest": "",
+      "rename": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 4000

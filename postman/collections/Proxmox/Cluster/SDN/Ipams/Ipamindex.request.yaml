@@ -1,0 +1,10 @@
+$kind: http-request
+description: 'List PVE IPAM Entries Permissions: Only list entries where you have ''SDN.Audit'' or ''SDN.Allocate'' permissions on ''/sdn/zones/<zone>/<vnet>'''
+url: '{{base_url}}/cluster/sdn/ipams/:ipam/status'
+method: GET
+pathVariables:
+  - key: ipam
+    value: ''
+    description: The SDN ipam object identifier.
+settings: {}
+order: 6000

@@ -1,0 +1,26 @@
+$kind: http-request
+description: 'Extract a file or directory (as zip archive) from a PBS backup. Permissions: You need read access for the volume.'
+url: '{{base_url}}/nodes/:node/storage/:storage/file-restore/download'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: storage
+    value: ''
+    description: The storage identifier.
+queryParams:
+  - key: filepath
+    value: ''
+    description: base64-path to the directory or file to download.
+    disabled: true
+  - key: volume
+    value: ''
+    description: Backup volume ID or name. Currently only PBS snapshots are supported.
+    disabled: true
+  - key: tar
+    value: 'false'
+    description: Download dirs as 'tar.zst' instead of 'zip'.
+    disabled: true
+settings: {}
+order: 2000

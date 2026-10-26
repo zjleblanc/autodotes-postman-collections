@@ -1,0 +1,13 @@
+$kind: http-request
+description: Read IP or Network settings from IPSet.
+url: '{{base_url}}/cluster/firewall/ipset/:name/:cidr'
+method: GET
+pathVariables:
+  - key: name
+    value: ''
+    description: IP set name.
+  - key: cidr
+    value: ''
+    description: Network/IP specification in CIDR format.
+settings: {}
+order: 6000

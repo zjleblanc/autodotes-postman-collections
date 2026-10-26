@@ -1,0 +1,18 @@
+$kind: http-request
+description: Get preconditions for migration.
+url: '{{base_url}}/nodes/:node/lxc/:vmid/migrate'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+queryParams:
+  - key: target
+    value: ''
+    description: Target node.
+    disabled: true
+settings: {}
+order: 17000

@@ -1,0 +1,59 @@
+$kind: http-request
+description: Read Journal
+url: '{{base_url}}/nodes/:node/journal'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+queryParams:
+  - key: endcursor
+    value: ''
+    description: End before the given Cursor. Conflicts with 'until'
+    disabled: true
+  - key: identifiers
+    value: 'false'
+    description: Also return a record listing the distinct syslog identifiers present, for filter completion. Only honored together with 'structured'.
+    disabled: true
+  - key: kernel
+    value: 'false'
+    description: Only print kernel messages.
+    disabled: true
+  - key: lastentries
+    value: '0'
+    description: Limit to the last X lines. Conflicts with a range.
+    disabled: true
+  - key: priority
+    value: ''
+    description: 'Only print messages of this syslog priority: a single level from 0 (emerg) to 7 (debug), selecting that level and everything more severe, or a ''LOW..HIGH'' range. Empty means no priority filter.'
+    disabled: true
+  - key: service
+    value: ''
+    description: 'Only print messages whose syslog identifier matches this glob, for example ''pve*'' or ''postfix/*''.'
+    disabled: true
+  - key: since
+    value: '0'
+    description: Display all log since this UNIX epoch. Conflicts with 'startcursor'.
+    disabled: true
+  - key: startcursor
+    value: ''
+    description: Start after the given Cursor. Conflicts with 'since'
+    disabled: true
+  - key: structured
+    value: 'false'
+    description: Return one JSON object per entry with separate fields (timestamp, identifier, message, priority, ...) instead of pre-rendered text lines.
+    disabled: true
+  - key: unit
+    value: ''
+    description: Only print messages of this systemd unit (the .service suffix is implied).
+    disabled: true
+  - key: units
+    value: 'false'
+    description: Also return a record listing the distinct systemd units present, for filter completion. Only honored together with 'structured'.
+    disabled: true
+  - key: until
+    value: '0'
+    description: Display all log until this UNIX epoch. Conflicts with 'endcursor'.
+    disabled: true
+settings: {}
+order: 35000

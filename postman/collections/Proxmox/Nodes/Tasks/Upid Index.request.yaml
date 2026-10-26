@@ -1,0 +1,11 @@
+$kind: http-request
+url: '{{base_url}}/nodes/:node/tasks/:upid'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: upid
+    value: ''
+settings: {}
+order: 2000

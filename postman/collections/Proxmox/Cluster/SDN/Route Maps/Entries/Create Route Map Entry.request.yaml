@@ -1,0 +1,23 @@
+$kind: http-request
+description: Create Route Map entry
+url: '{{base_url}}/cluster/sdn/route-maps/entries'
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "action": "permit",
+      "order": 0,
+      "route-map-id": "",
+      "call": "",
+      "digest": "",
+      "exit-action": "",
+      "lock-token": "",
+      "match": [],
+      "set": []
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 2000

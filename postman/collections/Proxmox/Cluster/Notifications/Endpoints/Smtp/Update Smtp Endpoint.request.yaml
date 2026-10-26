@@ -1,0 +1,31 @@
+$kind: http-request
+description: Update existing smtp endpoint
+url: '{{base_url}}/cluster/notifications/endpoints/smtp/:name'
+method: PUT
+pathVariables:
+  - key: name
+    value: ''
+    description: The name of the endpoint.
+body:
+  type: json
+  content: |-
+    {
+      "author": "",
+      "comment": "",
+      "delete": [],
+      "digest": "",
+      "disable": false,
+      "from-address": "",
+      "mailto": [],
+      "mailto-user": [],
+      "mode": "tls",
+      "password": "",
+      "port": 0,
+      "server": "",
+      "username": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 4000

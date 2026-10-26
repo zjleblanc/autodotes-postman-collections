@@ -1,0 +1,10 @@
+$kind: http-request
+description: List local USB devices.
+url: '{{base_url}}/nodes/:node/hardware/usb'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+settings: {}
+order: 3000

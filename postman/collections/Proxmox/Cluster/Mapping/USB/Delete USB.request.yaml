@@ -1,0 +1,9 @@
+$kind: http-request
+description: Remove Hardware Mapping.
+url: '{{base_url}}/cluster/mapping/usb/:id'
+method: DELETE
+pathVariables:
+  - key: id
+    value: ''
+settings: {}
+order: 5000

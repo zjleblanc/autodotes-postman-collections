@@ -1,0 +1,21 @@
+$kind: http-request
+description: Mute or unmute a Ceph health check. A muted check no longer counts towards the cluster status, but stays visible and keeps being evaluated.
+url: '{{base_url}}/cluster/ceph/health-mute/:code'
+method: PUT
+pathVariables:
+  - key: code
+    value: ''
+    description: The health check to mute, as reported by 'ceph health', for example 'AUTH_INSECURE_CLIENT_KEY_TYPE'.
+body:
+  type: json
+  content: |-
+    {
+      "value": false,
+      "sticky": false,
+      "ttl": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 2000

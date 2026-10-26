@@ -1,0 +1,13 @@
+$kind: http-request
+description: Reload service. Falls back to restart if service cannot be reloaded.
+url: '{{base_url}}/nodes/:node/services/:service/reload'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: service
+    value: chrony
+    description: Service ID
+settings: {}
+order: 7000

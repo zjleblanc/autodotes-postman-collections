@@ -1,0 +1,9 @@
+$kind: http-request
+description: Remove directory mapping.
+url: '{{base_url}}/cluster/mapping/dir/:id'
+method: DELETE
+pathVariables:
+  - key: id
+    value: ''
+settings: {}
+order: 5000

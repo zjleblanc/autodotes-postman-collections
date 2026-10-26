@@ -1,0 +1,6 @@
+$kind: http-request
+description: ACMEAccount index.
+url: '{{base_url}}/cluster/acme/account'
+method: GET
+settings: {}
+order: 1000

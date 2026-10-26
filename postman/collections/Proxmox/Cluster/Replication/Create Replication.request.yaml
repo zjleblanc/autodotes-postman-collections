@@ -1,0 +1,23 @@
+$kind: http-request
+description: 'Create a new replication job Permissions: Requires the VM.Replicate permission on /vms/<vmid>.'
+url: '{{base_url}}/cluster/replication'
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "id": "",
+      "target": "",
+      "type": "local",
+      "comment": "",
+      "disable": false,
+      "rate": 0,
+      "remove_job": "local",
+      "schedule": "*/15",
+      "source": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 2000

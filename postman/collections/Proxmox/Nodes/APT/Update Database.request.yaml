@@ -1,0 +1,20 @@
+$kind: http-request
+description: This is used to resynchronize the package index files from their sources (apt-get update).
+url: '{{base_url}}/nodes/:node/apt/update'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+body:
+  type: json
+  content: |-
+    {
+      "notify": false,
+      "quiet": false
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 3000

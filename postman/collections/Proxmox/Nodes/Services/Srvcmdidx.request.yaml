@@ -1,0 +1,13 @@
+$kind: http-request
+description: Directory index
+url: '{{base_url}}/nodes/:node/services/:service'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: service
+    value: chrony
+    description: Service ID
+settings: {}
+order: 2000

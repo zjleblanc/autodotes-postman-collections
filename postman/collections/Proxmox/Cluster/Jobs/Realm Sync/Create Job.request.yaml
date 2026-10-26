@@ -1,0 +1,25 @@
+$kind: http-request
+description: 'Create new realm-sync job. Permissions: ''Realm.AllocateUser'' on ''/access/realm/<realm>'' and ''User.Modify'' permissions to ''/access/groups/''.'
+url: '{{base_url}}/cluster/jobs/realm-sync/:id'
+method: POST
+pathVariables:
+  - key: id
+    value: ''
+    description: The ID of the job.
+body:
+  type: json
+  content: |-
+    {
+      "schedule": "",
+      "comment": "",
+      "enable-new": true,
+      "enabled": true,
+      "realm": "",
+      "remove-vanished": "none",
+      "scope": "users"
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 3000

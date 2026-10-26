@@ -1,0 +1,6 @@
+$kind: http-request
+description: List rules.
+url: '{{base_url}}/cluster/firewall/rules'
+method: GET
+settings: {}
+order: 1000

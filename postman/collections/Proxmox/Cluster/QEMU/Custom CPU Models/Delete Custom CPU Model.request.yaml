@@ -1,0 +1,10 @@
+$kind: http-request
+description: Delete a custom CPU model definition.
+url: '{{base_url}}/cluster/qemu/custom-cpu-models/:cputype'
+method: DELETE
+pathVariables:
+  - key: cputype
+    value: ''
+    description: The custom model to delete. The 'custom-' prefix is optional.
+settings: {}
+order: 5000

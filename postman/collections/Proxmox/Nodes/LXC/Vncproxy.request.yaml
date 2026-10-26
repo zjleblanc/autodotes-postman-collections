@@ -1,0 +1,24 @@
+$kind: http-request
+description: Creates a TCP VNC proxy connections.
+url: '{{base_url}}/nodes/:node/lxc/:vmid/vncproxy'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+body:
+  type: json
+  content: |-
+    {
+      "height": 0,
+      "websocket": false,
+      "width": 0
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 12000

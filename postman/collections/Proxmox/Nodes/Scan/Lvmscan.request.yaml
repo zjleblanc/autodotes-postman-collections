@@ -1,0 +1,10 @@
+$kind: http-request
+description: List local LVM volume groups.
+url: '{{base_url}}/nodes/:node/scan/lvm'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+settings: {}
+order: 6000

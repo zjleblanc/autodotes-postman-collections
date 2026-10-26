@@ -1,0 +1,18 @@
+$kind: http-request
+description: Get automatically generated cloudinit config.
+url: '{{base_url}}/nodes/:node/qemu/:vmid/cloudinit/dump'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+queryParams:
+  - key: type
+    value: user
+    description: Config type.
+    disabled: true
+settings: {}
+order: 3000

@@ -1,0 +1,6 @@
+$kind: http-request
+description: Returns a list of all smtp endpoints
+url: '{{base_url}}/cluster/notifications/endpoints/smtp'
+method: GET
+settings: {}
+order: 1000

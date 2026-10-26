@@ -1,0 +1,30 @@
+$kind: http-request
+description: Create Ceph pool
+url: '{{base_url}}/nodes/:node/ceph/pool'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+body:
+  type: json
+  content: |-
+    {
+      "name": "",
+      "add_storages": false,
+      "application": "rbd",
+      "crush_rule": "",
+      "erasure-coding": "",
+      "min_size": 2,
+      "pg_autoscale_mode": "warn",
+      "pg_num": 128,
+      "pg_num_min": 0,
+      "size": 3,
+      "target_size": "",
+      "target_size_ratio": 0
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 2000

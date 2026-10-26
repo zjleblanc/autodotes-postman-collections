@@ -1,0 +1,10 @@
+$kind: http-request
+description: Read HA rule.
+url: '{{base_url}}/cluster/ha/rules/:rule'
+method: GET
+pathVariables:
+  - key: rule
+    value: ''
+    description: HA rule identifier.
+settings: {}
+order: 3000

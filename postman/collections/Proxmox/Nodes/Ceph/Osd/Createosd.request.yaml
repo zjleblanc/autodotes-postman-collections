@@ -1,0 +1,26 @@
+$kind: http-request
+description: Create OSD
+url: '{{base_url}}/nodes/:node/ceph/osd'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+body:
+  type: json
+  content: |-
+    {
+      "dev": "",
+      "crush-device-class": "",
+      "db_dev": "",
+      "db_dev_size": 0,
+      "encrypted": false,
+      "osds-per-device": 0,
+      "wal_dev": "",
+      "wal_dev_size": 0
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 2000

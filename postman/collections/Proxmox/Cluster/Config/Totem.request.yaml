@@ -1,0 +1,6 @@
+$kind: http-request
+description: Get corosync totem protocol settings.
+url: '{{base_url}}/cluster/config/totem'
+method: GET
+settings: {}
+order: 7000

@@ -1,0 +1,15 @@
+$kind: http-request
+description: List of available CPU flags. Currently only implemented for x86_64, returns an empty list for aarch64.
+url: '{{base_url}}/cluster/qemu/cpu-flags'
+method: GET
+queryParams:
+  - key: accel
+    value: kvm
+    description: Acceleration type to check node compatibility for.
+    disabled: true
+  - key: arch
+    value: x86_64
+    description: Virtual processor architecture. Defaults to the host architecture.
+    disabled: true
+settings: {}
+order: 2000

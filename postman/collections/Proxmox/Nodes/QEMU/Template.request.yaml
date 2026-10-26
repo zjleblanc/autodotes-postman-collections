@@ -1,0 +1,22 @@
+$kind: http-request
+description: 'Create a Template. Permissions: You need ''VM.Allocate'' permissions on /vms/{vmid}'
+url: '{{base_url}}/nodes/:node/qemu/:vmid/template'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+body:
+  type: json
+  content: |-
+    {
+      "disk": "ide0"
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 30000

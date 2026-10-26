@@ -1,0 +1,13 @@
+$kind: http-request
+description: Get the virtual machine configuration with both current and pending values.
+url: '{{base_url}}/nodes/:node/qemu/:vmid/pending'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+settings: {}
+order: 12000

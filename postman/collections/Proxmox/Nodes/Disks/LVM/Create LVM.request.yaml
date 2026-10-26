@@ -1,0 +1,21 @@
+$kind: http-request
+description: 'Create an LVM Volume Group Permissions: Requires additionally ''Datastore.Allocate'' on /storage when setting ''add_storage'''
+url: '{{base_url}}/nodes/:node/disks/lvm'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+body:
+  type: json
+  content: |-
+    {
+      "device": "",
+      "name": "",
+      "add_storage": false
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 2000

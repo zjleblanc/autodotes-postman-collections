@@ -1,0 +1,26 @@
+$kind: http-request
+description: 'Update API token for a specific user. NOTE: when ''regenerate'' is set, the returned token value needs to be stored as it cannot be retrieved afterwards!'
+url: '{{base_url}}/access/users/:userid/token/:tokenid'
+method: PUT
+pathVariables:
+  - key: userid
+    value: ''
+    description: Full User ID, in the `name@realm` format.
+  - key: tokenid
+    value: ''
+    description: User-specific token identifier.
+body:
+  type: json
+  content: |-
+    {
+      "comment": "",
+      "delete": "",
+      "expire": "same as user",
+      "privsep": true,
+      "regenerate": false
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 4000

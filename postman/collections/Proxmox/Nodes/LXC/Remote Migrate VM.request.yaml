@@ -1,0 +1,30 @@
+$kind: http-request
+description: 'Migrate the container to another cluster. Creates a new migration task. EXPERIMENTAL feature!'
+url: '{{base_url}}/nodes/:node/lxc/:vmid/remote_migrate'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+body:
+  type: json
+  content: |-
+    {
+      "target-bridge": "",
+      "target-endpoint": "",
+      "target-storage": "",
+      "bwlimit": "migrate limit from datacenter or storage config",
+      "delete": false,
+      "online": false,
+      "restart": false,
+      "target-vmid": 0,
+      "timeout": 180
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 16000

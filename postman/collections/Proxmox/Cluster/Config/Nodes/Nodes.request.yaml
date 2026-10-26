@@ -1,0 +1,6 @@
+$kind: http-request
+description: Corosync node list.
+url: '{{base_url}}/cluster/config/nodes'
+method: GET
+settings: {}
+order: 1000

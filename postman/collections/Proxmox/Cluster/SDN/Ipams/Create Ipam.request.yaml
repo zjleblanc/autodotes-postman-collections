@@ -1,0 +1,21 @@
+$kind: http-request
+description: Create a new sdn ipam object.
+url: '{{base_url}}/cluster/sdn/ipams'
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "ipam": "",
+      "type": "netbox",
+      "fingerprint": "",
+      "lock-token": "",
+      "section": 0,
+      "token": "",
+      "url": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 2000

@@ -1,0 +1,10 @@
+$kind: http-request
+description: Index of hardware types
+url: '{{base_url}}/nodes/:node/hardware'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+settings: {}
+order: 1000

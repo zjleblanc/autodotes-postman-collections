@@ -1,0 +1,31 @@
+$kind: http-request
+description: Scan remote Proxmox Backup Server.
+url: '{{base_url}}/nodes/:node/scan/pbs'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+queryParams:
+  - key: password
+    value: ''
+    description: User password or API token secret.
+    disabled: true
+  - key: server
+    value: ''
+    description: The server address (name or IP).
+    disabled: true
+  - key: username
+    value: ''
+    description: User-name or API token-ID.
+    disabled: true
+  - key: fingerprint
+    value: ''
+    description: Certificate SHA 256 fingerprint.
+    disabled: true
+  - key: port
+    value: '8007'
+    description: Optional port.
+    disabled: true
+settings: {}
+order: 4000

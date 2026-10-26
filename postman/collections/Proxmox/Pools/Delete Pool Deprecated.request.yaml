@@ -1,0 +1,9 @@
+$kind: http-request
+description: 'Delete pool (deprecated, no support for nested pools, use ''DELETE /pools/?poolid={poolid}''). Permissions: You can only delete empty pools (no members).'
+url: '{{base_url}}/pools/:poolid'
+method: DELETE
+pathVariables:
+  - key: poolid
+    value: ''
+settings: {}
+order: 7000

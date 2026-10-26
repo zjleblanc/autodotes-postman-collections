@@ -1,0 +1,26 @@
+$kind: http-request
+description: Stop virtual machine. The qemu process will exit immediately. This is akin to pulling the power plug of a running computer and may damage the VM data.
+url: '{{base_url}}/nodes/:node/qemu/:vmid/status/stop'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+body:
+  type: json
+  content: |-
+    {
+      "keepActive": false,
+      "migratedfrom": "",
+      "overrule-shutdown": false,
+      "skiplock": false,
+      "timeout": 0
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 4000

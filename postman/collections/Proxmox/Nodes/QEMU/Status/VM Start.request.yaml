@@ -1,0 +1,32 @@
+$kind: http-request
+description: Start virtual machine.
+url: '{{base_url}}/nodes/:node/qemu/:vmid/status/start'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+body:
+  type: json
+  content: |-
+    {
+      "force-cpu": "",
+      "machine": "",
+      "migratedfrom": "",
+      "migration_network": "",
+      "migration_type": "secure",
+      "nets-host-mtu": "",
+      "skiplock": false,
+      "stateuri": "",
+      "targetstorage": "",
+      "timeout": "max(30, vm memory in GiB)",
+      "with-conntrack-state": false
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 3000

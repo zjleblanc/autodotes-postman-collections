@@ -1,0 +1,23 @@
+$kind: http-request
+description: Pull an OCI image from a registry.
+url: '{{base_url}}/nodes/:node/storage/:storage/oci-registry-pull'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: storage
+    value: ''
+    description: The storage identifier.
+body:
+  type: json
+  content: |-
+    {
+      "reference": "",
+      "filename": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 12000

@@ -1,0 +1,13 @@
+$kind: http-request
+description: Create Ceph Manager
+url: '{{base_url}}/nodes/:node/ceph/mgr/:id'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: id
+    value: nodename
+    description: The ID for the manager, when omitted the same as the nodename.
+settings: {}
+order: 2000

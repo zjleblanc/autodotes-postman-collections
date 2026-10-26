@@ -1,0 +1,27 @@
+$kind: http-request
+description: Add IP or Network to IPSet.
+url: '{{base_url}}/nodes/:node/qemu/:vmid/firewall/ipset/:name'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+  - key: name
+    value: ''
+    description: IP set name.
+body:
+  type: json
+  content: |-
+    {
+      "cidr": "",
+      "comment": "",
+      "nomatch": false
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 4000

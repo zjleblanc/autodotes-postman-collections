@@ -1,0 +1,22 @@
+$kind: http-request
+description: Reboot the VM by shutting it down, and starting it again. Applies pending changes.
+url: '{{base_url}}/nodes/:node/qemu/:vmid/status/reboot'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+body:
+  type: json
+  content: |-
+    {
+      "timeout": 0
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 7000

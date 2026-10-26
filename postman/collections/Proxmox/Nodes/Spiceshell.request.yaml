@@ -1,0 +1,21 @@
+$kind: http-request
+description: Creates a SPICE shell.
+url: '{{base_url}}/nodes/:node/spiceshell'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+body:
+  type: json
+  content: |-
+    {
+      "cmd": "login",
+      "cmd-opts": "",
+      "proxy": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 39000

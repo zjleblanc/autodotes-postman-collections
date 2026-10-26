@@ -1,0 +1,6 @@
+$kind: http-request
+description: Returns a list of all matchers
+url: '{{base_url}}/cluster/notifications/matchers'
+method: GET
+settings: {}
+order: 1000

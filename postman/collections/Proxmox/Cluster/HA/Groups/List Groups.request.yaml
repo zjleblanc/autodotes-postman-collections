@@ -1,0 +1,6 @@
+$kind: http-request
+description: Get HA groups. (deprecated in favor of HA rules)
+url: '{{base_url}}/cluster/ha/groups'
+method: GET
+settings: {}
+order: 1000

@@ -1,0 +1,19 @@
+$kind: http-request
+description: Delete Prefix List
+url: '{{base_url}}/cluster/sdn/prefix-lists/:id'
+method: DELETE
+pathVariables:
+  - key: id
+    value: ''
+    description: The SDN prefix list identifier
+body:
+  type: json
+  content: |-
+    {
+      "lock-token": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 5000

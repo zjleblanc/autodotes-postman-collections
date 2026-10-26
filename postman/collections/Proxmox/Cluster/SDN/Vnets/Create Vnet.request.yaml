@@ -1,0 +1,22 @@
+$kind: http-request
+description: Create a new sdn vnet object.
+url: '{{base_url}}/cluster/sdn/vnets'
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "vnet": "",
+      "zone": "",
+      "alias": "",
+      "isolate-ports": false,
+      "lock-token": "",
+      "tag": 0,
+      "type": "vnet",
+      "vlanaware": false
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 2000

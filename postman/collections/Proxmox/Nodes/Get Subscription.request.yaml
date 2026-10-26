@@ -1,0 +1,10 @@
+$kind: http-request
+description: Read subscription info.
+url: '{{base_url}}/nodes/:node/subscription'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+settings: {}
+order: 8000

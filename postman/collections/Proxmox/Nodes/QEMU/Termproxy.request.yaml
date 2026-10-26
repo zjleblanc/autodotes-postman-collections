@@ -1,0 +1,22 @@
+$kind: http-request
+description: Creates a TCP proxy connections.
+url: '{{base_url}}/nodes/:node/qemu/:vmid/termproxy'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+body:
+  type: json
+  content: |-
+    {
+      "serial": "serial0"
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 16000

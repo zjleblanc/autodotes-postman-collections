@@ -1,0 +1,13 @@
+$kind: http-request
+description: List mediated device types for given PCI device.
+url: '{{base_url}}/nodes/:node/hardware/pci/:pci-id-or-mapping/mdev'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: pci-id-or-mapping
+    value: ''
+    description: The PCI ID or mapping to list the mdev types for.
+settings: {}
+order: 3000

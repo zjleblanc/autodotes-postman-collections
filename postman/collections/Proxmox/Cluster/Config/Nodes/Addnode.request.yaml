@@ -1,0 +1,24 @@
+$kind: http-request
+description: Adds a node to the cluster configuration. This call is for internal use.
+url: '{{base_url}}/cluster/config/nodes/:node'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+body:
+  type: json
+  content: |-
+    {
+      "apiversion": 0,
+      "force": false,
+      "link[n]": "",
+      "new_node_ip": "",
+      "nodeid": 0,
+      "votes": 0
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 2000

@@ -1,0 +1,19 @@
+$kind: http-request
+description: Read sdn controller configuration.
+url: '{{base_url}}/cluster/sdn/controllers/:controller'
+method: GET
+pathVariables:
+  - key: controller
+    value: ''
+    description: The SDN controller object identifier.
+queryParams:
+  - key: pending
+    value: 'false'
+    description: Display pending config.
+    disabled: true
+  - key: running
+    value: 'false'
+    description: Display running config.
+    disabled: true
+settings: {}
+order: 3000

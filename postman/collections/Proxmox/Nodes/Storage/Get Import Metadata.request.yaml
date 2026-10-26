@@ -1,0 +1,18 @@
+$kind: http-request
+description: 'Get the base parameters for creating a guest which imports data from a foreign importable guest, like an ESXi VM Permissions: You need read access for the volume.'
+url: '{{base_url}}/nodes/:node/storage/:storage/import-metadata'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: storage
+    value: ''
+    description: The storage identifier.
+queryParams:
+  - key: volume
+    value: ''
+    description: Volume identifier for the guest archive/entry.
+    disabled: true
+settings: {}
+order: 13000

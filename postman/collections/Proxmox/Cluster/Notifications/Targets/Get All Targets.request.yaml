@@ -1,0 +1,6 @@
+$kind: http-request
+description: Returns a list of all entities that can be used as notification targets.
+url: '{{base_url}}/cluster/notifications/targets'
+method: GET
+settings: {}
+order: 1000

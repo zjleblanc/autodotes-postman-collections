@@ -1,0 +1,23 @@
+$kind: http-request
+description: Destroy a Ceph filesystem. Refuses if any PVE storage entry of type 'cephfs' still references the filesystem and is not disabled. Optionally also removes the storage entries and/or the underlying metadata and data pools.
+url: '{{base_url}}/nodes/:node/ceph/fs/:name'
+method: DELETE
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: name
+    value: ''
+    description: The Ceph filesystem name.
+body:
+  type: json
+  content: |-
+    {
+      "remove-pools": false,
+      "remove-storages": false
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 3000

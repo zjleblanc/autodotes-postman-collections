@@ -1,0 +1,28 @@
+$kind: http-request
+description: Read firewall log
+url: '{{base_url}}/nodes/:node/qemu/:vmid/firewall/log'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+queryParams:
+  - key: limit
+    value: '0'
+    disabled: true
+  - key: since
+    value: '0'
+    description: Display log since this UNIX epoch.
+    disabled: true
+  - key: start
+    value: '0'
+    disabled: true
+  - key: until
+    value: '0'
+    description: Display log until this UNIX epoch.
+    disabled: true
+settings: {}
+order: 7000

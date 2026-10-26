@@ -1,0 +1,16 @@
+$kind: http-request
+description: Release global lock for SDN configuration
+url: '{{base_url}}/cluster/sdn/lock'
+method: DELETE
+body:
+  type: json
+  content: |-
+    {
+      "force": false,
+      "lock-token": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 12000

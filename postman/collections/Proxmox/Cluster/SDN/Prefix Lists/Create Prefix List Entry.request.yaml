@@ -1,0 +1,18 @@
+$kind: http-request
+description: Create Prefix List
+url: '{{base_url}}/cluster/sdn/prefix-lists'
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "id": "",
+      "digest": "",
+      "entries": [],
+      "lock-token": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 2000

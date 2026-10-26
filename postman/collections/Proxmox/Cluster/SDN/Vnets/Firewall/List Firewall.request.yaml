@@ -1,0 +1,10 @@
+$kind: http-request
+description: Directory index.
+url: '{{base_url}}/cluster/sdn/vnets/:vnet/firewall'
+method: GET
+pathVariables:
+  - key: vnet
+    value: ''
+    description: The SDN vnet object identifier.
+settings: {}
+order: 1000

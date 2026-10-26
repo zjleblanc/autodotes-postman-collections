@@ -1,0 +1,22 @@
+$kind: http-request
+description: Remove IP or Network from IPSet.
+url: '{{base_url}}/cluster/firewall/ipset/:name/:cidr'
+method: DELETE
+pathVariables:
+  - key: name
+    value: ''
+    description: IP set name.
+  - key: cidr
+    value: ''
+    description: Network/IP specification in CIDR format.
+body:
+  type: json
+  content: |-
+    {
+      "digest": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 8000

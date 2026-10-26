@@ -1,0 +1,17 @@
+$kind: http-request
+description: Create a new directory mapping.
+url: '{{base_url}}/cluster/mapping/dir'
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "id": "",
+      "map": [],
+      "description": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 2000

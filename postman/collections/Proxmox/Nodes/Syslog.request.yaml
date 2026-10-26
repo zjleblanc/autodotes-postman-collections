@@ -1,0 +1,29 @@
+$kind: http-request
+description: Read system log
+url: '{{base_url}}/nodes/:node/syslog'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+queryParams:
+  - key: limit
+    value: '0'
+    disabled: true
+  - key: service
+    value: ''
+    description: Service ID
+    disabled: true
+  - key: since
+    value: ''
+    description: Display all log since this date-time string.
+    disabled: true
+  - key: start
+    value: '0'
+    disabled: true
+  - key: until
+    value: ''
+    description: Display all log until this date-time string.
+    disabled: true
+settings: {}
+order: 34000

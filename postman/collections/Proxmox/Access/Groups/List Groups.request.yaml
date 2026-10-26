@@ -1,0 +1,6 @@
+$kind: http-request
+description: 'Group index. Permissions: The returned list is restricted to groups where you have ''User.Modify'', ''Sys.Audit''  or ''Group.Allocate'' permissions on /access/groups/<group>.'
+url: '{{base_url}}/access/groups'
+method: GET
+settings: {}
+order: 1000

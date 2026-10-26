@@ -1,0 +1,22 @@
+$kind: http-request
+description: Update a hardware mapping.
+url: '{{base_url}}/cluster/mapping/usb/:id'
+method: PUT
+pathVariables:
+  - key: id
+    value: ''
+    description: The ID of the logical USB mapping.
+body:
+  type: json
+  content: |-
+    {
+      "map": [],
+      "delete": "",
+      "description": "",
+      "digest": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 4000

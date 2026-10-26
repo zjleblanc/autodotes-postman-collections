@@ -1,0 +1,13 @@
+$kind: http-request
+description: 'Get replication job status. Permissions: Requires the VM.Audit permission on /vms/<vmid>.'
+url: '{{base_url}}/nodes/:node/replication/:id/status'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: id
+    value: ''
+    description: 'Replication Job ID. The ID is composed of a Guest ID and a job number, separated by a hyphen, i.e. ''<GUEST>-<JOBNUM>''.'
+settings: {}
+order: 3000

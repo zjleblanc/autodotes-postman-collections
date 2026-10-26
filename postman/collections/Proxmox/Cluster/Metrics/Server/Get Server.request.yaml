@@ -1,0 +1,9 @@
+$kind: http-request
+description: Read metric server configuration.
+url: '{{base_url}}/cluster/metrics/server/:id'
+method: GET
+pathVariables:
+  - key: id
+    value: ''
+settings: {}
+order: 2000

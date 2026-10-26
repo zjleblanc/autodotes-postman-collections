@@ -1,0 +1,23 @@
+$kind: http-request
+description: Create a new matcher
+url: '{{base_url}}/cluster/notifications/matchers'
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "name": "",
+      "comment": "",
+      "disable": false,
+      "invert-match": false,
+      "match-calendar": [],
+      "match-field": [],
+      "match-severity": [],
+      "mode": "all",
+      "target": []
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 2000

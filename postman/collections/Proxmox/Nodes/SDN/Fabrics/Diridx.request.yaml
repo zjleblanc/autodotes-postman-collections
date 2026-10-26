@@ -1,0 +1,13 @@
+$kind: http-request
+description: Directory index for SDN fabric status.
+url: '{{base_url}}/nodes/:node/sdn/fabrics/:fabric'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: fabric
+    value: ''
+    description: Identifier for SDN fabrics
+settings: {}
+order: 1000

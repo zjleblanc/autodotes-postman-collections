@@ -1,0 +1,24 @@
+$kind: http-request
+description: Destroy the container (also delete all uses files).
+url: '{{base_url}}/nodes/:node/lxc/:vmid'
+method: DELETE
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+body:
+  type: json
+  content: |-
+    {
+      "destroy-unreferenced-disks": false,
+      "force": false,
+      "purge": false
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 4000

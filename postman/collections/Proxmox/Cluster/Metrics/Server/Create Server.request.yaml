@@ -1,0 +1,41 @@
+$kind: http-request
+description: Create a new external metric server config
+url: '{{base_url}}/cluster/metrics/server/:id'
+method: POST
+pathVariables:
+  - key: id
+    value: ''
+    description: The ID of the entry.
+body:
+  type: json
+  content: |-
+    {
+      "port": 0,
+      "server": "",
+      "type": "graphite",
+      "api-path-prefix": "",
+      "bucket": "",
+      "disable": false,
+      "influxdbproto": "udp",
+      "max-body-size": 25000000,
+      "mtu": 1500,
+      "organization": "",
+      "otel-compression": "gzip",
+      "otel-headers": "",
+      "otel-max-body-size": 10000000,
+      "otel-path": "/v1/metrics",
+      "otel-protocol": "https",
+      "otel-resource-attributes": "",
+      "otel-timeout": 5,
+      "otel-verify-ssl": true,
+      "path": "",
+      "proto": "udp",
+      "timeout": 1,
+      "token": "",
+      "verify-certificate": true
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 3000

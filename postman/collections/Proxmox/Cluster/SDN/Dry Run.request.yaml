@@ -1,0 +1,11 @@
+$kind: http-request
+description: Dry-run the SDN apply action and return the difference between the current configuration and the pending configuration
+url: '{{base_url}}/cluster/sdn/dry-run'
+method: GET
+queryParams:
+  - key: node
+    value: ''
+    description: The cluster node name.
+    disabled: true
+settings: {}
+order: 14000

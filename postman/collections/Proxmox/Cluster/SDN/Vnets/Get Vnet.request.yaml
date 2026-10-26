@@ -1,0 +1,19 @@
+$kind: http-request
+description: 'Read sdn vnet configuration. Permissions: Require ''SDN.Audit'' or ''SDN.Allocate'' permissions on ''/sdn/zones/<zone>/<vnet>'''
+url: '{{base_url}}/cluster/sdn/vnets/:vnet'
+method: GET
+pathVariables:
+  - key: vnet
+    value: ''
+    description: The SDN vnet object identifier.
+queryParams:
+  - key: pending
+    value: 'false'
+    description: Display pending config.
+    disabled: true
+  - key: running
+    value: 'false'
+    description: Display running config.
+    disabled: true
+settings: {}
+order: 3000

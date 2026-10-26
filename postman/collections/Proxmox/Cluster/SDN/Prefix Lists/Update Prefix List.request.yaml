@@ -1,0 +1,22 @@
+$kind: http-request
+description: Update Prefix List
+url: '{{base_url}}/cluster/sdn/prefix-lists/:id'
+method: PUT
+pathVariables:
+  - key: id
+    value: ''
+    description: The SDN prefix list identifier
+body:
+  type: json
+  content: |-
+    {
+      "delete": [],
+      "digest": "",
+      "entries": [],
+      "lock-token": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 4000

@@ -1,0 +1,27 @@
+$kind: http-request
+description: Migrate the container to another node. Creates a new migration task.
+url: '{{base_url}}/nodes/:node/lxc/:vmid/migrate'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+body:
+  type: json
+  content: |-
+    {
+      "target": "",
+      "bwlimit": "migrate limit from datacenter or storage config",
+      "online": false,
+      "restart": false,
+      "target-storage": "",
+      "timeout": 180
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 18000

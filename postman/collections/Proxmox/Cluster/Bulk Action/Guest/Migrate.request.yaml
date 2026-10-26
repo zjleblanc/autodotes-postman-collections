@@ -1,0 +1,20 @@
+$kind: http-request
+description: 'Bulk migrate all guests on the cluster. Permissions: The ''VM.Migrate'' permission is required on ''/'' or on ''/vms/<ID>'' for each ID passed via the ''vms'' parameter.'
+url: '{{base_url}}/cluster/bulk-action/guest/migrate'
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "target": "",
+      "max-workers": 1,
+      "maxworkers": 1,
+      "online": false,
+      "vms": [],
+      "with-local-disks": false
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 5000

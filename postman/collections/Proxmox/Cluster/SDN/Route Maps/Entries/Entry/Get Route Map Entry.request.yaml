@@ -1,0 +1,13 @@
+$kind: http-request
+description: Get Route Map Entry
+url: '{{base_url}}/cluster/sdn/route-maps/entries/:route-map-id/entry/:order'
+method: GET
+pathVariables:
+  - key: route-map-id
+    value: ''
+    description: The SDN route map identifier
+  - key: order
+    value: '0'
+    description: The index of this route map entry
+settings: {}
+order: 1000

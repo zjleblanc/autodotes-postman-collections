@@ -1,0 +1,11 @@
+$kind: http-request
+description: 'Read cluster log Permissions: The user needs ''Sys.Syslog'' on ''/'' in order to get all logs.'
+url: '{{base_url}}/cluster/log'
+method: GET
+queryParams:
+  - key: max
+    value: '0'
+    description: Maximum number of entries.
+    disabled: true
+settings: {}
+order: 17000

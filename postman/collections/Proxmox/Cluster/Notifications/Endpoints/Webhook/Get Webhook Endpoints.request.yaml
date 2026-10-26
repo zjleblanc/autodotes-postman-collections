@@ -1,0 +1,6 @@
+$kind: http-request
+description: Returns a list of all webhook endpoints
+url: '{{base_url}}/cluster/notifications/endpoints/webhook'
+method: GET
+settings: {}
+order: 1000

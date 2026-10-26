@@ -1,0 +1,13 @@
+$kind: http-request
+description: Execute fsfreeze-status.
+url: '{{base_url}}/nodes/:node/qemu/:vmid/agent/fsfreeze-status'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+settings: {}
+order: 4000

@@ -1,0 +1,24 @@
+$kind: http-request
+description: 'Create new user. Permissions: You need ''Realm.AllocateUser'' on ''/access/realm/<realm>'' on the realm of user <userid>, and ''User.Modify'' permissions to ''/access/groups/<group>'' for any group specified (or ''User.Modify'' on ''/access/groups'' if you pass no groups.'
+url: '{{base_url}}/access/users'
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "userid": "",
+      "comment": "",
+      "email": "",
+      "enable": true,
+      "expire": 0,
+      "firstname": "",
+      "groups": "",
+      "keys": "",
+      "lastname": "",
+      "password": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 2000

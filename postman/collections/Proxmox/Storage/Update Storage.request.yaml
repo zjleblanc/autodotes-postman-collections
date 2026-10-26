@@ -1,0 +1,68 @@
+$kind: http-request
+description: Update storage configuration.
+url: '{{base_url}}/storage/:storage'
+method: PUT
+pathVariables:
+  - key: storage
+    value: ''
+    description: The storage identifier.
+body:
+  type: json
+  content: |-
+    {
+      "blocksize": "",
+      "bwlimit": "",
+      "comstar_hg": "",
+      "comstar_tg": "",
+      "content": "",
+      "content-dirs": "",
+      "create-base-path": true,
+      "create-subdirs": true,
+      "data-pool": "",
+      "delete": "",
+      "digest": "",
+      "disable": false,
+      "domain": "",
+      "encryption-key": "",
+      "fingerprint": "",
+      "format": "raw",
+      "fs-name": "",
+      "fuse": false,
+      "is_mountpoint": "no",
+      "keyring": "",
+      "krbd": false,
+      "lio_tpg": "",
+      "master-pubkey": "",
+      "max-protected-backups": "Unlimited for users with Datastore.Allocate privilege, 5 for other users",
+      "mkdir": true,
+      "monhost": "",
+      "mountpoint": "",
+      "namespace": "",
+      "nocow": false,
+      "nodes": "",
+      "nowritecache": false,
+      "options": "",
+      "password": "",
+      "pool": "",
+      "port": 0,
+      "preallocation": "metadata",
+      "prune-backups": "",
+      "saferemove": false,
+      "saferemove-stepsize": 32,
+      "saferemove_throughput": "",
+      "server": "",
+      "shared": false,
+      "skip-cert-verification": true,
+      "smbversion": "default",
+      "snapshot-as-volume-chain": false,
+      "sparse": false,
+      "subdir": "",
+      "tagged_only": false,
+      "username": "",
+      "zfs-base-path": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 4000

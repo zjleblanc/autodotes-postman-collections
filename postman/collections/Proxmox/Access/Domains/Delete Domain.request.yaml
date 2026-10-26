@@ -1,0 +1,10 @@
+$kind: http-request
+description: Delete an authentication server.
+url: '{{base_url}}/access/domains/:realm'
+method: DELETE
+pathVariables:
+  - key: realm
+    value: ''
+    description: Authentication domain ID
+settings: {}
+order: 5000

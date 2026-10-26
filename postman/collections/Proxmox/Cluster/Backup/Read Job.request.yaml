@@ -1,0 +1,10 @@
+$kind: http-request
+description: Read vzdump backup job definition.
+url: '{{base_url}}/cluster/backup/:id'
+method: GET
+pathVariables:
+  - key: id
+    value: ''
+    description: The job ID.
+settings: {}
+order: 3000

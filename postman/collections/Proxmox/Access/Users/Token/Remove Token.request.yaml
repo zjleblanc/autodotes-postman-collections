@@ -1,0 +1,13 @@
+$kind: http-request
+description: Remove API token for a specific user.
+url: '{{base_url}}/access/users/:userid/token/:tokenid'
+method: DELETE
+pathVariables:
+  - key: userid
+    value: ''
+    description: Full User ID, in the `name@realm` format.
+  - key: tokenid
+    value: ''
+    description: User-specific token identifier.
+settings: {}
+order: 5000

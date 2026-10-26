@@ -1,0 +1,10 @@
+$kind: http-request
+description: Delete user.
+url: '{{base_url}}/access/users/:userid'
+method: DELETE
+pathVariables:
+  - key: userid
+    value: ''
+    description: Full User ID, in the `name@realm` format.
+settings: {}
+order: 5000

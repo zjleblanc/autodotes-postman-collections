@@ -1,0 +1,23 @@
+$kind: http-request
+description: Create a new sdn dns object.
+url: '{{base_url}}/cluster/sdn/dns'
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "dns": "",
+      "key": "",
+      "type": "powerdns",
+      "url": "",
+      "fingerprint": "",
+      "lock-token": "",
+      "reversemaskv6": 0,
+      "reversev6mask": 0,
+      "ttl": 0
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 2000

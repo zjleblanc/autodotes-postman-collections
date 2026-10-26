@@ -1,0 +1,19 @@
+$kind: http-request
+description: 'Bulk shutdown all guests on the cluster. Permissions: The ''VM.PowerMgmt'' permission is required on ''/'' or on ''/vms/<ID>'' for each ID passed via the ''vms'' parameter.'
+url: '{{base_url}}/cluster/bulk-action/guest/shutdown'
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "force-stop": true,
+      "max-workers": 4,
+      "maxworkers": 4,
+      "timeout": 180,
+      "vms": []
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 3000

@@ -1,0 +1,17 @@
+$kind: http-request
+description: Create a new hardware mapping.
+url: '{{base_url}}/cluster/mapping/usb'
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "id": "",
+      "map": [],
+      "description": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 2000

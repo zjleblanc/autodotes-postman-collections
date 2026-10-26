@@ -1,0 +1,42 @@
+$kind: http-request
+description: Create a new sdn zone object.
+url: '{{base_url}}/cluster/sdn/zones'
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "type": "evpn",
+      "zone": "",
+      "advertise-subnets": false,
+      "bridge": "",
+      "bridge-disable-mac-learning": false,
+      "controller": "",
+      "dhcp": "dnsmasq",
+      "disable-arp-nd-suppression": false,
+      "dns": "",
+      "dnszone": "",
+      "dp-id": 0,
+      "exitnodes": "",
+      "exitnodes-local-routing": false,
+      "exitnodes-primary": "",
+      "fabric": "",
+      "ipam": "",
+      "lock-token": "",
+      "mac": "",
+      "mtu": 0,
+      "nodes": "",
+      "peers": "",
+      "reversedns": "",
+      "rt-import": "",
+      "secondary-controllers": [],
+      "tag": 0,
+      "vlan-protocol": "802.1q",
+      "vrf-vxlan": 0,
+      "vxlan-port": 4789
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 2000

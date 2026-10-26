@@ -1,0 +1,6 @@
+$kind: http-request
+description: 'List TFA configurations of users. Permissions: Returns all or just the logged-in user, depending on privileges.'
+url: '{{base_url}}/access/tfa'
+method: GET
+settings: {}
+order: 1000

@@ -1,0 +1,10 @@
+$kind: http-request
+description: Get Prefix List
+url: '{{base_url}}/cluster/sdn/prefix-lists/:id'
+method: GET
+pathVariables:
+  - key: id
+    value: ''
+    description: The SDN prefix list identifier
+settings: {}
+order: 3000

@@ -1,0 +1,22 @@
+$kind: http-request
+description: Reset virtual machine.
+url: '{{base_url}}/nodes/:node/qemu/:vmid/status/reset'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+body:
+  type: json
+  content: |-
+    {
+      "skiplock": false
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 5000

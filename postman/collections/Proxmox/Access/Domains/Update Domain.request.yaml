@@ -1,0 +1,60 @@
+$kind: http-request
+description: Update authentication server settings.
+url: '{{base_url}}/access/domains/:realm'
+method: PUT
+pathVariables:
+  - key: realm
+    value: ''
+    description: Authentication domain ID
+body:
+  type: json
+  content: |-
+    {
+      "acr-values": "",
+      "audiences": "",
+      "autocreate": false,
+      "base_dn": "",
+      "bind_dn": "",
+      "capath": "/etc/ssl/certs",
+      "case-sensitive": true,
+      "cert": "",
+      "certkey": "",
+      "check-connection": false,
+      "client-id": "",
+      "client-key": "",
+      "comment": "",
+      "default": false,
+      "delete": "",
+      "digest": "",
+      "domain": "",
+      "filter": "",
+      "group_classes": "groupOfNames, group, univentionGroup, ipausergroup",
+      "group_dn": "",
+      "group_filter": "",
+      "group_name_attr": "",
+      "groups-autocreate": false,
+      "groups-claim": "",
+      "groups-overwrite": false,
+      "issuer-url": "",
+      "mode": "ldap",
+      "password": "",
+      "port": 0,
+      "prompt": "",
+      "query-userinfo": true,
+      "scopes": "email profile",
+      "secure": false,
+      "server1": "",
+      "server2": "",
+      "sslversion": "tlsv1",
+      "sync-defaults-options": "",
+      "sync_attributes": "",
+      "tfa": "",
+      "user_attr": "",
+      "user_classes": "inetorgperson, posixaccount, person, user",
+      "verify": false
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 4000

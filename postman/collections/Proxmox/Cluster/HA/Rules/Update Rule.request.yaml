@@ -1,0 +1,9 @@
+$kind: http-request
+description: Update HA rule.
+url: '{{base_url}}/cluster/ha/rules/:rule'
+method: PUT
+pathVariables:
+  - key: rule
+    value: ''
+settings: {}
+order: 4000

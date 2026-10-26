@@ -1,0 +1,11 @@
+$kind: http-request
+description: Retrieve ACME Directory Meta Information
+url: '{{base_url}}/cluster/acme/meta'
+method: GET
+queryParams:
+  - key: directory
+    value: 'https://acme-v02.api.letsencrypt.org/directory'
+    description: URL of ACME CA directory endpoint.
+    disabled: true
+settings: {}
+order: 5000

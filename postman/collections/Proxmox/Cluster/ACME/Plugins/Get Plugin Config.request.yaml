@@ -1,0 +1,10 @@
+$kind: http-request
+description: Get ACME plugin configuration.
+url: '{{base_url}}/cluster/acme/plugins/:id'
+method: GET
+pathVariables:
+  - key: id
+    value: ''
+    description: Unique identifier for ACME plugin instance.
+settings: {}
+order: 3000

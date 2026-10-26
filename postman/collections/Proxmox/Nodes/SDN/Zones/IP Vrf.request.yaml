@@ -1,0 +1,13 @@
+$kind: http-request
+description: Get the IP VRF of an EVPN zone.
+url: '{{base_url}}/nodes/:node/sdn/zones/:zone/ip-vrf'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: zone
+    value: ''
+    description: Name of an EVPN zone.
+settings: {}
+order: 5000

@@ -1,0 +1,6 @@
+$kind: http-request
+description: Index for jobs related endpoints.
+url: '{{base_url}}/cluster/jobs'
+method: GET
+settings: {}
+order: 1000

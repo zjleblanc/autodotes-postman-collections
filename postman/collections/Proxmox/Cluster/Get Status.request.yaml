@@ -1,0 +1,6 @@
+$kind: http-request
+description: Get cluster status information.
+url: '{{base_url}}/cluster/status'
+method: GET
+settings: {}
+order: 22000

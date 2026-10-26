@@ -1,0 +1,18 @@
+$kind: http-request
+description: Lists possible IPSet/Alias reference which are allowed in source/dest properties.
+url: '{{base_url}}/nodes/:node/qemu/:vmid/firewall/refs'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+queryParams:
+  - key: type
+    value: alias
+    description: Only list references of specified type.
+    disabled: true
+settings: {}
+order: 8000

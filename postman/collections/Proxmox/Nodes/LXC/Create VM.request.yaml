@@ -1,0 +1,63 @@
+$kind: http-request
+description: 'Create or restore a container. Permissions: You need ''VM.Allocate'' permission on /vms/{vmid} or on the VM pool /pool/{pool}. For restore, it is enough if the user has ''VM.Backup'' permission and the VM already exists. You also need ''Datastore.AllocateSpace'' permissions on the storage. For privileged containers, ''Sys.Modify'' permissions on ''/'' are required.'
+url: '{{base_url}}/nodes/:node/lxc'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+body:
+  type: json
+  content: |-
+    {
+      "ostemplate": "",
+      "vmid": 0,
+      "arch": "amd64",
+      "bwlimit": "restore limit from datacenter or storage config",
+      "cmode": "tty",
+      "console": true,
+      "cores": 0,
+      "cpulimit": 0,
+      "cpuunits": "cgroup v1: 1024, cgroup v2: 100",
+      "debug": false,
+      "description": "",
+      "dev[n]": "",
+      "entrypoint": "/sbin/init",
+      "env": "",
+      "features": "",
+      "force": false,
+      "ha-managed": false,
+      "hookscript": "",
+      "hostname": "",
+      "ignore-unpack-errors": false,
+      "lock": "backup",
+      "memory": 512,
+      "mp[n]": "",
+      "nameserver": "",
+      "net[n]": "",
+      "onboot": false,
+      "ostype": "debian",
+      "password": "",
+      "pool": "",
+      "protection": false,
+      "restore": false,
+      "rootfs": "",
+      "searchdomain": "",
+      "ssh-public-keys": "",
+      "start": false,
+      "startup": "",
+      "storage": "local",
+      "swap": 512,
+      "tags": "",
+      "template": false,
+      "timezone": "",
+      "tty": 2,
+      "unique": false,
+      "unprivileged": false,
+      "unused[n]": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 2000

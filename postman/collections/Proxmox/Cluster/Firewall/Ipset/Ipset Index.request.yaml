@@ -1,0 +1,6 @@
+$kind: http-request
+description: List IPSets
+url: '{{base_url}}/cluster/firewall/ipset'
+method: GET
+settings: {}
+order: 1000

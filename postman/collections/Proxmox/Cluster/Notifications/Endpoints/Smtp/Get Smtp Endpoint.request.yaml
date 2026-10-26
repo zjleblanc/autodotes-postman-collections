@@ -1,0 +1,9 @@
+$kind: http-request
+description: Return a specific smtp endpoint
+url: '{{base_url}}/cluster/notifications/endpoints/smtp/:name'
+method: GET
+pathVariables:
+  - key: name
+    value: ''
+settings: {}
+order: 3000

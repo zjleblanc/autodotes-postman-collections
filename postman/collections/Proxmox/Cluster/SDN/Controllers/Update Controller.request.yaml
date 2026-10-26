@@ -1,0 +1,37 @@
+$kind: http-request
+description: Update sdn controller object configuration.
+url: '{{base_url}}/cluster/sdn/controllers/:controller'
+method: PUT
+pathVariables:
+  - key: controller
+    value: ''
+    description: The SDN controller object identifier.
+body:
+  type: json
+  content: |-
+    {
+      "asn": 0,
+      "bgp-mode": "auto",
+      "bgp-multipath-as-path-relax": false,
+      "delete": "",
+      "digest": "",
+      "ebgp": false,
+      "ebgp-multihop": 0,
+      "fabric": "",
+      "isis-domain": "",
+      "isis-ifaces": "",
+      "isis-net": "",
+      "lock-token": "",
+      "loopback": "",
+      "node": "",
+      "nodes": "",
+      "peer-group-name": "VTEP",
+      "peers": "",
+      "route-map-in": "",
+      "route-map-out": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 4000

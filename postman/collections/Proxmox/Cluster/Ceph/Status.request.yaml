@@ -1,0 +1,6 @@
+$kind: http-request
+description: Get ceph status.
+url: '{{base_url}}/cluster/ceph/status'
+method: GET
+settings: {}
+order: 3000

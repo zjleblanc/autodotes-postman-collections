@@ -1,0 +1,10 @@
+$kind: http-request
+description: Send a test notification to a provided target.
+url: '{{base_url}}/cluster/notifications/targets/:name/test'
+method: POST
+pathVariables:
+  - key: name
+    value: ''
+    description: Name of the target.
+settings: {}
+order: 2000

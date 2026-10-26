@@ -1,0 +1,11 @@
+$kind: http-request
+description: Get information needed to join this cluster over the connected node.
+url: '{{base_url}}/cluster/config/join'
+method: GET
+queryParams:
+  - key: node
+    value: current connected node
+    description: 'The node for which the joinee gets the nodeinfo. '
+    disabled: true
+settings: {}
+order: 5000

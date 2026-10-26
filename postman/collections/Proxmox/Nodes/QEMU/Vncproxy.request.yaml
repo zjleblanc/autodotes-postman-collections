@@ -1,0 +1,23 @@
+$kind: http-request
+description: Creates a TCP VNC proxy connections.
+url: '{{base_url}}/nodes/:node/qemu/:vmid/vncproxy'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+body:
+  type: json
+  content: |-
+    {
+      "generate-password": false,
+      "websocket": false
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 15000

@@ -1,0 +1,24 @@
+$kind: http-request
+description: Add a TFA entry for a user.
+url: '{{base_url}}/access/tfa/:userid/:id'
+method: PUT
+pathVariables:
+  - key: userid
+    value: ''
+    description: Full User ID, in the `name@realm` format.
+  - key: id
+    value: ''
+    description: A TFA entry id.
+body:
+  type: json
+  content: |-
+    {
+      "description": "",
+      "enable": false,
+      "password": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 5000

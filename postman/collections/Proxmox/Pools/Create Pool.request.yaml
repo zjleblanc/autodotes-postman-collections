@@ -1,0 +1,16 @@
+$kind: http-request
+description: Create new pool.
+url: '{{base_url}}/pools'
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "poolid": "",
+      "comment": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 2000

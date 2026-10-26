@@ -1,0 +1,6 @@
+$kind: http-request
+description: List configured metric servers.
+url: '{{base_url}}/cluster/metrics/server'
+method: GET
+settings: {}
+order: 1000

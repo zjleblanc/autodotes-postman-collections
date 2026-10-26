@@ -1,0 +1,6 @@
+$kind: http-request
+description: SDN Fabrics Index
+url: '{{base_url}}/cluster/sdn/fabrics'
+method: GET
+settings: {}
+order: 1000

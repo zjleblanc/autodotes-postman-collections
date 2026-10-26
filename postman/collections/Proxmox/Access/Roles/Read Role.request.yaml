@@ -1,0 +1,9 @@
+$kind: http-request
+description: Get role configuration.
+url: '{{base_url}}/access/roles/:roleid'
+method: GET
+pathVariables:
+  - key: roleid
+    value: ''
+settings: {}
+order: 3000

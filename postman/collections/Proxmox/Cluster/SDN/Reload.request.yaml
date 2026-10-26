@@ -1,0 +1,16 @@
+$kind: http-request
+description: 'Apply sdn controller changes && reload.'
+url: '{{base_url}}/cluster/sdn'
+method: PUT
+body:
+  type: json
+  content: |-
+    {
+      "lock-token": "",
+      "release-lock": true
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 2000

@@ -1,0 +1,30 @@
+$kind: http-request
+description: 'Move volume to different storage or to a different VM. Permissions: You need ''VM.Config.Disk'' permissions on /vms/{vmid}, and ''Datastore.AllocateSpace'' permissions on the storage. To move a disk to another VM, you need the permissions on the target VM as well.'
+url: '{{base_url}}/nodes/:node/qemu/:vmid/move_disk'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+body:
+  type: json
+  content: |-
+    {
+      "disk": "ide0",
+      "bwlimit": "move limit from datacenter or storage config",
+      "delete": false,
+      "digest": "",
+      "format": "raw",
+      "storage": "",
+      "target-digest": "",
+      "target-disk": "ide0",
+      "target-vmid": 0
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 23000

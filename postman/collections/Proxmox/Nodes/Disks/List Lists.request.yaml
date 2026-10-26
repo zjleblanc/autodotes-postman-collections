@@ -1,0 +1,23 @@
+$kind: http-request
+description: List local disks.
+url: '{{base_url}}/nodes/:node/disks/list'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+queryParams:
+  - key: include-partitions
+    value: 'false'
+    description: Also include partitions.
+    disabled: true
+  - key: skipsmart
+    value: 'false'
+    description: Skip smart checks.
+    disabled: true
+  - key: type
+    value: unused
+    description: Only list specific types of disks.
+    disabled: true
+settings: {}
+order: 6000

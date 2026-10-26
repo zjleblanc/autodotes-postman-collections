@@ -1,0 +1,13 @@
+$kind: http-request
+description: Execute get-memory-block-info.
+url: '{{base_url}}/nodes/:node/qemu/:vmid/agent/get-memory-block-info'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+settings: {}
+order: 9000

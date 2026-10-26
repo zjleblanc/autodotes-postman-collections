@@ -1,0 +1,23 @@
+$kind: http-request
+description: Resume virtual machine.
+url: '{{base_url}}/nodes/:node/qemu/:vmid/status/resume'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+body:
+  type: json
+  content: |-
+    {
+      "nocheck": false,
+      "skiplock": false
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 9000

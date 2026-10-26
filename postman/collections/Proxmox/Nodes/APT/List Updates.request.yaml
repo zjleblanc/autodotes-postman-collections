@@ -1,0 +1,10 @@
+$kind: http-request
+description: List available updates.
+url: '{{base_url}}/nodes/:node/apt/update'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+settings: {}
+order: 2000

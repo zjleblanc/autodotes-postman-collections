@@ -1,0 +1,19 @@
+$kind: http-request
+description: Get package changelogs.
+url: '{{base_url}}/nodes/:node/apt/changelog'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+queryParams:
+  - key: name
+    value: ''
+    description: Package name.
+    disabled: true
+  - key: version
+    value: ''
+    description: Package version.
+    disabled: true
+settings: {}
+order: 4000

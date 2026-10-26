@@ -1,0 +1,22 @@
+$kind: http-request
+description: Read VM RRD statistics
+url: '{{base_url}}/nodes/:node/qemu/:vmid/rrddata'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+queryParams:
+  - key: timeframe
+    value: hour
+    description: Specify the time frame you are interested in.
+    disabled: true
+  - key: cf
+    value: AVERAGE
+    description: The RRD consolidation function
+    disabled: true
+settings: {}
+order: 8000

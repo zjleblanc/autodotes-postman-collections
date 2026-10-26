@@ -1,0 +1,11 @@
+$kind: http-request
+description: Resources index (cluster wide).
+url: '{{base_url}}/cluster/resources'
+method: GET
+queryParams:
+  - key: type
+    value: vm
+    description: Resource type.
+    disabled: true
+settings: {}
+order: 18000

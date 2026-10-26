@@ -1,0 +1,20 @@
+$kind: http-request
+description: Create a new HA group. (deprecated in favor of HA rules)
+url: '{{base_url}}/cluster/ha/groups'
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "group": "",
+      "nodes": "",
+      "comment": "",
+      "nofailback": false,
+      "restricted": false,
+      "type": "group"
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 2000

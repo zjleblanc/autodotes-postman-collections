@@ -1,0 +1,19 @@
+$kind: http-request
+description: Delete sdn zone object configuration.
+url: '{{base_url}}/cluster/sdn/zones/:zone'
+method: DELETE
+pathVariables:
+  - key: zone
+    value: ''
+    description: The SDN zone object identifier.
+body:
+  type: json
+  content: |-
+    {
+      "lock-token": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 5000

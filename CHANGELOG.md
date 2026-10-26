@@ -1,5 +1,18 @@
 # Changelog
 
+## 2026-10-26 — Generate Proxmox collection from the API viewer schema
+
+### Added
+
+- `postman/collections/Proxmox/`: Postman v3 collection generated from the Proxmox VE API Viewer's embedded schema (`apidoc.js`) at https://pve.proxmox.com/pve-docs/api-viewer/index.html. 121 folders mirror the API resource tree — Cluster, Nodes (QEMU, LXC, Ceph, storage, disks, firewall, etc.), Storage, Access, and Pools — totaling 680 requests.
+- `scripts/generate_proxmox_collection.py`: dependency-free generator that downloads and parses the `apiSchema` JSON tree embedded in `apidoc.js`, then emits one `.request.yaml` per method+path, folding path-variable segments (e.g. `{vmid}`, `{node}`) into their parent folder instead of creating a directory per variable.
+- `Access > Create Ticket` request: ticket/cookie login flow (`auth: noauth` plus an `afterResponse` script) that auto-populates `pve_ticket` and `csrf_token` collection variables; the collection's own auth sends the resulting `PVEAuthCookie` cookie, and a `beforeRequest` script adds the `CSRFPreventionToken` header on non-GET requests.
+- `.postman/resources.yaml`: registered the new Proxmox collection's workspace binding.
+
+### Fixed
+
+- Generator keeps all `queryParams` `disabled: true` by default (matching `AO/Settings/List Settings.request.yaml`), avoiding the `FMT209` URL/queryParams mismatch `postman collection lint` raised on ~35 GET requests with required query parameters. Collection now passes lint with 0 errors across all 680 requests.
+
 ## 2026-10-26 — Clear zleblanc-main environment variables
 
 ### Removed

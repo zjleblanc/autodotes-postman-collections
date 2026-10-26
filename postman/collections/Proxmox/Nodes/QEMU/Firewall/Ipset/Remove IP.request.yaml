@@ -1,0 +1,28 @@
+$kind: http-request
+description: Remove IP or Network from IPSet.
+url: '{{base_url}}/nodes/:node/qemu/:vmid/firewall/ipset/:name/:cidr'
+method: DELETE
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+  - key: name
+    value: ''
+    description: IP set name.
+  - key: cidr
+    value: ''
+    description: Network/IP specification in CIDR format.
+body:
+  type: json
+  content: |-
+    {
+      "digest": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 8000

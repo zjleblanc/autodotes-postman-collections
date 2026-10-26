@@ -1,0 +1,22 @@
+$kind: http-request
+description: 'Opens a websocket for VNC traffic. Permissions: You also need to pass a valid ticket (vncticket).'
+url: '{{base_url}}/nodes/:node/lxc/:vmid/vncwebsocket'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+queryParams:
+  - key: port
+    value: '0'
+    description: Port number returned by previous vncproxy call.
+    disabled: true
+  - key: vncticket
+    value: ''
+    description: Ticket from previous call to vncproxy.
+    disabled: true
+settings: {}
+order: 14000

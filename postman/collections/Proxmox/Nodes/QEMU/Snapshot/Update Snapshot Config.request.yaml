@@ -1,0 +1,25 @@
+$kind: http-request
+description: Update snapshot metadata.
+url: '{{base_url}}/nodes/:node/qemu/:vmid/snapshot/:snapname/config'
+method: PUT
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+  - key: snapname
+    value: ''
+    description: The name of the snapshot.
+body:
+  type: json
+  content: |-
+    {
+      "description": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 6000

@@ -1,0 +1,10 @@
+$kind: http-request
+description: List IPSet content
+url: '{{base_url}}/cluster/firewall/ipset/:name'
+method: GET
+pathVariables:
+  - key: name
+    value: ''
+    description: IP set name.
+settings: {}
+order: 3000

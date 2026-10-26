@@ -1,0 +1,50 @@
+$kind: http-request
+description: 'Create backup. Permissions: The user needs ''VM.Backup'' permissions on any VM, and ''Datastore.AllocateSpace'' on the backup storage (and fleecing storage when fleecing is used). The ''tmpdir'', ''dumpdir'', ''script'' and ''job-id'' parameters are restricted to the ''root@pam'' user. The ''prune-backups'' setting requires ''Datastore.Allocate'' on the backup storage. The ''bwlimit'', ''performance'' and ''ionice'' parameters require ''Sys.Modify'' on ''/''. The ''stop'' parameter requires ''Sys.Modify'' on ''/nodes/{node}'''
+url: '{{base_url}}/nodes/:node/vzdump'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: Only run if executed on this node.
+body:
+  type: json
+  content: |-
+    {
+      "all": false,
+      "bwlimit": 0,
+      "compress": "0",
+      "dumpdir": "",
+      "exclude": "",
+      "exclude-path": [],
+      "fleecing": "",
+      "ionice": 7,
+      "job-id": "",
+      "lockwait": 180,
+      "mailnotification": "always",
+      "mailto": "",
+      "mode": "snapshot",
+      "notes-template": "",
+      "notification-mode": "auto",
+      "pbs-change-detection-mode": "legacy",
+      "performance": "",
+      "pigz": 0,
+      "pool": "",
+      "protected": false,
+      "prune-backups": "keep-all=1",
+      "quiet": false,
+      "remove": true,
+      "script": "",
+      "stdexcludes": true,
+      "stdout": false,
+      "stop": false,
+      "stopwait": 10,
+      "storage": "",
+      "tmpdir": "",
+      "vmid": "",
+      "zstd": 1
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 1000

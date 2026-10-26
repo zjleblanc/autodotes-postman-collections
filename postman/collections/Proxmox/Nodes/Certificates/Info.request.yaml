@@ -1,0 +1,10 @@
+$kind: http-request
+description: Get information about node's certificates.
+url: '{{base_url}}/nodes/:node/certificates/info'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+settings: {}
+order: 3000

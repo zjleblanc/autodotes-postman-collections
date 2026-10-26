@@ -1,0 +1,26 @@
+$kind: http-request
+description: 'Get prune information for backups. NOTE: this is only a preview and might not be what a subsequent prune call does if backups are removed/added in the meantime.'
+url: '{{base_url}}/nodes/:node/storage/:storage/prunebackups'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: storage
+    value: ''
+    description: The storage identifier.
+queryParams:
+  - key: prune-backups
+    value: ''
+    description: Use these retention options instead of those from the storage configuration.
+    disabled: true
+  - key: type
+    value: qemu
+    description: Either 'qemu' or 'lxc'. Only consider backups for guests of this type.
+    disabled: true
+  - key: vmid
+    value: '0'
+    description: Only consider backups for this guest.
+    disabled: true
+settings: {}
+order: 3000

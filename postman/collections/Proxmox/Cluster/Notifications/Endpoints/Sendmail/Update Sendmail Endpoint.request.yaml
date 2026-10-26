@@ -1,0 +1,26 @@
+$kind: http-request
+description: Update existing sendmail endpoint
+url: '{{base_url}}/cluster/notifications/endpoints/sendmail/:name'
+method: PUT
+pathVariables:
+  - key: name
+    value: ''
+    description: The name of the endpoint.
+body:
+  type: json
+  content: |-
+    {
+      "author": "",
+      "comment": "",
+      "delete": [],
+      "digest": "",
+      "disable": false,
+      "from-address": "",
+      "mailto": [],
+      "mailto-user": []
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 4000

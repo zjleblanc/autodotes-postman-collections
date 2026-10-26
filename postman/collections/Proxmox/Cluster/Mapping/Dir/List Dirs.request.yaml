@@ -1,0 +1,11 @@
+$kind: http-request
+description: 'List directory mapping Permissions: Only lists entries where you have ''Mapping.Modify'', ''Mapping.Use'' or ''Mapping.Audit'' permissions on ''/mapping/dir/<id>''.'
+url: '{{base_url}}/cluster/mapping/dir'
+method: GET
+queryParams:
+  - key: check-node
+    value: ''
+    description: If given, checks the configurations on the given node for correctness, and adds relevant diagnostics for the directory to the response.
+    disabled: true
+settings: {}
+order: 1000

@@ -2,6 +2,7 @@ cloudResources:
   collections:
     ../postman/collections/AAP: 15706575-248e6540-31a2-49c0-bdb0-13284b5c3ab0
     ../postman/collections/AO: 15706575-12ba6e04-cfb3-41db-9dec-c8a62cca0c1e
+    ../postman/collections/Proxmox: 15706575-c95af45e-2205-46a9-848f-a18fd18f8efd
     ../postman/collections/TMDB API: 15706575-3f5771ec-7086-4f5c-9197-7a3f8d4e6a73
   documents:
     ../postman/documents/WORKSPACE-README.md: 15983030-8792-4452-8e16-2db265c3810a

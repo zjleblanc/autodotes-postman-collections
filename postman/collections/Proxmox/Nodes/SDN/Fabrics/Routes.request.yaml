@@ -1,0 +1,13 @@
+$kind: http-request
+description: Get all routes for a fabric.
+url: '{{base_url}}/nodes/:node/sdn/fabrics/:fabric/routes'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: fabric
+    value: ''
+    description: Identifier for SDN fabrics
+settings: {}
+order: 2000

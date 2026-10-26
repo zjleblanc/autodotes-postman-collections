@@ -1,0 +1,30 @@
+$kind: http-request
+description: 'Create a container clone/copy Permissions: You need ''VM.Clone'' permissions on /vms/{vmid}, and ''VM.Allocate'' permissions on /vms/{newid} (or on the VM pool /pool/{pool}). You also need ''Datastore.AllocateSpace'' on any used storage, and ''SDN.Use'' on any bridge.'
+url: '{{base_url}}/nodes/:node/lxc/:vmid/clone'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+body:
+  type: json
+  content: |-
+    {
+      "newid": 0,
+      "bwlimit": "clone limit from datacenter or storage config",
+      "description": "",
+      "full": false,
+      "hostname": "",
+      "pool": "",
+      "snapname": "",
+      "storage": "",
+      "target": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 21000

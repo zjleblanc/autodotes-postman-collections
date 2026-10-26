@@ -1,0 +1,15 @@
+$kind: http-request
+description: Get node configuration options.
+url: '{{base_url}}/nodes/:node/config'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+queryParams:
+  - key: property
+    value: all
+    description: Return only a specific property from the node configuration.
+    disabled: true
+settings: {}
+order: 23000

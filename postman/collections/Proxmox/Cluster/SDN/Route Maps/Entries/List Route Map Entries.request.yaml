@@ -1,0 +1,15 @@
+$kind: http-request
+description: 'Lists all route map entries. Permissions: Only returns route map entries where you have ''SDN.Audit'' or ''SDN.Allocate'' permissions.'
+url: '{{base_url}}/cluster/sdn/route-maps/entries'
+method: GET
+queryParams:
+  - key: pending
+    value: 'false'
+    description: Display pending config.
+    disabled: true
+  - key: running
+    value: 'false'
+    description: Display running config.
+    disabled: true
+settings: {}
+order: 1000

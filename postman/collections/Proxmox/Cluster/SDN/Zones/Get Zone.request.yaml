@@ -1,0 +1,19 @@
+$kind: http-request
+description: Read sdn zone configuration.
+url: '{{base_url}}/cluster/sdn/zones/:zone'
+method: GET
+pathVariables:
+  - key: zone
+    value: ''
+    description: The SDN zone object identifier.
+queryParams:
+  - key: pending
+    value: 'false'
+    description: Display pending config.
+    disabled: true
+  - key: running
+    value: 'false'
+    description: Display running config.
+    disabled: true
+settings: {}
+order: 3000

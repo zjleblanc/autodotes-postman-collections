@@ -1,0 +1,15 @@
+$kind: http-request
+description: List available networks
+url: '{{base_url}}/nodes/:node/network'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+queryParams:
+  - key: type
+    value: bridge
+    description: Only list specific interface types.
+    disabled: true
+settings: {}
+order: 1000

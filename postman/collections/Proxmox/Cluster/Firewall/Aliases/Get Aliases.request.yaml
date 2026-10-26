@@ -1,0 +1,6 @@
+$kind: http-request
+description: List aliases
+url: '{{base_url}}/cluster/firewall/aliases'
+method: GET
+settings: {}
+order: 1000

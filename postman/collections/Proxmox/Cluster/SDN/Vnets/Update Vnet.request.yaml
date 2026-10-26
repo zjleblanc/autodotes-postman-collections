@@ -1,0 +1,26 @@
+$kind: http-request
+description: 'Update sdn vnet object configuration. Permissions: Require ''SDN.Allocate'' permission on ''/sdn/zones/<zone>/<vnet>'''
+url: '{{base_url}}/cluster/sdn/vnets/:vnet'
+method: PUT
+pathVariables:
+  - key: vnet
+    value: ''
+    description: The SDN vnet object identifier.
+body:
+  type: json
+  content: |-
+    {
+      "alias": "",
+      "delete": "",
+      "digest": "",
+      "isolate-ports": false,
+      "lock-token": "",
+      "tag": 0,
+      "vlanaware": false,
+      "zone": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 4000

@@ -1,0 +1,25 @@
+$kind: http-request
+description: 'Create a ZFS pool. Permissions: Requires additionally ''Datastore.Allocate'' on /storage when setting ''add_storage'''
+url: '{{base_url}}/nodes/:node/disks/zfs'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+body:
+  type: json
+  content: |-
+    {
+      "devices": "",
+      "name": "",
+      "raidlevel": "single",
+      "add_storage": false,
+      "ashift": 12,
+      "compression": "on",
+      "draid-config": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 2000

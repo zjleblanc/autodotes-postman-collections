@@ -1,0 +1,10 @@
+$kind: http-request
+description: 'Get node-specific QEMU migration capabilities of the node. Requires the ''Sys.Audit'' permission on ''/nodes/<node>''.'
+url: '{{base_url}}/nodes/:node/capabilities/qemu/migration'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+settings: {}
+order: 5000

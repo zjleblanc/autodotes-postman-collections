@@ -1,0 +1,6 @@
+$kind: http-request
+description: Index for all available endpoint types.
+url: '{{base_url}}/cluster/notifications/endpoints'
+method: GET
+settings: {}
+order: 1000

@@ -1,0 +1,6 @@
+$kind: http-request
+description: List recent tasks (cluster wide).
+url: '{{base_url}}/cluster/tasks'
+method: GET
+settings: {}
+order: 19000

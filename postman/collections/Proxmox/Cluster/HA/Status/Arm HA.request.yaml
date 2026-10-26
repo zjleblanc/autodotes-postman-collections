@@ -1,0 +1,6 @@
+$kind: http-request
+description: Request re-arming the HA stack after it was disarmed.
+url: '{{base_url}}/cluster/ha/status/arm-ha'
+method: POST
+settings: {}
+order: 5000

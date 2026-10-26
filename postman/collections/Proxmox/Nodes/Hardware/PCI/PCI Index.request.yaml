@@ -1,0 +1,12 @@
+$kind: http-request
+description: Index of available pci methods
+url: '{{base_url}}/nodes/:node/hardware/pci/:pci-id-or-mapping'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: pci-id-or-mapping
+    value: ''
+settings: {}
+order: 2000

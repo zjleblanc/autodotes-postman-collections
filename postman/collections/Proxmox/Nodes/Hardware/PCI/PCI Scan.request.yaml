@@ -1,0 +1,19 @@
+$kind: http-request
+description: List local PCI devices.
+url: '{{base_url}}/nodes/:node/hardware/pci'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+queryParams:
+  - key: pci-class-blacklist
+    value: 05;06;0b
+    description: 'A list of blacklisted PCI classes, which will not be returned. Following are filtered by default: Memory Controller (05), Bridge (06) and Processor (0b).'
+    disabled: true
+  - key: verbose
+    value: 'true'
+    description: If disabled, does only print the PCI IDs. Otherwise, additional information like vendor and device will be returned.
+    disabled: true
+settings: {}
+order: 1000

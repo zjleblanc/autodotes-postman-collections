@@ -1,0 +1,11 @@
+$kind: http-request
+description: Get next free VMID. Pass a VMID to assert that its free (at time of check).
+url: '{{base_url}}/cluster/nextid'
+method: GET
+queryParams:
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+    disabled: true
+settings: {}
+order: 23000

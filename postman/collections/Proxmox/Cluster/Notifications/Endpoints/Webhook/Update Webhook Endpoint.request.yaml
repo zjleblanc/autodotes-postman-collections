@@ -1,0 +1,27 @@
+$kind: http-request
+description: Update existing webhook endpoint
+url: '{{base_url}}/cluster/notifications/endpoints/webhook/:name'
+method: PUT
+pathVariables:
+  - key: name
+    value: ''
+    description: The name of the endpoint.
+body:
+  type: json
+  content: |-
+    {
+      "body": "",
+      "comment": "",
+      "delete": [],
+      "digest": "",
+      "disable": false,
+      "header": [],
+      "method": "post",
+      "secret": [],
+      "url": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 4000

@@ -1,0 +1,22 @@
+$kind: http-request
+description: Create a Ceph Monitor. Also auto-creates a Manager for the first monitor.
+url: '{{base_url}}/nodes/:node/ceph/mon/:monid'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: monid
+    value: nodename
+    description: The ID for the monitor, when omitted the same as the nodename.
+body:
+  type: json
+  content: |-
+    {
+      "mon-address": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 2000

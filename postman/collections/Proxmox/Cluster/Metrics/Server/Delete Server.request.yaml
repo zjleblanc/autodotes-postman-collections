@@ -1,0 +1,9 @@
+$kind: http-request
+description: Remove Metric server.
+url: '{{base_url}}/cluster/metrics/server/:id'
+method: DELETE
+pathVariables:
+  - key: id
+    value: ''
+settings: {}
+order: 5000

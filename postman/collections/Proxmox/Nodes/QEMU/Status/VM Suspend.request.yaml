@@ -1,0 +1,24 @@
+$kind: http-request
+description: 'Suspend virtual machine. Permissions: You need ''VM.PowerMgmt'' on /vms/{vmid}, and if you have set ''todisk'', you need also ''VM.Config.Disk'' on /vms/{vmid} and ''Datastore.AllocateSpace'' on the storage for the vmstate.'
+url: '{{base_url}}/nodes/:node/qemu/:vmid/status/suspend'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+body:
+  type: json
+  content: |-
+    {
+      "skiplock": false,
+      "statestorage": "",
+      "todisk": false
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 8000

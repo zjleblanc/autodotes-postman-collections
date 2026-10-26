@@ -1,0 +1,6 @@
+$kind: http-request
+description: Get datacenter options. Without 'Sys.Audit' on '/' not all options are returned.
+url: '{{base_url}}/cluster/options'
+method: GET
+settings: {}
+order: 20000

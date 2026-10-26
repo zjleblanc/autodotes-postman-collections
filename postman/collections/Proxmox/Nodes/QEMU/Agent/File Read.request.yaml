@@ -1,0 +1,30 @@
+$kind: http-request
+description: Reads the given file via guest agent. Is limited to 16777216 bytes.
+url: '{{base_url}}/nodes/:node/qemu/:vmid/agent/file-read'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+queryParams:
+  - key: file
+    value: ''
+    description: The path to the file
+    disabled: true
+  - key: count
+    value: '16777216'
+    description: Number of bytes to read.
+    disabled: true
+  - key: decode
+    value: 'true'
+    description: Data received from the QEMU Guest-Agent is base64 encoded. If this is set to true, the data is decoded. Otherwise the content is forwarded with base64 encoding. Defaults to true.
+    disabled: true
+  - key: offset
+    value: '0'
+    description: Offset to start reading at
+    disabled: true
+settings: {}
+order: 26000

@@ -1,0 +1,19 @@
+$kind: http-request
+description: 'Bulk suspend all guests on the cluster. Permissions: The ''VM.PowerMgmt'' permission is required on ''/'' or on ''/vms/<ID>'' for each ID passed via the ''vms'' parameter. Additionally, you need ''VM.Config.Disk'' on the ''/vms/{vmid}'' path and ''Datastore.AllocateSpace'' for the configured state-storage(s)'
+url: '{{base_url}}/cluster/bulk-action/guest/suspend'
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "max-workers": 4,
+      "maxworkers": 4,
+      "statestorage": "",
+      "to-disk": false,
+      "vms": []
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 4000

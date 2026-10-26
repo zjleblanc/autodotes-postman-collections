@@ -1,0 +1,15 @@
+$kind: http-request
+description: Request disarming the HA stack, releasing all watchdogs cluster-wide.
+url: '{{base_url}}/cluster/ha/status/disarm-ha'
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "resource-mode": "freeze"
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 4000

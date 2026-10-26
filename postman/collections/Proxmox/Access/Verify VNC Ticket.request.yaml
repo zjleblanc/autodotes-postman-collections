@@ -1,0 +1,19 @@
+$kind: http-request
+description: 'verify VNC authentication ticket. Permissions: You need to pass valid credientials.'
+url: '{{base_url}}/access/vncticket'
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "authid": "",
+      "path": "",
+      "privs": "",
+      "vncticket": "",
+      "port": 0
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 12000

@@ -1,0 +1,10 @@
+$kind: http-request
+description: Delete storage configuration.
+url: '{{base_url}}/storage/:storage'
+method: DELETE
+pathVariables:
+  - key: storage
+    value: ''
+    description: The storage identifier.
+settings: {}
+order: 5000

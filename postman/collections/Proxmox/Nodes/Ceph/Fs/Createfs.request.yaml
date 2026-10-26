@@ -1,0 +1,23 @@
+$kind: http-request
+description: Create a Ceph filesystem
+url: '{{base_url}}/nodes/:node/ceph/fs/:name'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: name
+    value: cephfs
+    description: The ceph filesystem name.
+body:
+  type: json
+  content: |-
+    {
+      "add-storage": false,
+      "pg_num": 128
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 2000

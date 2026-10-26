@@ -1,0 +1,13 @@
+$kind: http-request
+description: Fetch a requested TFA entry if present.
+url: '{{base_url}}/access/tfa/:userid/:id'
+method: GET
+pathVariables:
+  - key: userid
+    value: ''
+    description: Full User ID, in the `name@realm` format.
+  - key: id
+    value: ''
+    description: A TFA entry id.
+settings: {}
+order: 4000

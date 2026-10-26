@@ -1,0 +1,26 @@
+$kind: http-request
+description: 'Update replication job configuration. Permissions: Requires the VM.Replicate permission on /vms/<vmid>.'
+url: '{{base_url}}/cluster/replication/:id'
+method: PUT
+pathVariables:
+  - key: id
+    value: ''
+    description: 'Replication Job ID. The ID is composed of a Guest ID and a job number, separated by a hyphen, i.e. ''<GUEST>-<JOBNUM>''.'
+body:
+  type: json
+  content: |-
+    {
+      "comment": "",
+      "delete": "",
+      "digest": "",
+      "disable": false,
+      "rate": 0,
+      "remove_job": "local",
+      "schedule": "*/15",
+      "source": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 4000

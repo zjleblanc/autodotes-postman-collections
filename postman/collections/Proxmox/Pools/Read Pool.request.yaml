@@ -1,0 +1,13 @@
+$kind: http-request
+description: 'Get pool configuration (deprecated, no support for nested pools, use ''GET /pools/?poolid={poolid}'').'
+url: '{{base_url}}/pools/:poolid'
+method: GET
+pathVariables:
+  - key: poolid
+    value: ''
+queryParams:
+  - key: type
+    value: qemu
+    disabled: true
+settings: {}
+order: 5000

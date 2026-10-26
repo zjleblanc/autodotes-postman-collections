@@ -1,0 +1,27 @@
+$kind: http-request
+description: Set node configuration options.
+url: '{{base_url}}/nodes/:node/config'
+method: PUT
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+body:
+  type: json
+  content: |-
+    {
+      "acme": "",
+      "acmedomain[n]": "",
+      "ballooning-target": 80,
+      "delete": "",
+      "description": "",
+      "digest": "",
+      "location": "",
+      "startall-onboot-delay": 0,
+      "wakeonlan": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 24000

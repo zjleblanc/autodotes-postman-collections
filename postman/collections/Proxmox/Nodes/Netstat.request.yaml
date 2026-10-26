@@ -1,0 +1,10 @@
+$kind: http-request
+description: Read tap/vm network device interface counters
+url: '{{base_url}}/nodes/:node/netstat'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+settings: {}
+order: 29000

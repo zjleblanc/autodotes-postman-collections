@@ -1,0 +1,19 @@
+$kind: http-request
+description: Reboot or shutdown a node.
+url: '{{base_url}}/nodes/:node/status'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+body:
+  type: json
+  content: |-
+    {
+      "command": "reboot"
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 28000

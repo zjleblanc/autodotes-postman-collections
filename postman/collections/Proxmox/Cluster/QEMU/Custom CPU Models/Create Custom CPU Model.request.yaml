@@ -1,0 +1,22 @@
+$kind: http-request
+description: Add a custom CPU model definition.
+url: '{{base_url}}/cluster/qemu/custom-cpu-models'
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "cputype": "",
+      "reported-model": "kvm64",
+      "flags": "",
+      "guest-phys-bits": 0,
+      "hidden": false,
+      "hv-vendor-id": "",
+      "level": 0,
+      "phys-bits": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 2000

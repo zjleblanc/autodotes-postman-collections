@@ -1,0 +1,24 @@
+$kind: http-request
+description: Update ha group configuration. (deprecated in favor of HA rules)
+url: '{{base_url}}/cluster/ha/groups/:group'
+method: PUT
+pathVariables:
+  - key: group
+    value: ''
+    description: The HA group identifier.
+body:
+  type: json
+  content: |-
+    {
+      "comment": "",
+      "delete": "",
+      "digest": "",
+      "nodes": "",
+      "nofailback": false,
+      "restricted": false
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 4000

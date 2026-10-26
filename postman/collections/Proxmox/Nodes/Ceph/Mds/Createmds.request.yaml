@@ -1,0 +1,22 @@
+$kind: http-request
+description: Create Ceph Metadata Server (MDS)
+url: '{{base_url}}/nodes/:node/ceph/mds/:name'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: name
+    value: nodename
+    description: The ID for the mds, when omitted the same as the nodename
+body:
+  type: json
+  content: |-
+    {
+      "hotstandby": false
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 2000

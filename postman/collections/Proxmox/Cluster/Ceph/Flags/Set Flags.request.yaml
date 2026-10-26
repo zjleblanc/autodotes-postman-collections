@@ -1,0 +1,25 @@
+$kind: http-request
+description: 'Set/Unset multiple Ceph flags at once. Each flag is a top-level optional boolean: passing true sets the flag, false unsets it, omitting it leaves the current state untouched. Runs as a worker task; returns a UPID to follow.'
+url: '{{base_url}}/cluster/ceph/flags'
+method: PUT
+body:
+  type: json
+  content: |-
+    {
+      "nobackfill": false,
+      "nodeep-scrub": false,
+      "nodown": false,
+      "noin": false,
+      "noout": false,
+      "norebalance": false,
+      "norecover": false,
+      "noscrub": false,
+      "notieragent": false,
+      "noup": false,
+      "pause": false
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 2000

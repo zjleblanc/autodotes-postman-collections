@@ -1,0 +1,19 @@
+$kind: http-request
+description: Delete sdn dns object configuration.
+url: '{{base_url}}/cluster/sdn/dns/:dns'
+method: DELETE
+pathVariables:
+  - key: dns
+    value: ''
+    description: The SDN dns object identifier.
+body:
+  type: json
+  content: |-
+    {
+      "lock-token": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 5000

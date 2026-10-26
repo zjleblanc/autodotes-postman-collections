@@ -1,0 +1,6 @@
+$kind: http-request
+description: 'Authentication domain index. Permissions: Anyone can access that, because we need that list for the login box (before the user is authenticated).'
+url: '{{base_url}}/access/domains'
+method: GET
+settings: {}
+order: 1000

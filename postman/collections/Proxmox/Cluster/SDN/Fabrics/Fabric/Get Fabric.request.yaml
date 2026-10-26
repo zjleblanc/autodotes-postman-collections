@@ -1,0 +1,10 @@
+$kind: http-request
+description: Update a fabric
+url: '{{base_url}}/cluster/sdn/fabrics/fabric/:id'
+method: GET
+pathVariables:
+  - key: id
+    value: ''
+    description: Identifier for SDN fabrics
+settings: {}
+order: 3000

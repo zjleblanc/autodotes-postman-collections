@@ -1,0 +1,15 @@
+$kind: http-request
+url: '{{base_url}}/nodes/:node/qemu/:vmid/snapshot/:snapname'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+  - key: snapname
+    value: ''
+    description: The name of the snapshot.
+settings: {}
+order: 3000

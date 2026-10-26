@@ -1,0 +1,11 @@
+$kind: http-request
+description: 'SDN dns index. Permissions: Only list entries where you have ''SDN.Audit'' or ''SDN.Allocate'' permissions on ''/sdn/dns/<dns>'''
+url: '{{base_url}}/cluster/sdn/dns'
+method: GET
+queryParams:
+  - key: type
+    value: powerdns
+    description: Only list sdn dns of specific type
+    disabled: true
+settings: {}
+order: 1000

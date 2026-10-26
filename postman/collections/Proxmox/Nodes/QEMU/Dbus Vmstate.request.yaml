@@ -1,0 +1,22 @@
+$kind: http-request
+description: Control the dbus-vmstate helper for a given running VM.
+url: '{{base_url}}/nodes/:node/qemu/:vmid/dbus-vmstate'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+body:
+  type: json
+  content: |-
+    {
+      "action": "start"
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 33000

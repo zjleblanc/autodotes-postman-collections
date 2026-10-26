@@ -1,0 +1,22 @@
+$kind: http-request
+description: Delete a TFA entry by ID.
+url: '{{base_url}}/access/tfa/:userid/:id'
+method: DELETE
+pathVariables:
+  - key: userid
+    value: ''
+    description: Full User ID, in the `name@realm` format.
+  - key: id
+    value: ''
+    description: A TFA entry id.
+body:
+  type: json
+  content: |-
+    {
+      "password": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 6000

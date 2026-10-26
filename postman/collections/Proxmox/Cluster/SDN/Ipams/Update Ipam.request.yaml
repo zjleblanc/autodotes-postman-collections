@@ -1,0 +1,25 @@
+$kind: http-request
+description: Update sdn ipam object configuration.
+url: '{{base_url}}/cluster/sdn/ipams/:ipam'
+method: PUT
+pathVariables:
+  - key: ipam
+    value: ''
+    description: The SDN ipam object identifier.
+body:
+  type: json
+  content: |-
+    {
+      "delete": "",
+      "digest": "",
+      "fingerprint": "",
+      "lock-token": "",
+      "section": 0,
+      "token": "",
+      "url": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 4000

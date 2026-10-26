@@ -1,0 +1,11 @@
+$kind: http-request
+description: 'List PCI Hardware Mapping Permissions: Only lists entries where you have ''Mapping.Modify'', ''Mapping.Use'' or ''Mapping.Audit'' permissions on ''/mapping/pci/<id>''.'
+url: '{{base_url}}/cluster/mapping/pci'
+method: GET
+queryParams:
+  - key: check-node
+    value: ''
+    description: If given, checks the configurations on the given node for correctness, and adds relevant diagnostics for the devices to the response.
+    disabled: true
+settings: {}
+order: 1000

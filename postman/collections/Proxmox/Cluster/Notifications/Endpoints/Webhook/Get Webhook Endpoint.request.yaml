@@ -1,0 +1,10 @@
+$kind: http-request
+description: Return a specific webhook endpoint
+url: '{{base_url}}/cluster/notifications/endpoints/webhook/:name'
+method: GET
+pathVariables:
+  - key: name
+    value: ''
+    description: Name of the endpoint.
+settings: {}
+order: 3000

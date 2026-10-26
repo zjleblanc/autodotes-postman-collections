@@ -1,0 +1,15 @@
+$kind: http-request
+description: Acquire global lock for SDN configuration
+url: '{{base_url}}/cluster/sdn/lock'
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "allow-pending": false
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 11000

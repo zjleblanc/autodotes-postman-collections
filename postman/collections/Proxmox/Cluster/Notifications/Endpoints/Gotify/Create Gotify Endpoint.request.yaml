@@ -1,0 +1,19 @@
+$kind: http-request
+description: Create a new gotify endpoint
+url: '{{base_url}}/cluster/notifications/endpoints/gotify'
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "name": "",
+      "server": "",
+      "token": "",
+      "comment": "",
+      "disable": false
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 2000

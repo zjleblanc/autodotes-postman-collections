@@ -1,0 +1,22 @@
+$kind: http-request
+description: Returns a SPICE configuration to connect to the CT.
+url: '{{base_url}}/nodes/:node/lxc/:vmid/spiceproxy'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+body:
+  type: json
+  content: |-
+    {
+      "proxy": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 15000

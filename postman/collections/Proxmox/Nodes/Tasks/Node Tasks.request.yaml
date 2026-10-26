@@ -1,0 +1,51 @@
+$kind: http-request
+description: 'Read task list for one node (finished tasks). Permissions: List task associated with the current user, or all task the user has ''Sys.Audit'' permissions on /nodes/<node> (the <node> the task runs on).'
+url: '{{base_url}}/nodes/:node/tasks'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+queryParams:
+  - key: errors
+    value: 'false'
+    description: Only list tasks with a status of ERROR.
+    disabled: true
+  - key: limit
+    value: '50'
+    description: Only list this number of tasks.
+    disabled: true
+  - key: since
+    value: '0'
+    description: Only list tasks since this UNIX epoch.
+    disabled: true
+  - key: source
+    value: archive
+    description: List archived, active or all tasks.
+    disabled: true
+  - key: start
+    value: '0'
+    description: List tasks beginning from this offset.
+    disabled: true
+  - key: statusfilter
+    value: ''
+    description: List of Task States that should be returned.
+    disabled: true
+  - key: typefilter
+    value: ''
+    description: Only list tasks of this type (e.g., vzstart, vzdump).
+    disabled: true
+  - key: until
+    value: '0'
+    description: Only list tasks until this UNIX epoch.
+    disabled: true
+  - key: userfilter
+    value: ''
+    description: Only list tasks from this user.
+    disabled: true
+  - key: vmid
+    value: '0'
+    description: Only list tasks for this VM.
+    disabled: true
+settings: {}
+order: 1000

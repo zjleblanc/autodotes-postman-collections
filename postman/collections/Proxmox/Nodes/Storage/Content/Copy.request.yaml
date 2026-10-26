@@ -1,0 +1,26 @@
+$kind: http-request
+description: Copy a volume. This is experimental code - do not use.
+url: '{{base_url}}/nodes/:node/storage/:storage/content/:volume'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: storage
+    value: ''
+    description: The storage identifier.
+  - key: volume
+    value: ''
+    description: Source volume identifier
+body:
+  type: json
+  content: |-
+    {
+      "target": "",
+      "target_node": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 4000

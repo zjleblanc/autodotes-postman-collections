@@ -1,0 +1,10 @@
+$kind: http-request
+description: Directory index.
+url: '{{base_url}}/nodes/:node/firewall'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+settings: {}
+order: 1000

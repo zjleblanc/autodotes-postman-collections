@@ -1,0 +1,13 @@
+$kind: http-request
+description: Get single rule data.
+url: '{{base_url}}/nodes/:node/firewall/rules/:pos'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: pos
+    value: '0'
+    description: 'Update rule at position <pos>.'
+settings: {}
+order: 3000

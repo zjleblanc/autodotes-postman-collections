@@ -1,0 +1,28 @@
+$kind: http-request
+description: 'Download templates, ISO images, OVAs and VM images by using an URL. Permissions: Requires allocation access on the storage and as this allows one to probe the (local!) host network indirectly it also requires one of Sys.Modify on / (for backwards compatibility) or the newer Sys.AccessNetwork privilege on the node.'
+url: '{{base_url}}/nodes/:node/storage/:storage/download-url'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: storage
+    value: ''
+    description: The storage identifier.
+body:
+  type: json
+  content: |-
+    {
+      "content": "iso",
+      "filename": "",
+      "url": "",
+      "checksum": "",
+      "checksum-algorithm": "md5",
+      "compression": "",
+      "verify-certificates": true
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 11000

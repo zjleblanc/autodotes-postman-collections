@@ -1,0 +1,22 @@
+$kind: http-request
+description: Execute QEMU Guest Agent commands.
+url: '{{base_url}}/nodes/:node/qemu/:vmid/agent'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+body:
+  type: json
+  content: |-
+    {
+      "command": "fsfreeze-freeze"
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 2000

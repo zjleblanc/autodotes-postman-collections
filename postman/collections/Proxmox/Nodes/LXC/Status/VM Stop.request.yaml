@@ -1,0 +1,23 @@
+$kind: http-request
+description: Stop the container. This will abruptly stop all processes running in the container.
+url: '{{base_url}}/nodes/:node/lxc/:vmid/status/stop'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+body:
+  type: json
+  content: |-
+    {
+      "overrule-shutdown": false,
+      "skiplock": false
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 4000

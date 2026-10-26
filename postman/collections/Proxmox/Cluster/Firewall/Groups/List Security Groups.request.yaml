@@ -1,0 +1,6 @@
+$kind: http-request
+description: List security groups.
+url: '{{base_url}}/cluster/firewall/groups'
+method: GET
+settings: {}
+order: 1000

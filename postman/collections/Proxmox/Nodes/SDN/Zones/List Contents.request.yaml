@@ -1,0 +1,13 @@
+$kind: http-request
+description: List zone content.
+url: '{{base_url}}/nodes/:node/sdn/zones/:zone/content'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: zone
+    value: ''
+    description: The SDN zone object identifier.
+settings: {}
+order: 3000

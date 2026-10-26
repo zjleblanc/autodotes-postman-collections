@@ -1,0 +1,6 @@
+$kind: http-request
+description: get the status of all ceph flags
+url: '{{base_url}}/cluster/ceph/flags'
+method: GET
+settings: {}
+order: 1000

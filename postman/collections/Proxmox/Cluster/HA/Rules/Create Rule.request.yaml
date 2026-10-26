@@ -1,0 +1,6 @@
+$kind: http-request
+description: Create HA rule.
+url: '{{base_url}}/cluster/ha/rules'
+method: POST
+settings: {}
+order: 2000

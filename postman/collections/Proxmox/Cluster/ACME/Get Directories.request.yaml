@@ -1,0 +1,6 @@
+$kind: http-request
+description: Get named known ACME directory endpoints.
+url: '{{base_url}}/cluster/acme/directories'
+method: GET
+settings: {}
+order: 6000

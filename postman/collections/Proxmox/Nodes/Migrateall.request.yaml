@@ -1,0 +1,23 @@
+$kind: http-request
+description: 'Migrate all VMs and Containers. Permissions: The ''VM.Migrate'' permission is required on ''/'' or on ''/vms/<ID>'' for each ID passed via the ''vms'' parameter.'
+url: '{{base_url}}/nodes/:node/migrateall'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+body:
+  type: json
+  content: |-
+    {
+      "target": "",
+      "max-workers": 0,
+      "maxworkers": 0,
+      "vms": "",
+      "with-local-disks": false
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 52000

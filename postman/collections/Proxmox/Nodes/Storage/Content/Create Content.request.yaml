@@ -1,0 +1,25 @@
+$kind: http-request
+description: Allocate disk images.
+url: '{{base_url}}/nodes/:node/storage/:storage/content'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: storage
+    value: ''
+    description: The storage identifier.
+body:
+  type: json
+  content: |-
+    {
+      "filename": "",
+      "size": "",
+      "vmid": 0,
+      "format": "raw"
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 2000

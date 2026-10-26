@@ -1,0 +1,15 @@
+$kind: http-request
+description: Get available QEMU/KVM machine types.
+url: '{{base_url}}/nodes/:node/capabilities/qemu/machines'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+queryParams:
+  - key: arch
+    value: x86_64
+    description: Virtual processor architecture. Defaults to the host architecture.
+    disabled: true
+settings: {}
+order: 4000

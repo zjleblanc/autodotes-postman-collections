@@ -1,0 +1,10 @@
+$kind: http-request
+description: Delete security group.
+url: '{{base_url}}/cluster/firewall/groups/:group'
+method: DELETE
+pathVariables:
+  - key: group
+    value: ''
+    description: Security Group name.
+settings: {}
+order: 5000

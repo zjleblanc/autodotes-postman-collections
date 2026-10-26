@@ -1,0 +1,19 @@
+$kind: http-request
+description: Read IP or Network settings from IPSet.
+url: '{{base_url}}/nodes/:node/lxc/:vmid/firewall/ipset/:name/:cidr'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+  - key: name
+    value: ''
+    description: IP set name.
+  - key: cidr
+    value: ''
+    description: Network/IP specification in CIDR format.
+settings: {}
+order: 6000

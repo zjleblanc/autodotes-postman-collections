@@ -1,0 +1,19 @@
+$kind: http-request
+description: 'Query metadata of an URL: file size, file name and mime type.'
+url: '{{base_url}}/nodes/:node/query-url-metadata'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+queryParams:
+  - key: url
+    value: ''
+    description: The URL to query the metadata from.
+    disabled: true
+  - key: verify-certificates
+    value: 'true'
+    description: If false, no SSL/TLS certificates will be verified.
+    disabled: true
+settings: {}
+order: 47000

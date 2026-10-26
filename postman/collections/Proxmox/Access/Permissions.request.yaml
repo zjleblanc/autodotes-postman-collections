@@ -1,0 +1,15 @@
+$kind: http-request
+description: 'Retrieve effective permissions of given user/token. Permissions: Each user/token is allowed to dump their own permissions (or that of owned tokens). A user can dump the permissions of another user or their tokens if they have ''Sys.Audit'' permission on /access.'
+url: '{{base_url}}/access/permissions'
+method: GET
+queryParams:
+  - key: path
+    value: ''
+    description: Only dump this specific path, not the whole tree.
+    disabled: true
+  - key: userid
+    value: ''
+    description: User ID or full API token ID
+    disabled: true
+settings: {}
+order: 14000

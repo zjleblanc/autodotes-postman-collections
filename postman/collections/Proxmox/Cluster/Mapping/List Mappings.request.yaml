@@ -1,0 +1,6 @@
+$kind: http-request
+description: List resource types.
+url: '{{base_url}}/cluster/mapping'
+method: GET
+settings: {}
+order: 1000

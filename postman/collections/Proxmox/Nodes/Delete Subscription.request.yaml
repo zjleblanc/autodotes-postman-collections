@@ -1,0 +1,10 @@
+$kind: http-request
+description: Delete subscription key of this node.
+url: '{{base_url}}/nodes/:node/subscription'
+method: DELETE
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+settings: {}
+order: 11000

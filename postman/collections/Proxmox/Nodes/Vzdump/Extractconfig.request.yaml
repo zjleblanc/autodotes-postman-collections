@@ -1,0 +1,15 @@
+$kind: http-request
+description: 'Extract configuration from vzdump backup archive. Permissions: The user needs ''VM.Backup'' permissions on the backed up guest ID, and ''Datastore.AllocateSpace'' on the backup storage.'
+url: '{{base_url}}/nodes/:node/vzdump/extractconfig'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+queryParams:
+  - key: volume
+    value: ''
+    description: Volume identifier
+    disabled: true
+settings: {}
+order: 3000

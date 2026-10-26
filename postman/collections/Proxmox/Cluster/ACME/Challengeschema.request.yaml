@@ -1,0 +1,6 @@
+$kind: http-request
+description: Get schema of ACME challenge types.
+url: '{{base_url}}/cluster/acme/challenge-schema'
+method: GET
+settings: {}
+order: 7000

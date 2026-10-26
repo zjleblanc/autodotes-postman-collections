@@ -1,0 +1,10 @@
+$kind: http-request
+description: Deactivate existing ACME account at CA.
+url: '{{base_url}}/cluster/acme/account/:name'
+method: DELETE
+pathVariables:
+  - key: name
+    value: default
+    description: ACME account config file name.
+settings: {}
+order: 5000

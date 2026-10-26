@@ -1,0 +1,37 @@
+$kind: http-request
+description: Modify rule data.
+url: '{{base_url}}/cluster/firewall/groups/:group/:pos'
+method: PUT
+pathVariables:
+  - key: group
+    value: ''
+    description: Security Group name.
+  - key: pos
+    value: '0'
+    description: 'Update rule at position <pos>.'
+body:
+  type: json
+  content: |-
+    {
+      "action": "",
+      "comment": "",
+      "delete": "",
+      "dest": "",
+      "digest": "",
+      "dport": "",
+      "enable": 0,
+      "icmp-type": "",
+      "iface": "",
+      "log": "emerg",
+      "macro": "",
+      "moveto": 0,
+      "proto": "",
+      "source": "",
+      "sport": "",
+      "type": "in"
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 7000

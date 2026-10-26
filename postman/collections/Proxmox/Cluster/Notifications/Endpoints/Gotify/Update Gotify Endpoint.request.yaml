@@ -1,0 +1,24 @@
+$kind: http-request
+description: Update existing gotify endpoint
+url: '{{base_url}}/cluster/notifications/endpoints/gotify/:name'
+method: PUT
+pathVariables:
+  - key: name
+    value: ''
+    description: The name of the endpoint.
+body:
+  type: json
+  content: |-
+    {
+      "comment": "",
+      "delete": [],
+      "digest": "",
+      "disable": false,
+      "server": "",
+      "token": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 4000

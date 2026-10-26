@@ -1,0 +1,16 @@
+$kind: http-request
+description: Create new role.
+url: '{{base_url}}/access/roles'
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "roleid": "",
+      "privs": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 2000

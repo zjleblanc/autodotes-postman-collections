@@ -1,0 +1,20 @@
+$kind: http-request
+description: Creates a VNC Shell proxy.
+url: '{{base_url}}/nodes/:node/termproxy'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+body:
+  type: json
+  content: |-
+    {
+      "cmd": "login",
+      "cmd-opts": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 37000

@@ -1,0 +1,17 @@
+$kind: http-request
+description: Verify OpenID authorization code and create a ticket.
+url: '{{base_url}}/access/openid/login'
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "code": "",
+      "redirect-url": "",
+      "state": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 3000

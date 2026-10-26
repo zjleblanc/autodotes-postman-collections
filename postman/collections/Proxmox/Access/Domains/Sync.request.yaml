@@ -1,0 +1,24 @@
+$kind: http-request
+description: 'Syncs users and/or groups from the configured LDAP to user.cfg. NOTE: Synced groups will have the name ''name-$realm'', so make sure those groups do not exist to prevent overwriting. Permissions: ''Realm.AllocateUser'' on ''/access/realm/<realm>'' and  ''User.Modify'' permissions to ''/access/groups/''.'
+url: '{{base_url}}/access/domains/:realm/sync'
+method: POST
+pathVariables:
+  - key: realm
+    value: ''
+    description: Authentication domain ID
+body:
+  type: json
+  content: |-
+    {
+      "dry-run": false,
+      "enable-new": true,
+      "full": false,
+      "purge": false,
+      "remove-vanished": "none",
+      "scope": "users"
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 6000

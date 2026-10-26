@@ -1,0 +1,39 @@
+$kind: http-request
+description: Set Firewall options.
+url: '{{base_url}}/nodes/:node/firewall/options'
+method: PUT
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+body:
+  type: json
+  content: |-
+    {
+      "delete": "",
+      "digest": "",
+      "enable": true,
+      "log_level_forward": "emerg",
+      "log_level_in": "emerg",
+      "log_level_out": "emerg",
+      "log_nf_conntrack": false,
+      "ndp": true,
+      "nf_conntrack_allow_invalid": false,
+      "nf_conntrack_helpers": "",
+      "nf_conntrack_max": 262144,
+      "nf_conntrack_tcp_timeout_established": 432000,
+      "nf_conntrack_tcp_timeout_syn_recv": 60,
+      "nftables": false,
+      "nosmurfs": false,
+      "protection_synflood": false,
+      "protection_synflood_burst": 1000,
+      "protection_synflood_rate": 200,
+      "smurf_log_level": "emerg",
+      "tcp_flags_log_level": "emerg",
+      "tcpflags": false
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 4000

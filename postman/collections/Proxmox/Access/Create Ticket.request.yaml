@@ -1,0 +1,33 @@
+$kind: http-request
+description: 'Create or verify authentication ticket. Permissions: You need to pass valid credientials.'
+url: '{{base_url}}/access/ticket'
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "password": "",
+      "username": "",
+      "new-format": true,
+      "otp": "",
+      "path": "",
+      "privs": "",
+      "realm": "",
+      "tfa-challenge": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 11000
+auth:
+  type: noauth
+scripts:
+  - type: afterResponse
+    language: text/javascript
+    code: |-
+      if (pm.response.code === 200) {
+          const data = (pm.response.json() || {}).data || {};
+          if (data.ticket) { pm.collectionVariables.set('pve_ticket', data.ticket); }
+          if (data.CSRFPreventionToken) { pm.collectionVariables.set('csrf_token', data.CSRFPreventionToken); }
+      }

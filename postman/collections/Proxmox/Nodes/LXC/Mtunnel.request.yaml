@@ -1,0 +1,23 @@
+$kind: http-request
+description: 'Migration tunnel endpoint - only for internal use by CT migration. Permissions: You need ''VM.Allocate'' permissions on ''/vms/{vmid}'' and Sys.Incoming on ''/''. Further permission checks happen during the actual migration.'
+url: '{{base_url}}/nodes/:node/lxc/:vmid/mtunnel'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+body:
+  type: json
+  content: |-
+    {
+      "bridges": "",
+      "storages": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 26000

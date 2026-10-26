@@ -1,0 +1,22 @@
+$kind: http-request
+description: 'Create a Filesystem on an unused disk. Will be mounted under ''/mnt/pve/NAME''. Permissions: Requires additionally ''Datastore.Allocate'' on /storage when setting ''add_storage'''
+url: '{{base_url}}/nodes/:node/disks/directory'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+body:
+  type: json
+  content: |-
+    {
+      "device": "",
+      "name": "",
+      "add_storage": false,
+      "filesystem": "ext4"
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 2000

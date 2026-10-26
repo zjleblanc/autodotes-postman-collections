@@ -1,0 +1,10 @@
+$kind: http-request
+description: Delete vzdump backup job definition.
+url: '{{base_url}}/cluster/backup/:id'
+method: DELETE
+pathVariables:
+  - key: id
+    value: ''
+    description: The job ID.
+settings: {}
+order: 5000

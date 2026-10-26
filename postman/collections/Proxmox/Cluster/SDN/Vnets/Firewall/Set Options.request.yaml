@@ -1,0 +1,23 @@
+$kind: http-request
+description: 'Set Firewall options. Permissions: Needs SDN.Allocate permissions on ''/sdn/zones/<zone>/<vnet>'''
+url: '{{base_url}}/cluster/sdn/vnets/:vnet/firewall/options'
+method: PUT
+pathVariables:
+  - key: vnet
+    value: ''
+    description: The SDN vnet object identifier.
+body:
+  type: json
+  content: |-
+    {
+      "delete": "",
+      "digest": "",
+      "enable": false,
+      "log_level_forward": "emerg",
+      "policy_forward": "ACCEPT"
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 4000

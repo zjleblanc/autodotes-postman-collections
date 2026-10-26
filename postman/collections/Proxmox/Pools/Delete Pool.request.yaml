@@ -1,0 +1,15 @@
+$kind: http-request
+description: 'Delete pool. Permissions: You can only delete empty pools (no members).'
+url: '{{base_url}}/pools'
+method: DELETE
+body:
+  type: json
+  content: |-
+    {
+      "poolid": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 4000

@@ -1,0 +1,6 @@
+$kind: http-request
+description: List vzdump backup schedule.
+url: '{{base_url}}/cluster/backup'
+method: GET
+settings: {}
+order: 1000

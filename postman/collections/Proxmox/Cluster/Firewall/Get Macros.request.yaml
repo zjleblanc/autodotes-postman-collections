@@ -1,0 +1,6 @@
+$kind: http-request
+description: List available macros
+url: '{{base_url}}/cluster/firewall/macros'
+method: GET
+settings: {}
+order: 8000

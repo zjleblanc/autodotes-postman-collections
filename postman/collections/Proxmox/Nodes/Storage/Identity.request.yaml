@@ -1,0 +1,13 @@
+$kind: http-request
+description: Return identity information for this storage instance.
+url: '{{base_url}}/nodes/:node/storage/:storage/identity'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: storage
+    value: ''
+    description: The storage identifier.
+settings: {}
+order: 14000

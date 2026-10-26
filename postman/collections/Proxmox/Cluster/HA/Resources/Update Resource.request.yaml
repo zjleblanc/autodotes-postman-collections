@@ -1,0 +1,27 @@
+$kind: http-request
+description: Update resource configuration.
+url: '{{base_url}}/cluster/ha/resources/:sid'
+method: PUT
+pathVariables:
+  - key: sid
+    value: ''
+    description: 'HA resource ID. This consists of a resource type followed by a resource specific name, separated with colon (example: vm:100 / ct:100). For virtual machines and containers, you can simply use the VM or CT id as a shortcut (example: 100).'
+body:
+  type: json
+  content: |-
+    {
+      "auto-rebalance": true,
+      "comment": "",
+      "delete": "",
+      "digest": "",
+      "failback": true,
+      "group": "",
+      "max_relocate": 1,
+      "max_restart": 1,
+      "state": "started"
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 4000

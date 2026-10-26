@@ -1,0 +1,6 @@
+$kind: http-request
+description: 'List all custom CPU model definitions visible to the user. Permissions: Only lists entries where the user has ''Mapping.Modify'', ''Mapping.Use'' or ''Mapping.Audit'' permissions on ''/mapping/cpu/<name>''.'
+url: '{{base_url}}/cluster/qemu/custom-cpu-models'
+method: GET
+settings: {}
+order: 1000

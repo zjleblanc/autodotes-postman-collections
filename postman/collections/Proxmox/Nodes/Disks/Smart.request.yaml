@@ -1,0 +1,19 @@
+$kind: http-request
+description: Get SMART Health of a disk.
+url: '{{base_url}}/nodes/:node/disks/smart'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+queryParams:
+  - key: disk
+    value: ''
+    description: Block device name
+    disabled: true
+  - key: healthonly
+    value: 'false'
+    description: If true returns only the health status
+    disabled: true
+settings: {}
+order: 7000

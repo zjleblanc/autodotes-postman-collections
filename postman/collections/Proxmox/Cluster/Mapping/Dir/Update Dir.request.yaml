@@ -1,0 +1,22 @@
+$kind: http-request
+description: Update a directory mapping.
+url: '{{base_url}}/cluster/mapping/dir/:id'
+method: PUT
+pathVariables:
+  - key: id
+    value: ''
+    description: The ID of the directory mapping
+body:
+  type: json
+  content: |-
+    {
+      "delete": "",
+      "description": "",
+      "digest": "",
+      "map": []
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 4000

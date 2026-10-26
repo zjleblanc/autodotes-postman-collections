@@ -1,0 +1,9 @@
+$kind: http-request
+description: Get group configuration.
+url: '{{base_url}}/access/groups/:groupid'
+method: GET
+pathVariables:
+  - key: groupid
+    value: ''
+settings: {}
+order: 3000

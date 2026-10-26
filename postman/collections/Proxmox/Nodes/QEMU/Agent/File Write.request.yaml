@@ -1,0 +1,24 @@
+$kind: http-request
+description: Writes the given file via guest agent.
+url: '{{base_url}}/nodes/:node/qemu/:vmid/agent/file-write'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+body:
+  type: json
+  content: |-
+    {
+      "content": "",
+      "file": "",
+      "encode": true
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 27000

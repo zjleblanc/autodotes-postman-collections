@@ -1,0 +1,11 @@
+$kind: http-request
+description: 'List Route Maps Permissions: Only returns route maps where you have ''SDN.Audit'' or ''SDN.Allocate'' permissions.'
+url: '{{base_url}}/cluster/sdn/route-maps'
+method: GET
+queryParams:
+  - key: running
+    value: 'false'
+    description: Display running config.
+    disabled: true
+settings: {}
+order: 1000

@@ -1,0 +1,19 @@
+$kind: http-request
+description: Set subscription key.
+url: '{{base_url}}/nodes/:node/subscription'
+method: PUT
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+body:
+  type: json
+  content: |-
+    {
+      "key": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 10000

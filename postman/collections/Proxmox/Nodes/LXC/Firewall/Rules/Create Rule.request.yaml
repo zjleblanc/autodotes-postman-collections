@@ -1,0 +1,36 @@
+$kind: http-request
+description: Create new rule.
+url: '{{base_url}}/nodes/:node/lxc/:vmid/firewall/rules'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+body:
+  type: json
+  content: |-
+    {
+      "action": "",
+      "type": "in",
+      "comment": "",
+      "dest": "",
+      "digest": "",
+      "dport": "",
+      "enable": 0,
+      "icmp-type": "",
+      "iface": "",
+      "log": "emerg",
+      "macro": "",
+      "pos": 0,
+      "proto": "",
+      "source": "",
+      "sport": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 2000

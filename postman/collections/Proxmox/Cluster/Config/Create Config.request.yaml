@@ -1,0 +1,19 @@
+$kind: http-request
+description: Generate new cluster configuration. If no links given, default to local IP address as link0.
+url: '{{base_url}}/cluster/config'
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "clustername": "",
+      "link[n]": "",
+      "nodeid": 0,
+      "token-coefficient": 125,
+      "votes": 0
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 2000

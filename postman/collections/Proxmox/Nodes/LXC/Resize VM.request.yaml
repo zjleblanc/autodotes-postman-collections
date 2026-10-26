@@ -1,0 +1,24 @@
+$kind: http-request
+description: Resize a container mount point.
+url: '{{base_url}}/nodes/:node/lxc/:vmid/resize'
+method: PUT
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+body:
+  type: json
+  content: |-
+    {
+      "disk": "rootfs",
+      "size": "",
+      "digest": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 22000

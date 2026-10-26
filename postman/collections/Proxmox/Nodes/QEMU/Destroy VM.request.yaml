@@ -1,0 +1,24 @@
+$kind: http-request
+description: Destroy the VM and  all used/owned volumes. Removes any VM specific permissions and firewall rules
+url: '{{base_url}}/nodes/:node/qemu/:vmid'
+method: DELETE
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+body:
+  type: json
+  content: |-
+    {
+      "destroy-unreferenced-disks": false,
+      "purge": false,
+      "skiplock": false
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 4000

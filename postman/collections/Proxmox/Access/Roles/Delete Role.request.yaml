@@ -1,0 +1,9 @@
+$kind: http-request
+description: Delete role.
+url: '{{base_url}}/access/roles/:roleid'
+method: DELETE
+pathVariables:
+  - key: roleid
+    value: ''
+settings: {}
+order: 5000

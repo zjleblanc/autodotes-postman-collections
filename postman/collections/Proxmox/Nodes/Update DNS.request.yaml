@@ -1,0 +1,22 @@
+$kind: http-request
+description: Write DNS settings.
+url: '{{base_url}}/nodes/:node/dns'
+method: PUT
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+body:
+  type: json
+  content: |-
+    {
+      "search": "",
+      "dns1": "",
+      "dns2": "",
+      "dns3": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 41000

@@ -1,0 +1,19 @@
+$kind: http-request
+description: Order a new certificate from ACME-compatible CA.
+url: '{{base_url}}/nodes/:node/certificates/acme/certificate'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+body:
+  type: json
+  content: |-
+    {
+      "force": false
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 2000

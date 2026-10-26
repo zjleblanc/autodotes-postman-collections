@@ -1,0 +1,23 @@
+$kind: http-request
+description: Send key event to virtual machine.
+url: '{{base_url}}/nodes/:node/qemu/:vmid/sendkey'
+method: PUT
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+body:
+  type: json
+  content: |-
+    {
+      "key": "",
+      "skiplock": false
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 20000

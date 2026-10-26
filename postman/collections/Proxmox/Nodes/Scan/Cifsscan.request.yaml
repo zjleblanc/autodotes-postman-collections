@@ -1,0 +1,27 @@
+$kind: http-request
+description: Scan remote CIFS server.
+url: '{{base_url}}/nodes/:node/scan/cifs'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+queryParams:
+  - key: server
+    value: ''
+    description: The server address (name or IP).
+    disabled: true
+  - key: domain
+    value: ''
+    description: SMB domain (Workgroup).
+    disabled: true
+  - key: password
+    value: ''
+    description: User password.
+    disabled: true
+  - key: username
+    value: ''
+    description: User name.
+    disabled: true
+settings: {}
+order: 3000

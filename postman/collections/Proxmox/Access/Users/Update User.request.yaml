@@ -1,0 +1,27 @@
+$kind: http-request
+description: Update user configuration.
+url: '{{base_url}}/access/users/:userid'
+method: PUT
+pathVariables:
+  - key: userid
+    value: ''
+    description: Full User ID, in the `name@realm` format.
+body:
+  type: json
+  content: |-
+    {
+      "append": false,
+      "comment": "",
+      "email": "",
+      "enable": true,
+      "expire": 0,
+      "firstname": "",
+      "groups": "",
+      "keys": "",
+      "lastname": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 4000

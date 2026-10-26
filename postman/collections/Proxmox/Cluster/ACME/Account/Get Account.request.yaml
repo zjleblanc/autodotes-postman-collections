@@ -1,0 +1,10 @@
+$kind: http-request
+description: Return existing ACME account information.
+url: '{{base_url}}/cluster/acme/account/:name'
+method: GET
+pathVariables:
+  - key: name
+    value: default
+    description: ACME account config file name.
+settings: {}
+order: 3000

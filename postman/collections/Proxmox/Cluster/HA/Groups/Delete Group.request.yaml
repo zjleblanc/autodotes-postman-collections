@@ -1,0 +1,10 @@
+$kind: http-request
+description: Delete ha group configuration. (deprecated in favor of HA rules)
+url: '{{base_url}}/cluster/ha/groups/:group'
+method: DELETE
+pathVariables:
+  - key: group
+    value: ''
+    description: The HA group identifier.
+settings: {}
+order: 5000

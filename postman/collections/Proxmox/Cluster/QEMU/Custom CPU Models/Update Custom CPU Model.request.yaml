@@ -1,0 +1,27 @@
+$kind: http-request
+description: Update a custom CPU model definition.
+url: '{{base_url}}/cluster/qemu/custom-cpu-models/:cputype'
+method: PUT
+pathVariables:
+  - key: cputype
+    value: ''
+    description: Name for the custom CPU model. The 'custom-' prefix is optional.
+body:
+  type: json
+  content: |-
+    {
+      "delete": "",
+      "digest": "",
+      "flags": "",
+      "guest-phys-bits": 0,
+      "hidden": false,
+      "hv-vendor-id": "",
+      "level": 0,
+      "phys-bits": "",
+      "reported-model": "kvm64"
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 4000

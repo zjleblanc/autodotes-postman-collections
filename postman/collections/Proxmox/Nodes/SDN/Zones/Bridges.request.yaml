@@ -1,0 +1,13 @@
+$kind: http-request
+description: Get a list of all bridges (vnets) that are part of a zone, as well as the ports that are members of that bridge.
+url: '{{base_url}}/nodes/:node/sdn/zones/:zone/bridges'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: zone
+    value: ''
+    description: zone name or "localnetwork"
+settings: {}
+order: 4000

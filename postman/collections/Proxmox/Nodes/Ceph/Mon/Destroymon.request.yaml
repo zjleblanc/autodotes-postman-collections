@@ -1,0 +1,13 @@
+$kind: http-request
+description: 'Destroy a Ceph Monitor. Refuses to remove the last monitor of the cluster. Does not destroy any Manager on the same node; use /nodes/{node}/ceph/mgr/{id} for that.'
+url: '{{base_url}}/nodes/:node/ceph/mon/:monid'
+method: DELETE
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: monid
+    value: ''
+    description: Monitor ID
+settings: {}
+order: 3000

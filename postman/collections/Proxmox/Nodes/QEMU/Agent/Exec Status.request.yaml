@@ -1,0 +1,18 @@
+$kind: http-request
+description: Gets the status of the given pid started by the guest-agent
+url: '{{base_url}}/nodes/:node/qemu/:vmid/agent/exec-status'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+queryParams:
+  - key: pid
+    value: '0'
+    description: The PID to query
+    disabled: true
+settings: {}
+order: 25000

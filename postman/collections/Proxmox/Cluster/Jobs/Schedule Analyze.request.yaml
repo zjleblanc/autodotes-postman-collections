@@ -1,0 +1,19 @@
+$kind: http-request
+description: Returns a list of future schedule runtimes.
+url: '{{base_url}}/cluster/jobs/schedule-analyze'
+method: GET
+queryParams:
+  - key: schedule
+    value: ''
+    description: Job schedule. The format is a subset of `systemd` calendar events.
+    disabled: true
+  - key: iterations
+    value: '10'
+    description: Number of event-iteration to simulate and return.
+    disabled: true
+  - key: starttime
+    value: '0'
+    description: UNIX timestamp to start the calculation from. Defaults to the current time.
+    disabled: true
+settings: {}
+order: 3000

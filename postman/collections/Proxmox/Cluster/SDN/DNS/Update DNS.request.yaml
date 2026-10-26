@@ -1,0 +1,26 @@
+$kind: http-request
+description: Update sdn dns object configuration.
+url: '{{base_url}}/cluster/sdn/dns/:dns'
+method: PUT
+pathVariables:
+  - key: dns
+    value: ''
+    description: The SDN dns object identifier.
+body:
+  type: json
+  content: |-
+    {
+      "delete": "",
+      "digest": "",
+      "fingerprint": "",
+      "key": "",
+      "lock-token": "",
+      "reversemaskv6": 0,
+      "ttl": 0,
+      "url": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 4000

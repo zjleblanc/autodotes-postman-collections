@@ -1,0 +1,19 @@
+$kind: http-request
+description: DELETE custom certificate chain and key.
+url: '{{base_url}}/nodes/:node/certificates/custom'
+method: DELETE
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+body:
+  type: json
+  content: |-
+    {
+      "restart": false
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 5000

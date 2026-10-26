@@ -1,0 +1,23 @@
+$kind: http-request
+description: Unlink/delete disk images.
+url: '{{base_url}}/nodes/:node/qemu/:vmid/unlink'
+method: PUT
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+body:
+  type: json
+  content: |-
+    {
+      "idlist": "",
+      "force": false
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 14000

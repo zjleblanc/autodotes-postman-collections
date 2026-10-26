@@ -1,0 +1,12 @@
+$kind: http-request
+description: 'Stop a task. Permissions: The user needs ''Sys.Modify'' permissions on ''/nodes/<node>'' if they aren''t the owner of the task.'
+url: '{{base_url}}/nodes/:node/tasks/:upid'
+method: DELETE
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: upid
+    value: ''
+settings: {}
+order: 3000

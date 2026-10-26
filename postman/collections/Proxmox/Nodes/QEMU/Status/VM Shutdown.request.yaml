@@ -1,0 +1,25 @@
+$kind: http-request
+description: Shutdown virtual machine. This is similar to pressing the power button on a physical machine. This will send an ACPI event for the guest OS, which should then proceed to a clean shutdown.
+url: '{{base_url}}/nodes/:node/qemu/:vmid/status/shutdown'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+body:
+  type: json
+  content: |-
+    {
+      "forceStop": false,
+      "keepActive": false,
+      "skiplock": false,
+      "timeout": 0
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 6000

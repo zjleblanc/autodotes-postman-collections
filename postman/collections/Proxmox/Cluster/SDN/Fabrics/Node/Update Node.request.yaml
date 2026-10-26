@@ -1,0 +1,33 @@
+$kind: http-request
+description: Update a node
+url: '{{base_url}}/cluster/sdn/fabrics/node/:fabric_id/:node_id'
+method: PUT
+pathVariables:
+  - key: fabric_id
+    value: ''
+    description: Identifier for SDN fabrics
+  - key: node_id
+    value: ''
+    description: Identifier for nodes in an SDN fabric
+body:
+  type: json
+  content: |-
+    {
+      "delete": [],
+      "interfaces": [],
+      "protocol": "openfabric",
+      "allowed_ips": [],
+      "digest": "",
+      "endpoint": "",
+      "ip": "",
+      "ip6": "",
+      "lock-token": "",
+      "peers": [],
+      "public_key": "",
+      "role": "internal"
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 5000

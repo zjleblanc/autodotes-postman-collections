@@ -1,0 +1,22 @@
+$kind: http-request
+description: 'Stop all VMs and Containers. Permissions: The ''VM.PowerMgmt'' permission is required on ''/'' or on ''/vms/<ID>'' for each ID passed via the ''vms'' parameter.'
+url: '{{base_url}}/nodes/:node/stopall'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+body:
+  type: json
+  content: |-
+    {
+      "force-stop": true,
+      "max-workers": 0,
+      "timeout": 180,
+      "vms": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 50000

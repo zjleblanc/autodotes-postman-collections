@@ -1,0 +1,10 @@
+$kind: http-request
+description: Read sdn ipam configuration.
+url: '{{base_url}}/cluster/sdn/ipams/:ipam'
+method: GET
+pathVariables:
+  - key: ipam
+    value: ''
+    description: The SDN ipam object identifier.
+settings: {}
+order: 3000

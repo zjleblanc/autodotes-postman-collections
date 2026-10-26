@@ -1,0 +1,28 @@
+$kind: http-request
+description: Update existing matcher
+url: '{{base_url}}/cluster/notifications/matchers/:name'
+method: PUT
+pathVariables:
+  - key: name
+    value: ''
+    description: Name of the matcher.
+body:
+  type: json
+  content: |-
+    {
+      "comment": "",
+      "delete": [],
+      "digest": "",
+      "disable": false,
+      "invert-match": false,
+      "match-calendar": [],
+      "match-field": [],
+      "match-severity": [],
+      "mode": "all",
+      "target": []
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 4000

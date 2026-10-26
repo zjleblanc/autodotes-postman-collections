@@ -1,0 +1,10 @@
+$kind: http-request
+description: Delete HA rule.
+url: '{{base_url}}/cluster/ha/rules/:rule'
+method: DELETE
+pathVariables:
+  - key: rule
+    value: ''
+    description: HA rule identifier.
+settings: {}
+order: 5000

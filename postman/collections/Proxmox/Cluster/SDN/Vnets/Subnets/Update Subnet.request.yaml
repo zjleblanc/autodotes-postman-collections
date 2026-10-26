@@ -1,0 +1,29 @@
+$kind: http-request
+description: 'Update sdn subnet object configuration. Permissions: Require ''SDN.Allocate'' permission on ''/sdn/zones/<zone>/<vnet>'''
+url: '{{base_url}}/cluster/sdn/vnets/:vnet/subnets/:subnet'
+method: PUT
+pathVariables:
+  - key: vnet
+    value: ''
+    description: associated vnet
+  - key: subnet
+    value: ''
+    description: The SDN subnet object identifier.
+body:
+  type: json
+  content: |-
+    {
+      "delete": "",
+      "dhcp-dns-server": "",
+      "dhcp-range": [],
+      "digest": "",
+      "dnszoneprefix": "",
+      "gateway": "",
+      "lock-token": "",
+      "snat": false
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 4000

@@ -1,0 +1,15 @@
+$kind: http-request
+description: Get user TFA types (Personal and Realm).
+url: '{{base_url}}/access/users/:userid/tfa'
+method: GET
+pathVariables:
+  - key: userid
+    value: ''
+    description: Full User ID, in the `name@realm` format.
+queryParams:
+  - key: multiple
+    value: 'false'
+    description: Request all entries as an array.
+    disabled: true
+settings: {}
+order: 6000

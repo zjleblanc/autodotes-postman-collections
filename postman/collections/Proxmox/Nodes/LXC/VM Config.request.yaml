@@ -1,0 +1,22 @@
+$kind: http-request
+description: Get container configuration.
+url: '{{base_url}}/nodes/:node/lxc/:vmid/config'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+queryParams:
+  - key: current
+    value: 'false'
+    description: Get current values (instead of pending values).
+    disabled: true
+  - key: snapshot
+    value: ''
+    description: Fetch config values from given snapshot.
+    disabled: true
+settings: {}
+order: 5000

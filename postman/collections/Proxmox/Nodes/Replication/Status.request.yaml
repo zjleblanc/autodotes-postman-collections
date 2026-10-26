@@ -1,0 +1,15 @@
+$kind: http-request
+description: 'List status of all replication jobs on this node. Permissions: Requires the VM.Audit permission on /vms/<vmid>.'
+url: '{{base_url}}/nodes/:node/replication'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+queryParams:
+  - key: guest
+    value: '0'
+    description: Only list replication jobs for this guest.
+    disabled: true
+settings: {}
+order: 1000

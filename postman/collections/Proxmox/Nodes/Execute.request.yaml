@@ -1,0 +1,19 @@
+$kind: http-request
+description: Execute multiple commands in order, root only.
+url: '{{base_url}}/nodes/:node/execute'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+body:
+  type: json
+  content: |-
+    {
+      "commands": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 30000

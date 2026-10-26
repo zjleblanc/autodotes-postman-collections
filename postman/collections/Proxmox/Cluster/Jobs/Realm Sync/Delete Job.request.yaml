@@ -1,0 +1,9 @@
+$kind: http-request
+description: Delete realm-sync job definition.
+url: '{{base_url}}/cluster/jobs/realm-sync/:id'
+method: DELETE
+pathVariables:
+  - key: id
+    value: ''
+settings: {}
+order: 5000

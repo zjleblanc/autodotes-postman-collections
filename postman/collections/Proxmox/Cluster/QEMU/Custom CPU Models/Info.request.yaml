@@ -1,0 +1,10 @@
+$kind: http-request
+description: Retrieve details about a specific custom CPU model.
+url: '{{base_url}}/cluster/qemu/custom-cpu-models/:cputype'
+method: GET
+pathVariables:
+  - key: cputype
+    value: ''
+    description: Name of the CPU model to query. The 'custom-' prefix is optional.
+settings: {}
+order: 3000

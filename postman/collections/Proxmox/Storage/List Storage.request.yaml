@@ -1,0 +1,11 @@
+$kind: http-request
+description: 'Storage index. Permissions: Only list entries where you have ''Datastore.Audit'' or ''Datastore.AllocateSpace'' permissions on ''/storage/<storage>'''
+url: '{{base_url}}/storage'
+method: GET
+queryParams:
+  - key: type
+    value: btrfs
+    description: Only list storage of specific type
+    disabled: true
+settings: {}
+order: 1000

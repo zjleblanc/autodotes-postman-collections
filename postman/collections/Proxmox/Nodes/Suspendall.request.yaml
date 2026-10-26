@@ -1,0 +1,20 @@
+$kind: http-request
+description: 'Suspend all VMs. Permissions: The ''VM.PowerMgmt'' permission is required on ''/'' or on ''/vms/<ID>'' for each ID passed via the ''vms'' parameter. Additionally, you need ''VM.Config.Disk'' on the ''/vms/{vmid}'' path and ''Datastore.AllocateSpace'' for the configured state-storage(s)'
+url: '{{base_url}}/nodes/:node/suspendall'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+body:
+  type: json
+  content: |-
+    {
+      "max-workers": 0,
+      "vms": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 51000

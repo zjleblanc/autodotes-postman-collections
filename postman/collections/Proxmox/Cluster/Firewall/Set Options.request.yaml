@@ -1,0 +1,22 @@
+$kind: http-request
+description: Set Firewall options.
+url: '{{base_url}}/cluster/firewall/options'
+method: PUT
+body:
+  type: json
+  content: |-
+    {
+      "delete": "",
+      "digest": "",
+      "ebtables": true,
+      "enable": 0,
+      "log_ratelimit": "",
+      "policy_forward": "ACCEPT",
+      "policy_in": "ACCEPT",
+      "policy_out": "ACCEPT"
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 7000

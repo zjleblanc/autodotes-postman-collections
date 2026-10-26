@@ -1,0 +1,24 @@
+$kind: http-request
+description: Create Prefix List Entry
+url: '{{base_url}}/cluster/sdn/prefix-lists/:id/entries'
+method: POST
+pathVariables:
+  - key: id
+    value: ''
+    description: The SDN prefix list identifier
+body:
+  type: json
+  content: |-
+    {
+      "action": "permit",
+      "prefix": "",
+      "ge": 0,
+      "le": 0,
+      "lock-token": "",
+      "seq": 0
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 2000

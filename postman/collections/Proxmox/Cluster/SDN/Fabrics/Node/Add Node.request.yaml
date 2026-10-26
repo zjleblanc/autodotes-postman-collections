@@ -1,0 +1,30 @@
+$kind: http-request
+description: Add a node
+url: '{{base_url}}/cluster/sdn/fabrics/node/:fabric_id'
+method: POST
+pathVariables:
+  - key: fabric_id
+    value: ''
+    description: Identifier for SDN fabrics
+body:
+  type: json
+  content: |-
+    {
+      "interfaces": [],
+      "node_id": "",
+      "protocol": "openfabric",
+      "allowed_ips": [],
+      "digest": "",
+      "endpoint": "",
+      "ip": "",
+      "ip6": "",
+      "lock-token": "",
+      "peers": [],
+      "public_key": "",
+      "role": "internal"
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 3000

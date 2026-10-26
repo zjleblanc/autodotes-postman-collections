@@ -1,0 +1,26 @@
+$kind: http-request
+description: Create a new smtp endpoint
+url: '{{base_url}}/cluster/notifications/endpoints/smtp'
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "from-address": "",
+      "name": "",
+      "server": "",
+      "author": "",
+      "comment": "",
+      "disable": false,
+      "mailto": [],
+      "mailto-user": [],
+      "mode": "tls",
+      "password": "",
+      "port": 0,
+      "username": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 2000

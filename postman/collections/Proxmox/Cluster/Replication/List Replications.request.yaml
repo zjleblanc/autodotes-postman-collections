@@ -1,0 +1,6 @@
+$kind: http-request
+description: 'List replication jobs. Permissions: Will only return replication jobs for which the calling user has VM.Audit permission on /vms/<vmid>.'
+url: '{{base_url}}/cluster/replication'
+method: GET
+settings: {}
+order: 1000

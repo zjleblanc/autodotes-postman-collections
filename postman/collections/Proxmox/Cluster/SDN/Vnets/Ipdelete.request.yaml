@@ -1,0 +1,21 @@
+$kind: http-request
+description: Delete IP Mappings in a VNet
+url: '{{base_url}}/cluster/sdn/vnets/:vnet/ips'
+method: DELETE
+pathVariables:
+  - key: vnet
+    value: ''
+    description: The SDN vnet object identifier.
+body:
+  type: json
+  content: |-
+    {
+      "ip": "",
+      "zone": "",
+      "mac": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 10000

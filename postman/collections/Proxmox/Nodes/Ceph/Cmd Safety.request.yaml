@@ -1,0 +1,23 @@
+$kind: http-request
+description: Heuristical check if it is safe to perform an action.
+url: '{{base_url}}/nodes/:node/ceph/cmd-safety'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+queryParams:
+  - key: action
+    value: stop
+    description: Action to check
+    disabled: true
+  - key: id
+    value: ''
+    description: ID of the service
+    disabled: true
+  - key: service
+    value: osd
+    description: Service type
+    disabled: true
+settings: {}
+order: 19000

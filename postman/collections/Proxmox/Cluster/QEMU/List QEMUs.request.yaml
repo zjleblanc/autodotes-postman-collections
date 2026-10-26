@@ -1,0 +1,6 @@
+$kind: http-request
+description: Cluster-wide QEMU index
+url: '{{base_url}}/cluster/qemu'
+method: GET
+settings: {}
+order: 1000

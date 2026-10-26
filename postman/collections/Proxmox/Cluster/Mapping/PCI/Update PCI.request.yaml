@@ -1,0 +1,24 @@
+$kind: http-request
+description: Update a hardware mapping.
+url: '{{base_url}}/cluster/mapping/pci/:id'
+method: PUT
+pathVariables:
+  - key: id
+    value: ''
+    description: The ID of the logical PCI mapping.
+body:
+  type: json
+  content: |-
+    {
+      "delete": "",
+      "description": "",
+      "digest": "",
+      "live-migration-capable": false,
+      "map": [],
+      "mdev": false
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 4000

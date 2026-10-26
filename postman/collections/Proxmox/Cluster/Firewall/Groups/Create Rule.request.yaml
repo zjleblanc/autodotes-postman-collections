@@ -1,0 +1,33 @@
+$kind: http-request
+description: Create new rule.
+url: '{{base_url}}/cluster/firewall/groups/:group'
+method: POST
+pathVariables:
+  - key: group
+    value: ''
+    description: Security Group name.
+body:
+  type: json
+  content: |-
+    {
+      "action": "",
+      "type": "in",
+      "comment": "",
+      "dest": "",
+      "digest": "",
+      "dport": "",
+      "enable": 0,
+      "icmp-type": "",
+      "iface": "",
+      "log": "emerg",
+      "macro": "",
+      "pos": 0,
+      "proto": "",
+      "source": "",
+      "sport": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 4000

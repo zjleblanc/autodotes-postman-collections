@@ -1,0 +1,23 @@
+$kind: http-request
+description: Retrieve metrics of the cluster.
+url: '{{base_url}}/cluster/metrics/export'
+method: GET
+queryParams:
+  - key: history
+    value: 'false'
+    description: Also return historic values. Returns full available metric history unless `start-time` is also set
+    disabled: true
+  - key: local-only
+    value: 'false'
+    description: Only return metrics for the current node instead of the whole cluster
+    disabled: true
+  - key: node-list
+    value: ''
+    description: Only return metrics from nodes passed as comma-separated list
+    disabled: true
+  - key: start-time
+    value: '0'
+    description: 'Only include metrics with a timestamp > start-time.'
+    disabled: true
+settings: {}
+order: 3000

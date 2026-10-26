@@ -1,0 +1,17 @@
+$kind: http-request
+description: Create IP or Network Alias.
+url: '{{base_url}}/cluster/firewall/aliases'
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "cidr": "",
+      "name": "",
+      "comment": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 2000

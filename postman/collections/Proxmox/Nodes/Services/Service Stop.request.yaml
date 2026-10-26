@@ -1,0 +1,13 @@
+$kind: http-request
+description: Stop service.
+url: '{{base_url}}/nodes/:node/services/:service/stop'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: service
+    value: chrony
+    description: Service ID
+settings: {}
+order: 5000

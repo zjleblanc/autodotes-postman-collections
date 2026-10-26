@@ -1,0 +1,23 @@
+$kind: http-request
+description: Create a new HA resource.
+url: '{{base_url}}/cluster/ha/resources'
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "sid": "",
+      "auto-rebalance": true,
+      "comment": "",
+      "failback": true,
+      "group": "",
+      "max_relocate": 1,
+      "max_restart": 1,
+      "state": "started",
+      "type": "ct"
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 2000

@@ -1,0 +1,23 @@
+$kind: http-request
+description: Start the container.
+url: '{{base_url}}/nodes/:node/lxc/:vmid/status/start'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+body:
+  type: json
+  content: |-
+    {
+      "debug": false,
+      "skiplock": false
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 3000

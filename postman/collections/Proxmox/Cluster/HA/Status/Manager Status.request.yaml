@@ -1,0 +1,6 @@
+$kind: http-request
+description: Get full HA manager status, including LRM status.
+url: '{{base_url}}/cluster/ha/status/manager_status'
+method: GET
+settings: {}
+order: 3000

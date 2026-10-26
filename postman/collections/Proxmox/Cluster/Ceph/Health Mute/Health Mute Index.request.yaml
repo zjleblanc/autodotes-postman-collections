@@ -1,0 +1,6 @@
+$kind: http-request
+description: Get the currently muted Ceph health checks.
+url: '{{base_url}}/cluster/ceph/health-mute'
+method: GET
+settings: {}
+order: 1000

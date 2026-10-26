@@ -1,0 +1,13 @@
+$kind: http-request
+description: 'List pools or get pool configuration. Permissions: List all pools where you have Pool.Audit permissions on /pool/<pool>, or the pool specific with {poolid}'
+url: '{{base_url}}/pools'
+method: GET
+queryParams:
+  - key: poolid
+    value: ''
+    disabled: true
+  - key: type
+    value: qemu
+    disabled: true
+settings: {}
+order: 1000

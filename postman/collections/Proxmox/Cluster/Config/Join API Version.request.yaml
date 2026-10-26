@@ -1,0 +1,6 @@
+$kind: http-request
+description: Return the version of the cluster join API available on this node.
+url: '{{base_url}}/cluster/config/apiversion'
+method: GET
+settings: {}
+order: 3000

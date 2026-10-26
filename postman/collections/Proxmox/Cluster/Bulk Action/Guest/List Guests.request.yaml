@@ -1,0 +1,6 @@
+$kind: http-request
+description: Bulk action index.
+url: '{{base_url}}/cluster/bulk-action/guest'
+method: GET
+settings: {}
+order: 1000

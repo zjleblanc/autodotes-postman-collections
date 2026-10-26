@@ -1,0 +1,10 @@
+$kind: http-request
+description: Read storage configuration.
+url: '{{base_url}}/storage/:storage'
+method: GET
+pathVariables:
+  - key: storage
+    value: ''
+    description: The storage identifier.
+settings: {}
+order: 3000

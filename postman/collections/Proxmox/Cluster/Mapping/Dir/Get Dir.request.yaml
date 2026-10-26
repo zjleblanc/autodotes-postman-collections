@@ -1,0 +1,9 @@
+$kind: http-request
+description: Get directory mapping.
+url: '{{base_url}}/cluster/mapping/dir/:id'
+method: GET
+pathVariables:
+  - key: id
+    value: ''
+settings: {}
+order: 3000

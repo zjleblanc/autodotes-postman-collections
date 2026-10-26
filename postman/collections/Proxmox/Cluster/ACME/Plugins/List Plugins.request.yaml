@@ -1,0 +1,11 @@
+$kind: http-request
+description: ACME plugin index.
+url: '{{base_url}}/cluster/acme/plugins'
+method: GET
+queryParams:
+  - key: type
+    value: dns
+    description: Only list ACME plugins of a specific type
+    disabled: true
+settings: {}
+order: 1000

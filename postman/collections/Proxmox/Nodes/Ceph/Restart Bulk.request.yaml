@@ -1,0 +1,25 @@
+$kind: http-request
+description: 'Rolling restart of all Ceph OSDs on this node. Each OSD is restarted only after Ceph reports the previous one is back up and the next one is safe to stop. For non-OSD Ceph daemons, use the cluster-wide endpoint at /cluster/ceph/restart-bulk. The ''noout'' flag is applied only to the OSDs targeted by this run, so unrelated OSDs on other nodes that fail during the restart window still get out-marked normally. Aborting the resulting task (for example via ''pvesh task stop'') triggers a SIGTERM handler that unsets the per-OSD ''noout'' if this endpoint set it. Per-daemon progress is checkpointed in Ceph''s config-key store (''pve/ceph-bulk-restart/node/<node>''), so an aborted run can be resumed by re-issuing this endpoint with ''resume=1''.'
+url: '{{base_url}}/nodes/:node/ceph/restart-bulk'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+body:
+  type: json
+  content: |-
+    {
+      "service-type": "osd",
+      "dry-run": false,
+      "force": false,
+      "only-outdated": false,
+      "resume": false,
+      "set-noout": true,
+      "timeout": 600
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 14000

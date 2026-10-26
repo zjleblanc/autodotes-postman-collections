@@ -1,0 +1,13 @@
+$kind: http-request
+description: Get container configuration, including pending changes.
+url: '{{base_url}}/nodes/:node/lxc/:vmid/pending'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+settings: {}
+order: 24000

@@ -1,0 +1,26 @@
+$kind: http-request
+description: Add a fabric
+url: '{{base_url}}/cluster/sdn/fabrics/fabric'
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "id": "",
+      "protocol": "openfabric",
+      "redistribute": [],
+      "area": "",
+      "csnp_interval": 0,
+      "digest": "",
+      "hello_interval": 0,
+      "ip6_prefix": "",
+      "ip_prefix": "",
+      "lock-token": "",
+      "persistent_keepalive": 0,
+      "route_filter": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 2000

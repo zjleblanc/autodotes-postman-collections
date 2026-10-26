@@ -1,0 +1,6 @@
+$kind: http-request
+description: Cluster node index.
+url: '{{base_url}}/nodes'
+method: GET
+settings: {}
+order: 1000

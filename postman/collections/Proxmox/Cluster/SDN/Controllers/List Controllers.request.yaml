@@ -1,0 +1,19 @@
+$kind: http-request
+description: 'SDN controllers index. Permissions: Only list entries where you have ''SDN.Audit'' or ''SDN.Allocate'' permissions on ''/sdn/controllers/<controller>'''
+url: '{{base_url}}/cluster/sdn/controllers'
+method: GET
+queryParams:
+  - key: pending
+    value: 'false'
+    description: Display pending config.
+    disabled: true
+  - key: running
+    value: 'false'
+    description: Display running config.
+    disabled: true
+  - key: type
+    value: bgp
+    description: Only list sdn controllers of specific type
+    disabled: true
+settings: {}
+order: 1000

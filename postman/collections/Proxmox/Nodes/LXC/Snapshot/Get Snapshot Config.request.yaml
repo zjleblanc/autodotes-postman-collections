@@ -1,0 +1,16 @@
+$kind: http-request
+description: Get snapshot configuration
+url: '{{base_url}}/nodes/:node/lxc/:vmid/snapshot/:snapname/config'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+  - key: snapname
+    value: ''
+    description: The name of the snapshot.
+settings: {}
+order: 6000

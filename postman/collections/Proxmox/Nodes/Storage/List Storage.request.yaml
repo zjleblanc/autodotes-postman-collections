@@ -1,0 +1,31 @@
+$kind: http-request
+description: 'Get status for all datastores. Permissions: Only list entries where you have ''Datastore.Audit'' or ''Datastore.AllocateSpace'' permissions on ''/storage/<storage>'''
+url: '{{base_url}}/nodes/:node/storage'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+queryParams:
+  - key: content
+    value: ''
+    description: Only list stores which support this content type.
+    disabled: true
+  - key: enabled
+    value: 'false'
+    description: Only list stores which are enabled (not disabled in config).
+    disabled: true
+  - key: format
+    value: 'false'
+    description: Include information about formats
+    disabled: true
+  - key: storage
+    value: ''
+    description: Only list status for  specified storage
+    disabled: true
+  - key: target
+    value: ''
+    description: If target is different to 'node', we only lists shared storages which content is accessible on this 'node' and the specified 'target' node.
+    disabled: true
+settings: {}
+order: 1000

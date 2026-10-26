@@ -1,0 +1,13 @@
+$kind: http-request
+description: ceph osd out
+url: '{{base_url}}/nodes/:node/ceph/osd/:osdid/out'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: osdid
+    value: '0'
+    description: OSD ID
+settings: {}
+order: 8000

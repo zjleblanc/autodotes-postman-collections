@@ -1,0 +1,11 @@
+$kind: http-request
+description: 'SDN ipams index. Permissions: Only list entries where you have ''SDN.Audit'' or ''SDN.Allocate'' permissions on ''/sdn/ipams/<ipam>'''
+url: '{{base_url}}/cluster/sdn/ipams'
+method: GET
+queryParams:
+  - key: type
+    value: netbox
+    description: Only list sdn ipams of specific type
+    disabled: true
+settings: {}
+order: 1000

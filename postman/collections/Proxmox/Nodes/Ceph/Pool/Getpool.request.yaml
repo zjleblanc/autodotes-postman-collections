@@ -1,0 +1,18 @@
+$kind: http-request
+description: Show the current pool status.
+url: '{{base_url}}/nodes/:node/ceph/pool/:name/status'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: name
+    value: ''
+    description: The name of the pool. It must be unique.
+queryParams:
+  - key: verbose
+    value: 'false'
+    description: If enabled, will display additional data(eg. statistics).
+    disabled: true
+settings: {}
+order: 6000

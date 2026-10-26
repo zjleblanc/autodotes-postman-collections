@@ -1,0 +1,9 @@
+$kind: http-request
+description: Remove matcher
+url: '{{base_url}}/cluster/notifications/matchers/:name'
+method: DELETE
+pathVariables:
+  - key: name
+    value: ''
+settings: {}
+order: 5000

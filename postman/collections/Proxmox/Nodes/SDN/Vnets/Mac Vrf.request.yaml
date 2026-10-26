@@ -1,0 +1,13 @@
+$kind: http-request
+description: 'Get the MAC VRF for a VNet in an EVPN zone. Permissions: Require ''SDN.Audit'' permissions on ''/sdn/zones/<zone>/<vnet>'''
+url: '{{base_url}}/nodes/:node/sdn/vnets/:vnet/mac-vrf'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vnet
+    value: ''
+    description: The SDN vnet object identifier.
+settings: {}
+order: 2000

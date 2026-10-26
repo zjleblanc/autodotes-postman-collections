@@ -1,0 +1,11 @@
+$kind: http-request
+description: 'List USB Hardware Mappings Permissions: Only lists entries where you have ''Mapping.Modify'', ''Mapping.Use'' or ''Mapping.Audit'' permissions on ''/mapping/usb/<id>''.'
+url: '{{base_url}}/cluster/mapping/usb'
+method: GET
+queryParams:
+  - key: check-node
+    value: ''
+    description: If given, checks the configurations on the given node for correctness, and adds relevant errors to the devices.
+    disabled: true
+settings: {}
+order: 1000

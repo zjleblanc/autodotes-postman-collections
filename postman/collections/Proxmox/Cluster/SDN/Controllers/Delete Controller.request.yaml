@@ -1,0 +1,19 @@
+$kind: http-request
+description: Delete sdn controller object configuration.
+url: '{{base_url}}/cluster/sdn/controllers/:controller'
+method: DELETE
+pathVariables:
+  - key: controller
+    value: ''
+    description: The SDN controller object identifier.
+body:
+  type: json
+  content: |-
+    {
+      "lock-token": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 5000

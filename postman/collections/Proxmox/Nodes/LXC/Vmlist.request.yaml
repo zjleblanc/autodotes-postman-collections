@@ -1,0 +1,10 @@
+$kind: http-request
+description: 'LXC container index (per node). Permissions: Only list CTs where you have VM.Audit permission on /vms/<vmid>.'
+url: '{{base_url}}/nodes/:node/lxc'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+settings: {}
+order: 1000

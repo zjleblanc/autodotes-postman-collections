@@ -1,0 +1,15 @@
+$kind: http-request
+description: 'Get the currently configured vzdump defaults. Permissions: The user needs ''Datastore.Audit'' or ''Datastore.AllocateSpace'' permissions for the specified storage (or default storage if none specified). Some properties are only returned when the user has ''Sys.Audit'' permissions for the node.'
+url: '{{base_url}}/nodes/:node/vzdump/defaults'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+queryParams:
+  - key: storage
+    value: ''
+    description: The storage identifier.
+    disabled: true
+settings: {}
+order: 2000

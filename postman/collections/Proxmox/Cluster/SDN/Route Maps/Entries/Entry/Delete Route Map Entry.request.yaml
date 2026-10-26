@@ -1,0 +1,22 @@
+$kind: http-request
+description: Delete Route Map Entry
+url: '{{base_url}}/cluster/sdn/route-maps/entries/:route-map-id/entry/:order'
+method: DELETE
+pathVariables:
+  - key: route-map-id
+    value: ''
+    description: The SDN route map identifier
+  - key: order
+    value: '0'
+    description: The index of this route map entry
+body:
+  type: json
+  content: |-
+    {
+      "lock-token": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 3000

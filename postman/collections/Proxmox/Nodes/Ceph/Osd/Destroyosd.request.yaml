@@ -1,0 +1,22 @@
+$kind: http-request
+description: Destroy OSD
+url: '{{base_url}}/nodes/:node/ceph/osd/:osdid'
+method: DELETE
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: osdid
+    value: '0'
+    description: OSD ID
+body:
+  type: json
+  content: |-
+    {
+      "cleanup": false
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 4000

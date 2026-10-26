@@ -1,0 +1,10 @@
+$kind: http-request
+description: Gather various systems information about a node
+url: '{{base_url}}/nodes/:node/report'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+settings: {}
+order: 48000

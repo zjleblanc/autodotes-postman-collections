@@ -1,0 +1,24 @@
+$kind: http-request
+description: 'Prune backups. Only those using the standard naming scheme are considered. Permissions: You need the ''Datastore.Allocate'' privilege on the storage (or if a VM ID is specified, ''Datastore.AllocateSpace'' and ''VM.Backup'' for the VM).'
+url: '{{base_url}}/nodes/:node/storage/:storage/prunebackups'
+method: DELETE
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: storage
+    value: ''
+    description: The storage identifier.
+body:
+  type: json
+  content: |-
+    {
+      "prune-backups": "",
+      "type": "qemu",
+      "vmid": 0
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 4000

@@ -1,0 +1,10 @@
+$kind: http-request
+description: Get auth server configuration.
+url: '{{base_url}}/access/domains/:realm'
+method: GET
+pathVariables:
+  - key: realm
+    value: ''
+    description: Authentication domain ID
+settings: {}
+order: 3000

@@ -1,0 +1,24 @@
+$kind: http-request
+description: Update IP or Network settings
+url: '{{base_url}}/cluster/firewall/ipset/:name/:cidr'
+method: PUT
+pathVariables:
+  - key: name
+    value: ''
+    description: IP set name.
+  - key: cidr
+    value: ''
+    description: Network/IP specification in CIDR format.
+body:
+  type: json
+  content: |-
+    {
+      "comment": "",
+      "digest": "",
+      "nomatch": false
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 7000

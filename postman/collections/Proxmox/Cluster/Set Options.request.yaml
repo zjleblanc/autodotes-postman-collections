@@ -1,0 +1,39 @@
+$kind: http-request
+description: Set datacenter options.
+url: '{{base_url}}/cluster/options'
+method: PUT
+body:
+  type: json
+  content: |-
+    {
+      "bwlimit": "",
+      "consent-text": "",
+      "console": "applet",
+      "crs": "",
+      "delete": "",
+      "description": "",
+      "email_from": "",
+      "fencing": "watchdog",
+      "ha": "",
+      "http_proxy": "",
+      "keyboard": "de",
+      "language": "ar",
+      "location": "",
+      "mac_prefix": "BC:24:11",
+      "max_workers": 0,
+      "migration": "",
+      "migration_unsecure": false,
+      "next-id": "",
+      "notify": "",
+      "registered-tags": "",
+      "replication": "",
+      "tag-style": "",
+      "u2f": "",
+      "user-tag-access": "",
+      "webauthn": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 21000

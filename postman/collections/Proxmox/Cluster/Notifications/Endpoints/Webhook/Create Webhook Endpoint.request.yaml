@@ -1,0 +1,22 @@
+$kind: http-request
+description: Create a new webhook endpoint
+url: '{{base_url}}/cluster/notifications/endpoints/webhook'
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "method": "post",
+      "name": "",
+      "url": "",
+      "body": "",
+      "comment": "",
+      "disable": false,
+      "header": [],
+      "secret": []
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 2000

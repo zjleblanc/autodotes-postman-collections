@@ -1,0 +1,15 @@
+$kind: http-request
+description: 'SDN Fabrics Index Permissions: Only list entries where you have ''SDN.Audit'' or ''SDN.Allocate'' permissions on ''/sdn/fabrics/<fabric>'''
+url: '{{base_url}}/cluster/sdn/fabrics/fabric'
+method: GET
+queryParams:
+  - key: pending
+    value: 'false'
+    description: Display pending config.
+    disabled: true
+  - key: running
+    value: 'false'
+    description: Display running config.
+    disabled: true
+settings: {}
+order: 1000

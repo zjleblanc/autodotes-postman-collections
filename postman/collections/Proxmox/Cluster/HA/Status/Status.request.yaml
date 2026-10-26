@@ -1,0 +1,6 @@
+$kind: http-request
+description: Get HA manager status.
+url: '{{base_url}}/cluster/ha/status/current'
+method: GET
+settings: {}
+order: 2000

@@ -1,0 +1,26 @@
+$kind: http-request
+description: 'Create a new sdn subnet object. Permissions: Require ''SDN.Allocate'' permission on ''/sdn/zones/<zone>/<vnet>'''
+url: '{{base_url}}/cluster/sdn/vnets/:vnet/subnets'
+method: POST
+pathVariables:
+  - key: vnet
+    value: ''
+    description: associated vnet
+body:
+  type: json
+  content: |-
+    {
+      "subnet": "",
+      "type": "subnet",
+      "dhcp-dns-server": "",
+      "dhcp-range": [],
+      "dnszoneprefix": "",
+      "gateway": "",
+      "lock-token": "",
+      "snat": false
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 2000

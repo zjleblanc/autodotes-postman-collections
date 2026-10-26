@@ -1,0 +1,15 @@
+$kind: http-request
+description: 'List all custom and default CPU models. Permissions: Custom models are filtered to those the current user has any of Mapping.{Audit,Use,Modify} on /mapping/cpu/<name>; Sys.Audit on /nodes continues to grant visibility of all custom models for back-compat.'
+url: '{{base_url}}/nodes/:node/capabilities/qemu/cpu'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+queryParams:
+  - key: arch
+    value: x86_64
+    description: Virtual processor architecture. Defaults to the host architecture.
+    disabled: true
+settings: {}
+order: 2000

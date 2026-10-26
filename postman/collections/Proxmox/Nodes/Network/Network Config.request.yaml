@@ -1,0 +1,13 @@
+$kind: http-request
+description: Read network device configuration
+url: '{{base_url}}/nodes/:node/network/:iface'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: iface
+    value: ''
+    description: Network interface name.
+settings: {}
+order: 5000

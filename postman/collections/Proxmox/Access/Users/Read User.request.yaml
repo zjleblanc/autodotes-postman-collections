@@ -1,0 +1,10 @@
+$kind: http-request
+description: Get user configuration.
+url: '{{base_url}}/access/users/:userid'
+method: GET
+pathVariables:
+  - key: userid
+    value: ''
+    description: Full User ID, in the `name@realm` format.
+settings: {}
+order: 3000

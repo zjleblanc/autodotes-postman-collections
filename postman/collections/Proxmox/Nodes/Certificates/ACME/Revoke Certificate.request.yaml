@@ -1,0 +1,10 @@
+$kind: http-request
+description: Revoke existing certificate from CA.
+url: '{{base_url}}/nodes/:node/certificates/acme/certificate'
+method: DELETE
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+settings: {}
+order: 4000

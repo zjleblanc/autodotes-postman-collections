@@ -1,0 +1,15 @@
+$kind: http-request
+description: Get configured values from either ceph.conf or the mon config DB. Underscores in section and key names are normalised to hyphens in the response, regardless of how they're written in the source.
+url: '{{base_url}}/nodes/:node/ceph/cfg/value'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+queryParams:
+  - key: config-keys
+    value: ''
+    description: 'List of <section>:<config key> items separated by semicolon, comma or space.'
+    disabled: true
+settings: {}
+order: 4000

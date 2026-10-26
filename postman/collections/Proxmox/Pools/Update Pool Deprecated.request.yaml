@@ -1,0 +1,22 @@
+$kind: http-request
+description: 'Update pool data (deprecated, no support for nested pools - use ''PUT /pools/?poolid={poolid}'' instead). Permissions: You also need the right to modify permissions on any object you add/delete.'
+url: '{{base_url}}/pools/:poolid'
+method: PUT
+pathVariables:
+  - key: poolid
+    value: ''
+body:
+  type: json
+  content: |-
+    {
+      "allow-move": false,
+      "comment": "",
+      "delete": false,
+      "storage": "",
+      "vms": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 6000

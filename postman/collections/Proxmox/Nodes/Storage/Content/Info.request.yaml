@@ -1,0 +1,16 @@
+$kind: http-request
+description: 'Get volume attributes Permissions: You need read access for the volume.'
+url: '{{base_url}}/nodes/:node/storage/:storage/content/:volume'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: storage
+    value: ''
+    description: The storage identifier.
+  - key: volume
+    value: ''
+    description: Volume identifier
+settings: {}
+order: 3000

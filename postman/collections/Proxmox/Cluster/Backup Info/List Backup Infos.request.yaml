@@ -1,0 +1,6 @@
+$kind: http-request
+description: Index for backup info related endpoints
+url: '{{base_url}}/cluster/backup-info'
+method: GET
+settings: {}
+order: 1000

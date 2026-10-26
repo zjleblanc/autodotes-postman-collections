@@ -1,0 +1,26 @@
+$kind: http-request
+description: Upload templates, ISO images, OVAs and VM images.
+url: '{{base_url}}/nodes/:node/storage/:storage/upload'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: storage
+    value: ''
+    description: The storage identifier.
+body:
+  type: json
+  content: |-
+    {
+      "content": "iso",
+      "filename": "",
+      "checksum": "",
+      "checksum-algorithm": "md5",
+      "tmpfilename": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 10000

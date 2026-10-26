@@ -1,0 +1,27 @@
+$kind: http-request
+description: Update Prefix List Entry
+url: '{{base_url}}/cluster/sdn/prefix-lists/:id/entries/:url_seq'
+method: PUT
+pathVariables:
+  - key: id
+    value: ''
+  - key: url_seq
+    value: ''
+body:
+  type: json
+  content: |-
+    {
+      "action": "permit",
+      "delete": [],
+      "digest": "",
+      "ge": 0,
+      "le": 0,
+      "lock-token": "",
+      "prefix": "",
+      "seq": 0
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 4000

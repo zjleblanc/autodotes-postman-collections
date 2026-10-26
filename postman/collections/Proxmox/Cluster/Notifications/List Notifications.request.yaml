@@ -1,0 +1,6 @@
+$kind: http-request
+description: Index for notification-related API endpoints.
+url: '{{base_url}}/cluster/notifications'
+method: GET
+settings: {}
+order: 1000

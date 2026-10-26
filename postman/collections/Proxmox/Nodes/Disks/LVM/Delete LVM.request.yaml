@@ -1,0 +1,23 @@
+$kind: http-request
+description: 'Remove an LVM Volume Group. Permissions: Requires additionally ''Datastore.Allocate'' on /storage when setting ''cleanup-config'''
+url: '{{base_url}}/nodes/:node/disks/lvm/:name'
+method: DELETE
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: name
+    value: ''
+    description: The storage identifier.
+body:
+  type: json
+  content: |-
+    {
+      "cleanup-config": false,
+      "cleanup-disks": false
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 3000

@@ -1,0 +1,21 @@
+$kind: http-request
+description: Update Access Control List (add or remove permissions).
+url: '{{base_url}}/access/acl'
+method: PUT
+body:
+  type: json
+  content: |-
+    {
+      "path": "",
+      "roles": "",
+      "delete": false,
+      "groups": "",
+      "propagate": true,
+      "tokens": "",
+      "users": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 6000

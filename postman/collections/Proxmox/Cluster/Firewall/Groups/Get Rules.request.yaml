@@ -1,0 +1,10 @@
+$kind: http-request
+description: List rules.
+url: '{{base_url}}/cluster/firewall/groups/:group'
+method: GET
+pathVariables:
+  - key: group
+    value: ''
+    description: Security Group name.
+settings: {}
+order: 3000

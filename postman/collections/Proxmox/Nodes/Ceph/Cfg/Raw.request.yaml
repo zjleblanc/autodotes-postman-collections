@@ -1,0 +1,10 @@
+$kind: http-request
+description: Get the Ceph configuration file.
+url: '{{base_url}}/nodes/:node/ceph/cfg/raw'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+settings: {}
+order: 2000

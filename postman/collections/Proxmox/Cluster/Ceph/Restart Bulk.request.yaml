@@ -1,0 +1,19 @@
+$kind: http-request
+description: 'Cluster-wide rolling restart of all Ceph daemons of the given type. For MON/MGR/MDS each daemon is restarted only after Ceph reports the previous one is back up and the next one is safe to stop. For OSDs the cluster path orchestrates the per-node endpoint at /nodes/{node}/ceph/restart-bulk on each node in turn, inheriting that endpoint''s per-OSD ''noout'' handling and resume support. The ''noout'' flag itself is not exposed by this endpoint as it is OSD-specific (and for OSDs handled by the per-node sub-tasks).'
+url: '{{base_url}}/cluster/ceph/restart-bulk'
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "service-type": "mon",
+      "dry-run": false,
+      "force": false,
+      "only-outdated": false,
+      "timeout": 600
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 4000

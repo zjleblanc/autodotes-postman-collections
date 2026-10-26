@@ -1,0 +1,15 @@
+$kind: http-request
+description: 'User index. Permissions: The returned list is restricted to users where you have ''User.Modify'' or ''Sys.Audit'' permissions on ''/access/groups'' or on a group the user belongs too. But it always includes the current (authenticated) user.'
+url: '{{base_url}}/access/users'
+method: GET
+queryParams:
+  - key: enabled
+    value: 'false'
+    description: Optional filter for enable property.
+    disabled: true
+  - key: full
+    value: 'false'
+    description: Include group and token information.
+    disabled: true
+settings: {}
+order: 1000

@@ -1,0 +1,11 @@
+$kind: http-request
+description: Get ceph metadata.
+url: '{{base_url}}/cluster/ceph/metadata'
+method: GET
+queryParams:
+  - key: scope
+    value: all
+    description: 'Which metadata facet to return: ''all'' enriches the per-daemon metadata with the PVE-side service state (presence of unit, data directory), ''versions'' collects only per-node Ceph binary version data.'
+    disabled: true
+settings: {}
+order: 2000

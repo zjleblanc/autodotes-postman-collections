@@ -1,0 +1,19 @@
+$kind: http-request
+description: 'SDN Fabrics Index Permissions: Only returns nodes where you have ''Sys.Audit'' or ''Sys.Modify'' permissions.'
+url: '{{base_url}}/cluster/sdn/fabrics/node/:fabric_id'
+method: GET
+pathVariables:
+  - key: fabric_id
+    value: ''
+    description: Identifier for SDN fabrics
+queryParams:
+  - key: pending
+    value: 'false'
+    description: Display pending config.
+    disabled: true
+  - key: running
+    value: 'false'
+    description: Display running config.
+    disabled: true
+settings: {}
+order: 2000

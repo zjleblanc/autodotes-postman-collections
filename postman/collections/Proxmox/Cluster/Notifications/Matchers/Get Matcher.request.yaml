@@ -1,0 +1,9 @@
+$kind: http-request
+description: Return a specific matcher
+url: '{{base_url}}/cluster/notifications/matchers/:name'
+method: GET
+pathVariables:
+  - key: name
+    value: ''
+settings: {}
+order: 3000

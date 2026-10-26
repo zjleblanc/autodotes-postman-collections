@@ -1,0 +1,10 @@
+$kind: http-request
+description: Return a specific gotify endpoint
+url: '{{base_url}}/cluster/notifications/endpoints/gotify/:name'
+method: GET
+pathVariables:
+  - key: name
+    value: ''
+    description: Name of the endpoint.
+settings: {}
+order: 3000

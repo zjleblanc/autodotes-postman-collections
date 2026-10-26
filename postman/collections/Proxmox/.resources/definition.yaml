@@ -1,0 +1,29 @@
+$kind: collection
+name: Proxmox
+description: 'Proxmox VE REST API. Manages cluster, nodes, VMs (QEMU/LXC), storage, access control, and pools. Generated from the official API schema at https://pve.proxmox.com/pve-docs/api-viewer/index.html. Authenticate via Access > Create Ticket (sets pve_ticket/csrf_token automatically), or replace this collection''s auth with an API token header for long-lived automation.'
+variables:
+  - key: base_url
+    value: 'https://localhost:8006/api2/json'
+    description: Proxmox VE API base URL (scheme + host + port + /api2/json)
+  - key: pve_ticket
+    value: ''
+    description: 'PVEAuthCookie ticket value, set automatically by Access > Create Ticket'
+  - key: csrf_token
+    value: ''
+    description: 'CSRFPreventionToken, set automatically by Access > Create Ticket; required on non-GET requests'
+auth:
+  type: apikey
+  credentials:
+    - key: key
+      value: Cookie
+    - key: value
+      value: 'PVEAuthCookie={{pve_ticket}}'
+    - key: in
+      value: header
+scripts:
+  - type: 'http:beforeRequest'
+    language: text/javascript
+    code: |-
+      if (pm.collectionVariables.get('csrf_token') && pm.request.method !== 'GET') {
+          pm.request.headers.upsert({ key: 'CSRFPreventionToken', value: pm.collectionVariables.get('csrf_token') });
+      }

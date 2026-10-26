@@ -1,0 +1,21 @@
+$kind: http-request
+description: 'Start all VMs and containers located on this node (by default only those with onboot=1). Permissions: The ''VM.PowerMgmt'' permission is required on ''/'' or on ''/vms/<ID>'' for each ID passed via the ''vms'' parameter.'
+url: '{{base_url}}/nodes/:node/startall'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+body:
+  type: json
+  content: |-
+    {
+      "force": true,
+      "max-workers": 0,
+      "vms": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 49000

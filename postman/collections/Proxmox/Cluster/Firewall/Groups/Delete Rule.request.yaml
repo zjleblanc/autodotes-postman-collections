@@ -1,0 +1,22 @@
+$kind: http-request
+description: Delete rule.
+url: '{{base_url}}/cluster/firewall/groups/:group/:pos'
+method: DELETE
+pathVariables:
+  - key: group
+    value: ''
+    description: Security Group name.
+  - key: pos
+    value: '0'
+    description: 'Update rule at position <pos>.'
+body:
+  type: json
+  content: |-
+    {
+      "digest": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 8000

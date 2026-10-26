@@ -1,0 +1,22 @@
+$kind: http-request
+description: 'Migration tunnel endpoint for websocket upgrade - only for internal use by VM migration. Permissions: You need to pass a ticket valid for the selected socket. Tickets can be created via the mtunnel API call, which will check permissions accordingly.'
+url: '{{base_url}}/nodes/:node/lxc/:vmid/mtunnelwebsocket'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+queryParams:
+  - key: socket
+    value: ''
+    description: unix socket to forward to
+    disabled: true
+  - key: ticket
+    value: ''
+    description: ticket return by initial 'mtunnel' API call, or retrieved via 'ticket' tunnel command
+    disabled: true
+settings: {}
+order: 27000

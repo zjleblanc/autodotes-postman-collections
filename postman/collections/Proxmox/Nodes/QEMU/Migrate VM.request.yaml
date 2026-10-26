@@ -1,0 +1,30 @@
+$kind: http-request
+description: Migrate virtual machine. Creates a new migration task.
+url: '{{base_url}}/nodes/:node/qemu/:vmid/migrate'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+body:
+  type: json
+  content: |-
+    {
+      "target": "",
+      "bwlimit": "migrate limit from datacenter or storage config",
+      "force": false,
+      "migration_network": "",
+      "migration_type": "secure",
+      "online": false,
+      "targetstorage": "",
+      "with-conntrack-state": false,
+      "with-local-disks": false
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 25000

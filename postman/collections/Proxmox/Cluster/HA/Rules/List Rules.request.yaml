@@ -1,0 +1,15 @@
+$kind: http-request
+description: Get HA rules.
+url: '{{base_url}}/cluster/ha/rules'
+method: GET
+queryParams:
+  - key: resource
+    value: ''
+    description: Limit the returned list to rules affecting the specified resource.
+    disabled: true
+  - key: type
+    value: node-affinity
+    description: Limit the returned list to the specified rule type.
+    disabled: true
+settings: {}
+order: 1000

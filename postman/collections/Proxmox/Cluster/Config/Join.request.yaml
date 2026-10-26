@@ -1,0 +1,21 @@
+$kind: http-request
+description: Joins this node into an existing cluster. If no links are given, default to IP resolved by node's hostname on single link (fallback fails for clusters with multiple links).
+url: '{{base_url}}/cluster/config/join'
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "fingerprint": "",
+      "hostname": "",
+      "password": "",
+      "force": false,
+      "link[n]": "",
+      "nodeid": 0,
+      "votes": 0
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 6000

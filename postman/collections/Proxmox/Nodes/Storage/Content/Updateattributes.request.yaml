@@ -1,0 +1,26 @@
+$kind: http-request
+description: 'Update volume attributes Permissions: You need read access for the volume.'
+url: '{{base_url}}/nodes/:node/storage/:storage/content/:volume'
+method: PUT
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: storage
+    value: ''
+    description: The storage identifier.
+  - key: volume
+    value: ''
+    description: Volume identifier
+body:
+  type: json
+  content: |-
+    {
+      "notes": "",
+      "protected": false
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 5000

@@ -1,0 +1,6 @@
+$kind: http-request
+description: Dummy. Useful for formatters which want to provide a login page.
+url: '{{base_url}}/access/ticket'
+method: GET
+settings: {}
+order: 10000

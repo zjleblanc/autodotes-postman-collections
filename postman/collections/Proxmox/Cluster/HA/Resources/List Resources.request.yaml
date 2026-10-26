@@ -1,0 +1,11 @@
+$kind: http-request
+description: List HA resources.
+url: '{{base_url}}/cluster/ha/resources'
+method: GET
+queryParams:
+  - key: type
+    value: ct
+    description: Only list resources of specific type
+    disabled: true
+settings: {}
+order: 1000

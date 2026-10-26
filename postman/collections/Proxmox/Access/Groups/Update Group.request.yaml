@@ -1,0 +1,18 @@
+$kind: http-request
+description: Update group data.
+url: '{{base_url}}/access/groups/:groupid'
+method: PUT
+pathVariables:
+  - key: groupid
+    value: ''
+body:
+  type: json
+  content: |-
+    {
+      "comment": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 4000

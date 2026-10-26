@@ -1,0 +1,13 @@
+$kind: http-request
+description: OSD index.
+url: '{{base_url}}/nodes/:node/ceph/osd/:osdid'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: osdid
+    value: '0'
+    description: OSD ID
+settings: {}
+order: 3000

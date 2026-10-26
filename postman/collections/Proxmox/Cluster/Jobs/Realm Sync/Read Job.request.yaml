@@ -1,0 +1,9 @@
+$kind: http-request
+description: Read realm-sync job definition.
+url: '{{base_url}}/cluster/jobs/realm-sync/:id'
+method: GET
+pathVariables:
+  - key: id
+    value: ''
+settings: {}
+order: 2000

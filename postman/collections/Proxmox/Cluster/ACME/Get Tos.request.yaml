@@ -1,0 +1,11 @@
+$kind: http-request
+description: Retrieve ACME TermsOfService URL from CA. Deprecated, please use /cluster/acme/meta.
+url: '{{base_url}}/cluster/acme/tos'
+method: GET
+queryParams:
+  - key: directory
+    value: 'https://acme-v02.api.letsencrypt.org/directory'
+    description: URL of ACME CA directory endpoint.
+    disabled: true
+settings: {}
+order: 4000

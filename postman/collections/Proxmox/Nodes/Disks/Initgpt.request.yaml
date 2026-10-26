@@ -1,0 +1,20 @@
+$kind: http-request
+description: Initialize Disk with GPT
+url: '{{base_url}}/nodes/:node/disks/initgpt'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+body:
+  type: json
+  content: |-
+    {
+      "disk": "",
+      "uuid": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 8000

@@ -1,0 +1,19 @@
+$kind: http-request
+description: List all entries for a given Route Map
+url: '{{base_url}}/cluster/sdn/route-maps/entries/:route-map-id'
+method: GET
+pathVariables:
+  - key: route-map-id
+    value: ''
+    description: The SDN route map identifier
+queryParams:
+  - key: pending
+    value: 'false'
+    description: Display pending config.
+    disabled: true
+  - key: running
+    value: 'false'
+    description: Display running config.
+    disabled: true
+settings: {}
+order: 3000

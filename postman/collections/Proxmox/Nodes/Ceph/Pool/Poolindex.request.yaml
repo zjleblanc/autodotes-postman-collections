@@ -1,0 +1,13 @@
+$kind: http-request
+description: Pool index.
+url: '{{base_url}}/nodes/:node/ceph/pool/:name'
+method: GET
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: name
+    value: ''
+    description: The name of the pool.
+settings: {}
+order: 3000

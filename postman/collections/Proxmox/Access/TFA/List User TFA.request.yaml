@@ -1,0 +1,10 @@
+$kind: http-request
+description: List TFA configurations of users.
+url: '{{base_url}}/access/tfa/:userid'
+method: GET
+pathVariables:
+  - key: userid
+    value: ''
+    description: Full User ID, in the `name@realm` format.
+settings: {}
+order: 2000

@@ -1,0 +1,6 @@
+$kind: http-request
+description: 'Get Access Control List (ACLs). Permissions: The returned list is restricted to objects where you have rights to modify permissions.'
+url: '{{base_url}}/access/acl'
+method: GET
+settings: {}
+order: 5000

@@ -1,0 +1,10 @@
+$kind: http-request
+description: Try to wake a node via 'wake on LAN' network packet.
+url: '{{base_url}}/nodes/:node/wakeonlan'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: target node for wake on LAN packet
+settings: {}
+order: 31000

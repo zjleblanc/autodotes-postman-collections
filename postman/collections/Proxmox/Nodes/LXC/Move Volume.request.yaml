@@ -1,0 +1,29 @@
+$kind: http-request
+description: 'Move a rootfs-/mp-volume to a different storage or to a different container. Permissions: You need ''VM.Config.Disk'' permissions on /vms/{vmid}, and ''Datastore.AllocateSpace'' permissions on the storage. To move a volume to another container, you need the permissions on the target container as well.'
+url: '{{base_url}}/nodes/:node/lxc/:vmid/move_volume'
+method: POST
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+body:
+  type: json
+  content: |-
+    {
+      "volume": "rootfs",
+      "bwlimit": "clone limit from datacenter or storage config",
+      "delete": false,
+      "digest": "",
+      "storage": "",
+      "target-digest": "",
+      "target-vmid": 0,
+      "target-volume": "rootfs"
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 23000

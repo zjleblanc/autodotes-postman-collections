@@ -1,0 +1,9 @@
+$kind: http-request
+description: Return a specific sendmail endpoint
+url: '{{base_url}}/cluster/notifications/endpoints/sendmail/:name'
+method: GET
+pathVariables:
+  - key: name
+    value: ''
+settings: {}
+order: 3000

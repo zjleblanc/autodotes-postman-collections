@@ -1,0 +1,19 @@
+$kind: http-request
+description: Wipe a disk or partition.
+url: '{{base_url}}/nodes/:node/disks/wipedisk'
+method: PUT
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+body:
+  type: json
+  content: |-
+    {
+      "disk": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 9000

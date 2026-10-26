@@ -1,0 +1,25 @@
+$kind: http-request
+description: Update ACME plugin configuration.
+url: '{{base_url}}/cluster/acme/plugins/:id'
+method: PUT
+pathVariables:
+  - key: id
+    value: ''
+    description: ACME Plugin ID name
+body:
+  type: json
+  content: |-
+    {
+      "api": "1984hosting",
+      "data": "",
+      "delete": "",
+      "digest": "",
+      "disable": false,
+      "nodes": "",
+      "validation-delay": 30
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 4000

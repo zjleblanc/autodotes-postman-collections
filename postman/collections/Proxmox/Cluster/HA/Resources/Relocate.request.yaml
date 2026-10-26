@@ -1,0 +1,19 @@
+$kind: http-request
+description: Request resource relocation to another node. This stops the service on the old node, and restarts it on the target node.
+url: '{{base_url}}/cluster/ha/resources/:sid/relocate'
+method: POST
+pathVariables:
+  - key: sid
+    value: ''
+    description: 'HA resource ID. This consists of a resource type followed by a resource specific name, separated with colon (example: vm:100 / ct:100). For virtual machines and containers, you can simply use the VM or CT id as a shortcut (example: 100).'
+body:
+  type: json
+  content: |-
+    {
+      "node": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 7000

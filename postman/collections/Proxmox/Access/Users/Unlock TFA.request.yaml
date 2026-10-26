@@ -1,0 +1,10 @@
+$kind: http-request
+description: Unlock a user's TFA authentication.
+url: '{{base_url}}/access/users/:userid/unlock-tfa'
+method: PUT
+pathVariables:
+  - key: userid
+    value: ''
+    description: Full User ID, in the `name@realm` format.
+settings: {}
+order: 7000

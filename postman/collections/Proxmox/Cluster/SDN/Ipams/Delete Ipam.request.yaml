@@ -1,0 +1,19 @@
+$kind: http-request
+description: Delete sdn ipam object configuration.
+url: '{{base_url}}/cluster/sdn/ipams/:ipam'
+method: DELETE
+pathVariables:
+  - key: ipam
+    value: ''
+    description: The SDN ipam object identifier.
+body:
+  type: json
+  content: |-
+    {
+      "lock-token": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 5000

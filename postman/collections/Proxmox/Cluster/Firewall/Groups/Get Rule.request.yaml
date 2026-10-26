@@ -1,0 +1,13 @@
+$kind: http-request
+description: Get single rule data.
+url: '{{base_url}}/cluster/firewall/groups/:group/:pos'
+method: GET
+pathVariables:
+  - key: group
+    value: ''
+    description: Security Group name.
+  - key: pos
+    value: '0'
+    description: 'Update rule at position <pos>.'
+settings: {}
+order: 6000

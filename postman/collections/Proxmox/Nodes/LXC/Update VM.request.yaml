@@ -1,0 +1,56 @@
+$kind: http-request
+description: 'Set container options. Permissions: non-volume mount points in rootfs and mp[n] are restricted to root@pam'
+url: '{{base_url}}/nodes/:node/lxc/:vmid/config'
+method: PUT
+pathVariables:
+  - key: node
+    value: ''
+    description: The cluster node name.
+  - key: vmid
+    value: '0'
+    description: The (unique) ID of the VM.
+body:
+  type: json
+  content: |-
+    {
+      "arch": "amd64",
+      "cmode": "tty",
+      "console": true,
+      "cores": 0,
+      "cpulimit": 0,
+      "cpuunits": "cgroup v1: 1024, cgroup v2: 100",
+      "debug": false,
+      "delete": "",
+      "description": "",
+      "dev[n]": "",
+      "digest": "",
+      "entrypoint": "/sbin/init",
+      "env": "",
+      "features": "",
+      "hookscript": "",
+      "hostname": "",
+      "lock": "backup",
+      "memory": 512,
+      "mp[n]": "",
+      "nameserver": "",
+      "net[n]": "",
+      "onboot": false,
+      "ostype": "debian",
+      "protection": false,
+      "revert": "",
+      "rootfs": "",
+      "searchdomain": "",
+      "startup": "",
+      "swap": 512,
+      "tags": "",
+      "template": false,
+      "timezone": "",
+      "tty": 2,
+      "unprivileged": false,
+      "unused[n]": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 6000

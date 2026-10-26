@@ -1,0 +1,18 @@
+$kind: http-request
+description: Create new security group.
+url: '{{base_url}}/cluster/firewall/groups'
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "group": "",
+      "comment": "",
+      "digest": "",
+      "rename": ""
+    }
+headers:
+  - key: Content-Type
+    value: application/json
+settings: {}
+order: 2000

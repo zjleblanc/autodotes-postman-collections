@@ -1,0 +1,10 @@
+$kind: http-request
+description: Read sdn dns configuration.
+url: '{{base_url}}/cluster/sdn/dns/:dns'
+method: GET
+pathVariables:
+  - key: dns
+    value: ''
+    description: The SDN dns object identifier.
+settings: {}
+order: 3000

@@ -1,0 +1,6 @@
+$kind: http-request
+description: Returns known notification metadata fields
+url: '{{base_url}}/cluster/notifications/matcher-fields'
+method: GET
+settings: {}
+order: 2000

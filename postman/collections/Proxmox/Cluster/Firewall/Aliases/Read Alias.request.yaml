@@ -1,0 +1,10 @@
+$kind: http-request
+description: Read alias.
+url: '{{base_url}}/cluster/firewall/aliases/:name'
+method: GET
+pathVariables:
+  - key: name
+    value: ''
+    description: Alias name.
+settings: {}
+order: 3000
