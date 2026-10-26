@@ -1,0 +1,22 @@
+$kind: http-request
+description: >-
+  List approval requests with filtering (status, execution_id), sorting,
+  and cursor-based pagination.
+url: '{{base_url}}/api/v1/approvals'
+method: GET
+queryParams:
+  - key: limit
+    value: '20'
+    disabled: true
+  - key: cursor
+    value: ''
+    disabled: true
+  - key: sort
+    value: ''
+    disabled: true
+  - key: status
+    value: ''
+    disabled: true
+    description: Filter by approval status, e.g. pending
+settings: {}
+order: 1000

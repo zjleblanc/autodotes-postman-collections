@@ -1,0 +1,10 @@
+$kind: http-request
+description: Revoke all active sessions for a specific user. The user will need to re-authenticate.
+url: '{{base_url}}/api/v1/admin/revocation/users/:username'
+method: POST
+pathVariables:
+  - key: username
+    value: jdoe
+    description: '(Required) Username of the user'
+settings: {}
+order: 3000

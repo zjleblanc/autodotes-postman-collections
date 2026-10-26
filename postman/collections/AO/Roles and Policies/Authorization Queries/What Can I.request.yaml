@@ -1,0 +1,17 @@
+$kind: http-request
+description: >-
+  List all effective permissions for the current user as a flat, paginated
+  list of permission entries. No runtime policy evaluation call is needed.
+url: '{{base_url}}/api/v1/authz/what_can_i'
+method: POST
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "limit": 20
+    }
+settings: {}
+order: 3000

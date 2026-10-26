@@ -1,0 +1,23 @@
+$kind: http-request
+description: >-
+  List role assignments with policy-driven visibility. Supports filters for
+  principal_id, group_id, principal_name, principal_type, role_name,
+  project_id, and scope (system|project).
+url: '{{base_url}}/api/v1/role_assignments'
+method: GET
+queryParams:
+  - key: limit
+    value: '20'
+    disabled: true
+  - key: cursor
+    value: ''
+    disabled: true
+  - key: sort
+    value: ''
+    disabled: true
+  - key: scope
+    value: ''
+    disabled: true
+    description: 'Filter by scope: system or project'
+settings: {}
+order: 2000

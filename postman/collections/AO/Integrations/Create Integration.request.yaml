@@ -1,0 +1,21 @@
+$kind: http-request
+description: Create a new integration.
+url: '{{base_url}}/api/v1/integrations'
+method: POST
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "name": "My MCP Server",
+      "integration_type": "mcp_server",
+      "project_id": "{{project_id}}",
+      "credential_id": "{{credential_id}}",
+      "configuration": {
+        "url": "https://mcp.example.com"
+      }
+    }
+settings: {}
+order: 1000

@@ -1,0 +1,13 @@
+$kind: http-request
+description: Get an LLM model by ID, scoped to an integration.
+url: '{{base_url}}/api/v1/integrations/:integration_id/models/:model_id'
+method: GET
+pathVariables:
+  - key: integration_id
+    value: '{{integration_id}}'
+    description: '(Required) UUID of the integration'
+  - key: model_id
+    value: '{{model_id}}'
+    description: '(Required) UUID of the LLM model'
+settings: {}
+order: 2000

@@ -1,0 +1,9 @@
+$kind: http-request
+description: >-
+  Return the canonical catalog of resource types and the actions that can
+  be performed on each, built dynamically at startup from route
+  dependencies and built-in policies.
+url: '{{base_url}}/api/v1/authz/resource_actions'
+method: GET
+settings: {}
+order: 4000

@@ -1,0 +1,19 @@
+$kind: http-request
+description: Cancel a running or pending invocation.
+url: '{{base_url}}/api/v1/invocations/:invocation_id/cancel'
+method: POST
+headers:
+  - key: Content-Type
+    value: application/json
+pathVariables:
+  - key: invocation_id
+    value: '{{invocation_id}}'
+    description: '(Required) UUID of the invocation'
+body:
+  type: json
+  content: |-
+    {
+      "reason": "User cancelled"
+    }
+settings: {}
+order: 6000

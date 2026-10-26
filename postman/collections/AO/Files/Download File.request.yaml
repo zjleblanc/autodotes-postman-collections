@@ -1,0 +1,10 @@
+$kind: http-request
+description: Download a file by its ID. Serves the file from whichever storage backend it was uploaded to.
+url: '{{base_url}}/api/v1/files/:file_id/download'
+method: GET
+pathVariables:
+  - key: file_id
+    value: '{{file_id}}'
+    description: '(Required) UUID of the file'
+settings: {}
+order: 4000

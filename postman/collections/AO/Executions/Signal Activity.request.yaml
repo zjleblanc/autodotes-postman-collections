@@ -1,0 +1,24 @@
+$kind: http-request
+description: >-
+  Send a signal to a specific activity within a running workflow execution.
+  Used by external systems to deliver events to activities awaiting them.
+url: '{{base_url}}/api/v1/executions/:execution_id/activities/:activity_id/signal'
+method: POST
+headers:
+  - key: Content-Type
+    value: application/json
+pathVariables:
+  - key: execution_id
+    value: '{{execution_id}}'
+    description: '(Required) UUID of the execution'
+  - key: activity_id
+    value: '{{activity_id}}'
+    description: '(Required) Activity ID from the workflow definition'
+body:
+  type: json
+  content: |-
+    {
+      "signal_data": {}
+    }
+settings: {}
+order: 7000

@@ -1,0 +1,7 @@
+$kind: collection
+description: >-
+  Authorization debug/query endpoints: check a single decision (can_i),
+  reverse-lookup authorized users (who_can), list the caller's effective
+  permissions (what_can_i), browse the resource/action catalog, and validate
+  proposed resource names.
+order: 3000

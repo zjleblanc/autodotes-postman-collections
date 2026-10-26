@@ -1,0 +1,8 @@
+$kind: http-request
+description: >-
+  Set the global revocation timestamp to the current time. All tokens
+  issued before this time will be rejected.
+url: '{{base_url}}/api/v1/admin/revocation'
+method: POST
+settings: {}
+order: 2000

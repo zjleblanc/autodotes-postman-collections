@@ -1,0 +1,17 @@
+$kind: http-request
+description: Return a lightweight directory of groups (id + name only).
+url: '{{base_url}}/api/v1/groups/directory'
+method: GET
+queryParams:
+  - key: name
+    value: ''
+    disabled: true
+    description: Filter by group name
+  - key: limit
+    value: '20'
+    disabled: true
+  - key: cursor
+    value: ''
+    disabled: true
+settings: {}
+order: 12000

@@ -1,0 +1,10 @@
+$kind: http-request
+description: Permanently delete a file and its stored content.
+url: '{{base_url}}/api/v1/files/:file_id'
+method: DELETE
+pathVariables:
+  - key: file_id
+    value: '{{file_id}}'
+    description: '(Required) UUID of the file'
+settings: {}
+order: 6000

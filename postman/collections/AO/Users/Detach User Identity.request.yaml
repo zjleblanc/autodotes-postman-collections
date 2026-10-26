@@ -1,0 +1,13 @@
+$kind: http-request
+description: Detach (hard-delete) a federated identity from a user.
+url: '{{base_url}}/api/v1/users/:user_id/identities/:identity_id'
+method: DELETE
+pathVariables:
+  - key: user_id
+    value: '{{user_id}}'
+    description: '(Required) UUID of the user'
+  - key: identity_id
+    value: '{{identity_id}}'
+    description: '(Required) UUID of the identity'
+settings: {}
+order: 14000

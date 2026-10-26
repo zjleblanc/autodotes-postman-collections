@@ -1,0 +1,3 @@
+$kind: collection
+description: Project-scoped role CRUD. Includes project-owned roles and global roles with scope "project".
+order: 10000

@@ -1,0 +1,10 @@
+$kind: http-request
+description: Soft delete a user. Revokes all their sessions.
+url: '{{base_url}}/api/v1/users/:user_id'
+method: DELETE
+pathVariables:
+  - key: user_id
+    value: '{{user_id}}'
+    description: '(Required) UUID of the user'
+settings: {}
+order: 6000

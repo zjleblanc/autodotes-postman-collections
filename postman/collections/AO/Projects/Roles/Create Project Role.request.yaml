@@ -1,0 +1,22 @@
+$kind: http-request
+description: Create a role scoped to this project. Requires role:create permission.
+url: '{{base_url}}/api/v1/projects/:project_id/roles'
+method: POST
+headers:
+  - key: Content-Type
+    value: application/json
+pathVariables:
+  - key: project_id
+    value: '{{project_id}}'
+    description: '(Required) UUID of the project'
+body:
+  type: json
+  content: |-
+    {
+      "name": "workflow-editor",
+      "description": "Can edit workflows",
+      "policies": [],
+      "labels": {}
+    }
+settings: {}
+order: 1000

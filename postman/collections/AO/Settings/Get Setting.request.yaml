@@ -1,0 +1,10 @@
+$kind: http-request
+description: Get a single runtime setting by its dot-namespaced key.
+url: '{{base_url}}/api/v1/settings/:key'
+method: GET
+pathVariables:
+  - key: key
+    value: files.max_upload_size_mb
+    description: '(Required) Dot-namespaced setting key'
+settings: {}
+order: 3000

@@ -1,5 +1,23 @@
 # Changelog
 
+## 2026-10-26 — Clear zleblanc-main environment variables
+
+### Removed
+
+- `postman/environments/zleblanc-main.environment.yaml`: cleared all 23 variables (AAP, Proxmox VE, Grafana, ServiceNow, Red Hat Console, Automation Hub, Dynatrace, Bitbucket, Slack, and demo webhook/OAuth placeholders) down to an empty `values: []`, to be re-populated as needed later.
+
+## 2026-10-26 — Add AO collection generated from the Syntara domain model
+
+### Added
+
+- `postman/collections/AO/`: Postman v3 collection for the Syntara Orchestration API (FastAPI/SQLModel/Temporal), generated from the live domain model in `syntara-orchestration/syntara` (devel branch). 18 top-level folders mirror backend routers — Auth, Identity Providers, Users, Projects, Workflows, Executions, Invocations, Approvals, Credentials, Integrations, Tools, Files, Settings, Service Accounts, Role Assignments, Roles and Policies, Admin, and AAP Proxy — totaling 189 requests.
+- Collection-scoped `http:beforeRequest` pre-request script that auto-authenticates via `Auth > Login` whenever `ao_access_token` is missing or expired, using the `ao_username`/`ao_password` collection variables, and caches the resulting token and expiry (`ao_access_token_expiry`) as collection variables for reuse across requests.
+- `.postman/resources.yaml`: registered the new AO collection's workspace binding.
+
+### Fixed
+
+- `AAP Proxy/*`, `Auth/OIDC Authorize.request.yaml`, `Auth/OIDC Callback.request.yaml`, and 40+ other list/get requests: resolved `queryParams`-vs-URL mismatches, missing `formdata` `type` fields on two multipart requests, and a YAML nested-mapping parse error in `Executions/.resources/definition.yaml` — all surfaced and fixed via `postman collection lint`.
+
 ## 2026-10-26 — Add TMDB API collection from OpenAPI spec
 
 ### Added

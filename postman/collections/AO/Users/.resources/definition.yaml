@@ -1,0 +1,3 @@
+$kind: collection
+description: User account CRUD, group membership, role assignments, federated identities, and lightweight directory lookups.
+order: 3000

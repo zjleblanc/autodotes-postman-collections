@@ -1,0 +1,13 @@
+$kind: http-request
+description: Get a specific workflow version by version number.
+url: '{{base_url}}/api/v1/workflows/:workflow_id/versions/:version'
+method: GET
+pathVariables:
+  - key: workflow_id
+    value: '{{workflow_id}}'
+    description: '(Required) UUID of the workflow'
+  - key: version
+    value: '1'
+    description: '(Required) Integer version number'
+settings: {}
+order: 2000

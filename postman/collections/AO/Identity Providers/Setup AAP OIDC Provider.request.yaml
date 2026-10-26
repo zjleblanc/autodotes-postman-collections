@@ -1,0 +1,20 @@
+$kind: http-request
+description: >-
+  Push-button setup: connects to Ansible Automation Platform, creates an
+  OAuth2 application, and configures the identity provider with AAP defaults.
+url: '{{base_url}}/api/v1/identity_providers/setup_aap_oidc'
+method: POST
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "aap_base_url": "https://aap.example.com",
+      "aap_username": "admin",
+      "aap_password": "changeme",
+      "name": "Ansible Automation Platform"
+    }
+settings: {}
+order: 7000

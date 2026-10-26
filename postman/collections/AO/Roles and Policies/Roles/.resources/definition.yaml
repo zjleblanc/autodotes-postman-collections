@@ -1,0 +1,3 @@
+$kind: collection
+description: System-scope (global) role CRUD. Builtin roles cannot be modified or deleted.
+order: 1000

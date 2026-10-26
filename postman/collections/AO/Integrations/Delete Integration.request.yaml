@@ -1,0 +1,10 @@
+$kind: http-request
+description: Delete an integration. Admin-only permission.
+url: '{{base_url}}/api/v1/integrations/:integration_id'
+method: DELETE
+pathVariables:
+  - key: integration_id
+    value: '{{integration_id}}'
+    description: '(Required) UUID of the integration'
+settings: {}
+order: 5000

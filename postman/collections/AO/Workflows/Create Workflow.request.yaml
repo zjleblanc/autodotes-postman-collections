@@ -1,0 +1,23 @@
+$kind: http-request
+description: Create a new workflow with an initial version.
+url: '{{base_url}}/api/v1/workflows'
+method: POST
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "name": "My Workflow",
+      "description": "Workflow description",
+      "project_id": "{{project_id}}",
+      "labels": {},
+      "workflow_definition": {
+        "nodes": [],
+        "edges": []
+      },
+      "is_import": false
+    }
+settings: {}
+order: 2000

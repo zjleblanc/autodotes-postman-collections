@@ -1,0 +1,3 @@
+$kind: collection
+description: Group CRUD, membership management, group role assignments, and group directory lookup.
+order: 16000

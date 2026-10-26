@@ -1,0 +1,19 @@
+$kind: http-request
+description: Patch a project. Requires project:update permission scoped to this project.
+url: '{{base_url}}/api/v1/projects/:project_id'
+method: PATCH
+headers:
+  - key: Content-Type
+    value: application/json
+pathVariables:
+  - key: project_id
+    value: '{{project_id}}'
+    description: '(Required) UUID of the project'
+body:
+  type: json
+  content: |-
+    {
+      "description": "Updated description"
+    }
+settings: {}
+order: 4000

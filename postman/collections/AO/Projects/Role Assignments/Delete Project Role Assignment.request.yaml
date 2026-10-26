@@ -1,0 +1,13 @@
+$kind: http-request
+description: Remove a role assignment from a project.
+url: '{{base_url}}/api/v1/projects/:project_id/role_assignments/:assignment_id'
+method: DELETE
+pathVariables:
+  - key: project_id
+    value: '{{project_id}}'
+    description: '(Required) UUID of the project'
+  - key: assignment_id
+    value: '{{assignment_id}}'
+    description: '(Required) UUID of the role assignment'
+settings: {}
+order: 3000

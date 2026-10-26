@@ -1,0 +1,22 @@
+$kind: http-request
+description: >-
+  Submit an approval decision (approve or reject). Only pending requests can
+  be decided; this resumes workflow execution on the appropriate path.
+url: '{{base_url}}/api/v1/approvals/:approval_id'
+method: PATCH
+headers:
+  - key: Content-Type
+    value: application/json
+pathVariables:
+  - key: approval_id
+    value: '{{approval_id}}'
+    description: '(Required) UUID of the approval request'
+body:
+  type: json
+  content: |-
+    {
+      "decision": "approved",
+      "decision_notes": "Looks good"
+    }
+settings: {}
+order: 4000

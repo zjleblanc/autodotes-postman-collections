@@ -1,0 +1,19 @@
+$kind: http-request
+description: Update a group partially; only provided fields are changed.
+url: '{{base_url}}/api/v1/groups/:group_id'
+method: PATCH
+headers:
+  - key: Content-Type
+    value: application/json
+pathVariables:
+  - key: group_id
+    value: '{{group_id}}'
+    description: '(Required) UUID of the group'
+body:
+  type: json
+  content: |-
+    {
+      "description": "Updated description"
+    }
+settings: {}
+order: 4000

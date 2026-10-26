@@ -1,0 +1,6 @@
+$kind: collection
+description: >-
+  Human-in-the-loop approval requests created by workflow executions at
+  approval nodes. Supports decision submission (approve/reject) and batch
+  decisions.
+order: 8000

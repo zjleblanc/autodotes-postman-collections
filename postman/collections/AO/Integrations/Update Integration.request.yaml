@@ -1,0 +1,19 @@
+$kind: http-request
+description: Update an integration. Admin-only permission.
+url: '{{base_url}}/api/v1/integrations/:integration_id'
+method: PATCH
+headers:
+  - key: Content-Type
+    value: application/json
+pathVariables:
+  - key: integration_id
+    value: '{{integration_id}}'
+    description: '(Required) UUID of the integration'
+body:
+  type: json
+  content: |-
+    {
+      "name": "Updated Integration Name"
+    }
+settings: {}
+order: 4000

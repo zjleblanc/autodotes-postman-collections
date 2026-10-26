@@ -1,0 +1,19 @@
+$kind: http-request
+description: Patch a role. Builtin roles cannot be modified. Requires role:update permission.
+url: '{{base_url}}/api/v1/roles/:role_id'
+method: PATCH
+headers:
+  - key: Content-Type
+    value: application/json
+pathVariables:
+  - key: role_id
+    value: '{{role_id}}'
+    description: '(Required) UUID of the role'
+body:
+  type: json
+  content: |-
+    {
+      "description": "Updated description"
+    }
+settings: {}
+order: 4000

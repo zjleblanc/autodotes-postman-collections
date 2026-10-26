@@ -1,0 +1,18 @@
+$kind: http-request
+description: List Ansible Automation Platform organizations.
+url: '{{base_url}}/api/v1/proxies/aap/organizations'
+method: GET
+queryParams:
+  - key: search
+    value: ''
+    disabled: true
+  - key: integration_id
+    value: ''
+    disabled: true
+    description: UUID of the AAP integration to use (required if more than one is visible)
+  - key: credential_id
+    value: ''
+    disabled: true
+    description: UUID of a Syntara credential (type "Ansible Automation Platform") to use instead of the integration's management credential
+settings: {}
+order: 1000

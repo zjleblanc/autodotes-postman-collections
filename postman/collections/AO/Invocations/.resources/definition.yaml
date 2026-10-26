@@ -1,0 +1,6 @@
+$kind: collection
+description: >-
+  Async agent invocations (LLM/agent orchestration). Create JSON or
+  multipart (file upload) invocations, poll status, retrieve agent traces,
+  and cancel.
+order: 7000

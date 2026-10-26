@@ -1,0 +1,16 @@
+$kind: http-request
+description: List Ansible Automation Platform instance groups (not organization-scoped).
+url: '{{base_url}}/api/v1/proxies/aap/instance_groups'
+method: GET
+queryParams:
+  - key: search
+    value: ''
+    disabled: true
+  - key: integration_id
+    value: ''
+    disabled: true
+  - key: credential_id
+    value: ''
+    disabled: true
+settings: {}
+order: 9000

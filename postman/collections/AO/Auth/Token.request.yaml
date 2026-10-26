@@ -1,0 +1,23 @@
+$kind: http-request
+description: >-
+  OAuth 2.0 client credentials grant (RFC 6749 Section 4.4) for service
+  accounts. Credentials can be provided via HTTP Basic auth header or
+  form-encoded body. No refresh token is issued.
+url: '{{base_url}}/api/v1/auth/token'
+method: POST
+headers:
+  - key: Content-Type
+    value: application/x-www-form-urlencoded
+auth:
+  type: noauth
+body:
+  type: urlencoded
+  content:
+    - key: grant_type
+      value: client_credentials
+    - key: client_id
+      value: '{{sa_client_id}}'
+    - key: client_secret
+      value: '{{sa_client_secret}}'
+settings: {}
+order: 2000

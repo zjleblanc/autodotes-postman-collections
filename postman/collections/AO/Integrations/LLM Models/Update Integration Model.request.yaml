@@ -1,0 +1,22 @@
+$kind: http-request
+description: Update (enable/disable) an LLM model, scoped to an integration.
+url: '{{base_url}}/api/v1/integrations/:integration_id/models/:model_id'
+method: PATCH
+headers:
+  - key: Content-Type
+    value: application/json
+pathVariables:
+  - key: integration_id
+    value: '{{integration_id}}'
+    description: '(Required) UUID of the integration'
+  - key: model_id
+    value: '{{model_id}}'
+    description: '(Required) UUID of the LLM model'
+body:
+  type: json
+  content: |-
+    {
+      "enabled": false
+    }
+settings: {}
+order: 3000

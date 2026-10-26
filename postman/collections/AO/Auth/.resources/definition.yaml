@@ -1,0 +1,3 @@
+$kind: collection
+description: JWT authentication, OAuth2 client credentials, and OIDC authorization code flow.
+order: 1000

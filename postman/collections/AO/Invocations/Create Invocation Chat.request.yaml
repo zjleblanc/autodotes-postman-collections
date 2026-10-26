@@ -1,0 +1,32 @@
+$kind: http-request
+name: Create Invocation (Chat / File Uploads)
+description: >-
+  Accept an async agent invocation request with optional file uploads via
+  multipart/form-data.
+url: '{{base_url}}/api/v1/invocations/chat'
+method: POST
+headers:
+  - key: Content-Type
+    value: multipart/form-data
+body:
+  type: formdata
+  content:
+    - key: prompt
+      type: text
+      value: What does this file contain?
+    - key: session_id
+      type: text
+      value: session-001
+    - key: project_id
+      type: text
+      value: '{{project_id}}'
+    - key: context_data
+      type: text
+      value: '{}'
+      disabled: true
+    - key: files
+      type: file
+      src: ''
+      disabled: true
+settings: {}
+order: 2000

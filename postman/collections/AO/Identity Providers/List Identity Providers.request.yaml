@@ -1,0 +1,16 @@
+$kind: http-request
+description: List identity providers with filtering, sorting, and pagination.
+url: '{{base_url}}/api/v1/identity_providers'
+method: GET
+queryParams:
+  - key: limit
+    value: '20'
+    disabled: true
+  - key: cursor
+    value: ''
+    disabled: true
+  - key: sort
+    value: ''
+    disabled: true
+settings: {}
+order: 1000

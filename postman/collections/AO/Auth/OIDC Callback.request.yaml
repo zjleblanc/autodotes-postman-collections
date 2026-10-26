@@ -1,0 +1,28 @@
+$kind: http-request
+description: >-
+  Handle the OIDC callback after the user authenticates at the identity
+  provider. Exchanges the authorization code for tokens, validates the ID
+  token, resolves/creates a local user, and establishes a session.
+url: '{{base_url}}/api/v1/auth/oidc/callback?state={{oidc_state}}'
+method: GET
+auth:
+  type: noauth
+queryParams:
+  - key: state
+    value: '{{oidc_state}}'
+    description: '(Required) OIDC state parameter for CSRF protection'
+  - key: code
+    value: string
+    disabled: true
+    description: Authorization code from identity provider
+  - key: error
+    value: string
+    disabled: true
+    description: Error code from identity provider
+  - key: error_description
+    value: string
+    disabled: true
+    description: Human-readable error description from identity provider
+settings:
+  followRedirects: false
+order: 10000

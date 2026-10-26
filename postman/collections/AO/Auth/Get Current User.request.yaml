@@ -1,0 +1,7 @@
+$kind: http-request
+name: Get Current User (me)
+description: Return information about the currently authenticated user from the access token claims and session metadata.
+url: '{{base_url}}/api/v1/auth/me'
+method: GET
+settings: {}
+order: 7000

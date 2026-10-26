@@ -1,0 +1,107 @@
+$kind: collection
+name: AO
+description: >-
+  Syntara Orchestration API. A distributed multi-agent system built with
+  FastAPI, SQLModel, and PostgreSQL, with Temporal for workflow
+  orchestration. Generated from the domain model in
+  https://github.com/syntara-orchestration/syntara/tree/devel/backend.
+  Top-level folders map to backend domains (src/syntara/{domain}).
+variables:
+  - key: base_url
+    value: 'http://localhost:8000'
+    description: 'Syntara API base URL (no trailing slash)'
+  - key: ao_username
+    value: admin
+    description: 'Username used by the pre-request script to auto-login via Auth > Login.'
+  - key: ao_password
+    value: ''
+    description: >-
+      Password used by the pre-request script to auto-login via Auth >
+      Login. Set this locally — do not commit a real password.
+  - key: ao_access_token
+    value: ''
+    description: >-
+      JWT access token used for bearer auth. Auto-populated by the
+      collection pre-request script (calls Auth > Login with
+      ao_username/ao_password) whenever it is missing or expired. Do not
+      set manually.
+  - key: ao_access_token_expiry
+    value: ''
+    description: >-
+      Epoch ms when ao_access_token expires. Managed by the collection
+      pre-request script; do not set manually.
+auth:
+  type: bearer
+  credentials:
+    - key: token
+      value: '{{ao_access_token}}'
+scripts:
+  - type: http:beforeRequest
+    language: text/javascript
+    code: |-
+      // Collection-scoped pre-request script: ensures every request has a
+      // valid ao_access_token by logging in via Auth > Login whenever the
+      // current token is missing or expired. Username/password come from
+      // the ao_username/ao_password collection variables below.
+      (function () {
+        const TOKEN_VAR = 'ao_access_token';
+        const EXPIRY_VAR = 'ao_access_token_expiry';
+        const SAFETY_BUFFER_MS = 30 * 1000; // refresh slightly before actual expiry
+
+        // Don't auto-login for the auth endpoints that manage tokens
+        // themselves, or this script would trigger a redundant login
+        // before every call to Login/Token/Refresh Token/OIDC.
+        const path = pm.request.url.getPath();
+        const isAuthManagementRequest = ['/auth/login', '/auth/token', '/auth/refresh', '/auth/oidc'].some(
+          (p) => path.indexOf(p) !== -1
+        );
+        if (isAuthManagementRequest) {
+          return;
+        }
+
+        const existingToken = pm.collectionVariables.get(TOKEN_VAR);
+        const expiryRaw = pm.collectionVariables.get(EXPIRY_VAR);
+        const expiry = expiryRaw ? parseInt(expiryRaw, 10) : 0;
+        const isExpired = !expiry || Number.isNaN(expiry) || Date.now() >= expiry;
+
+        if (existingToken && !isExpired) {
+          return; // current token is still valid, nothing to do
+        }
+
+        const username = pm.variables.get('ao_username');
+        const password = pm.variables.get('ao_password');
+
+        if (!username || !password) {
+          console.warn(
+            'AO Auth: ao_username/ao_password are not set — skipping auto-login. ' +
+              'Set them on the AO collection variables.'
+          );
+          return;
+        }
+
+        pm.sendRequest(
+          {
+            url: pm.variables.get('base_url') + '/api/v1/auth/login',
+            method: 'POST',
+            header: { 'Content-Type': 'application/json' },
+            body: {
+              mode: 'raw',
+              raw: JSON.stringify({ username: username, password: password }),
+            },
+          },
+          function (err, res) {
+            if (err) {
+              console.error('AO Auth: login request errored', err);
+              return;
+            }
+            if (res.code !== 200) {
+              console.error('AO Auth: login failed with status ' + res.code, res.text());
+              return;
+            }
+            const body = res.json();
+            pm.collectionVariables.set(TOKEN_VAR, body.access_token);
+            const expiresInMs = (body.expires_in || 0) * 1000;
+            pm.collectionVariables.set(EXPIRY_VAR, String(Date.now() + expiresInMs - SAFETY_BUFFER_MS));
+          }
+        );
+      })();

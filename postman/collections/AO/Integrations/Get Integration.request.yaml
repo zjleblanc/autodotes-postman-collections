@@ -1,0 +1,10 @@
+$kind: http-request
+description: Get an integration by ID.
+url: '{{base_url}}/api/v1/integrations/:integration_id'
+method: GET
+pathVariables:
+  - key: integration_id
+    value: '{{integration_id}}'
+    description: '(Required) UUID of the integration'
+settings: {}
+order: 3000

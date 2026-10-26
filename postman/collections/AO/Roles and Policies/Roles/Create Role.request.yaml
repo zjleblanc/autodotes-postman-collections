@@ -1,0 +1,18 @@
+$kind: http-request
+description: Create a custom role. Requires role:create permission.
+url: '{{base_url}}/api/v1/roles'
+method: POST
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "name": "auditor-plus",
+      "description": "Extended auditor role",
+      "policies": [],
+      "labels": {}
+    }
+settings: {}
+order: 1000

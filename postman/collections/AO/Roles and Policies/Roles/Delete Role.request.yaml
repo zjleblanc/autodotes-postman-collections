@@ -1,0 +1,10 @@
+$kind: http-request
+description: Delete a role. Builtin roles cannot be deleted. Requires role:delete permission.
+url: '{{base_url}}/api/v1/roles/:role_id'
+method: DELETE
+pathVariables:
+  - key: role_id
+    value: '{{role_id}}'
+    description: '(Required) UUID of the role'
+settings: {}
+order: 6000

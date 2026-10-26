@@ -1,0 +1,16 @@
+$kind: http-request
+description: List all runtime settings with pagination, filtering, and sorting.
+url: '{{base_url}}/api/v1/settings'
+method: GET
+queryParams:
+  - key: limit
+    value: '20'
+    disabled: true
+  - key: cursor
+    value: ''
+    disabled: true
+  - key: sort
+    value: ''
+    disabled: true
+settings: {}
+order: 1000

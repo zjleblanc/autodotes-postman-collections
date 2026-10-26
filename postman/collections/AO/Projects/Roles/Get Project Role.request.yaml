@@ -1,0 +1,13 @@
+$kind: http-request
+description: Get a single role, verifying it belongs to this project.
+url: '{{base_url}}/api/v1/projects/:project_id/roles/:role_id'
+method: GET
+pathVariables:
+  - key: project_id
+    value: '{{project_id}}'
+    description: '(Required) UUID of the project'
+  - key: role_id
+    value: '{{role_id}}'
+    description: '(Required) UUID of the role'
+settings: {}
+order: 3000

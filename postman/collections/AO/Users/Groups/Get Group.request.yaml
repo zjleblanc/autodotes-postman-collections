@@ -1,0 +1,10 @@
+$kind: http-request
+description: Retrieve a group by its UUID.
+url: '{{base_url}}/api/v1/groups/:group_id'
+method: GET
+pathVariables:
+  - key: group_id
+    value: '{{group_id}}'
+    description: '(Required) UUID of the group'
+settings: {}
+order: 3000

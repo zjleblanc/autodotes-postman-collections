@@ -1,0 +1,21 @@
+$kind: http-request
+description: >-
+  Upload 1-10 files (max 10MB each) independently of invocations. Returns
+  file_ids that can be stored in workflow configuration and passed to
+  invocations.
+url: '{{base_url}}/api/v1/files'
+method: POST
+headers:
+  - key: Content-Type
+    value: multipart/form-data
+body:
+  type: formdata
+  content:
+    - key: files
+      type: file
+      src: ''
+    - key: project_id
+      type: text
+      value: '{{project_id}}'
+settings: {}
+order: 1000

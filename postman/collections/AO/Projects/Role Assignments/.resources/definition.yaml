@@ -1,0 +1,3 @@
+$kind: collection
+description: Project-scoped role assignment management (assign/revoke roles to users or groups within a project).
+order: 9000

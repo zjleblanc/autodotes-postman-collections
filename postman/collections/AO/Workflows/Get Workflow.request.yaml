@@ -1,0 +1,10 @@
+$kind: http-request
+description: Get a workflow by ID including its current active version.
+url: '{{base_url}}/api/v1/workflows/:workflow_id'
+method: GET
+pathVariables:
+  - key: workflow_id
+    value: '{{workflow_id}}'
+    description: '(Required) UUID of the workflow'
+settings: {}
+order: 4000

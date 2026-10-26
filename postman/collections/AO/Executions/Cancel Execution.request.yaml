@@ -1,0 +1,12 @@
+$kind: http-request
+description: >-
+  Request cancellation of a running workflow execution. The status update to
+  CANCELLED happens asynchronously.
+url: '{{base_url}}/api/v1/executions/:execution_id/cancel'
+method: POST
+pathVariables:
+  - key: execution_id
+    value: '{{execution_id}}'
+    description: '(Required) UUID of the execution'
+settings: {}
+order: 4000

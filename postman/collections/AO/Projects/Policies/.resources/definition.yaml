@@ -1,0 +1,3 @@
+$kind: collection
+description: Project-scoped policy CRUD. Includes project-owned policies and global policies with scope "project".
+order: 11000

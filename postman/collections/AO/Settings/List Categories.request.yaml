@@ -1,0 +1,6 @@
+$kind: http-request
+description: List all setting categories with their group names.
+url: '{{base_url}}/api/v1/settings/categories'
+method: GET
+settings: {}
+order: 2000

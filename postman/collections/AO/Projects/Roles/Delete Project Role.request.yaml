@@ -1,0 +1,13 @@
+$kind: http-request
+description: Delete a project role. Builtin roles cannot be deleted.
+url: '{{base_url}}/api/v1/projects/:project_id/roles/:role_id'
+method: DELETE
+pathVariables:
+  - key: project_id
+    value: '{{project_id}}'
+    description: '(Required) UUID of the project'
+  - key: role_id
+    value: '{{role_id}}'
+    description: '(Required) UUID of the role'
+settings: {}
+order: 6000

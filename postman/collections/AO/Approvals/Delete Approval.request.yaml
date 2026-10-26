@@ -1,0 +1,12 @@
+$kind: http-request
+description: >-
+  Delete a pending approval request. Deleting an already-decided approval
+  returns 409 Conflict.
+url: '{{base_url}}/api/v1/approvals/:approval_id'
+method: DELETE
+pathVariables:
+  - key: approval_id
+    value: '{{approval_id}}'
+    description: '(Required) UUID of the approval request'
+settings: {}
+order: 5000

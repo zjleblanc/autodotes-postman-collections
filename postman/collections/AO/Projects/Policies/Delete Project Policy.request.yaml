@@ -1,0 +1,13 @@
+$kind: http-request
+description: Delete a project policy. Only project-owned policies can be deleted.
+url: '{{base_url}}/api/v1/projects/:project_id/policies/:policy_id'
+method: DELETE
+pathVariables:
+  - key: project_id
+    value: '{{project_id}}'
+    description: '(Required) UUID of the project'
+  - key: policy_id
+    value: '{{policy_id}}'
+    description: '(Required) UUID of the policy'
+settings: {}
+order: 6000

@@ -1,0 +1,19 @@
+$kind: http-request
+description: Patch a policy. Builtin policies cannot be modified. Requires policy:update permission.
+url: '{{base_url}}/api/v1/policies/:policy_id'
+method: PATCH
+headers:
+  - key: Content-Type
+    value: application/json
+pathVariables:
+  - key: policy_id
+    value: '{{policy_id}}'
+    description: '(Required) UUID of the policy'
+body:
+  type: json
+  content: |-
+    {
+      "description": "Updated description"
+    }
+settings: {}
+order: 4000

@@ -1,0 +1,20 @@
+$kind: http-request
+description: List versions for a workflow with cursor-based pagination.
+url: '{{base_url}}/api/v1/workflows/:workflow_id/versions'
+method: GET
+pathVariables:
+  - key: workflow_id
+    value: '{{workflow_id}}'
+    description: '(Required) UUID of the workflow'
+queryParams:
+  - key: limit
+    value: '20'
+    disabled: true
+  - key: cursor
+    value: ''
+    disabled: true
+  - key: sort
+    value: ''
+    disabled: true
+settings: {}
+order: 1000

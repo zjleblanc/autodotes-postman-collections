@@ -1,0 +1,13 @@
+$kind: http-request
+description: Remove a project assignment from an integration.
+url: '{{base_url}}/api/v1/integrations/:integration_id/projects/:project_id'
+method: DELETE
+pathVariables:
+  - key: integration_id
+    value: '{{integration_id}}'
+    description: '(Required) UUID of the integration'
+  - key: project_id
+    value: '{{project_id}}'
+    description: '(Required) UUID of the project'
+settings: {}
+order: 2000

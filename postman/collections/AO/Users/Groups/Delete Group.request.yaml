@@ -1,0 +1,10 @@
+$kind: http-request
+description: Soft delete a group.
+url: '{{base_url}}/api/v1/groups/:group_id'
+method: DELETE
+pathVariables:
+  - key: group_id
+    value: '{{group_id}}'
+    description: '(Required) UUID of the group'
+settings: {}
+order: 5000

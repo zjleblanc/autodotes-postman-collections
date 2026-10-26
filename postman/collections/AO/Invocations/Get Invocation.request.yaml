@@ -1,0 +1,12 @@
+$kind: http-request
+description: >-
+  Get full invocation details including the result. For testing/debugging;
+  production systems should use WebSockets for real-time results.
+url: '{{base_url}}/api/v1/invocations/:invocation_id'
+method: GET
+pathVariables:
+  - key: invocation_id
+    value: '{{invocation_id}}'
+    description: '(Required) UUID of the invocation'
+settings: {}
+order: 4000

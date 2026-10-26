@@ -1,0 +1,17 @@
+$kind: http-request
+description: Get Ansible Automation Platform workflow job template details, including prompt-on-launch capabilities.
+url: '{{base_url}}/api/v1/proxies/aap/workflow_job_templates/:workflow_job_template_id'
+method: GET
+pathVariables:
+  - key: workflow_job_template_id
+    value: '1'
+    description: '(Required) Integer ID of the AAP workflow job template'
+queryParams:
+  - key: integration_id
+    value: ''
+    disabled: true
+  - key: credential_id
+    value: ''
+    disabled: true
+settings: {}
+order: 5000

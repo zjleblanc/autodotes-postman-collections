@@ -1,0 +1,20 @@
+$kind: http-request
+description: >-
+  Accept an async agent invocation request (JSON) and return the invocation
+  ID immediately with status=running. Poll Get Invocation for the result.
+url: '{{base_url}}/api/v1/invocations'
+method: POST
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "prompt": "Create a workflow to deploy app to production",
+      "session_id": "session-001",
+      "project_id": "{{project_id}}",
+      "context_data": {}
+    }
+settings: {}
+order: 1000

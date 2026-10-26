@@ -1,0 +1,20 @@
+$kind: http-request
+description: >-
+  Validate a workflow definition without saving it. Stateless, side-effect-free
+  check; requires authentication but no project/workflow permission.
+url: '{{base_url}}/api/v1/workflows/validate'
+method: POST
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "workflow_definition": {
+        "nodes": [],
+        "edges": []
+      }
+    }
+settings: {}
+order: 1000

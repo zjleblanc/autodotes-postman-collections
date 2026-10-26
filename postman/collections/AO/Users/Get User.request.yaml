@@ -1,0 +1,10 @@
+$kind: http-request
+description: Get a user by ID.
+url: '{{base_url}}/api/v1/users/:user_id'
+method: GET
+pathVariables:
+  - key: user_id
+    value: '{{user_id}}'
+    description: '(Required) UUID of the user'
+settings: {}
+order: 4000

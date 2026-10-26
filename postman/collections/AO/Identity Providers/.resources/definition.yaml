@@ -1,0 +1,3 @@
+$kind: collection
+description: OIDC identity provider configuration, connection testing, and push-button AAP OIDC setup.
+order: 2000

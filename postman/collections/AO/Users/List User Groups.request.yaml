@@ -1,0 +1,17 @@
+$kind: http-request
+description: List groups that a user belongs to.
+url: '{{base_url}}/api/v1/users/:user_id/groups'
+method: GET
+pathVariables:
+  - key: user_id
+    value: '{{user_id}}'
+    description: '(Required) UUID of the user'
+queryParams:
+  - key: limit
+    value: '20'
+    disabled: true
+  - key: cursor
+    value: ''
+    disabled: true
+settings: {}
+order: 7000

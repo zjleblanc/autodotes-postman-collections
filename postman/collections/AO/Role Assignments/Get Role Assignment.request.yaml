@@ -1,0 +1,13 @@
+$kind: http-request
+description: >-
+  Get a single role assignment by ID. Visibility rules match the list
+  endpoint: admins see all, project-admins see their projects, users see
+  their own.
+url: '{{base_url}}/api/v1/role_assignments/:assignment_id'
+method: GET
+pathVariables:
+  - key: assignment_id
+    value: '{{assignment_id}}'
+    description: '(Required) UUID of the role assignment'
+settings: {}
+order: 3000

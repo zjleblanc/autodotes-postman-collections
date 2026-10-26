@@ -1,0 +1,23 @@
+$kind: http-request
+description: >-
+  Update workflow metadata and/or definition. Supplying workflow_definition
+  creates a new version only if the definition differs from the current one.
+url: '{{base_url}}/api/v1/workflows/:workflow_id'
+method: PATCH
+headers:
+  - key: Content-Type
+    value: application/json
+pathVariables:
+  - key: workflow_id
+    value: '{{workflow_id}}'
+    description: '(Required) UUID of the workflow'
+body:
+  type: json
+  content: |-
+    {
+      "name": "My Workflow",
+      "description": "Updated description",
+      "change_description": "Updated node configuration"
+    }
+settings: {}
+order: 5000

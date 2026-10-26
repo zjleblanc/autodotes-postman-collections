@@ -1,0 +1,20 @@
+$kind: http-request
+description: List Ansible Automation Platform execution environments, optionally filtered by organization.
+url: '{{base_url}}/api/v1/proxies/aap/execution_environments'
+method: GET
+queryParams:
+  - key: search
+    value: ''
+    disabled: true
+  - key: organization
+    value: ''
+    disabled: true
+    description: Filter by AAP organization ID
+  - key: integration_id
+    value: ''
+    disabled: true
+  - key: credential_id
+    value: ''
+    disabled: true
+settings: {}
+order: 7000

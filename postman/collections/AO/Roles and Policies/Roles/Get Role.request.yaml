@@ -1,0 +1,10 @@
+$kind: http-request
+description: Get a role by ID (includes builtin roles).
+url: '{{base_url}}/api/v1/roles/:role_id'
+method: GET
+pathVariables:
+  - key: role_id
+    value: '{{role_id}}'
+    description: '(Required) UUID of the role'
+settings: {}
+order: 3000

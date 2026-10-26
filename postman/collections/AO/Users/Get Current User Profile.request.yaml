@@ -1,0 +1,7 @@
+$kind: http-request
+name: Get Current User Profile (me)
+description: Return information about the currently authenticated user.
+url: '{{base_url}}/api/v1/users/me'
+method: GET
+settings: {}
+order: 3000

@@ -1,0 +1,19 @@
+$kind: http-request
+description: Attach a federated identity from another user to this user.
+url: '{{base_url}}/api/v1/users/:user_id/identities'
+method: POST
+headers:
+  - key: Content-Type
+    value: application/json
+pathVariables:
+  - key: user_id
+    value: '{{user_id}}'
+    description: '(Required) UUID of the user'
+body:
+  type: json
+  content: |-
+    {
+      "identity_id": "{{identity_id}}"
+    }
+settings: {}
+order: 13000

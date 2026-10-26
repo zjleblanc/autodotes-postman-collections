@@ -1,0 +1,19 @@
+$kind: http-request
+description: >-
+  Start a new workflow execution. Starts the Temporal workflow first, then
+  creates the database record only after Temporal accepts it.
+url: '{{base_url}}/api/v1/executions'
+method: POST
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "workflow_id": "{{workflow_id}}",
+      "input_data": {},
+      "use_published": true
+    }
+settings: {}
+order: 2000

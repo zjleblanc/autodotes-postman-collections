@@ -1,0 +1,12 @@
+$kind: http-request
+description: >-
+  Retrieve the agent execution trace for a completed invocation, including
+  reasoning steps, tool calls, and tool results.
+url: '{{base_url}}/api/v1/invocations/:invocation_id/trace'
+method: GET
+pathVariables:
+  - key: invocation_id
+    value: '{{invocation_id}}'
+    description: '(Required) UUID of the invocation'
+settings: {}
+order: 5000

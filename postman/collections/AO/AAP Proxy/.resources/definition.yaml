@@ -1,0 +1,8 @@
+$kind: collection
+description: >-
+  Read-only proxy to Ansible Automation Platform, used for workflow builder
+  pickers (organizations, job/workflow templates, inventories, execution
+  environments, credentials, instance groups, labels). Resolves the AAP
+  integration/credential automatically unless integration_id or
+  credential_id is supplied.
+order: 18000

@@ -1,0 +1,19 @@
+$kind: http-request
+description: Update an identity provider.
+url: '{{base_url}}/api/v1/identity_providers/:provider_id'
+method: PATCH
+headers:
+  - key: Content-Type
+    value: application/json
+pathVariables:
+  - key: provider_id
+    value: '{{idp_id}}'
+    description: '(Required) UUID of the identity provider'
+body:
+  type: json
+  content: |-
+    {
+      "enabled": false
+    }
+settings: {}
+order: 4000

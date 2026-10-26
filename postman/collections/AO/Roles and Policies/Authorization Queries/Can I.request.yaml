@@ -1,0 +1,21 @@
+$kind: http-request
+description: >-
+  Check whether the current user can perform a specific action on a
+  resource, evaluating effective policies against the configured authz
+  evaluator.
+url: '{{base_url}}/api/v1/authz/can_i'
+method: POST
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "action": "read",
+      "resource_type": "workflow",
+      "resource_id": "",
+      "resource_project": "{{project_id}}"
+    }
+settings: {}
+order: 1000

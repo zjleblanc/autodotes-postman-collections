@@ -1,0 +1,10 @@
+$kind: http-request
+description: Soft delete an identity provider. Invalidates sessions for all affected users.
+url: '{{base_url}}/api/v1/identity_providers/:provider_id'
+method: DELETE
+pathVariables:
+  - key: provider_id
+    value: '{{idp_id}}'
+    description: '(Required) UUID of the identity provider'
+settings: {}
+order: 5000

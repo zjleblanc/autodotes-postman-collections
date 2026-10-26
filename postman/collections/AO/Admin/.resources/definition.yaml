@@ -1,0 +1,5 @@
+$kind: collection
+description: >-
+  Admin session revocation: global revocation timestamp, and targeted
+  revocation by username or identity provider name.
+order: 17000

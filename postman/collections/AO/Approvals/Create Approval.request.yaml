@@ -1,0 +1,20 @@
+$kind: http-request
+description: >-
+  Create a new approval request. Internal endpoint normally called by the
+  Workflows component when execution reaches an approval node.
+url: '{{base_url}}/api/v1/approvals'
+method: POST
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "execution_id": "{{execution_id}}",
+      "project_id": "{{project_id}}",
+      "approvers": [],
+      "context": {}
+    }
+settings: {}
+order: 2000

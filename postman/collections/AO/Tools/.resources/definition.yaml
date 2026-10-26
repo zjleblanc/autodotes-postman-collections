@@ -1,0 +1,5 @@
+$kind: collection
+description: >-
+  Top-level, cross-integration tool listing and unscoped tool status
+  updates. Integration-scoped tool CRUD lives under Integrations > MCP Tools.
+order: 11000

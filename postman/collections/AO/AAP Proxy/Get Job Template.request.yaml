@@ -1,0 +1,17 @@
+$kind: http-request
+description: Get Ansible Automation Platform job template details, including prompt-on-launch capabilities.
+url: '{{base_url}}/api/v1/proxies/aap/job_templates/:job_template_id'
+method: GET
+pathVariables:
+  - key: job_template_id
+    value: '1'
+    description: '(Required) Integer ID of the AAP job template'
+queryParams:
+  - key: integration_id
+    value: ''
+    disabled: true
+  - key: credential_id
+    value: ''
+    disabled: true
+settings: {}
+order: 3000

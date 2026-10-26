@@ -1,0 +1,7 @@
+$kind: collection
+description: >-
+  Global (system-scope) role and policy CRUD, plus authorization debug/query
+  endpoints (can_i, who_can, what_can_i, resource catalog, name validation).
+  Project-scoped roles/policies live under Projects > Roles and Projects >
+  Policies.
+order: 16000

@@ -1,0 +1,6 @@
+$kind: collection
+description: >-
+  Global (system-level) role assignment endpoints. Supports both global and
+  project-scoped assignments via an optional project_id. Visibility is
+  policy-driven (any/project/self scopes).
+order: 15000

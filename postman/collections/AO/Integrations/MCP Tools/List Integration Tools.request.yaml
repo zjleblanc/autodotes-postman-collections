@@ -1,0 +1,20 @@
+$kind: http-request
+description: List tools for an integration with filtering, sorting, and pagination.
+url: '{{base_url}}/api/v1/integrations/:integration_id/tools'
+method: GET
+pathVariables:
+  - key: integration_id
+    value: '{{integration_id}}'
+    description: '(Required) UUID of the integration (must be an mcp_server)'
+queryParams:
+  - key: limit
+    value: '20'
+    disabled: true
+  - key: cursor
+    value: ''
+    disabled: true
+  - key: sort
+    value: ''
+    disabled: true
+settings: {}
+order: 1000

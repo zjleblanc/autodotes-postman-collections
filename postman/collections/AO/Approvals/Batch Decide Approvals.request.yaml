@@ -1,0 +1,23 @@
+$kind: http-request
+description: >-
+  Submit decisions for multiple approval requests at once. Each decision is
+  processed independently; the response includes per-approval results.
+url: '{{base_url}}/api/v1/approvals/batch'
+method: POST
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "decisions": [
+        {
+          "approval_id": "{{approval_id}}",
+          "decision": "approved",
+          "decision_notes": "Batch approved"
+        }
+      ]
+    }
+settings: {}
+order: 6000

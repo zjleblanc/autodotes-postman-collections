@@ -1,0 +1,9 @@
+$kind: http-request
+description: >-
+  Exchange a valid Bearer JWT for a short-lived, single-use opaque ticket.
+  Connect to the WebSocket endpoint with ?ticket=<ticket> instead of passing
+  the raw JWT in the query string. Not available to service accounts.
+url: '{{base_url}}/api/v1/auth/ws_ticket'
+method: POST
+settings: {}
+order: 3000

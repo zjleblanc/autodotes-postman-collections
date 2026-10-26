@@ -1,0 +1,6 @@
+$kind: collection
+description: >-
+  External service integrations (AAP, LLM providers, MCP servers): CRUD,
+  connection discovery/validation, resource refresh, project assignment, and
+  sub-resource management for LLM models and MCP tools.
+order: 10000

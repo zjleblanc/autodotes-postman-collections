@@ -1,0 +1,15 @@
+$kind: http-request
+description: >-
+  Validate a resource name against naming rules, for real-time UI
+  validation before creating a project, role, or policy.
+url: '{{base_url}}/api/v1/authz/validate_name?name=my-new-project&resource_type=project'
+method: GET
+queryParams:
+  - key: name
+    value: my-new-project
+    description: '(Required) Name to validate'
+  - key: resource_type
+    value: project
+    description: 'One of: project, policy, role. Defaults to project.'
+settings: {}
+order: 5000

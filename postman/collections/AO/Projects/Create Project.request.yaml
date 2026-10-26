@@ -1,0 +1,17 @@
+$kind: http-request
+description: Create a new project. The creator is automatically assigned the project-admin role.
+url: '{{base_url}}/api/v1/projects'
+method: POST
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "name": "My Project",
+      "description": "Project description",
+      "labels": {}
+    }
+settings: {}
+order: 1000

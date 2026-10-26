@@ -1,0 +1,20 @@
+$kind: http-request
+description: Bulk enable/disable tools for an integration.
+url: '{{base_url}}/api/v1/integrations/:integration_id/tools/bulk_update'
+method: PATCH
+headers:
+  - key: Content-Type
+    value: application/json
+pathVariables:
+  - key: integration_id
+    value: '{{integration_id}}'
+    description: '(Required) UUID of the integration'
+body:
+  type: json
+  content: |-
+    {
+      "tool_ids": [],
+      "enabled": true
+    }
+settings: {}
+order: 4000

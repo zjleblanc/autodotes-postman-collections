@@ -1,0 +1,18 @@
+$kind: http-request
+description: >-
+  Retrieve executions with filtering, sorting, and cursor-based pagination.
+  Supports workflow_id, created_by, status, mode, and labels[key]=value filters.
+url: '{{base_url}}/api/v1/executions'
+method: GET
+queryParams:
+  - key: limit
+    value: '20'
+    disabled: true
+  - key: cursor
+    value: ''
+    disabled: true
+  - key: sort
+    value: ''
+    disabled: true
+settings: {}
+order: 1000

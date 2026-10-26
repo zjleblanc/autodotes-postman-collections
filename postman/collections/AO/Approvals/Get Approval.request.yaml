@@ -1,0 +1,12 @@
+$kind: http-request
+description: >-
+  Get an approval request by ID, including request context, next steps for
+  approval/rejection paths, and decision history.
+url: '{{base_url}}/api/v1/approvals/:approval_id'
+method: GET
+pathVariables:
+  - key: approval_id
+    value: '{{approval_id}}'
+    description: '(Required) UUID of the approval request'
+settings: {}
+order: 3000

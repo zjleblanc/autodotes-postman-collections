@@ -1,0 +1,20 @@
+$kind: http-request
+description: Update a runtime setting value with optimistic locking via expected_version.
+url: '{{base_url}}/api/v1/settings/:key'
+method: PATCH
+headers:
+  - key: Content-Type
+    value: application/json
+pathVariables:
+  - key: key
+    value: files.max_upload_size_mb
+    description: '(Required) Dot-namespaced setting key'
+body:
+  type: json
+  content: |-
+    {
+      "value": 10,
+      "expected_version": 1
+    }
+settings: {}
+order: 4000

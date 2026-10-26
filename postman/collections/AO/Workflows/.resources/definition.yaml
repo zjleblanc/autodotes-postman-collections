@@ -1,0 +1,6 @@
+$kind: collection
+description: >-
+  Visual workflow definitions executed by the Temporal-backed orchestration
+  engine. Includes CRUD, stateless validation, single-node testing, and
+  read-only version history/publish lifecycle.
+order: 5000

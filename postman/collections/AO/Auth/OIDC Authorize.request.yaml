@@ -1,0 +1,23 @@
+$kind: http-request
+description: >-
+  Initiate the OIDC authorization code flow. Redirects the browser to the
+  identity provider's authorization endpoint. Public endpoint.
+url: '{{base_url}}/api/v1/auth/oidc/authorize?provider_id={{idp_id}}'
+method: GET
+auth:
+  type: noauth
+queryParams:
+  - key: provider_id
+    value: '{{idp_id}}'
+    description: '(Required) UUID of the identity provider to use'
+  - key: redirect_to
+    value: string
+    disabled: true
+    description: URL to redirect to after successful login
+  - key: flow
+    value: link
+    disabled: true
+    description: 'Optional flow type: link or test_signin'
+settings:
+  followRedirects: false
+order: 9000

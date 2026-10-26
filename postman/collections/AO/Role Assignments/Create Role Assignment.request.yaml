@@ -1,0 +1,19 @@
+$kind: http-request
+description: >-
+  Assign a role to a user or group. When project_id is provided the
+  assignment is project-scoped; otherwise it is a global (system-level)
+  assignment. Exactly one of principal_id or group_id must be provided.
+url: '{{base_url}}/api/v1/role_assignments'
+method: POST
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "principal_id": "{{user_id}}",
+      "role_name": "admin"
+    }
+settings: {}
+order: 1000

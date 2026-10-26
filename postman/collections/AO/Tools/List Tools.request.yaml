@@ -1,0 +1,18 @@
+$kind: http-request
+description: >-
+  List tools with filtering, sorting, and pagination across all integrations
+  visible to the caller.
+url: '{{base_url}}/api/v1/tools'
+method: GET
+queryParams:
+  - key: limit
+    value: '20'
+    disabled: true
+  - key: cursor
+    value: ''
+    disabled: true
+  - key: sort
+    value: ''
+    disabled: true
+settings: {}
+order: 1000

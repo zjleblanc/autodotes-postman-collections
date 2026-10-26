@@ -1,0 +1,22 @@
+$kind: http-request
+description: >-
+  Test a connection and discover resources (tools or models) without saving
+  an integration. Resolves the given credential and runs the adapter's
+  discover() method.
+url: '{{base_url}}/api/v1/integrations/discover'
+method: POST
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "integration_type": "mcp_server",
+      "credential_id": "{{credential_id}}",
+      "configuration": {
+        "url": "https://mcp.example.com"
+      }
+    }
+settings: {}
+order: 6000

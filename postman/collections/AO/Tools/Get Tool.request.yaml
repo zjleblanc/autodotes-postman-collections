@@ -1,0 +1,10 @@
+$kind: http-request
+description: Get tool details by ID, including parameters.
+url: '{{base_url}}/api/v1/tools/:tool_id'
+method: GET
+pathVariables:
+  - key: tool_id
+    value: '{{tool_id}}'
+    description: '(Required) UUID of the tool'
+settings: {}
+order: 2000

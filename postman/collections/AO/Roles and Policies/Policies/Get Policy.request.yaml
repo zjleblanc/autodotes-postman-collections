@@ -1,0 +1,10 @@
+$kind: http-request
+description: Get a policy by ID (includes builtin policies).
+url: '{{base_url}}/api/v1/policies/:policy_id'
+method: GET
+pathVariables:
+  - key: policy_id
+    value: '{{policy_id}}'
+    description: '(Required) UUID of the policy'
+settings: {}
+order: 3000

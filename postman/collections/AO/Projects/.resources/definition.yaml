@@ -1,0 +1,6 @@
+$kind: collection
+description: >-
+  Project CRUD and project-scoped sub-resources: workflows, approvals, role
+  assignments, roles, policies, and credentials. Authorization is enforced
+  per-endpoint via PermissionChecker scoped to project_id.
+order: 4000

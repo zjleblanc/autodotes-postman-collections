@@ -1,0 +1,13 @@
+$kind: http-request
+description: Restore a previous workflow version as a new draft.
+url: '{{base_url}}/api/v1/workflows/:workflow_id/versions/:version/restore'
+method: POST
+pathVariables:
+  - key: workflow_id
+    value: '{{workflow_id}}'
+    description: '(Required) UUID of the workflow'
+  - key: version
+    value: '1'
+    description: '(Required) Integer version number to restore'
+settings: {}
+order: 5000

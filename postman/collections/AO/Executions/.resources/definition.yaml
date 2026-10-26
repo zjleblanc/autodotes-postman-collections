@@ -1,0 +1,3 @@
+$kind: collection
+description: 'Workflow execution lifecycle (Temporal-backed): start, inspect, cancel, retry, and list activity executions.'
+order: 6000

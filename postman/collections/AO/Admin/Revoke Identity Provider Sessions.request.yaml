@@ -1,0 +1,12 @@
+$kind: http-request
+description: >-
+  Revoke all active sessions authenticated via a specific identity
+  provider. Those users will need to re-authenticate.
+url: '{{base_url}}/api/v1/admin/revocation/identity_providers/:idp_name'
+method: POST
+pathVariables:
+  - key: idp_name
+    value: Corporate OIDC
+    description: '(Required) Name of the identity provider'
+settings: {}
+order: 4000

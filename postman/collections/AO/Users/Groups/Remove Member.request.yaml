@@ -1,0 +1,13 @@
+$kind: http-request
+description: Remove a user from a group.
+url: '{{base_url}}/api/v1/groups/:group_id/members/:user_id'
+method: DELETE
+pathVariables:
+  - key: group_id
+    value: '{{group_id}}'
+    description: '(Required) UUID of the group'
+  - key: user_id
+    value: '{{user_id}}'
+    description: '(Required) UUID of the user'
+settings: {}
+order: 7000

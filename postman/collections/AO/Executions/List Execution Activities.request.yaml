@@ -1,0 +1,22 @@
+$kind: http-request
+description: >-
+  Retrieve activity executions for a workflow execution, synced and persisted
+  from Temporal, with cursor-based pagination.
+url: '{{base_url}}/api/v1/executions/:execution_id/activities'
+method: GET
+pathVariables:
+  - key: execution_id
+    value: '{{execution_id}}'
+    description: '(Required) UUID of the execution'
+queryParams:
+  - key: limit
+    value: '20'
+    disabled: true
+  - key: cursor
+    value: ''
+    disabled: true
+  - key: sort
+    value: ''
+    disabled: true
+settings: {}
+order: 6000

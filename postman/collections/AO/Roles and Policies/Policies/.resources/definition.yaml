@@ -1,0 +1,3 @@
+$kind: collection
+description: System-scope (global) policy CRUD. Builtin policies cannot be modified or deleted.
+order: 2000

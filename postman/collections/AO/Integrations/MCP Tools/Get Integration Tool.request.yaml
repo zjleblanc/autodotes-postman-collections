@@ -1,0 +1,13 @@
+$kind: http-request
+description: Get a tool by ID, scoped to an integration, including its parameters.
+url: '{{base_url}}/api/v1/integrations/:integration_id/tools/:tool_id'
+method: GET
+pathVariables:
+  - key: integration_id
+    value: '{{integration_id}}'
+    description: '(Required) UUID of the integration'
+  - key: tool_id
+    value: '{{tool_id}}'
+    description: '(Required) UUID of the tool'
+settings: {}
+order: 2000

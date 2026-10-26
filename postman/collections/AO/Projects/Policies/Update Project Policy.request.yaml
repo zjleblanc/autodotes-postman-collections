@@ -1,0 +1,22 @@
+$kind: http-request
+description: Patch a project policy. Only project-owned policies can be modified.
+url: '{{base_url}}/api/v1/projects/:project_id/policies/:policy_id'
+method: PATCH
+headers:
+  - key: Content-Type
+    value: application/json
+pathVariables:
+  - key: project_id
+    value: '{{project_id}}'
+    description: '(Required) UUID of the project'
+  - key: policy_id
+    value: '{{policy_id}}'
+    description: '(Required) UUID of the policy'
+body:
+  type: json
+  content: |-
+    {
+      "description": "Updated description"
+    }
+settings: {}
+order: 4000

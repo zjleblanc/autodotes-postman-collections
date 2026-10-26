@@ -1,0 +1,22 @@
+$kind: http-request
+description: Test a single node in a workflow with mocked predecessor outputs.
+url: '{{base_url}}/api/v1/workflows/:workflow_id/test'
+method: POST
+headers:
+  - key: Content-Type
+    value: application/json
+pathVariables:
+  - key: workflow_id
+    value: '{{workflow_id}}'
+    description: '(Required) UUID of the workflow'
+body:
+  type: json
+  content: |-
+    {
+      "target_node_id": "node-1",
+      "pre_resolved_nodes": {},
+      "trigger_inputs": {},
+      "execute_target": true
+    }
+settings: {}
+order: 7000

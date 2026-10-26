@@ -1,0 +1,12 @@
+$kind: http-request
+description: >-
+  Retrieve metadata and conversion status for a single file by its ID. Use
+  to poll for conversion status after upload.
+url: '{{base_url}}/api/v1/files/:file_id'
+method: GET
+pathVariables:
+  - key: file_id
+    value: '{{file_id}}'
+    description: '(Required) UUID of the file'
+settings: {}
+order: 5000

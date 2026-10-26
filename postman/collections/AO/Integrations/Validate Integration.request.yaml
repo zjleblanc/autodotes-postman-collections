@@ -1,0 +1,12 @@
+$kind: http-request
+description: >-
+  Validate a saved integration with a lightweight connectivity ping. Updates
+  the integration's status fields; does not sync tools/models.
+url: '{{base_url}}/api/v1/integrations/:integration_id/validate'
+method: POST
+pathVariables:
+  - key: integration_id
+    value: '{{integration_id}}'
+    description: '(Required) UUID of the integration'
+settings: {}
+order: 7000

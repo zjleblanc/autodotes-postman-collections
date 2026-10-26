@@ -1,0 +1,15 @@
+$kind: http-request
+description: Get an execution by ID, with optional includes for additional detail.
+url: '{{base_url}}/api/v1/executions/:execution_id'
+method: GET
+pathVariables:
+  - key: execution_id
+    value: '{{execution_id}}'
+    description: '(Required) UUID of the execution'
+queryParams:
+  - key: include
+    value: ''
+    disabled: true
+    description: Comma-separated list of additional fields to include
+settings: {}
+order: 3000

@@ -1,0 +1,18 @@
+$kind: http-request
+description: Authenticate with a username and password to receive a JWT access token. Sets the ao_refresh_token HttpOnly cookie on success.
+url: '{{base_url}}/api/v1/auth/login'
+method: POST
+headers:
+  - key: Content-Type
+    value: application/json
+auth:
+  type: noauth
+body:
+  type: json
+  content: |-
+    {
+      "username": "{{ao_username}}",
+      "password": "{{ao_password}}"
+    }
+settings: {}
+order: 1000

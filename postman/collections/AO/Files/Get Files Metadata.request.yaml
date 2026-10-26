@@ -1,0 +1,12 @@
+$kind: http-request
+description: >-
+  Retrieve metadata (filename, size, MIME type, status) for one or more
+  files by their IDs, without file content. 1-10 file_ids per request.
+url: '{{base_url}}/api/v1/files/metadata?file_ids={{file_id}}'
+method: GET
+queryParams:
+  - key: file_ids
+    value: '{{file_id}}'
+    description: '(Required) Repeat this param for each file ID, e.g. file_ids=uuid1&file_ids=uuid2'
+settings: {}
+order: 3000

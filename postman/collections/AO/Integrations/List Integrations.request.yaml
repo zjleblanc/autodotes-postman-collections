@@ -1,0 +1,19 @@
+$kind: http-request
+description: List integrations with filtering and pagination, scoped to the caller's read visibility.
+url: '{{base_url}}/api/v1/integrations'
+method: GET
+queryParams:
+  - key: limit
+    value: '20'
+    disabled: true
+  - key: cursor
+    value: ''
+    disabled: true
+  - key: sort
+    value: ''
+    disabled: true
+  - key: project_id
+    value: ''
+    disabled: true
+settings: {}
+order: 2000

@@ -1,0 +1,21 @@
+$kind: http-request
+description: Update a user. Supports partial updates - only provided fields are updated.
+url: '{{base_url}}/api/v1/users/:user_id'
+method: PATCH
+headers:
+  - key: Content-Type
+    value: application/json
+pathVariables:
+  - key: user_id
+    value: '{{user_id}}'
+    description: '(Required) UUID of the user'
+body:
+  type: json
+  content: |-
+    {
+      "first_name": "Jane",
+      "last_name": "Doe",
+      "is_enabled": true
+    }
+settings: {}
+order: 5000

@@ -1,0 +1,3 @@
+$kind: collection
+description: Runtime, dot-namespaced application settings with category grouping and optimistic-locking updates.
+order: 13000

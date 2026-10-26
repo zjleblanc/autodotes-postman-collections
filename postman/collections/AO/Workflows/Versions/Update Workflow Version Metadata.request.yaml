@@ -1,0 +1,22 @@
+$kind: http-request
+description: Update a workflow version's metadata (name, change_description).
+url: '{{base_url}}/api/v1/workflows/:workflow_id/versions/:version'
+method: PATCH
+headers:
+  - key: Content-Type
+    value: application/json
+pathVariables:
+  - key: workflow_id
+    value: '{{workflow_id}}'
+    description: '(Required) UUID of the workflow'
+  - key: version
+    value: '1'
+    description: '(Required) Integer version number'
+body:
+  type: json
+  content: |-
+    {
+      "change_description": "Fixed node configuration"
+    }
+settings: {}
+order: 3000

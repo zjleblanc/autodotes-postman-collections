@@ -1,0 +1,17 @@
+$kind: http-request
+description: Return a lightweight directory of users (id + username only).
+url: '{{base_url}}/api/v1/users/directory'
+method: GET
+queryParams:
+  - key: username
+    value: ''
+    disabled: true
+    description: Filter by username
+  - key: limit
+    value: '20'
+    disabled: true
+  - key: cursor
+    value: ''
+    disabled: true
+settings: {}
+order: 15000

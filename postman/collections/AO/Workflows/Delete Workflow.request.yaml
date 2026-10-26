@@ -1,0 +1,10 @@
+$kind: http-request
+description: Permanently delete a workflow and cascade-delete all its versions and executions.
+url: '{{base_url}}/api/v1/workflows/:workflow_id'
+method: DELETE
+pathVariables:
+  - key: workflow_id
+    value: '{{workflow_id}}'
+    description: '(Required) UUID of the workflow'
+settings: {}
+order: 6000

@@ -1,0 +1,12 @@
+$kind: http-request
+description: >-
+  Sync resources (tools) for a saved integration from the external service.
+  Only supported for mcp_server integration types.
+url: '{{base_url}}/api/v1/integrations/:integration_id/refresh'
+method: POST
+pathVariables:
+  - key: integration_id
+    value: '{{integration_id}}'
+    description: '(Required) UUID of the integration'
+settings: {}
+order: 8000

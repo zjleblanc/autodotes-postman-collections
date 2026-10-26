@@ -1,0 +1,10 @@
+$kind: http-request
+description: Delete a policy. Builtin policies cannot be deleted. Requires policy:delete permission.
+url: '{{base_url}}/api/v1/policies/:policy_id'
+method: DELETE
+pathVariables:
+  - key: policy_id
+    value: '{{policy_id}}'
+    description: '(Required) UUID of the policy'
+settings: {}
+order: 6000

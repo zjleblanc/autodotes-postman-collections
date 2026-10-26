@@ -1,0 +1,11 @@
+$kind: http-request
+description: >-
+  Return the CSRF form token derived from the session's CSRF seed cookie.
+  Call once after login or OIDC redirect; send the result in the
+  X-CSRF-Token header on subsequent state-changing requests.
+url: '{{base_url}}/api/v1/auth/csrf_token'
+method: POST
+auth:
+  type: noauth
+settings: {}
+order: 4000

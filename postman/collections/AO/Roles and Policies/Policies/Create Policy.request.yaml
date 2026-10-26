@@ -1,0 +1,24 @@
+$kind: http-request
+description: Create a custom policy. Requires policy:create permission.
+url: '{{base_url}}/api/v1/policies'
+method: POST
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "name": "global-read-only",
+      "description": "Read-only access to all projects",
+      "statements": [
+        {
+          "effect": "allow",
+          "resource": "project",
+          "actions": ["read"]
+        }
+      ],
+      "labels": {}
+    }
+settings: {}
+order: 1000

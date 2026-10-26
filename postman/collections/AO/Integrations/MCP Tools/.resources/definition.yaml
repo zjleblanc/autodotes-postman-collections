@@ -1,0 +1,3 @@
+$kind: collection
+description: Tool catalog for mcp_server-type integrations (enable/disable individual or bulk).
+order: 11000

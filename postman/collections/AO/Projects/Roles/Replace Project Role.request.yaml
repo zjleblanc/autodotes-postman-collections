@@ -1,0 +1,25 @@
+$kind: http-request
+description: Replace a project role. Builtin roles cannot be modified.
+url: '{{base_url}}/api/v1/projects/:project_id/roles/:role_id'
+method: PUT
+headers:
+  - key: Content-Type
+    value: application/json
+pathVariables:
+  - key: project_id
+    value: '{{project_id}}'
+    description: '(Required) UUID of the project'
+  - key: role_id
+    value: '{{role_id}}'
+    description: '(Required) UUID of the role'
+body:
+  type: json
+  content: |-
+    {
+      "name": "workflow-editor",
+      "description": "Can edit workflows",
+      "policies": [],
+      "labels": {}
+    }
+settings: {}
+order: 5000

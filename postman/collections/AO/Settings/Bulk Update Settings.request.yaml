@@ -1,0 +1,21 @@
+$kind: http-request
+description: Update multiple settings in a single request.
+url: '{{base_url}}/api/v1/settings'
+method: PATCH
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "updates": [
+        {
+          "key": "files.max_upload_size_mb",
+          "value": 10,
+          "expected_version": 1
+        }
+      ]
+    }
+settings: {}
+order: 5000

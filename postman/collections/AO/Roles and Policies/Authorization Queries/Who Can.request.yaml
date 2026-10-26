@@ -1,0 +1,21 @@
+$kind: http-request
+description: >-
+  List users who can perform a specific action. System-wide queries require
+  authz:query (admin); project-scoped queries are limited to a small set of
+  gated (resource_type, action) pairs.
+url: '{{base_url}}/api/v1/authz/who_can'
+method: POST
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "action": "decide",
+      "resource_type": "approval",
+      "resource_project": "{{project_id}}",
+      "limit": 20
+    }
+settings: {}
+order: 2000

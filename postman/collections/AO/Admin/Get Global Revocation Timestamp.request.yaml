@@ -1,0 +1,6 @@
+$kind: http-request
+description: Read the current global revocation timestamp. Returns null fields if no revocation has been performed.
+url: '{{base_url}}/api/v1/admin/revocation'
+method: GET
+settings: {}
+order: 1000

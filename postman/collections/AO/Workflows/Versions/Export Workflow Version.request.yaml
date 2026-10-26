@@ -1,0 +1,13 @@
+$kind: http-request
+description: Export a workflow version definition as a downloadable JSON file.
+url: '{{base_url}}/api/v1/workflows/:workflow_id/versions/:version/export'
+method: GET
+pathVariables:
+  - key: workflow_id
+    value: '{{workflow_id}}'
+    description: '(Required) UUID of the workflow'
+  - key: version
+    value: '1'
+    description: '(Required) Integer version number'
+settings: {}
+order: 6000

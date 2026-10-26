@@ -1,0 +1,3 @@
+$kind: collection
+description: Project-scoped service accounts used for machine-to-machine OAuth2 client-credentials auth (see Auth > Token).
+order: 14000

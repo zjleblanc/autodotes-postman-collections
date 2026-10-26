@@ -1,0 +1,20 @@
+$kind: http-request
+description: Assign a role to this group, optionally scoped to a project.
+url: '{{base_url}}/api/v1/groups/:group_id/role_assignments'
+method: POST
+headers:
+  - key: Content-Type
+    value: application/json
+pathVariables:
+  - key: group_id
+    value: '{{group_id}}'
+    description: '(Required) UUID of the group'
+body:
+  type: json
+  content: |-
+    {
+      "role_name": "project-user",
+      "project_id": "{{project_id}}"
+    }
+settings: {}
+order: 9000

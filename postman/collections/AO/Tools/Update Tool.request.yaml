@@ -1,0 +1,19 @@
+$kind: http-request
+description: Update tool status (enable/disable), unscoped from any specific integration.
+url: '{{base_url}}/api/v1/tools/:tool_id'
+method: PATCH
+headers:
+  - key: Content-Type
+    value: application/json
+pathVariables:
+  - key: tool_id
+    value: '{{tool_id}}'
+    description: '(Required) UUID of the tool'
+body:
+  type: json
+  content: |-
+    {
+      "enabled": false
+    }
+settings: {}
+order: 3000

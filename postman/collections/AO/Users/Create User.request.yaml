@@ -1,0 +1,21 @@
+$kind: http-request
+description: Create a new local user.
+url: '{{base_url}}/api/v1/users'
+method: POST
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "username": "jdoe",
+      "first_name": "Jane",
+      "last_name": "Doe",
+      "email": "jdoe@example.com",
+      "password": "ChangeMe123!",
+      "is_enabled": true,
+      "group_names": []
+    }
+settings: {}
+order: 1000

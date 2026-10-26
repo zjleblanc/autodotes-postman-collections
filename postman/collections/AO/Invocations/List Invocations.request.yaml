@@ -1,0 +1,19 @@
+$kind: http-request
+description: >-
+  List invocations with filtering, sorting, and cursor-based pagination.
+  Supports prompt, created_by, session_id, status, labels, created_at, and
+  updated_at filters.
+url: '{{base_url}}/api/v1/invocations'
+method: GET
+queryParams:
+  - key: limit
+    value: '20'
+    disabled: true
+  - key: cursor
+    value: ''
+    disabled: true
+  - key: sort
+    value: ''
+    disabled: true
+settings: {}
+order: 3000

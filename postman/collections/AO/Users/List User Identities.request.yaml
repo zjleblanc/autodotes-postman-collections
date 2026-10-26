@@ -1,0 +1,10 @@
+$kind: http-request
+description: List federated identities for a user.
+url: '{{base_url}}/api/v1/users/:user_id/identities'
+method: GET
+pathVariables:
+  - key: user_id
+    value: '{{user_id}}'
+    description: '(Required) UUID of the user'
+settings: {}
+order: 12000

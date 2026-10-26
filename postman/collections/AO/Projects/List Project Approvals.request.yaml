@@ -1,0 +1,20 @@
+$kind: http-request
+description: List approval requests belonging to a specific project. Requires approval:read permission scoped to this project.
+url: '{{base_url}}/api/v1/projects/:project_id/approvals'
+method: GET
+pathVariables:
+  - key: project_id
+    value: '{{project_id}}'
+    description: '(Required) UUID of the project'
+queryParams:
+  - key: limit
+    value: '20'
+    disabled: true
+  - key: cursor
+    value: ''
+    disabled: true
+  - key: sort
+    value: ''
+    disabled: true
+settings: {}
+order: 8000

@@ -1,0 +1,10 @@
+$kind: http-request
+description: Unpublish the currently published workflow version.
+url: '{{base_url}}/api/v1/workflows/:workflow_id/unpublish'
+method: POST
+pathVariables:
+  - key: workflow_id
+    value: '{{workflow_id}}'
+    description: '(Required) UUID of the workflow'
+settings: {}
+order: 8000

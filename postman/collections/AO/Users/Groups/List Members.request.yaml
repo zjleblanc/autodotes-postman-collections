@@ -1,0 +1,17 @@
+$kind: http-request
+description: List members of a group with pagination.
+url: '{{base_url}}/api/v1/groups/:group_id/members'
+method: GET
+pathVariables:
+  - key: group_id
+    value: '{{group_id}}'
+    description: '(Required) UUID of the group'
+queryParams:
+  - key: limit
+    value: '20'
+    disabled: true
+  - key: cursor
+    value: ''
+    disabled: true
+settings: {}
+order: 8000

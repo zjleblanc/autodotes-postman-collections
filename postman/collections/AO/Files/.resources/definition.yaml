@@ -1,0 +1,6 @@
+$kind: collection
+description: >-
+  Design-time file upload for later use in agent invocations. Files are
+  validated, stored in S3-compatible object storage, and queued for
+  document conversion via a builtin Temporal workflow.
+order: 12000

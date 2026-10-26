@@ -1,0 +1,28 @@
+$kind: http-request
+description: Create a policy scoped to this project. Requires policy:create permission.
+url: '{{base_url}}/api/v1/projects/:project_id/policies'
+method: POST
+headers:
+  - key: Content-Type
+    value: application/json
+pathVariables:
+  - key: project_id
+    value: '{{project_id}}'
+    description: '(Required) UUID of the project'
+body:
+  type: json
+  content: |-
+    {
+      "name": "workflow-read-only",
+      "description": "Read-only access to workflows",
+      "statements": [
+        {
+          "effect": "allow",
+          "resource": "workflow",
+          "actions": ["read"]
+        }
+      ],
+      "labels": {}
+    }
+settings: {}
+order: 1000

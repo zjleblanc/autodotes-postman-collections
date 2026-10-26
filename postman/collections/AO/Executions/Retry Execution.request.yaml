@@ -1,0 +1,12 @@
+$kind: http-request
+description: >-
+  Retry a completed workflow execution. Creates a new execution using the
+  same workflow version, inputs, and trigger as the original.
+url: '{{base_url}}/api/v1/executions/:execution_id/retry'
+method: POST
+pathVariables:
+  - key: execution_id
+    value: '{{execution_id}}'
+    description: '(Required) UUID of the execution'
+settings: {}
+order: 5000

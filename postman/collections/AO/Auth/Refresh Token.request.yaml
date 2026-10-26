@@ -1,0 +1,10 @@
+$kind: http-request
+description: >-
+  Exchange a valid refresh token (read from the ao_refresh_token HttpOnly
+  cookie) for a new access token. The refresh token is not rotated.
+url: '{{base_url}}/api/v1/auth/refresh'
+method: POST
+auth:
+  type: noauth
+settings: {}
+order: 5000

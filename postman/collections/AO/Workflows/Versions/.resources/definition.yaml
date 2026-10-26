@@ -1,0 +1,6 @@
+$kind: collection
+description: >-
+  Read-only, system-managed workflow version history. Versions are created
+  automatically via PATCH Workflow with a workflow_definition; publish,
+  restore, and export operate on specific version numbers.
+order: 9000

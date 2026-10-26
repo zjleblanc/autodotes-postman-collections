@@ -1,0 +1,22 @@
+$kind: http-request
+description: >-
+  Set a user's group memberships declaratively. Replaces all current
+  memberships with the provided list of group IDs; an empty list removes
+  the user from all groups.
+url: '{{base_url}}/api/v1/users/:user_id/groups'
+method: PUT
+headers:
+  - key: Content-Type
+    value: application/json
+pathVariables:
+  - key: user_id
+    value: '{{user_id}}'
+    description: '(Required) UUID of the user'
+body:
+  type: json
+  content: |-
+    {
+      "group_ids": []
+    }
+settings: {}
+order: 8000
