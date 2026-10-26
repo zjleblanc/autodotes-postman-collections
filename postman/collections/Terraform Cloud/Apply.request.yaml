@@ -1,5 +1,0 @@
-$kind: http-request
-url: "{{tf_cloud_base_url}}/applies/apply-rDqCxYtuhdAZrx9h"
-method: GET
-settings: {}
-order: 6000

@@ -1,6 +1,0 @@
-$kind: http-request
-name: execution_environments
-url: https://{{instance_fqdn}}/api/controller/v2/execution_environments/
-method: POST
-settings: {}
-order: 5000

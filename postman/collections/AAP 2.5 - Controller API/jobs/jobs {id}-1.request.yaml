@@ -1,6 +1,0 @@
-$kind: http-request
-name: jobs {id}
-url: https://{{instance_fqdn}}/api/controller/v2/jobs/{id}/
-method: GET
-settings: {}
-order: 13000

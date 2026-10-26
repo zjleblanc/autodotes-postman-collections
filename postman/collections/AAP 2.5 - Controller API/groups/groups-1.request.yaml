@@ -1,6 +1,0 @@
-$kind: http-request
-name: groups
-url: https://{{instance_fqdn}}/api/controller/v2/groups/
-method: POST
-settings: {}
-order: 12000

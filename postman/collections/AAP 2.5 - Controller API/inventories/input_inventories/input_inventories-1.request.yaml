@@ -1,6 +1,0 @@
-$kind: http-request
-name: input_inventories
-url: https://{{instance_fqdn}}/api/controller/v2/inventories/{id}/input_inventories/
-method: POST
-settings: {}
-order: 2000

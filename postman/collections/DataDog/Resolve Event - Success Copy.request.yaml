@@ -1,6 +1,0 @@
-$kind: http-request
-url: https://{{dd_region}}/api/{{dd_api_version}}/events/8855285233918467399
-method: GET
-headers:
-  Authorization: Bearer {{dd_pat}}
-order: 3000

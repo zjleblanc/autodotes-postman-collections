@@ -1,6 +1,0 @@
-$kind: http-request
-name: variable_data
-url: https://{{instance_fqdn}}/api/controller/v2/inventories/{id}/variable_data/
-method: PUT
-settings: {}
-order: 3000

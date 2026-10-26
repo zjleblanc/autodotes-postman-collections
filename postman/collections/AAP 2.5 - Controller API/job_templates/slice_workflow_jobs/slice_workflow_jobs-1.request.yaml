@@ -1,6 +1,0 @@
-$kind: http-request
-name: slice_workflow_jobs
-url: https://{{instance_fqdn}}/api/controller/v2/job_templates/{id}/slice_workflow_jobs/
-method: POST
-settings: {}
-order: 2000

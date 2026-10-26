@@ -1,5 +1,0 @@
-$kind: http-request
-url: "{{snow_base_url}}/api/now/table/sys_rest_message/04b365c6972031101501f8890353af00"
-method: GET
-settings: {}
-order: 6000

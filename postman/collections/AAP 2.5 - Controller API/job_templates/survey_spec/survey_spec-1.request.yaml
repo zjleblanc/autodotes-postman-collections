@@ -1,6 +1,0 @@
-$kind: http-request
-name: survey_spec
-url: https://{{instance_fqdn}}/api/controller/v2/job_templates/73/survey_spec/
-method: GET
-settings: {}
-order: 2000

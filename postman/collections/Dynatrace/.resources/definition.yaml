@@ -1,8 +1,0 @@
-$kind: collection
-auth:
-  - id: d36807a4-e0d1-49b8-b28e-cef3416fa0f0
-    type: apikey
-    name: apikey auth
-    credentials:
-      value: Api-Token {{dynatrace_token}}
-      key: Authorization

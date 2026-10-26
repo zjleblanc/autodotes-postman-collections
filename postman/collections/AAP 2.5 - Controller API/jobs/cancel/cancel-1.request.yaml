@@ -1,6 +1,0 @@
-$kind: http-request
-name: cancel
-url: https://{{instance_fqdn}}/api/controller/v2/jobs/{id}/cancel/
-method: POST
-settings: {}
-order: 2000

@@ -1,6 +1,0 @@
-$kind: http-request
-name: teams {id}
-url: https://{{instance_fqdn}}/api/controller/v2/teams/{id}/
-method: GET
-settings: {}
-order: 11000

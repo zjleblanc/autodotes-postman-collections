@@ -1,8 +1,0 @@
-$kind: collection
-auth:
-  - id: c9b247fb-0fa9-4a47-910f-01e69561f280
-    type: apikey
-    name: apikey auth
-    credentials:
-      value: PVEAPIToken=root@pam!postman={{pve_token}}
-      key: Authorization

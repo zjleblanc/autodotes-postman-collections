@@ -1,5 +1,0 @@
-$kind: http-request
-url: https://{{instance_fqdn}}/api/controller/v2/jobs/{id}/cancel/
-method: GET
-settings: {}
-order: 1000

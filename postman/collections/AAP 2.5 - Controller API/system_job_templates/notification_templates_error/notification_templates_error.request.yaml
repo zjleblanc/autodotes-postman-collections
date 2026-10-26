@@ -1,5 +1,0 @@
-$kind: http-request
-url: https://{{instance_fqdn}}/api/controller/v2/system_job_templates/{id}/notification_templates_error/
-method: GET
-settings: {}
-order: 1000

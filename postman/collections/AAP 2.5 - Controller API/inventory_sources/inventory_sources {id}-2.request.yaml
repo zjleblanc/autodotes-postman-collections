@@ -1,6 +1,0 @@
-$kind: http-request
-name: inventory_sources {id}
-url: https://{{instance_fqdn}}/api/controller/v2/inventory_sources/{id}/
-method: PATCH
-settings: {}
-order: 15000

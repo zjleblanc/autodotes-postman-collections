@@ -1,6 +1,0 @@
-$kind: http-request
-url: "{{instance_fqdn}}/api/gateway/v1/session/"
-method: POST
-settings: {}
-examples: ./.resources/session create.resources/examples
-order: 2000

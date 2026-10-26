@@ -1,5 +1,0 @@
-$kind: http-request
-url: https://{{instance_fqdn}}/api/controller/v2/dashboard/graphs/jobs/
-method: GET
-settings: {}
-order: 1000

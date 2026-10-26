@@ -1,6 +1,0 @@
-$kind: http-request
-name: job_templates
-url: https://{{instance_fqdn}}/api/controller/v2/job_templates/
-method: POST
-settings: {}
-order: 22000

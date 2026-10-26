@@ -1,6 +1,0 @@
-$kind: http-request
-name: job_templates {id}
-url: https://{{instance_fqdn}}/api/controller/v2/job_templates/{id}/
-method: PATCH
-settings: {}
-order: 25000

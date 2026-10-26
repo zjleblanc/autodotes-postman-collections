@@ -1,5 +1,0 @@
-$kind: http-request
-url: https://api.bitbucket.org/2.0/repositories/{{bitbucket_workspace}}/{{bitbucket_repo}}/diffstat/1818b679aba5267b6304c3d8073f815c0c3ea2db
-method: GET
-settings: {}
-order: 1000

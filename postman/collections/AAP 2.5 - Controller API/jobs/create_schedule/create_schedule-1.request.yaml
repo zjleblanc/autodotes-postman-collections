@@ -1,6 +1,0 @@
-$kind: http-request
-name: create_schedule
-url: https://{{instance_fqdn}}/api/controller/v2/jobs/{id}/create_schedule/
-method: POST
-settings: {}
-order: 2000

@@ -1,6 +1,0 @@
-$kind: http-request
-name: Schedule
-url: "{{aap_base_url}}/api/v2/job_templates/43/schedules/"
-method: GET
-settings: {}
-order: 8000

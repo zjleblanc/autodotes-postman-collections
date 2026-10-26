@@ -1,5 +1,0 @@
-$kind: http-request
-url: https://api.themoviedb.org/3/account/20850360/favorite/movies
-method: GET
-settings: {}
-order: 2000

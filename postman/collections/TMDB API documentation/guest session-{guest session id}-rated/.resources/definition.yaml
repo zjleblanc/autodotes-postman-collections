@@ -1,3 +1,0 @@
-$kind: collection
-name: guest session/{guest session id}/rated
-order: 15000

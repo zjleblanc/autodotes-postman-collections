@@ -1,6 +1,0 @@
-$kind: http-request
-name: admins
-url: https://{{instance_fqdn}}/api/controller/v2/organizations/{id}/admins/
-method: POST
-settings: {}
-order: 2000

@@ -1,6 +1,0 @@
-$kind: http-request
-name: copy
-url: https://{{instance_fqdn}}/api/controller/v2/workflow_job_templates/{id}/copy/
-method: POST
-settings: {}
-order: 2000

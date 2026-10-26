@@ -1,6 +1,0 @@
-$kind: http-request
-name: labels
-url: https://{{instance_fqdn}}/api/controller/v2/workflow_job_template_nodes/{id}/labels/
-method: POST
-settings: {}
-order: 2000

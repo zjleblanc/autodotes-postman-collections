@@ -1,7 +1,0 @@
-$kind: collection
-auth:
-  - id: 774d3170-2e8c-43d8-ba19-9458a4151faa
-    type: bearer
-    name: bearer auth
-    credentials:
-      token: "{{grafana_token}}"

@@ -1,5 +1,0 @@
-$kind: http-request
-url: https://{{instance_fqdn}}/api/controller/v2/role_user_assignments/{id}/
-method: DELETE
-settings: {}
-order: 3000

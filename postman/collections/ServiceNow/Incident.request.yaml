@@ -1,5 +1,0 @@
-$kind: http-request
-url: "{{snow_base_url}}/api/now/table/incident/a83820b58f723300e7e16c7827bdeed2"
-method: GET
-settings: {}
-order: 1000

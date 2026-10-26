@@ -1,5 +1,0 @@
-$kind: http-request
-url: "{{aap_base_url}}/api/v2/job_templates/44/survey_spec"
-method: GET
-settings: {}
-order: 4000

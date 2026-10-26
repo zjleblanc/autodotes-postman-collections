@@ -1,5 +1,0 @@
-$kind: http-request
-url: "{{snow_base_url}}/api/now/table/u_aws_subnet/62416f7b33a14a10792c131fad5c7bb1"
-method: GET
-settings: {}
-order: 13000

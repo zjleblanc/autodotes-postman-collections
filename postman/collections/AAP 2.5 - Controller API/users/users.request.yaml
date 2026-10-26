@@ -1,5 +1,0 @@
-$kind: http-request
-url: https://{{instance_fqdn}}/api/controller/v2/users/
-method: GET
-settings: {}
-order: 10000

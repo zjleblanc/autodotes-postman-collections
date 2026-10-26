@@ -1,6 +1,0 @@
-$kind: http-request
-name: instances {id}
-url: https://{{instance_fqdn}}/api/controller/v2/instances/{id}/
-method: PATCH
-settings: {}
-order: 10000

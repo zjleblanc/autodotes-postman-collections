@@ -1,6 +1,0 @@
-$kind: http-request
-name: notification_templates_started
-url: https://{{instance_fqdn}}/api/controller/v2/inventory_sources/{id}/notification_templates_started/
-method: POST
-settings: {}
-order: 2000

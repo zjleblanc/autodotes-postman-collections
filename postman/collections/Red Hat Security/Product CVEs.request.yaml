@@ -1,9 +1,0 @@
-$kind: http-request
-url: https://access.redhat.com/hydra/rest/securitydata/cve.json?product=Red Hat Ansible Automation Platform 2.4
-method: GET
-queryParams:
-  product: Red Hat Ansible Automation Platform 2.4
-auth:
-  type: noauth
-settings: {}
-order: 2000

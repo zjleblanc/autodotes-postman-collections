@@ -1,9 +1,0 @@
-$kind: http-request
-description: Get the current configuration info of EDA.
-url: "{{instance_fqdn}}/api/eda/v1/config/"
-method: GET
-headers:
-  Accept: application/json
-settings: {}
-examples: ./.resources/config retrieve.resources/examples
-order: 1000

@@ -1,5 +1,0 @@
-$kind: http-request
-url: https://{{instance_fqdn}}/api/controller/v2/project_updates/{id}/scm_inventory_updates/
-method: GET
-settings: {}
-order: 1000

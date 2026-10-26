@@ -1,7 +1,0 @@
-$kind: http-request
-url: https://api.cisco.com/supporttools/eox/rest/5/EOXBySerialNumber/1/FHK0933224R?responseencoding=json
-method: GET
-queryParams:
-  responseencoding: json
-settings: {}
-order: 1000

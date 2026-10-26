@@ -1,7 +1,0 @@
-$kind: http-request
-description: Extend the UIAuth view from DAB to show legacy auth information
-url: "{{instance_fqdn}}/api/gateway/v1/ui_auth/"
-method: GET
-settings: {}
-examples: ./.resources/ui auth retrieve.resources/examples
-order: 1000

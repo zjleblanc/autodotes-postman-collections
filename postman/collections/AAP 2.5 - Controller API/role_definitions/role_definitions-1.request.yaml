@@ -1,6 +1,0 @@
-$kind: http-request
-name: role_definitions
-url: https://{{instance_fqdn}}/api/controller/v2/role_definitions/
-method: POST
-settings: {}
-order: 4000

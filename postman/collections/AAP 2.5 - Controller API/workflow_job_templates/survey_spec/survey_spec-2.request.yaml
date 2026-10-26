@@ -1,6 +1,0 @@
-$kind: http-request
-name: survey_spec
-url: https://{{instance_fqdn}}/api/controller/v2/workflow_job_templates/{id}/survey_spec/
-method: POST
-settings: {}
-order: 3000

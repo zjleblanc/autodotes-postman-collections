@@ -1,6 +1,0 @@
-$kind: http-request
-name: notification_templates {id}
-url: https://{{instance_fqdn}}/api/controller/v2/notification_templates/{id}/
-method: PATCH
-settings: {}
-order: 8000

@@ -1,6 +1,0 @@
-$kind: http-request
-name: hosts
-url: https://{{instance_fqdn}}/api/controller/v2/inventories/{id}/hosts/
-method: POST
-settings: {}
-order: 2000

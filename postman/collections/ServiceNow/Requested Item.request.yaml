@@ -1,5 +1,0 @@
-$kind: http-request
-url: "{{snow_base_url}}/api/now/table/cmn_location"
-method: GET
-settings: {}
-order: 3000

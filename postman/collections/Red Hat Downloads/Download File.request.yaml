@@ -1,9 +1,0 @@
-$kind: http-request
-url: https://api.access.redhat.com/management/v1/images/6fc04aacb2517e0470248402951ad995948fcd3773541d47e578564f3e86aa19/download
-method: GET
-auth:
-  type: bearer
-  credentials:
-    token: "{{rhsm_access_token}}"
-settings: {}
-order: 3000

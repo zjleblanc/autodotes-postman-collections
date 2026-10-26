@@ -1,9 +1,0 @@
-$kind: http-request
-description: Retrieve the case based on the case number supplied in the path.
-url: "{{baseUrl}}/v1/cases/04239065"
-method: GET
-headers:
-  Accept: application/json
-settings: {}
-examples: ./.resources/Get Case By Case Number.resources/examples
-order: 4000

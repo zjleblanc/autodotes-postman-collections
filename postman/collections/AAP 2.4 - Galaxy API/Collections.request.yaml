@@ -1,8 +1,0 @@
-$kind: http-request
-url: "{{pah_base_url}}/api/galaxy/pulp/api/v3/ansible/collections/?fields=name,namespace,pk&limit=10"
-method: GET
-queryParams:
-  fields: name,namespace,pk
-  limit: "10"
-settings: {}
-order: 2000

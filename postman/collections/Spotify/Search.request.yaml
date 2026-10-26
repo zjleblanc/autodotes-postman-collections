@@ -1,9 +1,0 @@
-$kind: http-request
-url: https://api.spotify.com/v1/search?q=turnpike&type=artist&market=US
-method: GET
-queryParams:
-  q: turnpike
-  type: artist
-  market: US
-settings: {}
-order: 2000

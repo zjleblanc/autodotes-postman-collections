@@ -1,6 +1,0 @@
-$kind: http-request
-name: test
-url: https://{{instance_fqdn}}/api/controller/v2/credential_types/{id}/test/
-method: POST
-settings: {}
-order: 2000

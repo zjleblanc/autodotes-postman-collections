@@ -1,6 +1,0 @@
-$kind: http-request
-name: update
-url: https://{{instance_fqdn}}/api/controller/v2/projects/{id}/update/
-method: POST
-settings: {}
-order: 2000

@@ -1,29 +1,5 @@
 cloudResources:
-  collections:
-    ../postman/collections/AAP 2.4 - Controller API: 15706575-7f5d442f-cc92-4bb9-b04d-93287b4f2dd2
-    ../postman/collections/AAP 2.4 - Galaxy API: 15706575-38864f8c-bb33-48d1-b5c4-f168925ecdf4
-    ../postman/collections/AAP 2.5 - Controller API: 15706575-e91d3bf5-94f7-4a3d-8187-47563e909ff1
-    ../postman/collections/AAP 2.5 - EDA API: 15706575-dc697c2a-09d2-40da-9bf5-26bde890673c
-    ../postman/collections/AAP 2.5 - Gateway API: 15706575-ef8f54c2-137d-4f2d-a366-fabc2aa1fa4f
-    ../postman/collections/Azure Resource Manager: 15706575-06fade79-fad5-4972-910f-b7444370aa50
-    ../postman/collections/Bitbucket: 15706575-ea3e4270-4d6e-4a09-929e-aac50b51820f
-    ../postman/collections/Cisco EOX: 15706575-ed4d3d60-4bf6-4084-b4c1-7986342a7404
-    ../postman/collections/Cloudflare: 15706575-09941a35-3851-4c72-a154-a0e28f20e5a1
-    ../postman/collections/DataDog: 15706575-b2f5538e-e828-48be-a666-b18c82a7e89a
-    ../postman/collections/Dynatrace: 15706575-31b3ce66-6246-4e41-b9fe-d65d7286f261
-    ../postman/collections/Event Streams: 15706575-ccd71d3e-ab5a-4cc6-b7af-06182b535667
-    ../postman/collections/Grafana: 15706575-b8428654-7809-4021-a864-92aeaacc599d
-    ../postman/collections/Proxmox VE: 15706575-f9dfb0a7-6942-4770-a1c7-80fcb986b850
-    ../postman/collections/Red Hat Console: 15706575-854b5497-d516-44f1-bdbb-fd4298c27880
-    ../postman/collections/Red Hat Downloads: 15706575-7306c1fd-f1d1-47b2-b628-82c2d065e05e
-    ../postman/collections/Red Hat Security: 15706575-e0164134-9b4c-43f8-86bf-bf7988744a0e
-    ../postman/collections/ServiceNow: 15706575-a1396f97-4a56-4a72-921f-46c84f369c6d
-    ../postman/collections/Slack: 15706575-44fcbec2-bf6a-415c-88ae-94918f132626
-    ../postman/collections/Spotify: 15706575-f8ab33b3-e5c7-4b71-bbf7-ac404ceeaf68
-    ../postman/collections/Support Services: 15706575-a81e2864-737d-4ba9-8b17-288ba23d2649
-    ../postman/collections/TMDB: 15706575-62359726-6d17-4bba-9a20-4b0c80a046ef
-    ../postman/collections/TMDB API documentation: 15706575-b5dd1c5a-7d65-4e5c-993a-988d3838103c
-    ../postman/collections/Terraform Cloud: 15706575-a52e4f62-51bb-4021-831f-ed0739580aa8
+  collections: null
   documents:
     ../postman/documents/WORKSPACE-README.md: 15983030-8792-4452-8e16-2db265c3810a
   environments:

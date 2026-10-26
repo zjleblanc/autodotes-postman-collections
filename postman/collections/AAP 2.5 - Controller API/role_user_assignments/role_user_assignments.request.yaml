@@ -1,5 +1,0 @@
-$kind: http-request
-url: https://{{instance_fqdn}}/api/controller/v2/role_user_assignments/
-method: GET
-settings: {}
-order: 1000

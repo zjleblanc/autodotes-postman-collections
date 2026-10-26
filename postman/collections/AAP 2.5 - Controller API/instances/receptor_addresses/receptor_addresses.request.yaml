@@ -1,5 +1,0 @@
-$kind: http-request
-url: https://{{instance_fqdn}}/api/controller/v2/instances/{id}/receptor_addresses/
-method: GET
-settings: {}
-order: 1000

@@ -1,6 +1,0 @@
-$kind: http-request
-name: inventories {id}
-url: https://{{instance_fqdn}}/api/controller/v2/inventories/{id}/
-method: GET
-settings: {}
-order: 21000

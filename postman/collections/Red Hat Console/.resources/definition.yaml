@@ -1,7 +1,0 @@
-$kind: collection
-auth:
-  - id: 07f02222-9fec-4315-93c1-ba8e714ea378
-    type: bearer
-    name: bearer auth
-    credentials:
-      token: "{{rh_console_token}}"

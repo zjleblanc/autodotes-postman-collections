@@ -1,5 +1,0 @@
-$kind: http-request
-url: "{{dynatrace_base_url}}/api/v2/entities/HOST-D922EAA7DACD5C66"
-method: GET
-settings: {}
-order: 4000

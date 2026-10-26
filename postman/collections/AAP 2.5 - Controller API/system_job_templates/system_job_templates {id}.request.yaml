@@ -1,5 +1,0 @@
-$kind: http-request
-url: https://{{instance_fqdn}}/api/controller/v2/system_job_templates/{id}/
-method: GET
-settings: {}
-order: 8000

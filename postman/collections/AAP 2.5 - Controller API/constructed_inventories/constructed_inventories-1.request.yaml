@@ -1,6 +1,0 @@
-$kind: http-request
-name: constructed_inventories
-url: https://{{instance_fqdn}}/api/controller/v2/constructed_inventories/
-method: POST
-settings: {}
-order: 2000

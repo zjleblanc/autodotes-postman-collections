@@ -1,6 +1,0 @@
-$kind: http-request
-url: "{{instance_fqdn}}/api/gateway/v1/authenticator_plugins/"
-method: GET
-settings: {}
-examples: ./.resources/authenticator plugins retrieve.resources/examples
-order: 1000

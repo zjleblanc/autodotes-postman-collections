@@ -1,6 +1,0 @@
-$kind: http-request
-name: settings {category_slug}
-url: https://{{instance_fqdn}}/api/controller/v2/settings/{category_slug}/
-method: GET
-settings: {}
-order: 4000

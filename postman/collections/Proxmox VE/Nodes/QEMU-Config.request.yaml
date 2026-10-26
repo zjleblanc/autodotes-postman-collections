@@ -1,5 +1,0 @@
-$kind: http-request
-url: "{{pve_base_url}}/nodes/pve/qemu/104/config"
-method: GET
-settings: {}
-order: 3000

@@ -1,5 +1,0 @@
-$kind: http-request
-url: https://api.spotify.com/v1/me
-method: GET
-settings: {}
-order: 3000
