@@ -1,0 +1,32 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/controller/v2/job_templates/:id/launch/'
+order: 239000
+pathVariables:
+- key: id
+  value: '1'
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "extra_vars": "",
+      "inventory": 1,
+      "scm_branch": "",
+      "limit": "",
+      "job_tags": "",
+      "skip_tags": "",
+      "job_type": "run",
+      "verbosity": 0,
+      "diff_mode": false,
+      "credentials": "",
+      "credential_passwords": "",
+      "execution_environment": 1,
+      "labels": {},
+      "forks": 1,
+      "job_slice_count": 1,
+      "timeout": 1,
+      "instance_groups": {}
+    }

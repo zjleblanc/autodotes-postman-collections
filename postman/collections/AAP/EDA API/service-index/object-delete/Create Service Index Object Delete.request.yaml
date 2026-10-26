@@ -1,0 +1,4 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/eda/v1/service-index/object-delete/'
+order: 92000

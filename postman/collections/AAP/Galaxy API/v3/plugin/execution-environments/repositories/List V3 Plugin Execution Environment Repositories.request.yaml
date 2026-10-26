@@ -1,0 +1,71 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/galaxy/v3/plugin/execution-environments/repositories/'
+order: 426000
+queryParams:
+- key: description
+  value: ''
+  description: ''
+  disabled: true
+- key: description__contains
+  value: ''
+  description: ''
+  disabled: true
+- key: description__icontains
+  value: ''
+  description: ''
+  disabled: true
+- key: description__startswith
+  value: ''
+  description: ''
+  disabled: true
+- key: limit
+  value: ''
+  description: Number of results to return per page.
+  disabled: true
+- key: my_permissions
+  value: ''
+  description: ''
+  disabled: true
+- key: name
+  value: ''
+  description: ''
+  disabled: true
+- key: name__contains
+  value: ''
+  description: ''
+  disabled: true
+- key: name__icontains
+  value: ''
+  description: ''
+  disabled: true
+- key: name__startswith
+  value: ''
+  description: ''
+  disabled: true
+- key: offset
+  value: ''
+  description: The initial index from which to return the results.
+  disabled: true
+- key: sort
+  value: ''
+  description: |-
+    Ordering
+
+    * `created_at` - Created at
+    * `-created_at` - Created at (descending)
+    * `name` - Name
+    * `-name` - Name (descending)
+    * `description` - Description
+    * `-description` - Description (descending)
+    * `updated_at` - Updated at
+    * `-updated_at` - Updated at (descending)
+  disabled: true
+- key: fields
+  value: ''
+  description: A list of fields to include in the response.
+  disabled: true
+- key: exclude_fields
+  value: ''
+  description: A list of fields to exclude from the response.
+  disabled: true

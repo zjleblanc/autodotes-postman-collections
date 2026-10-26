@@ -1,0 +1,22 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/galaxy/pulp/api/v3/repositories/ansible/ansible/:id/move_collection_version/'
+order: 311000
+pathVariables:
+- key: id
+  value: '1'
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "collection_versions": [
+        ""
+      ],
+      "destination_repositories": [
+        ""
+      ],
+      "signing_service": ""
+    }

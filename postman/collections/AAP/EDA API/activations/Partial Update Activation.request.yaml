@@ -1,0 +1,35 @@
+$kind: http-request
+method: PATCH
+url: '{{aap_base_url}}/api/eda/v1/activations/:id/'
+order: 8000
+pathVariables:
+- key: id
+  value: '1'
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "name": "",
+      "description": "",
+      "is_enabled": false,
+      "restart_on_project_update": false,
+      "decision_environment_id": 0,
+      "rulebook_id": 0,
+      "extra_var": "",
+      "organization_id": 0,
+      "user": 0,
+      "restart_policy": "always",
+      "awx_token_id": 0,
+      "log_level": "debug",
+      "eda_credentials": [
+        0
+      ],
+      "k8s_service_name": "",
+      "source_mappings": "",
+      "skip_audit_events": false,
+      "enable_persistence": false,
+      "rule_engine_credential_id": 0
+    }

@@ -1,0 +1,13 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/eda/v1/auth/token/refresh/'
+order: 21000
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "refresh": ""
+    }

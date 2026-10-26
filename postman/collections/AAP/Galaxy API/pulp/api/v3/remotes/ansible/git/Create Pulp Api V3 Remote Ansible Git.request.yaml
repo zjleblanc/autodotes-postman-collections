@@ -1,0 +1,36 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/galaxy/pulp/api/v3/remotes/ansible/git/'
+order: 291000
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "pulp_labels": {},
+      "tls_validation": false,
+      "proxy_password": null,
+      "proxy_url": null,
+      "rate_limit": null,
+      "client_cert": null,
+      "max_retries": null,
+      "name": "",
+      "proxy_username": null,
+      "sock_connect_timeout": null,
+      "username": null,
+      "url": "",
+      "headers": [
+        {}
+      ],
+      "total_timeout": null,
+      "connect_timeout": null,
+      "download_concurrency": null,
+      "ca_cert": null,
+      "sock_read_timeout": null,
+      "password": null,
+      "client_key": null,
+      "metadata_only": false,
+      "git_ref": ""
+    }

@@ -1,0 +1,28 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/eda/v1/organizations/:id/teams/'
+order: 58000
+pathVariables:
+- key: id
+  value: '1'
+queryParams:
+- key: description
+  value: ''
+  description: Filter by team description.
+  disabled: true
+- key: name
+  value: ''
+  description: Filter by team name.
+  disabled: true
+- key: page
+  value: ''
+  description: A page number within the paginated result set.
+  disabled: true
+- key: page_size
+  value: ''
+  description: Number of results to return per page.
+  disabled: true
+- key: resource__ansible_id
+  value: ''
+  description: Filter by resource ansible ID.
+  disabled: true

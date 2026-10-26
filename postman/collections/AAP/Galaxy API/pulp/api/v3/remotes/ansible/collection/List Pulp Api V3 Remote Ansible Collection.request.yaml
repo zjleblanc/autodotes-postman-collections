@@ -1,0 +1,181 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/galaxy/pulp/api/v3/remotes/ansible/collection/'
+order: 284000
+queryParams:
+- key: limit
+  value: ''
+  description: Number of results to return per page.
+  disabled: true
+- key: name
+  value: ''
+  description: Filter results where name matches value
+  disabled: true
+- key: name__contains
+  value: ''
+  description: Filter results where name contains value
+  disabled: true
+- key: name__icontains
+  value: ''
+  description: Filter results where name contains value
+  disabled: true
+- key: name__iexact
+  value: ''
+  description: Filter results where name matches value
+  disabled: true
+- key: name__in
+  value: ''
+  description: Filter results where name is in a comma-separated list of values
+  disabled: true
+- key: name__iregex
+  value: ''
+  description: Filter results where name matches regex value
+  disabled: true
+- key: name__istartswith
+  value: ''
+  description: Filter results where name starts with value
+  disabled: true
+- key: name__regex
+  value: ''
+  description: Filter results where name matches regex value
+  disabled: true
+- key: name__startswith
+  value: ''
+  description: Filter results where name starts with value
+  disabled: true
+- key: offset
+  value: ''
+  description: The initial index from which to return the results.
+  disabled: true
+- key: ordering
+  value: ''
+  description: |-
+    Ordering
+
+    * `pulp_id` - Pulp id
+    * `-pulp_id` - Pulp id (descending)
+    * `pulp_created` - Pulp created
+    * `-pulp_created` - Pulp created (descending)
+    * `pulp_last_updated` - Pulp last updated
+    * `-pulp_last_updated` - Pulp last updated (descending)
+    * `pulp_type` - Pulp type
+    * `-pulp_type` - Pulp type (descending)
+    * `name` - Name
+    * `-name` - Name (descending)
+    * `pulp_labels` - Pulp labels
+    * `-pulp_labels` - Pulp labels (descending)
+    * `url` - Url
+    * `-url` - Url (descending)
+    * `ca_cert` - Ca cert
+    * `-ca_cert` - Ca cert (descending)
+    * `client_cert` - Client cert
+    * `-client_cert` - Client cert (descending)
+    * `client_key` - Client key
+    * `-client_key` - Client key (descending)
+    * `tls_validation` - Tls validation
+    * `-tls_validation` - Tls validation (descending)
+    * `username` - Username
+    * `-username` - Username (descending)
+    * `password` - Password
+    * `-password` - Password (descending)
+    * `proxy_url` - Proxy url
+    * `-proxy_url` - Proxy url (descending)
+    * `proxy_username` - Proxy username
+    * `-proxy_username` - Proxy username (descending)
+    * `proxy_password` - Proxy password
+    * `-proxy_password` - Proxy password (descending)
+    * `download_concurrency` - Download concurrency
+    * `-download_concurrency` - Download concurrency (descending)
+    * `max_retries` - Max retries
+    * `-max_retries` - Max retries (descending)
+    * `policy` - Policy
+    * `-policy` - Policy (descending)
+    * `total_timeout` - Total timeout
+    * `-total_timeout` - Total timeout (descending)
+    * `connect_timeout` - Connect timeout
+    * `-connect_timeout` - Connect timeout (descending)
+    * `sock_connect_timeout` - Sock connect timeout
+    * `-sock_connect_timeout` - Sock connect timeout (descending)
+    * `sock_read_timeout` - Sock read timeout
+    * `-sock_read_timeout` - Sock read timeout (descending)
+    * `headers` - Headers
+    * `-headers` - Headers (descending)
+    * `rate_limit` - Rate limit
+    * `-rate_limit` - Rate limit (descending)
+    * `requirements_file` - Requirements file
+    * `-requirements_file` - Requirements file (descending)
+    * `auth_url` - Auth url
+    * `-auth_url` - Auth url (descending)
+    * `token` - Token
+    * `-token` - Token (descending)
+    * `sync_dependencies` - Sync dependencies
+    * `-sync_dependencies` - Sync dependencies (descending)
+    * `signed_only` - Signed only
+    * `-signed_only` - Signed only (descending)
+    * `pk` - Pk
+    * `-pk` - Pk (descending)
+  disabled: true
+- key: pulp_href__in
+  value: ''
+  description: Multiple values may be separated by commas.
+  disabled: true
+- key: pulp_id__in
+  value: ''
+  description: Multiple values may be separated by commas.
+  disabled: true
+- key: pulp_label_select
+  value: ''
+  description: Filter labels by search string
+  disabled: true
+- key: pulp_last_updated
+  value: ''
+  description: Filter results where pulp_last_updated matches value
+  disabled: true
+- key: pulp_last_updated__gt
+  value: ''
+  description: Filter results where pulp_last_updated is greater than value
+  disabled: true
+- key: pulp_last_updated__gte
+  value: ''
+  description: Filter results where pulp_last_updated is greater than or equal to value
+  disabled: true
+- key: pulp_last_updated__lt
+  value: ''
+  description: Filter results where pulp_last_updated is less than value
+  disabled: true
+- key: pulp_last_updated__lte
+  value: ''
+  description: Filter results where pulp_last_updated is less than or equal to value
+  disabled: true
+- key: pulp_last_updated__range
+  value: ''
+  description: Filter results where pulp_last_updated is between two comma-separated values
+  disabled: true
+- key: q
+  value: ''
+  description: ''
+  disabled: true
+- key: url
+  value: ''
+  description: Filter results where url matches value
+  disabled: true
+- key: url__contains
+  value: ''
+  description: Filter results where url contains value
+  disabled: true
+- key: url__icontains
+  value: ''
+  description: Filter results where url contains value
+  disabled: true
+- key: url__in
+  value: ''
+  description: Filter results where url is in a comma-separated list of values
+  disabled: true
+- key: fields
+  value: ''
+  description: A list of fields to include in the response.
+  disabled: true
+- key: exclude_fields
+  value: ''
+  description: A list of fields to exclude from the response.
+  disabled: true

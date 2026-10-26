@@ -1,0 +1,10 @@
+$kind: http-request
+method: PUT
+url: '{{aap_base_url}}/api/gateway/v1/settings/all/'
+order: 112000
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: '{}'

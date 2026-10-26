@@ -1,0 +1,15 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/galaxy/v3/collections/:namespace/:name/versions/:version/move/:source_path/:dest_path/'
+order: 392000
+pathVariables:
+- key: namespace
+  value: namespace
+- key: name
+  value: name
+- key: version
+  value: version
+- key: source_path
+  value: source_path
+- key: dest_path
+  value: dest_path

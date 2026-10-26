@@ -1,0 +1,14 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/galaxy/_ui/v1/auth/login/'
+order: 5000
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "username": "",
+      "password": ""
+    }

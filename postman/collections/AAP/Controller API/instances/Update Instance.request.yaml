@@ -1,0 +1,24 @@
+$kind: http-request
+method: PUT
+url: '{{aap_base_url}}/api/controller/v2/instances/:id/'
+order: 142000
+pathVariables:
+- key: id
+  value: '1'
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "hostname": "",
+      "capacity_adjustment": 1.0,
+      "enabled": true,
+      "managed_by_policy": true,
+      "node_type": "execution",
+      "node_state": "installed",
+      "peers": {},
+      "listener_port": 1,
+      "peers_from_control_nodes": false
+    }

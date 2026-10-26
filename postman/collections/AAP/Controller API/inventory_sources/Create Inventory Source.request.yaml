@@ -1,0 +1,32 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/controller/v2/inventory_sources/'
+order: 186000
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "name": "",
+      "description": "",
+      "source": "azure_rm",
+      "source_path": "",
+      "source_vars": "",
+      "scm_branch": "",
+      "credential": 1,
+      "enabled_var": "",
+      "enabled_value": "",
+      "host_filter": "",
+      "overwrite": false,
+      "overwrite_vars": false,
+      "timeout": 0,
+      "verbosity": 1,
+      "limit": "",
+      "execution_environment": 1,
+      "inventory": 1,
+      "update_on_launch": false,
+      "update_cache_timeout": 0,
+      "source_project": 1
+    }

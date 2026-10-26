@@ -1,0 +1,4 @@
+$kind: http-request
+method: DELETE
+url: '{{aap_base_url}}/api/galaxy/pulp/api/v3/login/'
+order: 269000

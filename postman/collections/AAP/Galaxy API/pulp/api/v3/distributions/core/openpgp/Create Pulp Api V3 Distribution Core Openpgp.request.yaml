@@ -1,0 +1,19 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/galaxy/pulp/api/v3/distributions/core/openpgp/'
+order: 241000
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "base_path": "",
+      "content_guard": null,
+      "hidden": false,
+      "pulp_labels": {},
+      "name": "",
+      "repository": null,
+      "repository_version": null
+    }

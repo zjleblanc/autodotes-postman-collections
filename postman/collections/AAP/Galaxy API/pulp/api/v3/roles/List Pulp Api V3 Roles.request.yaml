@@ -1,0 +1,117 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/galaxy/pulp/api/v3/roles/'
+order: 326000
+queryParams:
+- key: contains_permission
+  value: ''
+  description: Filter roles that have any of the permissions in the list.
+  disabled: true
+- key: description
+  value: ''
+  description: Filter results where description matches value
+  disabled: true
+- key: description__contains
+  value: ''
+  description: Filter results where description contains value
+  disabled: true
+- key: description__icontains
+  value: ''
+  description: Filter results where description contains value
+  disabled: true
+- key: description__iexact
+  value: ''
+  description: Filter results where description matches value
+  disabled: true
+- key: for_object_type
+  value: ''
+  description: Filter roles that only have permissions for the specified object HREF.
+  disabled: true
+- key: limit
+  value: ''
+  description: Number of results to return per page.
+  disabled: true
+- key: locked
+  value: ''
+  description: Filter results where locked matches value
+  disabled: true
+- key: name
+  value: ''
+  description: Filter results where name matches value
+  disabled: true
+- key: name__contains
+  value: ''
+  description: Filter results where name contains value
+  disabled: true
+- key: name__icontains
+  value: ''
+  description: Filter results where name contains value
+  disabled: true
+- key: name__iexact
+  value: ''
+  description: Filter results where name matches value
+  disabled: true
+- key: name__in
+  value: ''
+  description: Filter results where name is in a comma-separated list of values
+  disabled: true
+- key: name__iregex
+  value: ''
+  description: Filter results where name matches regex value
+  disabled: true
+- key: name__istartswith
+  value: ''
+  description: Filter results where name starts with value
+  disabled: true
+- key: name__regex
+  value: ''
+  description: Filter results where name matches regex value
+  disabled: true
+- key: name__startswith
+  value: ''
+  description: Filter results where name starts with value
+  disabled: true
+- key: offset
+  value: ''
+  description: The initial index from which to return the results.
+  disabled: true
+- key: ordering
+  value: ''
+  description: |-
+    Ordering
+
+    * `pulp_id` - Pulp id
+    * `-pulp_id` - Pulp id (descending)
+    * `pulp_created` - Pulp created
+    * `-pulp_created` - Pulp created (descending)
+    * `pulp_last_updated` - Pulp last updated
+    * `-pulp_last_updated` - Pulp last updated (descending)
+    * `name` - Name
+    * `-name` - Name (descending)
+    * `description` - Description
+    * `-description` - Description (descending)
+    * `locked` - Locked
+    * `-locked` - Locked (descending)
+    * `pk` - Pk
+    * `-pk` - Pk (descending)
+  disabled: true
+- key: pulp_href__in
+  value: ''
+  description: Multiple values may be separated by commas.
+  disabled: true
+- key: pulp_id__in
+  value: ''
+  description: Multiple values may be separated by commas.
+  disabled: true
+- key: q
+  value: ''
+  description: ''
+  disabled: true
+- key: fields
+  value: ''
+  description: A list of fields to include in the response.
+  disabled: true
+- key: exclude_fields
+  value: ''
+  description: A list of fields to exclude from the response.
+  disabled: true

@@ -1,0 +1,17 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/eda/v1/service-index/resources/'
+order: 97000
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "ansible_id": "00000000-0000-0000-0000-000000000000",
+      "service_id": "00000000-0000-0000-0000-000000000000",
+      "is_partially_migrated": false,
+      "resource_type": "",
+      "resource_data": null
+    }

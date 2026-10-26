@@ -1,0 +1,10 @@
+$kind: http-request
+method: PATCH
+url: '{{aap_base_url}}/api/gateway/v1/authenticators/ansible_base-authentication-authenticator_plugins-local__local-database-authenticator/'
+order: 24000
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: '{}'

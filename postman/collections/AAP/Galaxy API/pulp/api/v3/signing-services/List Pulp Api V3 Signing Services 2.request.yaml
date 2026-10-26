@@ -1,0 +1,16 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/galaxy/pulp/api/v3/signing-services/:pulp_id/'
+order: 333000
+pathVariables:
+- key: pulp_id
+  value: pulp_id
+queryParams:
+- key: fields
+  value: ''
+  description: A list of fields to include in the response.
+  disabled: true
+- key: exclude_fields
+  value: ''
+  description: A list of fields to exclude from the response.
+  disabled: true

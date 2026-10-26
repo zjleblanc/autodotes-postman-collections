@@ -1,0 +1,18 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/eda/v1/role_definitions/'
+order: 66000
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "permissions": [
+        ""
+      ],
+      "content_type": "",
+      "name": "",
+      "description": ""
+    }

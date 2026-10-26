@@ -1,0 +1,7 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/controller/v2/users/:id/admin_of_organizations/'
+order: 475000
+pathVariables:
+- key: id
+  value: '1'

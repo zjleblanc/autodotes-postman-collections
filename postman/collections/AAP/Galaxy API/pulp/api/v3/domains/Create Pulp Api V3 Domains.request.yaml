@@ -1,0 +1,19 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/galaxy/pulp/api/v3/domains/'
+order: 247000
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "name": "",
+      "description": null,
+      "pulp_labels": {},
+      "storage_class": "pulpcore.app.models.storage.FileSystem",
+      "storage_settings": {},
+      "redirect_to_object_storage": true,
+      "hide_guarded_distributions": false
+    }

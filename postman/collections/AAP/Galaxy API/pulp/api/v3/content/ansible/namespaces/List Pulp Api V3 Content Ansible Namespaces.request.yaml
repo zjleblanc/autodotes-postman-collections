@@ -1,0 +1,165 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/galaxy/pulp/api/v3/content/ansible/namespaces/'
+order: 198000
+queryParams:
+- key: company
+  value: ''
+  description: Filter results where company matches value
+  disabled: true
+- key: company__contains
+  value: ''
+  description: Filter results where company contains value
+  disabled: true
+- key: company__icontains
+  value: ''
+  description: Filter results where company contains value
+  disabled: true
+- key: company__iexact
+  value: ''
+  description: Filter results where company matches value
+  disabled: true
+- key: company__in
+  value: ''
+  description: Filter results where company is in a comma-separated list of values
+  disabled: true
+- key: company__iregex
+  value: ''
+  description: Filter results where company matches regex value
+  disabled: true
+- key: company__istartswith
+  value: ''
+  description: Filter results where company starts with value
+  disabled: true
+- key: company__regex
+  value: ''
+  description: Filter results where company matches regex value
+  disabled: true
+- key: company__startswith
+  value: ''
+  description: Filter results where company starts with value
+  disabled: true
+- key: limit
+  value: ''
+  description: Number of results to return per page.
+  disabled: true
+- key: metadata_sha256
+  value: ''
+  description: Filter results where metadata_sha256 matches value
+  disabled: true
+- key: metadata_sha256__in
+  value: ''
+  description: Filter results where metadata_sha256 is in a comma-separated list of values
+  disabled: true
+- key: name
+  value: ''
+  description: Filter results where name matches value
+  disabled: true
+- key: name__contains
+  value: ''
+  description: Filter results where name contains value
+  disabled: true
+- key: name__icontains
+  value: ''
+  description: Filter results where name contains value
+  disabled: true
+- key: name__iexact
+  value: ''
+  description: Filter results where name matches value
+  disabled: true
+- key: name__in
+  value: ''
+  description: Filter results where name is in a comma-separated list of values
+  disabled: true
+- key: name__iregex
+  value: ''
+  description: Filter results where name matches regex value
+  disabled: true
+- key: name__istartswith
+  value: ''
+  description: Filter results where name starts with value
+  disabled: true
+- key: name__regex
+  value: ''
+  description: Filter results where name matches regex value
+  disabled: true
+- key: name__startswith
+  value: ''
+  description: Filter results where name starts with value
+  disabled: true
+- key: offset
+  value: ''
+  description: The initial index from which to return the results.
+  disabled: true
+- key: ordering
+  value: ''
+  description: |-
+    Ordering
+
+    * `pulp_id` - Pulp id
+    * `-pulp_id` - Pulp id (descending)
+    * `pulp_created` - Pulp created
+    * `-pulp_created` - Pulp created (descending)
+    * `pulp_last_updated` - Pulp last updated
+    * `-pulp_last_updated` - Pulp last updated (descending)
+    * `pulp_type` - Pulp type
+    * `-pulp_type` - Pulp type (descending)
+    * `upstream_id` - Upstream id
+    * `-upstream_id` - Upstream id (descending)
+    * `timestamp_of_interest` - Timestamp of interest
+    * `-timestamp_of_interest` - Timestamp of interest (descending)
+    * `name` - Name
+    * `-name` - Name (descending)
+    * `company` - Company
+    * `-company` - Company (descending)
+    * `email` - Email
+    * `-email` - Email (descending)
+    * `description` - Description
+    * `-description` - Description (descending)
+    * `resources` - Resources
+    * `-resources` - Resources (descending)
+    * `links` - Links
+    * `-links` - Links (descending)
+    * `avatar_sha256` - Avatar sha256
+    * `-avatar_sha256` - Avatar sha256 (descending)
+    * `metadata_sha256` - Metadata sha256
+    * `-metadata_sha256` - Metadata sha256 (descending)
+    * `pk` - Pk
+    * `-pk` - Pk (descending)
+  disabled: true
+- key: orphaned_for
+  value: ''
+  description: Minutes Content has been orphaned for. -1 uses ORPHAN_PROTECTION_TIME.
+  disabled: true
+- key: pulp_href__in
+  value: ''
+  description: Multiple values may be separated by commas.
+  disabled: true
+- key: pulp_id__in
+  value: ''
+  description: Multiple values may be separated by commas.
+  disabled: true
+- key: q
+  value: ''
+  description: ''
+  disabled: true
+- key: repository_version
+  value: ''
+  description: Repository Version referenced by HREF
+  disabled: true
+- key: repository_version_added
+  value: ''
+  description: Repository Version referenced by HREF
+  disabled: true
+- key: repository_version_removed
+  value: ''
+  description: Repository Version referenced by HREF
+  disabled: true
+- key: fields
+  value: ''
+  description: A list of fields to include in the response.
+  disabled: true
+- key: exclude_fields
+  value: ''
+  description: A list of fields to exclude from the response.
+  disabled: true

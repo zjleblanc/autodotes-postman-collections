@@ -1,0 +1,33 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/controller/v2/projects/:id/schedules/'
+order: 373000
+pathVariables:
+- key: id
+  value: '1'
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "rrule": "",
+      "name": "",
+      "description": "",
+      "extra_data": {},
+      "inventory": 1,
+      "scm_branch": "",
+      "job_type": null,
+      "job_tags": "",
+      "skip_tags": "",
+      "limit": "",
+      "diff_mode": false,
+      "verbosity": null,
+      "execution_environment": 1,
+      "forks": 1,
+      "job_slice_count": 1,
+      "timeout": 1,
+      "unified_job_template": 1,
+      "enabled": true
+    }

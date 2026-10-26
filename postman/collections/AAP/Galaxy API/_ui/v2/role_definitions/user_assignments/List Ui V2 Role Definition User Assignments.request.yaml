@@ -1,0 +1,28 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/galaxy/_ui/v2/role_definitions/:id/user_assignments/'
+order: 98000
+pathVariables:
+- key: id
+  value: '1'
+queryParams:
+- key: page
+  value: ''
+  description: A page number within the paginated result set.
+  disabled: true
+- key: page_size
+  value: ''
+  description: Number of results to return per page.
+  disabled: true
+- key: search
+  value: ''
+  description: A search term.
+  disabled: true
+- key: fields
+  value: ''
+  description: A list of fields to include in the response.
+  disabled: true
+- key: exclude_fields
+  value: ''
+  description: A list of fields to exclude from the response.
+  disabled: true

@@ -1,0 +1,73 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/galaxy/pulp/api/v3/groups/'
+order: 253000
+queryParams:
+- key: id
+  value: ''
+  description: Filter results where id matches value
+  disabled: true
+- key: id__in
+  value: ''
+  description: Filter results where id is in a comma-separated list of values
+  disabled: true
+- key: limit
+  value: ''
+  description: Number of results to return per page.
+  disabled: true
+- key: name
+  value: ''
+  description: Filter results where name matches value
+  disabled: true
+- key: name__contains
+  value: ''
+  description: Filter results where name contains value
+  disabled: true
+- key: name__icontains
+  value: ''
+  description: Filter results where name contains value
+  disabled: true
+- key: name__iexact
+  value: ''
+  description: Filter results where name matches value
+  disabled: true
+- key: name__in
+  value: ''
+  description: Filter results where name is in a comma-separated list of values
+  disabled: true
+- key: offset
+  value: ''
+  description: The initial index from which to return the results.
+  disabled: true
+- key: ordering
+  value: ''
+  description: |-
+    Ordering
+
+    * `id` - Id
+    * `-id` - Id (descending)
+    * `name` - Name
+    * `-name` - Name (descending)
+    * `pk` - Pk
+    * `-pk` - Pk (descending)
+  disabled: true
+- key: pulp_href__in
+  value: ''
+  description: Multiple values may be separated by commas.
+  disabled: true
+- key: pulp_id__in
+  value: ''
+  description: Multiple values may be separated by commas.
+  disabled: true
+- key: q
+  value: ''
+  description: ''
+  disabled: true
+- key: fields
+  value: ''
+  description: A list of fields to include in the response.
+  disabled: true
+- key: exclude_fields
+  value: ''
+  description: A list of fields to exclude from the response.
+  disabled: true

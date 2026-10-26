@@ -1,0 +1,9 @@
+$kind: http-request
+method: DELETE
+url: '{{aap_base_url}}/api/galaxy/v3/plugin/execution-environments/repositories/:base_path/_content/images/:manifest_ref/'
+order: 431000
+pathVariables:
+- key: base_path
+  value: base_path
+- key: manifest_ref
+  value: manifest_ref

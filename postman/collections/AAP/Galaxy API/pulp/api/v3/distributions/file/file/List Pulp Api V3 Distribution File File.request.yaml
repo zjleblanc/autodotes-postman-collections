@@ -1,0 +1,135 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/galaxy/pulp/api/v3/distributions/file/file/'
+order: 242000
+queryParams:
+- key: base_path
+  value: ''
+  description: Filter results where base_path matches value
+  disabled: true
+- key: base_path__contains
+  value: ''
+  description: Filter results where base_path contains value
+  disabled: true
+- key: base_path__icontains
+  value: ''
+  description: Filter results where base_path contains value
+  disabled: true
+- key: base_path__in
+  value: ''
+  description: Filter results where base_path is in a comma-separated list of values
+  disabled: true
+- key: checkpoint
+  value: ''
+  description: Filter results where checkpoint matches value
+  disabled: true
+- key: limit
+  value: ''
+  description: Number of results to return per page.
+  disabled: true
+- key: name
+  value: ''
+  description: Filter results where name matches value
+  disabled: true
+- key: name__contains
+  value: ''
+  description: Filter results where name contains value
+  disabled: true
+- key: name__icontains
+  value: ''
+  description: Filter results where name contains value
+  disabled: true
+- key: name__iexact
+  value: ''
+  description: Filter results where name matches value
+  disabled: true
+- key: name__in
+  value: ''
+  description: Filter results where name is in a comma-separated list of values
+  disabled: true
+- key: name__iregex
+  value: ''
+  description: Filter results where name matches regex value
+  disabled: true
+- key: name__istartswith
+  value: ''
+  description: Filter results where name starts with value
+  disabled: true
+- key: name__regex
+  value: ''
+  description: Filter results where name matches regex value
+  disabled: true
+- key: name__startswith
+  value: ''
+  description: Filter results where name starts with value
+  disabled: true
+- key: offset
+  value: ''
+  description: The initial index from which to return the results.
+  disabled: true
+- key: ordering
+  value: ''
+  description: |-
+    Ordering
+
+    * `pulp_id` - Pulp id
+    * `-pulp_id` - Pulp id (descending)
+    * `pulp_created` - Pulp created
+    * `-pulp_created` - Pulp created (descending)
+    * `pulp_last_updated` - Pulp last updated
+    * `-pulp_last_updated` - Pulp last updated (descending)
+    * `pulp_type` - Pulp type
+    * `-pulp_type` - Pulp type (descending)
+    * `name` - Name
+    * `-name` - Name (descending)
+    * `pulp_labels` - Pulp labels
+    * `-pulp_labels` - Pulp labels (descending)
+    * `base_path` - Base path
+    * `-base_path` - Base path (descending)
+    * `hidden` - Hidden
+    * `-hidden` - Hidden (descending)
+    * `checkpoint` - Checkpoint
+    * `-checkpoint` - Checkpoint (descending)
+    * `pk` - Pk
+    * `-pk` - Pk (descending)
+  disabled: true
+- key: prn__in
+  value: ''
+  description: Multiple values may be separated by commas.
+  disabled: true
+- key: pulp_href__in
+  value: ''
+  description: Multiple values may be separated by commas.
+  disabled: true
+- key: pulp_id__in
+  value: ''
+  description: Multiple values may be separated by commas.
+  disabled: true
+- key: pulp_label_select
+  value: ''
+  description: Filter labels by search string
+  disabled: true
+- key: q
+  value: ''
+  description: Filter results by using NOT, AND and OR operations on other filters
+  disabled: true
+- key: repository
+  value: ''
+  description: ''
+  disabled: true
+- key: repository__in
+  value: ''
+  description: ''
+  disabled: true
+- key: with_content
+  value: ''
+  description: Filter distributions based on the content served by them
+  disabled: true
+- key: fields
+  value: ''
+  description: A list of fields to include in the response.
+  disabled: true
+- key: exclude_fields
+  value: ''
+  description: A list of fields to exclude from the response.
+  disabled: true

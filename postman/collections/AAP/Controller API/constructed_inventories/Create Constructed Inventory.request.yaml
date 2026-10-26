@@ -1,0 +1,22 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/controller/v2/constructed_inventories/'
+order: 11000
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "name": "",
+      "description": "",
+      "organization": 1,
+      "variables": "",
+      "prevent_instance_group_fallback": false,
+      "opa_query_path": "",
+      "source_vars": "",
+      "update_cache_timeout": 1,
+      "limit": "",
+      "verbosity": 1
+    }

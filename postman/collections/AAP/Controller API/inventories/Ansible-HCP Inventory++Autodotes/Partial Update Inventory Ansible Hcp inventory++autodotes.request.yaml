@@ -1,0 +1,10 @@
+$kind: http-request
+method: PATCH
+url: '{{aap_base_url}}/api/controller/v2/inventories/Ansible-HCP Inventory++Autodotes/'
+order: 152000
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: '{}'

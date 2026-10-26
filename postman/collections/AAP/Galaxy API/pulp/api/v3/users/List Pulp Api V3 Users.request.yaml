@@ -1,0 +1,151 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/galaxy/pulp/api/v3/users/'
+order: 343000
+queryParams:
+- key: email
+  value: ''
+  description: Filter results where email matches value
+  disabled: true
+- key: email__contains
+  value: ''
+  description: Filter results where email contains value
+  disabled: true
+- key: email__icontains
+  value: ''
+  description: Filter results where email contains value
+  disabled: true
+- key: email__iexact
+  value: ''
+  description: Filter results where email matches value
+  disabled: true
+- key: email__in
+  value: ''
+  description: Filter results where email is in a comma-separated list of values
+  disabled: true
+- key: first_name
+  value: ''
+  description: Filter results where first_name matches value
+  disabled: true
+- key: first_name__contains
+  value: ''
+  description: Filter results where first_name contains value
+  disabled: true
+- key: first_name__icontains
+  value: ''
+  description: Filter results where first_name contains value
+  disabled: true
+- key: first_name__iexact
+  value: ''
+  description: Filter results where first_name matches value
+  disabled: true
+- key: first_name__in
+  value: ''
+  description: Filter results where first_name is in a comma-separated list of values
+  disabled: true
+- key: is_active
+  value: ''
+  description: Filter results where is_active matches value
+  disabled: true
+- key: is_staff
+  value: ''
+  description: Filter results where is_staff matches value
+  disabled: true
+- key: last_name
+  value: ''
+  description: Filter results where last_name matches value
+  disabled: true
+- key: last_name__contains
+  value: ''
+  description: Filter results where last_name contains value
+  disabled: true
+- key: last_name__icontains
+  value: ''
+  description: Filter results where last_name contains value
+  disabled: true
+- key: last_name__iexact
+  value: ''
+  description: Filter results where last_name matches value
+  disabled: true
+- key: last_name__in
+  value: ''
+  description: Filter results where last_name is in a comma-separated list of values
+  disabled: true
+- key: limit
+  value: ''
+  description: Number of results to return per page.
+  disabled: true
+- key: offset
+  value: ''
+  description: The initial index from which to return the results.
+  disabled: true
+- key: ordering
+  value: ''
+  description: |-
+    Ordering
+
+    * `id` - Id
+    * `-id` - Id (descending)
+    * `password` - Password
+    * `-password` - Password (descending)
+    * `last_login` - Last login
+    * `-last_login` - Last login (descending)
+    * `is_superuser` - Is superuser
+    * `-is_superuser` - Is superuser (descending)
+    * `username` - Username
+    * `-username` - Username (descending)
+    * `first_name` - First name
+    * `-first_name` - First name (descending)
+    * `last_name` - Last name
+    * `-last_name` - Last name (descending)
+    * `email` - Email
+    * `-email` - Email (descending)
+    * `is_staff` - Is staff
+    * `-is_staff` - Is staff (descending)
+    * `is_active` - Is active
+    * `-is_active` - Is active (descending)
+    * `date_joined` - Date joined
+    * `-date_joined` - Date joined (descending)
+    * `pk` - Pk
+    * `-pk` - Pk (descending)
+  disabled: true
+- key: pulp_href__in
+  value: ''
+  description: Multiple values may be separated by commas.
+  disabled: true
+- key: pulp_id__in
+  value: ''
+  description: Multiple values may be separated by commas.
+  disabled: true
+- key: q
+  value: ''
+  description: ''
+  disabled: true
+- key: username
+  value: ''
+  description: Filter results where username matches value
+  disabled: true
+- key: username__contains
+  value: ''
+  description: Filter results where username contains value
+  disabled: true
+- key: username__icontains
+  value: ''
+  description: Filter results where username contains value
+  disabled: true
+- key: username__iexact
+  value: ''
+  description: Filter results where username matches value
+  disabled: true
+- key: username__in
+  value: ''
+  description: Filter results where username is in a comma-separated list of values
+  disabled: true
+- key: fields
+  value: ''
+  description: A list of fields to include in the response.
+  disabled: true
+- key: exclude_fields
+  value: ''
+  description: A list of fields to exclude from the response.
+  disabled: true

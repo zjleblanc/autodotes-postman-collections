@@ -1,0 +1,24 @@
+$kind: http-request
+method: PATCH
+url: '{{aap_base_url}}/api/galaxy/pulp/api/v3/users/:id/'
+order: 347000
+pathVariables:
+- key: id
+  value: '1'
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "username": "",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "groups": [
+        0
+      ],
+      "password": "",
+      "is_superuser": false
+    }

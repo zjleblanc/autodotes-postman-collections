@@ -1,0 +1,3 @@
+$kind: collection
+name: Lightspeed API
+description: 'Lightspeed is not deployed/enabled on this AAP instance: every probed path under /api/lightspeed/ returned 404 during the crawl. This placeholder documents that finding; re-run scripts/crawl_aap_api.py lightspeed once the service is enabled.'

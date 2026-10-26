@@ -1,0 +1,18 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/controller/v2/execution_environments/'
+order: 53000
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "name": "",
+      "description": "",
+      "organization": 1,
+      "image": "",
+      "credential": 1,
+      "pull": ""
+    }

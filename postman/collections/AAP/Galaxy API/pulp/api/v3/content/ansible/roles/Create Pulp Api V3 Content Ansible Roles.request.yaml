@@ -1,0 +1,18 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/galaxy/pulp/api/v3/content/ansible/roles/'
+order: 201000
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "pulp_labels": {},
+      "artifact": "",
+      "repository": "",
+      "version": "",
+      "name": "",
+      "namespace": ""
+    }

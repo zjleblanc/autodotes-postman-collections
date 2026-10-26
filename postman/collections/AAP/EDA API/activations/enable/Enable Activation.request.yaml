@@ -1,0 +1,7 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/eda/v1/activations/:id/enable/'
+order: 11000
+pathVariables:
+- key: id
+  value: '1'

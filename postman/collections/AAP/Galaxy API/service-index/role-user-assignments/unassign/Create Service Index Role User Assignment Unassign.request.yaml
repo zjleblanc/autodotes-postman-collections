@@ -1,0 +1,17 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/galaxy/service-index/role-user-assignments/unassign/'
+order: 371000
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "created_by_ansible_id": null,
+      "object_id": null,
+      "object_ansible_id": null,
+      "role_definition": "",
+      "user_ansible_id": "00000000-0000-0000-0000-000000000000"
+    }

@@ -1,0 +1,24 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/eda/v1/rulebooks/:id/sources/'
+order: 89000
+pathVariables:
+- key: id
+  value: '1'
+queryParams:
+- key: name
+  value: ''
+  description: Filter by rulebook name.
+  disabled: true
+- key: page
+  value: ''
+  description: A page number within the paginated result set.
+  disabled: true
+- key: page_size
+  value: ''
+  description: Number of results to return per page.
+  disabled: true
+- key: project_id
+  value: ''
+  description: Filter by rulebook's project id.
+  disabled: true

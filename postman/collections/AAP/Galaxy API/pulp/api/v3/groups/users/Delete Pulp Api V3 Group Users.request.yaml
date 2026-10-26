@@ -1,0 +1,9 @@
+$kind: http-request
+method: DELETE
+url: '{{aap_base_url}}/api/galaxy/pulp/api/v3/groups/:group_pk/users/:id/'
+order: 257000
+pathVariables:
+- key: group_pk
+  value: group_pk
+- key: id
+  value: '1'

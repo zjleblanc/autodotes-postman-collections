@@ -1,0 +1,95 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/galaxy/_ui/v1/collection-versions/'
+order: 7000
+queryParams:
+- key: dependency
+  value: ''
+  description: ''
+  disabled: true
+- key: limit
+  value: ''
+  description: Number of results to return per page.
+  disabled: true
+- key: name
+  value: ''
+  description: ''
+  disabled: true
+- key: name__contains
+  value: ''
+  description: ''
+  disabled: true
+- key: name__icontains
+  value: ''
+  description: ''
+  disabled: true
+- key: name__startswith
+  value: ''
+  description: ''
+  disabled: true
+- key: namespace
+  value: ''
+  description: ''
+  disabled: true
+- key: namespace__contains
+  value: ''
+  description: ''
+  disabled: true
+- key: namespace__icontains
+  value: ''
+  description: ''
+  disabled: true
+- key: namespace__startswith
+  value: ''
+  description: ''
+  disabled: true
+- key: offset
+  value: ''
+  description: The initial index from which to return the results.
+  disabled: true
+- key: repository
+  value: ''
+  description: ''
+  disabled: true
+- key: sort
+  value: ''
+  description: |-
+    Ordering
+
+    * `pulp_created` - Pulp created
+    * `-pulp_created` - Pulp created (descending)
+    * `namespace` - Namespace
+    * `-namespace` - Namespace (descending)
+    * `collection` - Collection
+    * `-collection` - Collection (descending)
+    * `version` - Version
+    * `-version` - Version (descending)
+  disabled: true
+- key: version
+  value: ''
+  description: ''
+  disabled: true
+- key: version__contains
+  value: ''
+  description: ''
+  disabled: true
+- key: version__icontains
+  value: ''
+  description: ''
+  disabled: true
+- key: version__startswith
+  value: ''
+  description: ''
+  disabled: true
+- key: version_range
+  value: ''
+  description: ''
+  disabled: true
+- key: fields
+  value: ''
+  description: A list of fields to include in the response.
+  disabled: true
+- key: exclude_fields
+  value: ''
+  description: A list of fields to exclude from the response.
+  disabled: true

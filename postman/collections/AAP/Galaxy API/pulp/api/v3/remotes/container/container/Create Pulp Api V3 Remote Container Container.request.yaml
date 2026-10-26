@@ -1,0 +1,18 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/galaxy/pulp/api/v3/remotes/container/container/'
+order: 295000
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "name": "",
+      "upstream_name": "",
+      "registry": "",
+      "include_foreign_layers": false,
+      "include_tags": null,
+      "exclude_tags": null
+    }

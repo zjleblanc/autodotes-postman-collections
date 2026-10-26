@@ -1,0 +1,25 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/eda/v1/projects/'
+order: 60000
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "url": "",
+      "proxy": "",
+      "name": "",
+      "description": "",
+      "organization_id": 0,
+      "eda_credential_id": 0,
+      "signature_validation_credential_id": 0,
+      "verify_ssl": false,
+      "scm_type": "git",
+      "scm_branch": "",
+      "scm_refspec": "",
+      "update_revision_on_launch": false,
+      "scm_update_cache_timeout": 0
+    }

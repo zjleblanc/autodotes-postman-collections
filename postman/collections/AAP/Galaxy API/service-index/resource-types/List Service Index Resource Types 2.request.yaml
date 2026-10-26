@@ -1,0 +1,7 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/galaxy/service-index/resource-types/:name/'
+order: 355000
+pathVariables:
+- key: name
+  value: name

@@ -1,0 +1,12 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/eda/v1/activations/:id/disable/'
+order: 10000
+pathVariables:
+- key: id
+  value: '1'
+queryParams:
+- key: force
+  value: ''
+  description: Force disable after worker node offline
+  disabled: true

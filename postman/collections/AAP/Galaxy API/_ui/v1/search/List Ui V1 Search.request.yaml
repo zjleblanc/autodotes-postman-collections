@@ -1,0 +1,57 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/galaxy/_ui/v1/search/'
+order: 65000
+queryParams:
+- key: deprecated
+  value: ''
+  description: ''
+  disabled: true
+- key: keywords
+  value: ''
+  description: Search term to be queried against search vector if search_type is websearch or SQL ilike if search_type is sql
+  disabled: true
+- key: limit
+  value: ''
+  description: Number of results to return per page.
+  disabled: true
+- key: name
+  value: ''
+  description: Executes iexact filter on name
+  disabled: true
+- key: namespace
+  value: ''
+  description: Executes iexact filter on namespace
+  disabled: true
+- key: offset
+  value: ''
+  description: The initial index from which to return the results.
+  disabled: true
+- key: order_by
+  value: ''
+  description: ''
+  disabled: true
+- key: platform
+  value: ''
+  description: ''
+  disabled: true
+- key: search_type
+  value: websearch
+  description: ''
+  disabled: true
+- key: tags
+  value: ''
+  description: ''
+  disabled: true
+- key: type
+  value: ''
+  description: ''
+  disabled: true
+- key: fields
+  value: ''
+  description: A list of fields to include in the response.
+  disabled: true
+- key: exclude_fields
+  value: ''
+  description: A list of fields to exclude from the response.
+  disabled: true

@@ -1,0 +1,7 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/galaxy/content/:path/v3/sync/'
+order: 173000
+pathVariables:
+- key: path
+  value: path

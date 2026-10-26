@@ -1,0 +1,37 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/galaxy/_ui/v2/teams/'
+order: 112000
+queryParams:
+- key: name
+  value: ''
+  description: ''
+  disabled: true
+- key: name__contains
+  value: ''
+  description: ''
+  disabled: true
+- key: name__icontains
+  value: ''
+  description: ''
+  disabled: true
+- key: page
+  value: ''
+  description: A page number within the paginated result set.
+  disabled: true
+- key: page_size
+  value: ''
+  description: Number of results to return per page.
+  disabled: true
+- key: resource__ansible_id
+  value: ''
+  description: ''
+  disabled: true
+- key: fields
+  value: ''
+  description: A list of fields to include in the response.
+  disabled: true
+- key: exclude_fields
+  value: ''
+  description: A list of fields to exclude from the response.
+  disabled: true

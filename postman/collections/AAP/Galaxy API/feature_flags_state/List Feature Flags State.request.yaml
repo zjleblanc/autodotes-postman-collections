@@ -1,0 +1,4 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/galaxy/feature_flags_state/'
+order: 180000

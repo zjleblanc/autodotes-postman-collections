@@ -1,0 +1,24 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/galaxy/pulp/api/v3/distributions/container/pull-through/'
+order: 238000
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "name": "",
+      "pulp_labels": {},
+      "content_guard": "",
+      "base_path": "",
+      "hidden": false,
+      "repository": null,
+      "remote": "",
+      "distributions": [
+        ""
+      ],
+      "private": false,
+      "description": null
+    }

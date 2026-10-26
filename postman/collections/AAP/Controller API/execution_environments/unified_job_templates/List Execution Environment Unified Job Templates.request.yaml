@@ -1,0 +1,7 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/controller/v2/execution_environments/:id/unified_job_templates/'
+order: 65000
+pathVariables:
+- key: id
+  value: '1'

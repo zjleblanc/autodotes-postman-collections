@@ -1,0 +1,30 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/controller/v2/job_templates/:id/slice_workflow_jobs/'
+order: 250000
+pathVariables:
+- key: id
+  value: '1'
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "name": "",
+      "description": "",
+      "workflow_job_template": 1,
+      "extra_vars": "",
+      "allow_simultaneous": false,
+      "job_template": 1,
+      "is_sliced_job": false,
+      "inventory": 1,
+      "limit": "",
+      "scm_branch": "",
+      "webhook_service": "",
+      "webhook_credential": 1,
+      "webhook_guid": "",
+      "skip_tags": "",
+      "job_tags": ""
+    }

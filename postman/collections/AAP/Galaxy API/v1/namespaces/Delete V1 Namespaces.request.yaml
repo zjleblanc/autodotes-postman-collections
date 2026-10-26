@@ -1,0 +1,7 @@
+$kind: http-request
+method: DELETE
+url: '{{aap_base_url}}/api/galaxy/v1/namespaces/:id/'
+order: 374000
+pathVariables:
+- key: id
+  value: '1'

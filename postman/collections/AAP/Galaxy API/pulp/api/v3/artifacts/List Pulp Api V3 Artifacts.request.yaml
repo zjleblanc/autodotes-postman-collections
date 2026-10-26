@@ -1,0 +1,101 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/galaxy/pulp/api/v3/artifacts/'
+order: 186000
+queryParams:
+- key: limit
+  value: ''
+  description: Number of results to return per page.
+  disabled: true
+- key: md5
+  value: ''
+  description: Filter results where md5 matches value
+  disabled: true
+- key: offset
+  value: ''
+  description: The initial index from which to return the results.
+  disabled: true
+- key: ordering
+  value: ''
+  description: |-
+    Ordering
+
+    * `pulp_id` - Pulp id
+    * `-pulp_id` - Pulp id (descending)
+    * `pulp_created` - Pulp created
+    * `-pulp_created` - Pulp created (descending)
+    * `pulp_last_updated` - Pulp last updated
+    * `-pulp_last_updated` - Pulp last updated (descending)
+    * `file` - File
+    * `-file` - File (descending)
+    * `size` - Size
+    * `-size` - Size (descending)
+    * `md5` - Md5
+    * `-md5` - Md5 (descending)
+    * `sha1` - Sha1
+    * `-sha1` - Sha1 (descending)
+    * `sha224` - Sha224
+    * `-sha224` - Sha224 (descending)
+    * `sha256` - Sha256
+    * `-sha256` - Sha256 (descending)
+    * `sha384` - Sha384
+    * `-sha384` - Sha384 (descending)
+    * `sha512` - Sha512
+    * `-sha512` - Sha512 (descending)
+    * `timestamp_of_interest` - Timestamp of interest
+    * `-timestamp_of_interest` - Timestamp of interest (descending)
+    * `pk` - Pk
+    * `-pk` - Pk (descending)
+  disabled: true
+- key: orphaned_for
+  value: ''
+  description: Minutes Artifacts have been orphaned for. -1 uses ORPHAN_PROTECTION_TIME.
+  disabled: true
+- key: prn__in
+  value: ''
+  description: Multiple values may be separated by commas.
+  disabled: true
+- key: pulp_href__in
+  value: ''
+  description: Multiple values may be separated by commas.
+  disabled: true
+- key: pulp_id__in
+  value: ''
+  description: Multiple values may be separated by commas.
+  disabled: true
+- key: q
+  value: ''
+  description: Filter results by using NOT, AND and OR operations on other filters
+  disabled: true
+- key: repository_version
+  value: ''
+  description: ''
+  disabled: true
+- key: sha1
+  value: ''
+  description: Filter results where sha1 matches value
+  disabled: true
+- key: sha224
+  value: ''
+  description: Filter results where sha224 matches value
+  disabled: true
+- key: sha256
+  value: ''
+  description: Filter results where sha256 matches value
+  disabled: true
+- key: sha384
+  value: ''
+  description: Filter results where sha384 matches value
+  disabled: true
+- key: sha512
+  value: ''
+  description: Filter results where sha512 matches value
+  disabled: true
+- key: fields
+  value: ''
+  description: A list of fields to include in the response.
+  disabled: true
+- key: exclude_fields
+  value: ''
+  description: A list of fields to exclude from the response.
+  disabled: true

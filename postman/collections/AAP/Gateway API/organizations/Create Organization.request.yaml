@@ -1,0 +1,10 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/gateway/v1/organizations/'
+order: 43000
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: '{}'

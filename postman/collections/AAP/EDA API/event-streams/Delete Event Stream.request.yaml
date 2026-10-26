@@ -1,0 +1,7 @@
+$kind: http-request
+method: DELETE
+url: '{{aap_base_url}}/api/eda/v1/event-streams/:id/'
+order: 49000
+pathVariables:
+- key: id
+  value: '1'

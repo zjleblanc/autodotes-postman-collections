@@ -1,0 +1,20 @@
+$kind: http-request
+method: PATCH
+url: '{{aap_base_url}}/api/galaxy/content/:path/v3/collections/:namespace/:name/'
+order: 135000
+pathVariables:
+- key: path
+  value: path
+- key: namespace
+  value: namespace
+- key: name
+  value: name
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "deprecated": false
+    }

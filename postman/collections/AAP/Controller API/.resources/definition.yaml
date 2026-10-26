@@ -1,0 +1,3 @@
+$kind: collection
+name: Controller API
+description: Crawled from /api/controller/v2/ on 2026-10-26 via breadth-first discovery of `related` links; HTTP methods per endpoint confirmed via OPTIONS.

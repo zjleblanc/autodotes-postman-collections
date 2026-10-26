@@ -1,0 +1,15 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/galaxy/pulp/api/v3/contentguards/certguard/rhsm/'
+order: 217000
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "name": "",
+      "description": null,
+      "ca_certificate": ""
+    }

@@ -1,0 +1,10 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/controller/v2/config/'
+order: 9000
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: '{}'

@@ -1,0 +1,3 @@
+$kind: collection
+name: Gateway API
+description: Crawled from /api/gateway/v1/ on 2026-10-26 via breadth-first discovery of `related` links; HTTP methods per endpoint confirmed via OPTIONS.

@@ -1,0 +1,21 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/eda/v1/event-streams/'
+order: 47000
+queryParams:
+- key: name
+  value: ''
+  description: Filter by event stream name.
+  disabled: true
+- key: page
+  value: ''
+  description: A page number within the paginated result set.
+  disabled: true
+- key: page_size
+  value: ''
+  description: Number of results to return per page.
+  disabled: true
+- key: test_mode
+  value: ''
+  description: Filter by the test_mode being true or false
+  disabled: true

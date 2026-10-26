@@ -1,0 +1,24 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/eda/v1/role_user_access/:model_name/:id/:actor_pk/'
+order: 81000
+pathVariables:
+- key: model_name
+  value: model_name
+- key: id
+  value: '1'
+- key: actor_pk
+  value: actor_pk
+queryParams:
+- key: page
+  value: ''
+  description: A page number within the paginated result set.
+  disabled: true
+- key: page_size
+  value: ''
+  description: Number of results to return per page.
+  disabled: true
+- key: search
+  value: ''
+  description: A search term.
+  disabled: true

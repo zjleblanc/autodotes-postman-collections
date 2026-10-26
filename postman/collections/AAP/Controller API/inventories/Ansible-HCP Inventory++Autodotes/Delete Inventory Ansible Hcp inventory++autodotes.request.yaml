@@ -1,0 +1,4 @@
+$kind: http-request
+method: DELETE
+url: '{{aap_base_url}}/api/controller/v2/inventories/Ansible-HCP Inventory++Autodotes/'
+order: 150000

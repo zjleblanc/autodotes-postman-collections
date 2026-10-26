@@ -1,0 +1,15 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/controller/v2/teams/'
+order: 442000
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "name": "",
+      "description": "",
+      "organization": 1
+    }

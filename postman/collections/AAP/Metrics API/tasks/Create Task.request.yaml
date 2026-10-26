@@ -1,0 +1,18 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/metrics/v1/tasks/'
+order: 19000
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "name": "",
+      "function_name": "",
+      "task_data": {},
+      "scheduled_time": "2024-01-01T00:00:00Z",
+      "cron_expression": "",
+      "max_attempts": 1
+    }

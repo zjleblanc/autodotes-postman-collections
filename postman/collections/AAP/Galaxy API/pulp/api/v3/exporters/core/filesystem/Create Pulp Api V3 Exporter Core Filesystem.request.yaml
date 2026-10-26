@@ -1,0 +1,15 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/galaxy/pulp/api/v3/exporters/core/filesystem/'
+order: 250000
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "name": "",
+      "path": "",
+      "method": "write"
+    }

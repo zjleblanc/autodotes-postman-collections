@@ -1,0 +1,45 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/galaxy/_ui/v1/my-namespaces/'
+order: 42000
+queryParams:
+- key: company
+  value: ''
+  description: ''
+  disabled: true
+- key: keywords
+  value: ''
+  description: ''
+  disabled: true
+- key: limit
+  value: ''
+  description: Number of results to return per page.
+  disabled: true
+- key: name
+  value: ''
+  description: ''
+  disabled: true
+- key: offset
+  value: ''
+  description: The initial index from which to return the results.
+  disabled: true
+- key: sort
+  value: ''
+  description: |-
+    Ordering
+
+    * `name` - Name
+    * `-name` - Name (descending)
+    * `company` - Company
+    * `-company` - Company (descending)
+    * `id` - Id
+    * `-id` - Id (descending)
+  disabled: true
+- key: fields
+  value: ''
+  description: A list of fields to include in the response.
+  disabled: true
+- key: exclude_fields
+  value: ''
+  description: A list of fields to exclude from the response.
+  disabled: true

@@ -1,0 +1,24 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/galaxy/pulp/api/v3/groups/:group_pk/users/'
+order: 255000
+pathVariables:
+- key: group_pk
+  value: group_pk
+queryParams:
+- key: limit
+  value: ''
+  description: Number of results to return per page.
+  disabled: true
+- key: offset
+  value: ''
+  description: The initial index from which to return the results.
+  disabled: true
+- key: fields
+  value: ''
+  description: A list of fields to include in the response.
+  disabled: true
+- key: exclude_fields
+  value: ''
+  description: A list of fields to exclude from the response.
+  disabled: true

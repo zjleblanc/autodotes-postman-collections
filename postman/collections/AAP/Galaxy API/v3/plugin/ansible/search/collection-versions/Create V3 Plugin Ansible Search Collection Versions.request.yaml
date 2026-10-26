@@ -1,0 +1,31 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/galaxy/v3/plugin/ansible/search/collection-versions/'
+order: 425000
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "repository": {
+        "pulp_labels": {},
+        "name": "",
+        "description": null,
+        "retain_repo_versions": null,
+        "remote": null
+      },
+      "namespace_metadata": {
+        "name": "",
+        "company": "",
+        "email": "",
+        "description": "",
+        "resources": "",
+        "links": [],
+        "avatar": ""
+      },
+      "is_highest": false,
+      "is_deprecated": false,
+      "is_signed": false
+    }

@@ -1,0 +1,14 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/controller/v2/labels/'
+order: 273000
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "name": "",
+      "organization": 1
+    }

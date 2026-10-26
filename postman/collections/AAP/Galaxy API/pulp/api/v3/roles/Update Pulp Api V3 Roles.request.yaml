@@ -1,0 +1,20 @@
+$kind: http-request
+method: PUT
+url: '{{aap_base_url}}/api/galaxy/pulp/api/v3/roles/:id/'
+order: 331000
+pathVariables:
+- key: id
+  value: '1'
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "name": "",
+      "description": null,
+      "permissions": [
+        ""
+      ]
+    }

@@ -1,0 +1,32 @@
+$kind: http-request
+method: PUT
+url: '{{aap_base_url}}/api/galaxy/_ui/v1/execution-environments/registries/:id/'
+order: 21000
+pathVariables:
+- key: id
+  value: '1'
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "id": "00000000-0000-0000-0000-000000000000",
+      "name": "",
+      "url": "",
+      "policy": "immediate",
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "username": null,
+      "password": null,
+      "tls_validation": false,
+      "client_key": null,
+      "client_cert": null,
+      "ca_cert": null,
+      "download_concurrency": null,
+      "proxy_url": null,
+      "proxy_username": null,
+      "proxy_password": null,
+      "rate_limit": null
+    }

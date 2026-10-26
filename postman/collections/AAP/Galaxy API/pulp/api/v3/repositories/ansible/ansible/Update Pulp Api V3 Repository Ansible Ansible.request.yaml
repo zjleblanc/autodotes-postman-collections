@@ -1,0 +1,23 @@
+$kind: http-request
+method: PUT
+url: '{{aap_base_url}}/api/galaxy/pulp/api/v3/repositories/ansible/ansible/:id/'
+order: 309000
+pathVariables:
+- key: id
+  value: '1'
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "pulp_labels": {},
+      "name": "",
+      "description": null,
+      "retain_repo_versions": null,
+      "remote": null,
+      "last_synced_metadata_time": null,
+      "gpgkey": null,
+      "private": false
+    }

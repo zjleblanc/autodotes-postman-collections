@@ -1,0 +1,4 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/galaxy/_ui/v1/auth/login/'
+order: 4000

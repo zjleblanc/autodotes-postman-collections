@@ -1,0 +1,7 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/galaxy/service-index/resources/:ansible_id/'
+order: 361000
+pathVariables:
+- key: ansible_id
+  value: ansible_id

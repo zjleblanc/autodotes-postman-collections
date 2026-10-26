@@ -1,0 +1,18 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/galaxy/content/:path/v3/artifacts/collections/:path/:filename'
+order: 129000
+pathVariables:
+- key: path
+  value: path
+- key: filename
+  value: filename
+queryParams:
+- key: fields
+  value: ''
+  description: A list of fields to include in the response.
+  disabled: true
+- key: exclude_fields
+  value: ''
+  description: A list of fields to exclude from the response.
+  disabled: true

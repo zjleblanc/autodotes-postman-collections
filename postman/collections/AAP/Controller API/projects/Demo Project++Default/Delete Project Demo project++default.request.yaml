@@ -1,0 +1,4 @@
+$kind: http-request
+method: DELETE
+url: '{{aap_base_url}}/api/controller/v2/projects/Demo Project++Default/'
+order: 350000

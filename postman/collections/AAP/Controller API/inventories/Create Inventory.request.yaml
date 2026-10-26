@@ -1,0 +1,20 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/controller/v2/inventories/'
+order: 149000
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "name": "",
+      "description": "",
+      "organization": 1,
+      "kind": "",
+      "host_filter": "",
+      "variables": "",
+      "prevent_instance_group_fallback": false,
+      "opa_query_path": ""
+    }

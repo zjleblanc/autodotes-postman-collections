@@ -1,0 +1,13 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/galaxy/_ui/v2/teams/'
+order: 113000
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "name": ""
+    }

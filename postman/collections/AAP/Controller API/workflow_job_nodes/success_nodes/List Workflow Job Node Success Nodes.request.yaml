@@ -1,0 +1,7 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/controller/v2/workflow_job_nodes/:id/success_nodes/'
+order: 492000
+pathVariables:
+- key: id
+  value: '1'

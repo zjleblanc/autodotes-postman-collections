@@ -1,0 +1,22 @@
+$kind: http-request
+method: PATCH
+url: '{{aap_base_url}}/api/galaxy/pulp/api/v3/distributions/ansible/ansible/:id/'
+order: 233000
+pathVariables:
+- key: id
+  value: '1'
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "base_path": "",
+      "content_guard": null,
+      "hidden": false,
+      "pulp_labels": {},
+      "name": "",
+      "repository": null,
+      "repository_version": null
+    }

@@ -1,0 +1,51 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/galaxy/v1/namespaces/'
+order: 372000
+queryParams:
+- key: created
+  value: ''
+  description: ''
+  disabled: true
+- key: keywords
+  value: ''
+  description: ''
+  disabled: true
+- key: name
+  value: ''
+  description: ''
+  disabled: true
+- key: owner
+  value: ''
+  description: ''
+  disabled: true
+- key: page
+  value: ''
+  description: A page number within the paginated result set.
+  disabled: true
+- key: page_size
+  value: ''
+  description: Number of results to return per page.
+  disabled: true
+- key: provider
+  value: ''
+  description: ''
+  disabled: true
+- key: sort
+  value: ''
+  description: |-
+    Ordering
+
+    * `created` - Created
+    * `-created` - Created (descending)
+    * `name` - Name
+    * `-name` - Name (descending)
+  disabled: true
+- key: fields
+  value: ''
+  description: A list of fields to include in the response.
+  disabled: true
+- key: exclude_fields
+  value: ''
+  description: A list of fields to exclude from the response.
+  disabled: true

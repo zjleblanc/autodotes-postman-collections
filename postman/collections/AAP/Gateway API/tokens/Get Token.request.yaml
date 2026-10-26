@@ -1,0 +1,7 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/gateway/v1/tokens/:id/'
+order: 125000
+pathVariables:
+- key: id
+  value: '1'

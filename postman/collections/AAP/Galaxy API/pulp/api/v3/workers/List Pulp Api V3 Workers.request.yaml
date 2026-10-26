@@ -1,0 +1,133 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/galaxy/pulp/api/v3/workers/'
+order: 350000
+queryParams:
+- key: last_heartbeat
+  value: ''
+  description: Filter results where last_heartbeat matches value
+  disabled: true
+- key: last_heartbeat__gt
+  value: ''
+  description: Filter results where last_heartbeat is greater than value
+  disabled: true
+- key: last_heartbeat__gte
+  value: ''
+  description: Filter results where last_heartbeat is greater than or equal to value
+  disabled: true
+- key: last_heartbeat__isnull
+  value: ''
+  description: Filter results where last_heartbeat has a null value
+  disabled: true
+- key: last_heartbeat__lt
+  value: ''
+  description: Filter results where last_heartbeat is less than value
+  disabled: true
+- key: last_heartbeat__lte
+  value: ''
+  description: Filter results where last_heartbeat is less than or equal to value
+  disabled: true
+- key: last_heartbeat__range
+  value: ''
+  description: Filter results where last_heartbeat is between two comma separated values
+  disabled: true
+- key: limit
+  value: ''
+  description: Number of results to return per page.
+  disabled: true
+- key: missing
+  value: ''
+  description: ''
+  disabled: true
+- key: name
+  value: ''
+  description: Filter results where name matches value
+  disabled: true
+- key: name__contains
+  value: ''
+  description: Filter results where name contains value
+  disabled: true
+- key: name__icontains
+  value: ''
+  description: Filter results where name contains value
+  disabled: true
+- key: name__iexact
+  value: ''
+  description: Filter results where name matches value
+  disabled: true
+- key: name__in
+  value: ''
+  description: Filter results where name is in a comma-separated list of values
+  disabled: true
+- key: name__iregex
+  value: ''
+  description: Filter results where name matches regex value
+  disabled: true
+- key: name__istartswith
+  value: ''
+  description: Filter results where name starts with value
+  disabled: true
+- key: name__regex
+  value: ''
+  description: Filter results where name matches regex value
+  disabled: true
+- key: name__startswith
+  value: ''
+  description: Filter results where name starts with value
+  disabled: true
+- key: offset
+  value: ''
+  description: The initial index from which to return the results.
+  disabled: true
+- key: online
+  value: ''
+  description: ''
+  disabled: true
+- key: ordering
+  value: ''
+  description: |-
+    Ordering
+
+    * `pulp_id` - Pulp id
+    * `-pulp_id` - Pulp id (descending)
+    * `pulp_created` - Pulp created
+    * `-pulp_created` - Pulp created (descending)
+    * `pulp_last_updated` - Pulp last updated
+    * `-pulp_last_updated` - Pulp last updated (descending)
+    * `app_type` - App type
+    * `-app_type` - App type (descending)
+    * `name` - Name
+    * `-name` - Name (descending)
+    * `versions` - Versions
+    * `-versions` - Versions (descending)
+    * `ttl` - Ttl
+    * `-ttl` - Ttl (descending)
+    * `last_heartbeat` - Last heartbeat
+    * `-last_heartbeat` - Last heartbeat (descending)
+    * `pk` - Pk
+    * `-pk` - Pk (descending)
+  disabled: true
+- key: prn__in
+  value: ''
+  description: Multiple values may be separated by commas.
+  disabled: true
+- key: pulp_href__in
+  value: ''
+  description: Multiple values may be separated by commas.
+  disabled: true
+- key: pulp_id__in
+  value: ''
+  description: Multiple values may be separated by commas.
+  disabled: true
+- key: q
+  value: ''
+  description: Filter results by using NOT, AND and OR operations on other filters
+  disabled: true
+- key: fields
+  value: ''
+  description: A list of fields to include in the response.
+  disabled: true
+- key: exclude_fields
+  value: ''
+  description: A list of fields to exclude from the response.
+  disabled: true

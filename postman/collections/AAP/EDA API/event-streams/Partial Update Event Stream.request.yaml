@@ -1,0 +1,21 @@
+$kind: http-request
+method: PATCH
+url: '{{aap_base_url}}/api/eda/v1/event-streams/:id/'
+order: 51000
+pathVariables:
+- key: id
+  value: '1'
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "name": "",
+      "test_mode": false,
+      "additional_data_headers": "",
+      "eda_credential_id": 0,
+      "organization_id": 0,
+      "uuid": "00000000-0000-0000-0000-000000000000"
+    }

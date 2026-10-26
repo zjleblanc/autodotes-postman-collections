@@ -1,0 +1,22 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/metrics/v1/users/'
+order: 23000
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "password": "",
+      "last_login": "2024-01-01T00:00:00Z",
+      "is_superuser": false,
+      "username": "",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": false,
+      "date_joined": "2024-01-01T00:00:00Z"
+    }

@@ -1,0 +1,4 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/metrics/v1/tasks/'
+order: 18000

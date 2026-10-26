@@ -1,0 +1,69 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/galaxy/pulp/api/v3/uploads/'
+order: 339000
+queryParams:
+- key: limit
+  value: ''
+  description: Number of results to return per page.
+  disabled: true
+- key: offset
+  value: ''
+  description: The initial index from which to return the results.
+  disabled: true
+- key: ordering
+  value: ''
+  description: |-
+    Ordering
+
+    * `pulp_id` - Pulp id
+    * `-pulp_id` - Pulp id (descending)
+    * `pulp_created` - Pulp created
+    * `-pulp_created` - Pulp created (descending)
+    * `pulp_last_updated` - Pulp last updated
+    * `-pulp_last_updated` - Pulp last updated (descending)
+    * `size` - Size
+    * `-size` - Size (descending)
+    * `pk` - Pk
+    * `-pk` - Pk (descending)
+  disabled: true
+- key: prn__in
+  value: ''
+  description: Multiple values may be separated by commas.
+  disabled: true
+- key: pulp_href__in
+  value: ''
+  description: Multiple values may be separated by commas.
+  disabled: true
+- key: pulp_id__in
+  value: ''
+  description: Multiple values may be separated by commas.
+  disabled: true
+- key: q
+  value: ''
+  description: Filter results by using NOT, AND and OR operations on other filters
+  disabled: true
+- key: size
+  value: ''
+  description: Filter results where size matches value
+  disabled: true
+- key: size__gt
+  value: ''
+  description: Filter results where size is greater than value
+  disabled: true
+- key: size__lt
+  value: ''
+  description: Filter results where size is less than value
+  disabled: true
+- key: size__range
+  value: ''
+  description: Filter results where size is between two comma separated values
+  disabled: true
+- key: fields
+  value: ''
+  description: A list of fields to include in the response.
+  disabled: true
+- key: exclude_fields
+  value: ''
+  description: A list of fields to exclude from the response.
+  disabled: true

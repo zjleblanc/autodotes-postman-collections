@@ -1,0 +1,27 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/controller/v2/system_job_templates/:id/notification_templates_started/'
+order: 429000
+pathVariables:
+- key: id
+  value: '1'
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "id": 1,
+      "name": "",
+      "description": "",
+      "organization": 1,
+      "notification_type": "awssns",
+      "notification_configuration": {},
+      "messages": {
+        "started": null,
+        "success": null,
+        "error": null,
+        "workflow_approval": null
+      }
+    }

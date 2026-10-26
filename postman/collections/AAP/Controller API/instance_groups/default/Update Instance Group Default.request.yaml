@@ -1,0 +1,71 @@
+$kind: http-request
+method: PUT
+url: '{{aap_base_url}}/api/controller/v2/instance_groups/default/'
+order: 125000
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "name": "",
+      "max_concurrent_jobs": 0,
+      "max_forks": 0,
+      "is_container_group": false,
+      "credential": 1,
+      "policy_instance_percentage": 0,
+      "policy_instance_minimum": 0,
+      "policy_instance_list": "",
+      "pod_spec_override": {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "metadata": {
+          "namespace": "default",
+          "labels": {
+            "ansible_job": ""
+          }
+        },
+        "spec": {
+          "serviceAccountName": "default",
+          "automountServiceAccountToken": false,
+          "affinity": {
+            "podAntiAffinity": {
+              "preferredDuringSchedulingIgnoredDuringExecution": [
+                {
+                  "weight": 100,
+                  "podAffinityTerm": {
+                    "labelSelector": {
+                      "matchExpressions": [
+                        {
+                          "key": "ansible_job",
+                          "operator": "Exists"
+                        }
+                      ]
+                    },
+                    "topologyKey": "kubernetes.io/hostname"
+                  }
+                }
+              ]
+            }
+          },
+          "containers": [
+            {
+              "image": "registry.redhat.io/ansible-automation-platform-27/ee-supported-rhel9:latest",
+              "name": "worker",
+              "args": [
+                "ansible-runner",
+                "worker",
+                "--private-data-dir=/runner"
+              ],
+              "resources": {
+                "requests": {
+                  "cpu": "250m",
+                  "memory": "100Mi"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }

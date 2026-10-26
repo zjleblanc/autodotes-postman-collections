@@ -1,0 +1,9 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/galaxy/content/:path/v3/plugin/ansible/content/:distro_base_path/namespaces/'
+order: 160000
+pathVariables:
+- key: path
+  value: path
+- key: distro_base_path
+  value: distro_base_path

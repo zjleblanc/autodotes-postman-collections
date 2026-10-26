@@ -1,0 +1,7 @@
+$kind: http-request
+method: DELETE
+url: '{{aap_base_url}}/api/galaxy/pulp/api/v3/distributions/ansible/ansible/:id/'
+order: 231000
+pathVariables:
+- key: id
+  value: '1'

@@ -1,0 +1,21 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/galaxy/_ui/v2/users/'
+order: 119000
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "username": "",
+      "password": null,
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "groups": [],
+      "teams": [],
+      "organizations": [],
+      "is_superuser": false
+    }

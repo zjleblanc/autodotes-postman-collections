@@ -1,0 +1,7 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/controller/v2/job_templates/:id/notification_templates_success/'
+order: 244000
+pathVariables:
+- key: id
+  value: '1'

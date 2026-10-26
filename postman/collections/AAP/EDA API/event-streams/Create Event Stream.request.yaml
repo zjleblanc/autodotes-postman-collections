@@ -1,0 +1,18 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/eda/v1/event-streams/'
+order: 48000
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "name": "",
+      "test_mode": false,
+      "additional_data_headers": "",
+      "eda_credential_id": 0,
+      "organization_id": 0,
+      "uuid": "00000000-0000-0000-0000-000000000000"
+    }

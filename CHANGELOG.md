@@ -1,5 +1,17 @@
 # Changelog
 
+## 2026-10-26 — Generate AAP collection from live API crawl
+
+### Added
+
+- `scripts/crawl_aap_api.py`: crawls the AAP gateway's six federated APIs (`gateway`, `controller`, `eda`, `galaxy`, `lightspeed`, `metrics`) using `AAP_POSTMAN_TOKEN_READONLY` and generates Postman v3 collection YAML. DRF APIs (gateway, controller, metrics) are crawled breadth-first via `OPTIONS` + `related`-link discovery; EDA and Galaxy are generated directly from their published OpenAPI specs.
+- `postman/collections/AAP/`: single collection scoping Bearer auth (`{{aap_token}}`) and `{{aap_base_url}}` once at the top level, with one folder per API — Controller (557 requests), Galaxy (438), Gateway (141), EDA (121), Metrics (23), Lightspeed (1 placeholder; service not deployed on this instance).
+- `postman/collections/AAP/README.md` documenting the crawl strategy, structure, and known limitations per API.
+
+### Fixed
+
+- `.postman/resources.yaml`: repaired the `AAP` collection's workspace binding after `postman workspace push` reported a false "Failed to create" on the large initial import — the import had actually succeeded server-side; the CLI's polling budget just timed out before confirming, leaving the binding unrecorded and risking a duplicate collection on retry.
+
 ## 2026-10-25 — Consolidate environments into zleblanc-main with standard variable naming
 
 ### Changed

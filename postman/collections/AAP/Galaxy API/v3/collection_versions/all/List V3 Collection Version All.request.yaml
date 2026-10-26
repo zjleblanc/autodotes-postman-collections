@@ -1,0 +1,4 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/galaxy/v3/collection_versions/all/'
+order: 381000

@@ -1,0 +1,20 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/galaxy/v3/collections/:namespace/:name/versions/:version/'
+order: 389000
+pathVariables:
+- key: namespace
+  value: namespace
+- key: name
+  value: name
+- key: version
+  value: version
+queryParams:
+- key: fields
+  value: ''
+  description: A list of fields to include in the response.
+  disabled: true
+- key: exclude_fields
+  value: ''
+  description: A list of fields to exclude from the response.
+  disabled: true

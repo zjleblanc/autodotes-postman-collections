@@ -1,0 +1,150 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/galaxy/_ui/v1/repo/:distro_base_path/'
+order: 63000
+pathVariables:
+- key: distro_base_path
+  value: distro_base_path
+queryParams:
+- key: deprecated
+  value: ''
+  description: ''
+  disabled: true
+- key: include_related
+  value: ''
+  description: ''
+  disabled: true
+- key: keywords
+  value: ''
+  description: ''
+  disabled: true
+- key: limit
+  value: ''
+  description: Number of results to return per page.
+  disabled: true
+- key: name
+  value: ''
+  description: ''
+  disabled: true
+- key: namespace
+  value: ''
+  description: ''
+  disabled: true
+- key: offset
+  value: ''
+  description: The initial index from which to return the results.
+  disabled: true
+- key: ordering
+  value: ''
+  description: |-
+    Ordering
+
+    * `pulp_id` - Pulp id
+    * `-pulp_id` - Pulp id (descending)
+    * `pulp_created` - Pulp created
+    * `-pulp_created` - Pulp created (descending)
+    * `pulp_last_updated` - Pulp last updated
+    * `-pulp_last_updated` - Pulp last updated (descending)
+    * `pulp_type` - Pulp type
+    * `-pulp_type` - Pulp type (descending)
+    * `upstream_id` - Upstream id
+    * `-upstream_id` - Upstream id (descending)
+    * `timestamp_of_interest` - Timestamp of interest
+    * `-timestamp_of_interest` - Timestamp of interest (descending)
+    * `authors` - Authors
+    * `-authors` - Authors (descending)
+    * `contents` - Contents
+    * `-contents` - Contents (descending)
+    * `dependencies` - Dependencies
+    * `-dependencies` - Dependencies (descending)
+    * `description` - Description
+    * `-description` - Description (descending)
+    * `docs_blob` - Docs blob
+    * `-docs_blob` - Docs blob (descending)
+    * `manifest` - Manifest
+    * `-manifest` - Manifest (descending)
+    * `files` - Files
+    * `-files` - Files (descending)
+    * `documentation` - Documentation
+    * `-documentation` - Documentation (descending)
+    * `homepage` - Homepage
+    * `-homepage` - Homepage (descending)
+    * `issues` - Issues
+    * `-issues` - Issues (descending)
+    * `license` - License
+    * `-license` - License (descending)
+    * `name` - Name
+    * `-name` - Name (descending)
+    * `namespace` - Namespace
+    * `-namespace` - Namespace (descending)
+    * `repository` - Repository
+    * `-repository` - Repository (descending)
+    * `requires_ansible` - Requires ansible
+    * `-requires_ansible` - Requires ansible (descending)
+    * `sha256` - Sha256
+    * `-sha256` - Sha256 (descending)
+    * `version` - Version
+    * `-version` - Version (descending)
+    * `version_major` - Version major
+    * `-version_major` - Version major (descending)
+    * `version_minor` - Version minor
+    * `-version_minor` - Version minor (descending)
+    * `version_patch` - Version patch
+    * `-version_patch` - Version patch (descending)
+    * `version_prerelease` - Version prerelease
+    * `-version_prerelease` - Version prerelease (descending)
+    * `is_highest` - Is highest
+    * `-is_highest` - Is highest (descending)
+    * `search_vector` - Search vector
+    * `-search_vector` - Search vector (descending)
+    * `pk` - Pk
+    * `-pk` - Pk (descending)
+  disabled: true
+- key: orphaned_for
+  value: ''
+  description: Minutes Content has been orphaned for. -1 uses ORPHAN_PROTECTION_TIME.
+  disabled: true
+- key: pulp_href__in
+  value: ''
+  description: Multiple values may be separated by commas.
+  disabled: true
+- key: pulp_id__in
+  value: ''
+  description: Multiple values may be separated by commas.
+  disabled: true
+- key: q
+  value: ''
+  description: ''
+  disabled: true
+- key: repository_version
+  value: ''
+  description: Repository Version referenced by HREF
+  disabled: true
+- key: repository_version_added
+  value: ''
+  description: Repository Version referenced by HREF
+  disabled: true
+- key: repository_version_removed
+  value: ''
+  description: Repository Version referenced by HREF
+  disabled: true
+- key: sign_state
+  value: ''
+  description: ''
+  disabled: true
+- key: tags
+  value: ''
+  description: Filter by comma-separated list of tags that must all be matched
+  disabled: true
+- key: version
+  value: ''
+  description: Filter results where version matches value
+  disabled: true
+- key: fields
+  value: ''
+  description: A list of fields to include in the response.
+  disabled: true
+- key: exclude_fields
+  value: ''
+  description: A list of fields to exclude from the response.
+  disabled: true

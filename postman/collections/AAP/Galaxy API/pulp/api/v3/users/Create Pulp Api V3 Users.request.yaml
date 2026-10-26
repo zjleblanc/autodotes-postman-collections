@@ -1,0 +1,21 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/galaxy/pulp/api/v3/users/'
+order: 344000
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "username": "",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "groups": [
+        0
+      ],
+      "password": "",
+      "is_superuser": false
+    }

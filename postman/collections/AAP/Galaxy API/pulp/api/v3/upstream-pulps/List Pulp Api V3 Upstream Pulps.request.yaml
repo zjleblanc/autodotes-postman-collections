@@ -1,0 +1,177 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/galaxy/pulp/api/v3/upstream-pulps/'
+order: 341000
+queryParams:
+- key: base_url
+  value: ''
+  description: Filter results where base_url matches value
+  disabled: true
+- key: base_url__contains
+  value: ''
+  description: Filter results where base_url contains value
+  disabled: true
+- key: base_url__icontains
+  value: ''
+  description: Filter results where base_url contains value
+  disabled: true
+- key: base_url__iexact
+  value: ''
+  description: Filter results where base_url matches value
+  disabled: true
+- key: base_url__in
+  value: ''
+  description: Filter results where base_url is in a comma-separated list of values
+  disabled: true
+- key: base_url__iregex
+  value: ''
+  description: Filter results where base_url matches regex value
+  disabled: true
+- key: base_url__istartswith
+  value: ''
+  description: Filter results where base_url starts with value
+  disabled: true
+- key: base_url__regex
+  value: ''
+  description: Filter results where base_url matches regex value
+  disabled: true
+- key: base_url__startswith
+  value: ''
+  description: Filter results where base_url starts with value
+  disabled: true
+- key: last_replication
+  value: ''
+  description: Filter results where last_replication matches value
+  disabled: true
+- key: last_replication__gt
+  value: ''
+  description: Filter results where last_replication is greater than value
+  disabled: true
+- key: last_replication__gte
+  value: ''
+  description: Filter results where last_replication is greater than or equal to value
+  disabled: true
+- key: last_replication__isnull
+  value: ''
+  description: Filter results where last_replication has a null value
+  disabled: true
+- key: last_replication__lt
+  value: ''
+  description: Filter results where last_replication is less than value
+  disabled: true
+- key: last_replication__lte
+  value: ''
+  description: Filter results where last_replication is less than or equal to value
+  disabled: true
+- key: last_replication__range
+  value: ''
+  description: Filter results where last_replication is between two comma separated values
+  disabled: true
+- key: limit
+  value: ''
+  description: Number of results to return per page.
+  disabled: true
+- key: name
+  value: ''
+  description: Filter results where name matches value
+  disabled: true
+- key: name__contains
+  value: ''
+  description: Filter results where name contains value
+  disabled: true
+- key: name__icontains
+  value: ''
+  description: Filter results where name contains value
+  disabled: true
+- key: name__iexact
+  value: ''
+  description: Filter results where name matches value
+  disabled: true
+- key: name__in
+  value: ''
+  description: Filter results where name is in a comma-separated list of values
+  disabled: true
+- key: name__iregex
+  value: ''
+  description: Filter results where name matches regex value
+  disabled: true
+- key: name__istartswith
+  value: ''
+  description: Filter results where name starts with value
+  disabled: true
+- key: name__regex
+  value: ''
+  description: Filter results where name matches regex value
+  disabled: true
+- key: name__startswith
+  value: ''
+  description: Filter results where name starts with value
+  disabled: true
+- key: offset
+  value: ''
+  description: The initial index from which to return the results.
+  disabled: true
+- key: ordering
+  value: ''
+  description: |-
+    Ordering
+
+    * `pulp_id` - Pulp id
+    * `-pulp_id` - Pulp id (descending)
+    * `pulp_created` - Pulp created
+    * `-pulp_created` - Pulp created (descending)
+    * `pulp_last_updated` - Pulp last updated
+    * `-pulp_last_updated` - Pulp last updated (descending)
+    * `name` - Name
+    * `-name` - Name (descending)
+    * `base_url` - Base url
+    * `-base_url` - Base url (descending)
+    * `api_root` - Api root
+    * `-api_root` - Api root (descending)
+    * `domain` - Domain
+    * `-domain` - Domain (descending)
+    * `ca_cert` - Ca cert
+    * `-ca_cert` - Ca cert (descending)
+    * `client_cert` - Client cert
+    * `-client_cert` - Client cert (descending)
+    * `client_key` - Client key
+    * `-client_key` - Client key (descending)
+    * `tls_validation` - Tls validation
+    * `-tls_validation` - Tls validation (descending)
+    * `username` - Username
+    * `-username` - Username (descending)
+    * `password` - Password
+    * `-password` - Password (descending)
+    * `q_select` - Q select
+    * `-q_select` - Q select (descending)
+    * `policy` - Policy
+    * `-policy` - Policy (descending)
+    * `last_replication` - Last replication
+    * `-last_replication` - Last replication (descending)
+    * `pk` - Pk
+    * `-pk` - Pk (descending)
+  disabled: true
+- key: prn__in
+  value: ''
+  description: Multiple values may be separated by commas.
+  disabled: true
+- key: pulp_href__in
+  value: ''
+  description: Multiple values may be separated by commas.
+  disabled: true
+- key: pulp_id__in
+  value: ''
+  description: Multiple values may be separated by commas.
+  disabled: true
+- key: q
+  value: ''
+  description: Filter results by using NOT, AND and OR operations on other filters
+  disabled: true
+- key: fields
+  value: ''
+  description: A list of fields to include in the response.
+  disabled: true
+- key: exclude_fields
+  value: ''
+  description: A list of fields to exclude from the response.
+  disabled: true

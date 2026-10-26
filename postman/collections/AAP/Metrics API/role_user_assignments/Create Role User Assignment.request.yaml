@@ -1,0 +1,17 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/metrics/v1/role_user_assignments/'
+order: 16000
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "object_id": "",
+      "object_ansible_id": "",
+      "role_definition": {},
+      "user": {},
+      "user_ansible_id": ""
+    }

@@ -1,0 +1,7 @@
+$kind: http-request
+method: DELETE
+url: '{{aap_base_url}}/api/galaxy/pulp/api/v3/remotes/ansible/collection/:pulp_id/'
+order: 286000
+pathVariables:
+- key: pulp_id
+  value: pulp_id

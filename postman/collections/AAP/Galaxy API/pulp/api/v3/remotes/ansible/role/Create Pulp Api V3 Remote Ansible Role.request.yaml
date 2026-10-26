@@ -1,0 +1,35 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/galaxy/pulp/api/v3/remotes/ansible/role/'
+order: 293000
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "name": "",
+      "url": "",
+      "pulp_labels": {},
+      "policy": "immediate",
+      "ca_cert": null,
+      "client_cert": null,
+      "client_key": null,
+      "tls_validation": false,
+      "proxy_url": null,
+      "proxy_username": null,
+      "proxy_password": null,
+      "username": null,
+      "password": null,
+      "max_retries": null,
+      "total_timeout": null,
+      "connect_timeout": null,
+      "sock_connect_timeout": null,
+      "sock_read_timeout": null,
+      "headers": [
+        {}
+      ],
+      "download_concurrency": null,
+      "rate_limit": null
+    }

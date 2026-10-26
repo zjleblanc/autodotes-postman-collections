@@ -1,0 +1,118 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/galaxy/content/:path/v3/plugin/ansible/search/collection-versions/'
+order: 165000
+pathVariables:
+- key: path
+  value: path
+queryParams:
+- key: dependency
+  value: ''
+  description: ''
+  disabled: true
+- key: deprecated
+  value: ''
+  description: ''
+  disabled: true
+- key: distribution
+  value: ''
+  description: Filter collectionversions that are in these distrubtion ids.
+  disabled: true
+- key: distribution_base_path
+  value: ''
+  description: Filter collectionversions that are in these base paths.
+  disabled: true
+- key: highest
+  value: ''
+  description: ''
+  disabled: true
+- key: is_deprecated
+  value: ''
+  description: ''
+  disabled: true
+- key: is_highest
+  value: ''
+  description: ''
+  disabled: true
+- key: is_signed
+  value: ''
+  description: ''
+  disabled: true
+- key: keywords
+  value: ''
+  description: ''
+  disabled: true
+- key: limit
+  value: ''
+  description: Number of results to return per page.
+  disabled: true
+- key: name
+  value: ''
+  description: ''
+  disabled: true
+- key: namespace
+  value: ''
+  description: ''
+  disabled: true
+- key: offset
+  value: ''
+  description: The initial index from which to return the results.
+  disabled: true
+- key: order_by
+  value: ''
+  description: |-
+    Ordering
+
+    * `pulp_created` - by CV created
+    * `-pulp_created` - by CV created (descending)
+    * `namespace` - by CV namespace
+    * `-namespace` - by CV namespace (descending)
+    * `name` - by CV name
+    * `-name` - by CV name (descending)
+    * `version` - by CV version
+    * `-version` - by CV version (descending)
+  disabled: true
+- key: q
+  value: ''
+  description: ''
+  disabled: true
+- key: repository
+  value: ''
+  description: Filter collectionversions that are in these repository ids.
+  disabled: true
+- key: repository_label
+  value: ''
+  description: Filter labels by search string
+  disabled: true
+- key: repository_name
+  value: ''
+  description: Filter collectionversions that are in these repositories.
+  disabled: true
+- key: repository_version
+  value: ''
+  description: ''
+  disabled: true
+- key: signed
+  value: ''
+  description: ''
+  disabled: true
+- key: tags
+  value: ''
+  description: Filter by comma-separated list of tags that must all be matched
+  disabled: true
+- key: version
+  value: ''
+  description: ''
+  disabled: true
+- key: version_range
+  value: ''
+  description: ''
+  disabled: true
+- key: fields
+  value: ''
+  description: A list of fields to include in the response.
+  disabled: true
+- key: exclude_fields
+  value: ''
+  description: A list of fields to exclude from the response.
+  disabled: true

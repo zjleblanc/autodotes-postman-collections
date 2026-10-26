@@ -1,0 +1,4 @@
+$kind: http-request
+method: DELETE
+url: '{{aap_base_url}}/api/controller/v2/instance_groups/default/'
+order: 122000

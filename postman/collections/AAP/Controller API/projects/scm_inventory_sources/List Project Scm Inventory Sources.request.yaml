@@ -1,0 +1,7 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/controller/v2/projects/:id/scm_inventory_sources/'
+order: 374000
+pathVariables:
+- key: id
+  value: '1'

@@ -1,0 +1,4 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/eda/v1/role_metadata/'
+order: 73000

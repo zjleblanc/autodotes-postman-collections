@@ -1,0 +1,9 @@
+$kind: http-request
+method: DELETE
+url: '{{aap_base_url}}/api/galaxy/v3/collections/:namespace/:name/'
+order: 384000
+pathVariables:
+- key: namespace
+  value: namespace
+- key: name
+  value: name

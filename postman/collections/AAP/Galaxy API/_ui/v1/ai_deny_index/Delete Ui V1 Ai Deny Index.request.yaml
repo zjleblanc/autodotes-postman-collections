@@ -1,0 +1,9 @@
+$kind: http-request
+method: DELETE
+url: '{{aap_base_url}}/api/galaxy/_ui/v1/ai_deny_index/:scope/:reference/'
+order: 3000
+pathVariables:
+- key: scope
+  value: scope
+- key: reference
+  value: reference

@@ -1,0 +1,24 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/controller/v2/ad_hoc_commands/'
+order: 4000
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "execution_environment": 1,
+      "job_type": "run",
+      "inventory": 1,
+      "limit": "",
+      "credential": 1,
+      "module_name": "command",
+      "module_args": "",
+      "forks": 0,
+      "verbosity": 0,
+      "extra_vars": "",
+      "become_enabled": false,
+      "diff_mode": false
+    }

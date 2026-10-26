@@ -1,0 +1,7 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/galaxy/v3/plugin/execution-environments/repositories/:base_path/_content/sync/'
+order: 435000
+pathVariables:
+- key: base_path
+  value: base_path

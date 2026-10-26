@@ -1,0 +1,17 @@
+$kind: http-request
+method: PUT
+url: '{{aap_base_url}}/api/galaxy/v3/plugin/execution-environments/repositories/:base_path/_content/readme/'
+order: 434000
+pathVariables:
+- key: base_path
+  value: base_path
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "updated_at": "2024-01-01T00:00:00Z",
+      "text": ""
+    }

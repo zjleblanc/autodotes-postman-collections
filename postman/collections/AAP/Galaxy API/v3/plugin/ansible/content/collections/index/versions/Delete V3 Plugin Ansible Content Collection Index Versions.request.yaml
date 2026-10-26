@@ -1,0 +1,13 @@
+$kind: http-request
+method: DELETE
+url: '{{aap_base_url}}/api/galaxy/v3/plugin/ansible/content/:distro_base_path/collections/index/:namespace/:name/versions/:version/'
+order: 416000
+pathVariables:
+- key: distro_base_path
+  value: distro_base_path
+- key: namespace
+  value: namespace
+- key: name
+  value: name
+- key: version
+  value: version

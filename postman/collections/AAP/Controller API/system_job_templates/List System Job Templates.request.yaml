@@ -1,0 +1,4 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/controller/v2/system_job_templates/'
+order: 421000

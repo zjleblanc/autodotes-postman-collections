@@ -1,0 +1,22 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/galaxy/content/:path/v3/plugin/ansible/imports/collections/:task/'
+order: 164000
+pathVariables:
+- key: path
+  value: path
+- key: task
+  value: task
+queryParams:
+- key: since
+  value: ''
+  description: Filter messages since a given timestamp
+  disabled: true
+- key: fields
+  value: ''
+  description: A list of fields to include in the response.
+  disabled: true
+- key: exclude_fields
+  value: ''
+  description: A list of fields to exclude from the response.
+  disabled: true

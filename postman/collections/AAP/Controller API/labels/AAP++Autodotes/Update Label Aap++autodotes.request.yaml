@@ -1,0 +1,14 @@
+$kind: http-request
+method: PUT
+url: '{{aap_base_url}}/api/controller/v2/labels/AAP++Autodotes/'
+order: 276000
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "name": "",
+      "organization": 1
+    }

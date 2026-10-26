@@ -1,0 +1,7 @@
+$kind: http-request
+method: DELETE
+url: '{{aap_base_url}}/api/controller/v2/users/:id/'
+order: 469000
+pathVariables:
+- key: id
+  value: '1'

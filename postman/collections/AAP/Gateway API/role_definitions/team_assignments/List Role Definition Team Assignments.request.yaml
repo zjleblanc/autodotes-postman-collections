@@ -1,0 +1,7 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/gateway/v1/role_definitions/:id/team_assignments/'
+order: 58000
+pathVariables:
+- key: id
+  value: '1'

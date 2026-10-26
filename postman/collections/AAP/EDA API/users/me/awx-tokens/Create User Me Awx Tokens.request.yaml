@@ -1,0 +1,15 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/eda/v1/users/me/awx-tokens/'
+order: 117000
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "name": "",
+      "description": "",
+      "token": ""
+    }

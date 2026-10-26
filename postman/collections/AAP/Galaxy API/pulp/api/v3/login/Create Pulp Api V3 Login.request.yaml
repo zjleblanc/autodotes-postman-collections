@@ -1,0 +1,4 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/galaxy/pulp/api/v3/login/'
+order: 271000

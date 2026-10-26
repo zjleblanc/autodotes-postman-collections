@@ -1,0 +1,18 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/galaxy/content/:path/v3/plugin/ansible/content/:distro_base_path/collections/all-versions/'
+order: 148000
+pathVariables:
+- key: path
+  value: path
+- key: distro_base_path
+  value: distro_base_path
+queryParams:
+- key: fields
+  value: ''
+  description: A list of fields to include in the response.
+  disabled: true
+- key: exclude_fields
+  value: ''
+  description: A list of fields to exclude from the response.
+  disabled: true

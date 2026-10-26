@@ -1,0 +1,4 @@
+$kind: http-request
+method: DELETE
+url: '{{aap_base_url}}/api/gateway/v1/settings/all/'
+order: 110000

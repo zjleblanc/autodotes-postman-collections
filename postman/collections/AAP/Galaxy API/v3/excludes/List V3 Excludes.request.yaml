@@ -1,0 +1,17 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/galaxy/v3/excludes/'
+order: 393000
+queryParams:
+- key: format
+  value: ''
+  description: ''
+  disabled: true
+- key: fields
+  value: ''
+  description: A list of fields to include in the response.
+  disabled: true
+- key: exclude_fields
+  value: ''
+  description: A list of fields to exclude from the response.
+  disabled: true

@@ -1,0 +1,16 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/galaxy/pulp/api/v3/repositories/reclaim_space/'
+order: 324000
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "repo_hrefs": [],
+      "repo_versions_keeplist": [
+        ""
+      ]
+    }

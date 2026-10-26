@@ -1,0 +1,18 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/galaxy/_ui/v2/role_definitions/'
+order: 92000
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "permissions": [
+        ""
+      ],
+      "content_type": null,
+      "name": "",
+      "description": ""
+    }

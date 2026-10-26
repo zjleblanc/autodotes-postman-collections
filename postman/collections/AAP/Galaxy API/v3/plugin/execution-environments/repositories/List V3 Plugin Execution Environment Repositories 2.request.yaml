@@ -1,0 +1,16 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/galaxy/v3/plugin/execution-environments/repositories/:base_path/'
+order: 428000
+pathVariables:
+- key: base_path
+  value: base_path
+queryParams:
+- key: fields
+  value: ''
+  description: A list of fields to include in the response.
+  disabled: true
+- key: exclude_fields
+  value: ''
+  description: A list of fields to exclude from the response.
+  disabled: true

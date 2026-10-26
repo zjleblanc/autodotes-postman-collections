@@ -1,0 +1,17 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/controller/v2/organizations/'
+order: 295000
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "name": "",
+      "description": "",
+      "max_hosts": 0,
+      "default_environment": 1,
+      "opa_query_path": ""
+    }

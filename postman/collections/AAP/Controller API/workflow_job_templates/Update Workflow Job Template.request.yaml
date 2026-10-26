@@ -1,0 +1,35 @@
+$kind: http-request
+method: PUT
+url: '{{aap_base_url}}/api/controller/v2/workflow_job_templates/:id/'
+order: 518000
+pathVariables:
+- key: id
+  value: '1'
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "name": "",
+      "description": "",
+      "extra_vars": "",
+      "organization": 1,
+      "survey_enabled": false,
+      "allow_simultaneous": false,
+      "ask_variables_on_launch": false,
+      "inventory": 1,
+      "limit": "",
+      "scm_branch": "",
+      "ask_inventory_on_launch": false,
+      "ask_scm_branch_on_launch": false,
+      "ask_limit_on_launch": false,
+      "webhook_service": "",
+      "webhook_credential": 1,
+      "ask_labels_on_launch": false,
+      "ask_skip_tags_on_launch": false,
+      "ask_tags_on_launch": false,
+      "skip_tags": "",
+      "job_tags": ""
+    }

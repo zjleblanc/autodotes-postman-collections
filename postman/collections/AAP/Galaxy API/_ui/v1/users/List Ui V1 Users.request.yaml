@@ -1,0 +1,97 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/galaxy/_ui/v1/users/'
+order: 72000
+queryParams:
+- key: date_joined
+  value: ''
+  description: ''
+  disabled: true
+- key: email
+  value: ''
+  description: ''
+  disabled: true
+- key: email__contains
+  value: ''
+  description: ''
+  disabled: true
+- key: email__startswith
+  value: ''
+  description: ''
+  disabled: true
+- key: first_name
+  value: ''
+  description: ''
+  disabled: true
+- key: first_name__contains
+  value: ''
+  description: ''
+  disabled: true
+- key: first_name__startswith
+  value: ''
+  description: ''
+  disabled: true
+- key: groups
+  value: ''
+  description: ''
+  disabled: true
+- key: groups__name
+  value: ''
+  description: ''
+  disabled: true
+- key: last_name
+  value: ''
+  description: ''
+  disabled: true
+- key: last_name__contains
+  value: ''
+  description: ''
+  disabled: true
+- key: last_name__startswith
+  value: ''
+  description: ''
+  disabled: true
+- key: limit
+  value: ''
+  description: Number of results to return per page.
+  disabled: true
+- key: offset
+  value: ''
+  description: The initial index from which to return the results.
+  disabled: true
+- key: sort
+  value: ''
+  description: |-
+    Ordering
+
+    * `username` - Username
+    * `-username` - Username (descending)
+    * `email` - Email
+    * `-email` - Email (descending)
+    * `first_name` - First name
+    * `-first_name` - First name (descending)
+    * `last_name` - Last name
+    * `-last_name` - Last name (descending)
+    * `date_joined` - Date joined
+    * `-date_joined` - Date joined (descending)
+  disabled: true
+- key: username
+  value: ''
+  description: ''
+  disabled: true
+- key: username__contains
+  value: ''
+  description: ''
+  disabled: true
+- key: username__startswith
+  value: ''
+  description: ''
+  disabled: true
+- key: fields
+  value: ''
+  description: A list of fields to include in the response.
+  disabled: true
+- key: exclude_fields
+  value: ''
+  description: A list of fields to exclude from the response.
+  disabled: true

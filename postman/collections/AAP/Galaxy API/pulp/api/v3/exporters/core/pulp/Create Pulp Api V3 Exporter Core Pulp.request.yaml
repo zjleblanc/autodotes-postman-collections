@@ -1,0 +1,18 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/galaxy/pulp/api/v3/exporters/core/pulp/'
+order: 252000
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "name": "",
+      "path": "",
+      "repositories": [
+        ""
+      ],
+      "last_export": null
+    }

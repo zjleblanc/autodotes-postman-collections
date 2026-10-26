@@ -1,0 +1,24 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/eda/v1/activations/:id/instances/'
+order: 12000
+pathVariables:
+- key: id
+  value: '1'
+queryParams:
+- key: name
+  value: ''
+  description: Filter by activation instance name.
+  disabled: true
+- key: page
+  value: ''
+  description: A page number within the paginated result set.
+  disabled: true
+- key: page_size
+  value: ''
+  description: Number of results to return per page.
+  disabled: true
+- key: status
+  value: ''
+  description: Filter by activation instance status.
+  disabled: true

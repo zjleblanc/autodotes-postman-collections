@@ -1,0 +1,29 @@
+$kind: http-request
+method: PUT
+url: '{{aap_base_url}}/api/galaxy/_ui/v1/my-namespaces/:name/'
+order: 47000
+pathVariables:
+- key: name
+  value: name
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "name": "",
+      "company": "",
+      "email": "",
+      "avatar_url": "",
+      "description": "",
+      "links": [
+        {
+          "name": "",
+          "url": ""
+        }
+      ],
+      "groups": "",
+      "users": "",
+      "resources": ""
+    }

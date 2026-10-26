@@ -1,0 +1,22 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/controller/v2/workflow_job_templates/:id/launch/'
+order: 527000
+pathVariables:
+- key: id
+  value: '1'
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "extra_vars": "",
+      "inventory": 1,
+      "limit": "",
+      "scm_branch": "",
+      "labels": {},
+      "skip_tags": "",
+      "job_tags": ""
+    }

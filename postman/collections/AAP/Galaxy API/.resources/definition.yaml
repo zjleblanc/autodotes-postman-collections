@@ -1,0 +1,3 @@
+$kind: collection
+name: Galaxy API
+description: Merged from /api/galaxy/v3/openapi.json and the underlying Pulp app's /api/galaxy/pulp/api/v3/docs/api.json. Pulp's dynamic {xxx_href}action/ paths (which require an already-fetched resource href rather than a fixed URL) are excluded.

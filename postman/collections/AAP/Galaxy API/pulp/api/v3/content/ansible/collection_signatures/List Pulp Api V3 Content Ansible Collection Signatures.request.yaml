@@ -1,0 +1,91 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/galaxy/pulp/api/v3/content/ansible/collection_signatures/'
+order: 193000
+queryParams:
+- key: limit
+  value: ''
+  description: Number of results to return per page.
+  disabled: true
+- key: offset
+  value: ''
+  description: The initial index from which to return the results.
+  disabled: true
+- key: ordering
+  value: ''
+  description: |-
+    Ordering
+
+    * `pulp_id` - Pulp id
+    * `-pulp_id` - Pulp id (descending)
+    * `pulp_created` - Pulp created
+    * `-pulp_created` - Pulp created (descending)
+    * `pulp_last_updated` - Pulp last updated
+    * `-pulp_last_updated` - Pulp last updated (descending)
+    * `pulp_type` - Pulp type
+    * `-pulp_type` - Pulp type (descending)
+    * `upstream_id` - Upstream id
+    * `-upstream_id` - Upstream id (descending)
+    * `timestamp_of_interest` - Timestamp of interest
+    * `-timestamp_of_interest` - Timestamp of interest (descending)
+    * `data` - Data
+    * `-data` - Data (descending)
+    * `digest` - Digest
+    * `-digest` - Digest (descending)
+    * `pubkey_fingerprint` - Pubkey fingerprint
+    * `-pubkey_fingerprint` - Pubkey fingerprint (descending)
+    * `pk` - Pk
+    * `-pk` - Pk (descending)
+  disabled: true
+- key: orphaned_for
+  value: ''
+  description: Minutes Content has been orphaned for. -1 uses ORPHAN_PROTECTION_TIME.
+  disabled: true
+- key: pubkey_fingerprint
+  value: ''
+  description: Filter results where pubkey_fingerprint matches value
+  disabled: true
+- key: pubkey_fingerprint__in
+  value: ''
+  description: Filter results where pubkey_fingerprint is in a comma-separated list of values
+  disabled: true
+- key: pulp_href__in
+  value: ''
+  description: Multiple values may be separated by commas.
+  disabled: true
+- key: pulp_id__in
+  value: ''
+  description: Multiple values may be separated by commas.
+  disabled: true
+- key: q
+  value: ''
+  description: ''
+  disabled: true
+- key: repository_version
+  value: ''
+  description: Repository Version referenced by HREF
+  disabled: true
+- key: repository_version_added
+  value: ''
+  description: Repository Version referenced by HREF
+  disabled: true
+- key: repository_version_removed
+  value: ''
+  description: Repository Version referenced by HREF
+  disabled: true
+- key: signed_collection
+  value: ''
+  description: Filter signatures for collection version
+  disabled: true
+- key: signing_service
+  value: ''
+  description: Filter signatures produced by signature service
+  disabled: true
+- key: fields
+  value: ''
+  description: A list of fields to include in the response.
+  disabled: true
+- key: exclude_fields
+  value: ''
+  description: A list of fields to exclude from the response.
+  disabled: true

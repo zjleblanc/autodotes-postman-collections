@@ -1,0 +1,4 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/controller/v2/hosts/aap26-test-1++Service Now Inventory++Autodotes/'
+order: 98000

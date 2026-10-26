@@ -1,0 +1,7 @@
+$kind: http-request
+method: DELETE
+url: '{{aap_base_url}}/api/galaxy/service-index/resources/:ansible_id/'
+order: 360000
+pathVariables:
+- key: ansible_id
+  value: ansible_id

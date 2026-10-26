@@ -1,0 +1,17 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/eda/v1/service-index/role-user-assignments/unassign/'
+order: 110000
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "created_by_ansible_id": "00000000-0000-0000-0000-000000000000",
+      "object_id": "",
+      "object_ansible_id": "",
+      "role_definition": "",
+      "user_ansible_id": "00000000-0000-0000-0000-000000000000"
+    }

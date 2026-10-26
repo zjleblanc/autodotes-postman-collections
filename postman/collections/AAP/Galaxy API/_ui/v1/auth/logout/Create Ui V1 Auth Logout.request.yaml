@@ -1,0 +1,4 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/galaxy/_ui/v1/auth/logout/'
+order: 6000

@@ -1,0 +1,12 @@
+$kind: http-request
+method: DELETE
+url: '{{aap_base_url}}/api/eda/v1/activations/:id/'
+order: 6000
+pathVariables:
+- key: id
+  value: '1'
+queryParams:
+- key: force
+  value: ''
+  description: Force delete after worker node offline
+  disabled: true

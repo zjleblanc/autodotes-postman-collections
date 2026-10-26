@@ -1,0 +1,21 @@
+$kind: http-request
+method: PATCH
+url: '{{aap_base_url}}/api/galaxy/_ui/v2/role_definitions/:id/'
+order: 95000
+pathVariables:
+- key: id
+  value: '1'
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "permissions": [
+        ""
+      ],
+      "content_type": null,
+      "name": "",
+      "description": ""
+    }

@@ -1,0 +1,24 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/galaxy/pulp/api/v3/upstream-pulps/'
+order: 342000
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "name": "",
+      "base_url": "",
+      "api_root": "",
+      "domain": null,
+      "ca_cert": null,
+      "client_cert": null,
+      "client_key": null,
+      "tls_validation": false,
+      "username": null,
+      "password": null,
+      "q_select": null,
+      "policy": "all"
+    }

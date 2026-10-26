@@ -1,0 +1,16 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/galaxy/pulp/api/v3/tasks/purge/'
+order: 338000
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "finished_before": "2026-09-22",
+      "states": [
+        "completed"
+      ]
+    }

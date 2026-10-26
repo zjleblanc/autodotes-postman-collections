@@ -1,0 +1,4 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/gateway/v1/activitystream/'
+order: 1000

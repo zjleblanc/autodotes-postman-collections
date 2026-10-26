@@ -1,0 +1,75 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/galaxy/_ui/v1/execution-environments/registries/'
+order: 17000
+queryParams:
+- key: created_at
+  value: ''
+  description: ''
+  disabled: true
+- key: limit
+  value: ''
+  description: Number of results to return per page.
+  disabled: true
+- key: name
+  value: ''
+  description: ''
+  disabled: true
+- key: name__contains
+  value: ''
+  description: ''
+  disabled: true
+- key: name__icontains
+  value: ''
+  description: ''
+  disabled: true
+- key: name__startswith
+  value: ''
+  description: ''
+  disabled: true
+- key: offset
+  value: ''
+  description: The initial index from which to return the results.
+  disabled: true
+- key: sort
+  value: ''
+  description: |-
+    Ordering
+
+    * `name` - Name
+    * `-name` - Name (descending)
+    * `url` - Url
+    * `-url` - Url (descending)
+    * `created_at` - Created at
+    * `-created_at` - Created at (descending)
+    * `updated_at` - Updated at
+    * `-updated_at` - Updated at (descending)
+  disabled: true
+- key: updated_at
+  value: ''
+  description: ''
+  disabled: true
+- key: url
+  value: ''
+  description: ''
+  disabled: true
+- key: url__contains
+  value: ''
+  description: ''
+  disabled: true
+- key: url__icontains
+  value: ''
+  description: ''
+  disabled: true
+- key: url__startswith
+  value: ''
+  description: ''
+  disabled: true
+- key: fields
+  value: ''
+  description: A list of fields to include in the response.
+  disabled: true
+- key: exclude_fields
+  value: ''
+  description: A list of fields to exclude from the response.
+  disabled: true

@@ -1,0 +1,7 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/controller/v2/projects/:id/access_list/'
+order: 358000
+pathVariables:
+- key: id
+  value: '1'

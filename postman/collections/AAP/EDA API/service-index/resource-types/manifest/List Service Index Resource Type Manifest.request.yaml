@@ -1,0 +1,7 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/eda/v1/service-index/resource-types/:name/manifest/'
+order: 95000
+pathVariables:
+- key: name
+  value: name

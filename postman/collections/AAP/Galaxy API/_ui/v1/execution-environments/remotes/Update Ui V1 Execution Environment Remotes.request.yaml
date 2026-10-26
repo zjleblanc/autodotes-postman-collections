@@ -1,0 +1,21 @@
+$kind: http-request
+method: PUT
+url: '{{aap_base_url}}/api/galaxy/_ui/v1/execution-environments/remotes/:id/'
+order: 27000
+pathVariables:
+- key: id
+  value: '1'
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "name": "",
+      "upstream_name": "",
+      "registry": "",
+      "include_foreign_layers": false,
+      "include_tags": null,
+      "exclude_tags": null
+    }

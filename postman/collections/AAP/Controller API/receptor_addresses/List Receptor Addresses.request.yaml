@@ -1,0 +1,4 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/controller/v2/receptor_addresses/'
+order: 378000

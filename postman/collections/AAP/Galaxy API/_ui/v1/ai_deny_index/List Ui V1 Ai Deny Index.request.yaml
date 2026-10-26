@@ -1,0 +1,21 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/galaxy/_ui/v1/ai_deny_index/'
+order: 2000
+queryParams:
+- key: reference
+  value: ''
+  description: Filter by reference (namespace name)
+  disabled: true
+- key: scope
+  value: ''
+  description: Filter by scope
+  disabled: true
+- key: fields
+  value: ''
+  description: A list of fields to include in the response.
+  disabled: true
+- key: exclude_fields
+  value: ''
+  description: A list of fields to exclude from the response.
+  disabled: true

@@ -1,0 +1,4 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/galaxy/v3/auth/token/'
+order: 380000

@@ -1,0 +1,282 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/galaxy/pulp/api/v3/tasks/'
+order: 337000
+queryParams:
+- key: child_tasks
+  value: ''
+  description: ''
+  disabled: true
+- key: created_resources
+  value: ''
+  description: ''
+  disabled: true
+- key: exclusive_resources
+  value: ''
+  description: ''
+  disabled: true
+- key: exclusive_resources__in
+  value: ''
+  description: Multiple values may be separated by commas.
+  disabled: true
+- key: finished_at
+  value: ''
+  description: Filter results where finished_at matches value
+  disabled: true
+- key: finished_at__gt
+  value: ''
+  description: Filter results where finished_at is greater than value
+  disabled: true
+- key: finished_at__gte
+  value: ''
+  description: Filter results where finished_at is greater than or equal to value
+  disabled: true
+- key: finished_at__isnull
+  value: ''
+  description: Filter results where finished_at has a null value
+  disabled: true
+- key: finished_at__lt
+  value: ''
+  description: Filter results where finished_at is less than value
+  disabled: true
+- key: finished_at__lte
+  value: ''
+  description: Filter results where finished_at is less than or equal to value
+  disabled: true
+- key: finished_at__range
+  value: ''
+  description: Filter results where finished_at is between two comma separated values
+  disabled: true
+- key: limit
+  value: ''
+  description: Number of results to return per page.
+  disabled: true
+- key: logging_cid
+  value: ''
+  description: Filter results where logging_cid matches value
+  disabled: true
+- key: logging_cid__contains
+  value: ''
+  description: Filter results where logging_cid contains value
+  disabled: true
+- key: name
+  value: ''
+  description: Filter results where name matches value
+  disabled: true
+- key: name__contains
+  value: ''
+  description: Filter results where name contains value
+  disabled: true
+- key: name__in
+  value: ''
+  description: Filter results where name is in a comma-separated list of values
+  disabled: true
+- key: name__ne
+  value: ''
+  description: Filter results where name not equal to value
+  disabled: true
+- key: offset
+  value: ''
+  description: The initial index from which to return the results.
+  disabled: true
+- key: ordering
+  value: ''
+  description: |-
+    Ordering
+
+    * `pulp_id` - Pulp id
+    * `-pulp_id` - Pulp id (descending)
+    * `pulp_created` - Pulp created
+    * `-pulp_created` - Pulp created (descending)
+    * `pulp_last_updated` - Pulp last updated
+    * `-pulp_last_updated` - Pulp last updated (descending)
+    * `state` - State
+    * `-state` - State (descending)
+    * `name` - Name
+    * `-name` - Name (descending)
+    * `logging_cid` - Logging cid
+    * `-logging_cid` - Logging cid (descending)
+    * `unblocked_at` - Unblocked at
+    * `-unblocked_at` - Unblocked at (descending)
+    * `started_at` - Started at
+    * `-started_at` - Started at (descending)
+    * `finished_at` - Finished at
+    * `-finished_at` - Finished at (descending)
+    * `error` - Error
+    * `-error` - Error (descending)
+    * `enc_args` - Enc args
+    * `-enc_args` - Enc args (descending)
+    * `enc_kwargs` - Enc kwargs
+    * `-enc_kwargs` - Enc kwargs (descending)
+    * `reserved_resources_record` - Reserved resources record
+    * `-reserved_resources_record` - Reserved resources record (descending)
+    * `versions` - Versions
+    * `-versions` - Versions (descending)
+    * `profile_options` - Profile options
+    * `-profile_options` - Profile options (descending)
+    * `immediate` - Immediate
+    * `-immediate` - Immediate (descending)
+    * `deferred` - Deferred
+    * `-deferred` - Deferred (descending)
+    * `result` - Result
+    * `-result` - Result (descending)
+    * `pk` - Pk
+    * `-pk` - Pk (descending)
+  disabled: true
+- key: parent_task
+  value: ''
+  description: ''
+  disabled: true
+- key: prn__in
+  value: ''
+  description: Multiple values may be separated by commas.
+  disabled: true
+- key: pulp_created
+  value: ''
+  description: Filter results where pulp_created matches value
+  disabled: true
+- key: pulp_created__gt
+  value: ''
+  description: Filter results where pulp_created is greater than value
+  disabled: true
+- key: pulp_created__gte
+  value: ''
+  description: Filter results where pulp_created is greater than or equal to value
+  disabled: true
+- key: pulp_created__isnull
+  value: ''
+  description: Filter results where pulp_created has a null value
+  disabled: true
+- key: pulp_created__lt
+  value: ''
+  description: Filter results where pulp_created is less than value
+  disabled: true
+- key: pulp_created__lte
+  value: ''
+  description: Filter results where pulp_created is less than or equal to value
+  disabled: true
+- key: pulp_created__range
+  value: ''
+  description: Filter results where pulp_created is between two comma separated values
+  disabled: true
+- key: pulp_href__in
+  value: ''
+  description: Multiple values may be separated by commas.
+  disabled: true
+- key: pulp_id__in
+  value: ''
+  description: Multiple values may be separated by commas.
+  disabled: true
+- key: q
+  value: ''
+  description: Filter results by using NOT, AND and OR operations on other filters
+  disabled: true
+- key: reserved_resources
+  value: ''
+  description: ''
+  disabled: true
+- key: reserved_resources__in
+  value: ''
+  description: Multiple values may be separated by commas.
+  disabled: true
+- key: shared_resources
+  value: ''
+  description: ''
+  disabled: true
+- key: shared_resources__in
+  value: ''
+  description: Multiple values may be separated by commas.
+  disabled: true
+- key: started_at
+  value: ''
+  description: Filter results where started_at matches value
+  disabled: true
+- key: started_at__gt
+  value: ''
+  description: Filter results where started_at is greater than value
+  disabled: true
+- key: started_at__gte
+  value: ''
+  description: Filter results where started_at is greater than or equal to value
+  disabled: true
+- key: started_at__isnull
+  value: ''
+  description: Filter results where started_at has a null value
+  disabled: true
+- key: started_at__lt
+  value: ''
+  description: Filter results where started_at is less than value
+  disabled: true
+- key: started_at__lte
+  value: ''
+  description: Filter results where started_at is less than or equal to value
+  disabled: true
+- key: started_at__range
+  value: ''
+  description: Filter results where started_at is between two comma separated values
+  disabled: true
+- key: state
+  value: ''
+  description: |-
+    Filter results where state matches value
+
+    * `waiting` - Waiting
+    * `skipped` - Skipped
+    * `running` - Running
+    * `completed` - Completed
+    * `failed` - Failed
+    * `canceled` - Canceled
+    * `canceling` - Canceling
+  disabled: true
+- key: state__in
+  value: ''
+  description: Filter results where state is in a comma-separated list of values
+  disabled: true
+- key: state__ne
+  value: ''
+  description: Filter results where state not equal to value
+  disabled: true
+- key: task_group
+  value: ''
+  description: ''
+  disabled: true
+- key: unblocked_at
+  value: ''
+  description: Filter results where unblocked_at matches value
+  disabled: true
+- key: unblocked_at__gt
+  value: ''
+  description: Filter results where unblocked_at is greater than value
+  disabled: true
+- key: unblocked_at__gte
+  value: ''
+  description: Filter results where unblocked_at is greater than or equal to value
+  disabled: true
+- key: unblocked_at__isnull
+  value: ''
+  description: Filter results where unblocked_at has a null value
+  disabled: true
+- key: unblocked_at__lt
+  value: ''
+  description: Filter results where unblocked_at is less than value
+  disabled: true
+- key: unblocked_at__lte
+  value: ''
+  description: Filter results where unblocked_at is less than or equal to value
+  disabled: true
+- key: unblocked_at__range
+  value: ''
+  description: Filter results where unblocked_at is between two comma separated values
+  disabled: true
+- key: worker
+  value: ''
+  description: ''
+  disabled: true
+- key: fields
+  value: ''
+  description: A list of fields to include in the response.
+  disabled: true
+- key: exclude_fields
+  value: ''
+  description: A list of fields to exclude from the response.
+  disabled: true

@@ -1,0 +1,61 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/eda/v1/audit-rules/'
+order: 14000
+queryParams:
+- key: activation_instance_id
+  value: ''
+  description: Filter by activation_instance_id
+  disabled: true
+- key: created_at
+  value: ''
+  description: Filter by created_at
+  disabled: true
+- key: fired_at
+  value: ''
+  description: Filter by fired_at
+  disabled: true
+- key: id
+  value: ''
+  description: Filter by id
+  disabled: true
+- key: job_instance_id
+  value: ''
+  description: Filter by job_instance_id
+  disabled: true
+- key: name
+  value: ''
+  description: Filter by name
+  disabled: true
+- key: organization_id
+  value: ''
+  description: Filter by organization_id
+  disabled: true
+- key: page
+  value: ''
+  description: A page number within the paginated result set.
+  disabled: true
+- key: page_size
+  value: ''
+  description: Number of results to return per page.
+  disabled: true
+- key: rule_uuid
+  value: ''
+  description: Filter by rule_uuid
+  disabled: true
+- key: ruleset_name
+  value: ''
+  description: Filter by ruleset_name
+  disabled: true
+- key: ruleset_uuid
+  value: ''
+  description: Filter by ruleset_uuid
+  disabled: true
+- key: search
+  value: ''
+  description: A search term.
+  disabled: true
+- key: status
+  value: ''
+  description: Filter by status
+  disabled: true

@@ -1,0 +1,29 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/galaxy/_ui/v1/my-synclists/:id/curate/'
+order: 50000
+pathVariables:
+- key: id
+  value: '1'
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "name": "",
+      "policy": "exclude",
+      "upstream_repository": null,
+      "distribution": null,
+      "collections": [
+        {
+          "namespace": "",
+          "name": ""
+        }
+      ],
+      "namespaces": [
+        ""
+      ],
+      "groups": ""
+    }

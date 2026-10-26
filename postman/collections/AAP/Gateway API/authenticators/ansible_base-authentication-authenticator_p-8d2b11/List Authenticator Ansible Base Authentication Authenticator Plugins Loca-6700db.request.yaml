@@ -1,0 +1,4 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/gateway/v1/authenticators/ansible_base-authentication-authenticator_plugins-local__local-database-authenticator/'
+order: 23000

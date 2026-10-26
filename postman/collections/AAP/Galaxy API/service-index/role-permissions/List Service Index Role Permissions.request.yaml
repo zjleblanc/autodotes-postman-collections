@@ -1,0 +1,81 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/galaxy/service-index/role-permissions/'
+order: 364000
+queryParams:
+- key: api_slug
+  value: ''
+  description: Filter by api_slug (exact match)
+  disabled: true
+- key: api_slug__icontains
+  value: ''
+  description: Filter by api_slug (case-insensitive partial match)
+  disabled: true
+- key: codename
+  value: ''
+  description: Filter by codename (exact match)
+  disabled: true
+- key: codename__icontains
+  value: ''
+  description: Filter by codename (case-insensitive partial match)
+  disabled: true
+- key: content_type
+  value: ''
+  description: Filter by content_type (exact match)
+  disabled: true
+- key: id
+  value: ''
+  description: Filter by id (exact match)
+  disabled: true
+- key: id__gt
+  value: ''
+  description: Filter by id (gt)
+  disabled: true
+- key: id__gte
+  value: ''
+  description: Filter by id (gte)
+  disabled: true
+- key: id__lt
+  value: ''
+  description: Filter by id (lt)
+  disabled: true
+- key: id__lte
+  value: ''
+  description: Filter by id (lte)
+  disabled: true
+- key: name
+  value: ''
+  description: Filter by name (exact match)
+  disabled: true
+- key: name__icontains
+  value: ''
+  description: Filter by name (case-insensitive partial match)
+  disabled: true
+- key: order
+  value: ''
+  description: Order results by field name. Prefix with '-' for descending order. Supports comma-separated values for multiple fields.
+  disabled: true
+- key: order_by
+  value: ''
+  description: Order results by field name. Prefix with '-' for descending order. Supports comma-separated values for multiple fields.
+  disabled: true
+- key: page
+  value: ''
+  description: A page number within the paginated result set.
+  disabled: true
+- key: page_size
+  value: ''
+  description: Number of results to return per page.
+  disabled: true
+- key: role_level
+  value: ''
+  description: Filter by role level for RBAC
+  disabled: true
+- key: search
+  value: ''
+  description: A search term.
+  disabled: true
+- key: type
+  value: ''
+  description: Filter by object type. Supports comma-separated values for multiple types.
+  disabled: true

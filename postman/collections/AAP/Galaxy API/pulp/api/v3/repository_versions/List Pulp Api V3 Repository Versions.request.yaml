@@ -1,0 +1,115 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/galaxy/pulp/api/v3/repository_versions/'
+order: 325000
+queryParams:
+- key: content
+  value: ''
+  description: Content Unit referenced by HREF/PRN
+  disabled: true
+- key: content__in
+  value: ''
+  description: Multiple values may be separated by commas.
+  disabled: true
+- key: limit
+  value: ''
+  description: Number of results to return per page.
+  disabled: true
+- key: number
+  value: ''
+  description: Filter results where number matches value
+  disabled: true
+- key: number__gt
+  value: ''
+  description: Filter results where number is greater than value
+  disabled: true
+- key: number__gte
+  value: ''
+  description: Filter results where number is greater than or equal to value
+  disabled: true
+- key: number__lt
+  value: ''
+  description: Filter results where number is less than value
+  disabled: true
+- key: number__lte
+  value: ''
+  description: Filter results where number is less than or equal to value
+  disabled: true
+- key: number__range
+  value: ''
+  description: Filter results where number is between two comma separated values
+  disabled: true
+- key: offset
+  value: ''
+  description: The initial index from which to return the results.
+  disabled: true
+- key: ordering
+  value: ''
+  description: |-
+    Ordering
+
+    * `pulp_id` - Pulp id
+    * `-pulp_id` - Pulp id (descending)
+    * `pulp_created` - Pulp created
+    * `-pulp_created` - Pulp created (descending)
+    * `pulp_last_updated` - Pulp last updated
+    * `-pulp_last_updated` - Pulp last updated (descending)
+    * `number` - Number
+    * `-number` - Number (descending)
+    * `complete` - Complete
+    * `-complete` - Complete (descending)
+    * `info` - Info
+    * `-info` - Info (descending)
+    * `content_ids` - Content ids
+    * `-content_ids` - Content ids (descending)
+    * `pk` - Pk
+    * `-pk` - Pk (descending)
+  disabled: true
+- key: prn__in
+  value: ''
+  description: Multiple values may be separated by commas.
+  disabled: true
+- key: pulp_created
+  value: ''
+  description: Filter results where pulp_created matches value
+  disabled: true
+- key: pulp_created__gt
+  value: ''
+  description: Filter results where pulp_created is greater than value
+  disabled: true
+- key: pulp_created__gte
+  value: ''
+  description: Filter results where pulp_created is greater than or equal to value
+  disabled: true
+- key: pulp_created__isnull
+  value: ''
+  description: Filter results where pulp_created has a null value
+  disabled: true
+- key: pulp_created__lt
+  value: ''
+  description: Filter results where pulp_created is less than value
+  disabled: true
+- key: pulp_created__lte
+  value: ''
+  description: Filter results where pulp_created is less than or equal to value
+  disabled: true
+- key: pulp_created__range
+  value: ''
+  description: Filter results where pulp_created is between two comma separated values
+  disabled: true
+- key: pulp_href__in
+  value: ''
+  description: Multiple values may be separated by commas.
+  disabled: true
+- key: q
+  value: ''
+  description: Filter results by using NOT, AND and OR operations on other filters
+  disabled: true
+- key: fields
+  value: ''
+  description: A list of fields to include in the response.
+  disabled: true
+- key: exclude_fields
+  value: ''
+  description: A list of fields to exclude from the response.
+  disabled: true

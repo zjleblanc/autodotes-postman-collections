@@ -1,0 +1,9 @@
+$kind: http-request
+method: DELETE
+url: '{{aap_base_url}}/api/galaxy/_ui/v1/groups/:id/users/:user_id/'
+order: 35000
+pathVariables:
+- key: id
+  value: '1'
+- key: user_id
+  value: user_id

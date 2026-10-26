@@ -1,0 +1,7 @@
+$kind: http-request
+method: DELETE
+url: '{{aap_base_url}}/api/gateway/v1/service_nodes/:id/'
+order: 90000
+pathVariables:
+- key: id
+  value: '1'

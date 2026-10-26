@@ -1,0 +1,13 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/galaxy/_ui/v1/collection_signing/:path/:namespace/:collection/:version/'
+order: 13000
+pathVariables:
+- key: path
+  value: path
+- key: namespace
+  value: namespace
+- key: collection
+  value: collection
+- key: version
+  value: version

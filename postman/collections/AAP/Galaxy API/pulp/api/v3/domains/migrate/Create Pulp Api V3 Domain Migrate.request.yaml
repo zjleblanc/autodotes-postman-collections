@@ -1,0 +1,14 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/galaxy/pulp/api/v3/domains/migrate/'
+order: 248000
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "storage_class": "pulpcore.app.models.storage.FileSystem",
+      "storage_settings": {}
+    }

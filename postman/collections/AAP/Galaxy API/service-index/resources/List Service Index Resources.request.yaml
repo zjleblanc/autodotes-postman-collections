@@ -1,0 +1,81 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/galaxy/service-index/resources/'
+order: 357000
+queryParams:
+- key: ansible_id
+  value: ''
+  description: Filter by ansible_id (exact match)
+  disabled: true
+- key: content_object
+  value: ''
+  description: Filter by content_object (exact match)
+  disabled: true
+- key: content_type
+  value: ''
+  description: Filter by content_type (exact match)
+  disabled: true
+- key: id
+  value: ''
+  description: Filter by id (exact match)
+  disabled: true
+- key: id__gt
+  value: ''
+  description: Filter by id (gt)
+  disabled: true
+- key: id__gte
+  value: ''
+  description: Filter by id (gte)
+  disabled: true
+- key: id__lt
+  value: ''
+  description: Filter by id (lt)
+  disabled: true
+- key: id__lte
+  value: ''
+  description: Filter by id (lte)
+  disabled: true
+- key: is_partially_migrated
+  value: ''
+  description: Filter by is_partially_migrated (exact match)
+  disabled: true
+- key: name
+  value: ''
+  description: Filter by name (exact match)
+  disabled: true
+- key: name__icontains
+  value: ''
+  description: Filter by name (case-insensitive partial match)
+  disabled: true
+- key: object_id
+  value: ''
+  description: Filter by object_id (exact match)
+  disabled: true
+- key: object_id__icontains
+  value: ''
+  description: Filter by object_id (case-insensitive partial match)
+  disabled: true
+- key: order
+  value: ''
+  description: Order results by field name. Prefix with '-' for descending order. Supports comma-separated values for multiple fields.
+  disabled: true
+- key: order_by
+  value: ''
+  description: Order results by field name. Prefix with '-' for descending order. Supports comma-separated values for multiple fields.
+  disabled: true
+- key: page
+  value: ''
+  description: A page number within the paginated result set.
+  disabled: true
+- key: role_level
+  value: ''
+  description: Filter by role level for RBAC
+  disabled: true
+- key: service_id
+  value: ''
+  description: Filter by service_id (exact match)
+  disabled: true
+- key: type
+  value: ''
+  description: Filter by object type. Supports comma-separated values for multiple types.
+  disabled: true

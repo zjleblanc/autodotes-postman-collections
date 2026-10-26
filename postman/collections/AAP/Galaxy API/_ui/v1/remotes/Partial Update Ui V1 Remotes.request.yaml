@@ -1,0 +1,35 @@
+$kind: http-request
+method: PATCH
+url: '{{aap_base_url}}/api/galaxy/_ui/v1/remotes/:pulp_id/'
+order: 61000
+pathVariables:
+- key: pulp_id
+  value: pulp_id
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "url": "",
+      "auth_url": null,
+      "token": null,
+      "policy": "immediate",
+      "requirements_file": null,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z",
+      "username": null,
+      "password": null,
+      "tls_validation": false,
+      "client_key": null,
+      "client_cert": null,
+      "ca_cert": null,
+      "download_concurrency": null,
+      "proxy_url": null,
+      "proxy_username": null,
+      "proxy_password": null,
+      "rate_limit": null,
+      "signed_only": false,
+      "sync_highest_versions": null
+    }

@@ -1,0 +1,89 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/galaxy/pulp/api/v3/content/core/openpgp_publickey/'
+order: 206000
+queryParams:
+- key: fingerprint
+  value: ''
+  description: Filter results where fingerprint matches value
+  disabled: true
+- key: limit
+  value: ''
+  description: Number of results to return per page.
+  disabled: true
+- key: offset
+  value: ''
+  description: The initial index from which to return the results.
+  disabled: true
+- key: ordering
+  value: ''
+  description: |-
+    Ordering
+
+    * `pulp_id` - Pulp id
+    * `-pulp_id` - Pulp id (descending)
+    * `pulp_created` - Pulp created
+    * `-pulp_created` - Pulp created (descending)
+    * `pulp_last_updated` - Pulp last updated
+    * `-pulp_last_updated` - Pulp last updated (descending)
+    * `pulp_type` - Pulp type
+    * `-pulp_type` - Pulp type (descending)
+    * `upstream_id` - Upstream id
+    * `-upstream_id` - Upstream id (descending)
+    * `pulp_labels` - Pulp labels
+    * `-pulp_labels` - Pulp labels (descending)
+    * `timestamp_of_interest` - Timestamp of interest
+    * `-timestamp_of_interest` - Timestamp of interest (descending)
+    * `raw_data` - Raw data
+    * `-raw_data` - Raw data (descending)
+    * `fingerprint` - Fingerprint
+    * `-fingerprint` - Fingerprint (descending)
+    * `created` - Created
+    * `-created` - Created (descending)
+    * `pk` - Pk
+    * `-pk` - Pk (descending)
+  disabled: true
+- key: orphaned_for
+  value: ''
+  description: Minutes Content has been orphaned for. -1 uses ORPHAN_PROTECTION_TIME.
+  disabled: true
+- key: prn__in
+  value: ''
+  description: Multiple values may be separated by commas.
+  disabled: true
+- key: pulp_href__in
+  value: ''
+  description: Multiple values may be separated by commas.
+  disabled: true
+- key: pulp_id__in
+  value: ''
+  description: Multiple values may be separated by commas.
+  disabled: true
+- key: pulp_label_select
+  value: ''
+  description: Filter labels by search string
+  disabled: true
+- key: q
+  value: ''
+  description: Filter results by using NOT, AND and OR operations on other filters
+  disabled: true
+- key: repository_version
+  value: ''
+  description: ''
+  disabled: true
+- key: repository_version_added
+  value: ''
+  description: ''
+  disabled: true
+- key: repository_version_removed
+  value: ''
+  description: ''
+  disabled: true
+- key: fields
+  value: ''
+  description: A list of fields to include in the response.
+  disabled: true
+- key: exclude_fields
+  value: ''
+  description: A list of fields to exclude from the response.
+  disabled: true

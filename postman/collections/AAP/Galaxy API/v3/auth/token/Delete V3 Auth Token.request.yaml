@@ -1,0 +1,4 @@
+$kind: http-request
+method: DELETE
+url: '{{aap_base_url}}/api/galaxy/v3/auth/token/'
+order: 379000

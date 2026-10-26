@@ -1,0 +1,23 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/controller/v2/notification_templates/'
+order: 284000
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "name": "",
+      "description": "",
+      "organization": 1,
+      "notification_type": "awssns",
+      "notification_configuration": {},
+      "messages": {
+        "started": null,
+        "success": null,
+        "error": null,
+        "workflow_approval": null
+      }
+    }

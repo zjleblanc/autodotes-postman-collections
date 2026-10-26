@@ -1,0 +1,7 @@
+$kind: http-request
+method: DELETE
+url: '{{aap_base_url}}/api/galaxy/_ui/v1/remotes/:pulp_id/'
+order: 59000
+pathVariables:
+- key: pulp_id
+  value: pulp_id

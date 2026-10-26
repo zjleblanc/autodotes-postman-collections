@@ -1,0 +1,17 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/controller/v2/role_team_assignments/'
+order: 389000
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "object_id": "",
+      "object_ansible_id": "",
+      "role_definition": 1,
+      "team": 1,
+      "team_ansible_id": ""
+    }

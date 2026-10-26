@@ -1,0 +1,54 @@
+$kind: http-request
+method: GET
+url: '{{aap_base_url}}/api/galaxy/content/:path/v3/plugin/execution-environments/repositories/:base_path/_content/images/'
+order: 168000
+pathVariables:
+- key: path
+  value: path
+- key: base_path
+  value: base_path
+queryParams:
+- key: digest
+  value: ''
+  description: ''
+  disabled: true
+- key: digest__contains
+  value: ''
+  description: ''
+  disabled: true
+- key: digest__icontains
+  value: ''
+  description: ''
+  disabled: true
+- key: digest__startswith
+  value: ''
+  description: ''
+  disabled: true
+- key: exclude_child_manifests
+  value: ''
+  description: ''
+  disabled: true
+- key: limit
+  value: ''
+  description: Number of results to return per page.
+  disabled: true
+- key: offset
+  value: ''
+  description: The initial index from which to return the results.
+  disabled: true
+- key: sort
+  value: ''
+  description: |-
+    Ordering
+
+    * `created_at` - Created at
+    * `-created_at` - Created at (descending)
+  disabled: true
+- key: fields
+  value: ''
+  description: A list of fields to include in the response.
+  disabled: true
+- key: exclude_fields
+  value: ''
+  description: A list of fields to exclude from the response.
+  disabled: true

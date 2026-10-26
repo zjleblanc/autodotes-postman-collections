@@ -1,0 +1,17 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/galaxy/_ui/v2/role_team_assignments/'
+order: 103000
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "object_id": null,
+      "object_ansible_id": null,
+      "role_definition": 0,
+      "team": null,
+      "team_ansible_id": null
+    }

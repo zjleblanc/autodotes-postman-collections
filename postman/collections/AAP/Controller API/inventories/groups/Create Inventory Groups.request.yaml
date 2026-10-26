@@ -1,0 +1,20 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/controller/v2/inventories/:id/groups/'
+order: 165000
+pathVariables:
+- key: id
+  value: '1'
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "id": 1,
+      "name": "",
+      "description": "",
+      "inventory": 1,
+      "variables": ""
+    }

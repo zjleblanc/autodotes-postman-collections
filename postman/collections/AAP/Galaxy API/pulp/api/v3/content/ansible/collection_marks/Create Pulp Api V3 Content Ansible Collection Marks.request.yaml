@@ -1,0 +1,14 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/galaxy/pulp/api/v3/content/ansible/collection_marks/'
+order: 192000
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "marked_collection": "",
+      "value": ""
+    }

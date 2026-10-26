@@ -1,0 +1,23 @@
+$kind: http-request
+method: POST
+url: '{{aap_base_url}}/api/controller/v2/teams/:id/users/'
+order: 460000
+pathVariables:
+- key: id
+  value: '1'
+headers:
+- key: Content-Type
+  value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "id": 1,
+      "username": "",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_superuser": false,
+      "is_system_auditor": false,
+      "password": ""
+    }
