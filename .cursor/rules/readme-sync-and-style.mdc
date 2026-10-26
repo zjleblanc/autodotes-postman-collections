@@ -1,0 +1,31 @@
+---
+description: Keep repository and collection documentation consistent and synced
+globs: "{README.md,postman/collections/**/README.md,postman/documents/WORKSPACE-README.md}"
+alwaysApply: false
+---
+
+# README Sync And Style
+
+When editing top-level or collection documentation in this repo:
+
+- Keep `README.md` and `postman/documents/WORKSPACE-README.md` identical.
+- If one changes, update the other in the same turn with matching content.
+- Do not leave one file partially updated while the other is stale.
+
+For collection documentation:
+
+- Every collection folder under `postman/collections/` should have a
+  `README.md`.
+- When a collection is added or removed, update the top-level `README.md`
+  collection catalog in the same change.
+- Include auth requirements and required variables in each collection README.
+- Catalog requests at folder/resource level (reasonable depth), not exhaustive
+  endpoint-by-endpoint dumps.
+
+Markdown style requirements:
+
+- Use concise section structure: Overview, Auth, Required Variables, Folder
+  Catalog, Usage Notes.
+- Use Markdown tables for folder/request summaries.
+- Use repository-relative links for cross-references between docs.
+- Keep tone technical and concise; no emojis.

@@ -1,5 +1,19 @@
 # Changelog
 
+## 2026-10-26 — Add collection documentation and README sync rule
+
+### Added
+
+- `README.md`: new repository-level documentation covering all four collections (`AAP`, `Proxmox`, `AO`, `TMDB API`), request counts, auth models, usage/import approaches (fork, import, Git sync), and required variables per collection.
+- `postman/collections/AO/README.md`: AO collection guide with auth behavior (`{{ao_access_token}}` auto-login), required variables, and a top-level plus nested folder request catalog.
+- `postman/collections/Proxmox/README.md`: Proxmox collection guide documenting ticket/cookie auth (`PVEAuthCookie`), CSRF token handling, required variables, and top-level folder catalog.
+- `postman/collections/TMDB API/README.md`: TMDB collection guide documenting bearer auth requirements, setup variables, and resource-level folder catalog.
+- `.cursor/rules/readme-sync-and-style.mdc`: scoped documentation rule that enforces README style conventions, keeps collection catalog updates in sync, and requires `README.md` parity with `postman/documents/WORKSPACE-README.md`.
+
+### Changed
+
+- `postman/documents/WORKSPACE-README.md`: replaced the default one-line workspace placeholder with the same full content as `README.md` so both documents remain identical.
+
 ## 2026-10-26 — Generate Proxmox collection from the API viewer schema
 
 ### Added
