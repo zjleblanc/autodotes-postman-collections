@@ -14,7 +14,7 @@ request:
       {
         "username": "johnny_appleseed",
         "password": "test123",
-        "request_token": "1531f1a558c8357ce8990cf887ff196e8f5402ec"
+        "request_token": "<request_token>"
       }
 response:
   statusCode: 200
@@ -23,5 +23,5 @@ response:
     Content-Type: application/json
   body:
     type: json
-    content: '"{\n  \"success\": true,\n  \"expires_at\": \"2018-07-24 04:10:26 UTC\",\n  \"request_token\": \"1531f1a558c8357ce8990cf887ff196e8f5402ec\"\n}"'
+    content: '"{\n  \"success\": true,\n  \"expires_at\": \"2018-07-24 04:10:26 UTC\",\n  \"request_token\": \"<request_token>\"\n}"'
 order: 1000

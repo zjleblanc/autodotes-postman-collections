@@ -1,4 +1,6 @@
 [allowlist]
   paths = [
     '''.postman/resources\.yaml''',
+    '''postman/collections/.*\.example\.yaml$''',
+    '''postman/collections/.*\.request\.yaml$''',
   ]

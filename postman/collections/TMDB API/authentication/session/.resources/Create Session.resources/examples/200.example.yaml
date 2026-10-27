@@ -12,7 +12,7 @@ request:
     type: json
     content: |-
       {
-        "request_token": "6bc047b88f669d1fb86574f06381005d93d3517a"
+        "request_token": "<request_token>"
       }
 response:
   statusCode: 200
@@ -21,5 +21,5 @@ response:
     Content-Type: application/json
   body:
     type: json
-    content: '"{\n  \"success\": true,\n  \"session_id\": \"79191836ddaa0da3df76a5ffef6f07ad6ab0c641\"\n}"'
+    content: '"{\n  \"success\": true,\n  \"session_id\": \"<session_id>\"\n}"'
 order: 1000

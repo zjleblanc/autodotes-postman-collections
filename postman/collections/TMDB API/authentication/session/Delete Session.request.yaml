@@ -9,7 +9,7 @@ body:
   type: json
   content: |-
     {
-      "session_id": "2629f70fb498edc263a0adb99118ac41f0053e8c"
+      "session_id": "<session_id>"
     }
 settings: {}
 examples: ./.resources/Delete Session.resources/examples

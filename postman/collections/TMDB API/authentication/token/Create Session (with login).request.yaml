@@ -11,7 +11,7 @@ body:
     {
       "username": "johnny_appleseed",
       "password": "test123",
-      "request_token": "1531f1a558c8357ce8990cf887ff196e8f5402ec"
+      "request_token": "<request_token>"
     }
 settings: {}
 examples: ./.resources/Create Session (with login).resources/examples

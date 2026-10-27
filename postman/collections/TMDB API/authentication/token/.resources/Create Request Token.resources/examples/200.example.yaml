@@ -18,5 +18,5 @@ response:
     Content-Type: application/json
   body:
     type: json
-    content: '"{\n  \"success\": true,\n  \"expires_at\": \"2016-08-26 17:04:39 UTC\",\n  \"request_token\": \"ff5c7eeb5a8870efe3cd7fc5c282cffd26800ecd\"\n}"'
+    content: '"{\n  \"success\": true,\n  \"expires_at\": \"2016-08-26 17:04:39 UTC\",\n  \"request_token\": \"<request_token>\"\n}"'
 order: 1000
