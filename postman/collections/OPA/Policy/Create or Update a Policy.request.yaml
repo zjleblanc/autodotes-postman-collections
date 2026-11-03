@@ -1,0 +1,46 @@
+$kind: http-request
+description: >-
+  Create or replace a policy module. OPA parses, compiles, and installs the
+  module before accepting the request. Invalid modules return 400. Bundle-owned
+  package paths cannot be updated through this API.
+
+  Status codes: 200 no error; 400 bad request; 500 server error.
+url: '{{base_url}}/v1/policies/{{policy_id}}'
+method: PUT
+headers:
+  - key: Content-Type
+    value: text/plain
+queryParams:
+  - key: pretty
+    value: 'true'
+    description: 'If true, response is formatted for humans.'
+    disabled: true
+  - key: metrics
+    value: 'true'
+    description: 'Return compiler performance metrics in addition to result.'
+    disabled: true
+body:
+  type: text
+  content: |-
+    package opa.examples
+
+    import data.networks
+    import data.ports
+    import data.servers
+
+    public_servers contains server if {
+        some k, m
+        server := servers[_]
+        server.ports[_] == ports[k].id
+        ports[k].networks[_] == networks[m].id
+        networks[m].public == true
+    }
+scripts:
+  - type: afterResponse
+    language: text/javascript
+    code: |-
+      pm.test('Status code is 200', function () {
+        pm.response.to.have.status(200);
+      });
+examples: './.resources/Create or Update a Policy.resources/examples'
+order: 3000

@@ -1,0 +1,43 @@
+$kind: http-request
+name: 'Get a Document (Webhook)'
+description: >-
+  Webhook-style document evaluation under /v0. The request body is the input
+  document itself (not wrapped in an input key). Missing or undefined
+  documents return 404.
+
+  Status codes: 200 no error; 400 bad request; 404 not found; 500 server error.
+url: '{{base_url}}/v0/data/{{document_path}}'
+method: POST
+headers:
+  - key: Content-Type
+    value: application/json
+  - key: Content-Encoding
+    value: gzip
+    description: 'Indicates the request body is gzip encoded.'
+    disabled: true
+  - key: Accept-Encoding
+    value: gzip
+    description: 'Ask for a gzip-encoded response when above the configured minimum length.'
+    disabled: true
+queryParams:
+  - key: pretty
+    value: 'true'
+    description: 'If true, response is formatted for humans.'
+    disabled: true
+body:
+  type: json
+  content: |-
+    {
+      "example": {
+        "flag": true
+      }
+    }
+scripts:
+  - type: afterResponse
+    language: text/javascript
+    code: |-
+      pm.test('Status code is 200', function () {
+        pm.response.to.have.status(200);
+      });
+examples: './.resources/Get a Document Webhook.resources/examples'
+order: 3000

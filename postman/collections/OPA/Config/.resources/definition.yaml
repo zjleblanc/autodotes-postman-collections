@@ -1,0 +1,5 @@
+$kind: collection
+description: >-
+  Active OPA configuration. Service credentials and private keys are omitted
+  from the response.
+order: 6000

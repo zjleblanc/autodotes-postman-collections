@@ -1,0 +1,20 @@
+$kind: http-example
+name: '200 OK PostgreSQL Filter'
+request:
+  url: '{{base_url}}/v1/compile/{{filter_path}}'
+  method: POST
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    - key: Content-Type
+      value: application/vnd.opa.sql.postgresql+json
+  body:
+    type: json
+    content: |-
+      {
+        "result": {
+          "query": "WHERE fruits.name = E'pineapple'"
+        }
+      }
+order: 1000

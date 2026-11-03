@@ -1,0 +1,27 @@
+$kind: http-example
+name: '200 OK'
+request:
+  url: '{{base_url}}/v1/query'
+  method: GET
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    - key: Content-Type
+      value: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "result": [
+          {
+            "i": 3,
+            "name": "dev"
+          },
+          {
+            "i": 0,
+            "name": "app"
+          }
+        ]
+      }
+order: 1000

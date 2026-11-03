@@ -1,0 +1,47 @@
+$kind: http-example
+name: '200 OK'
+request:
+  url: '{{base_url}}/v1/status'
+  method: GET
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    - key: Content-Type
+      value: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "result": {
+          "labels": {
+            "id": "7da62ac6-42e0-4b3c-b6d5-199239ad436e",
+            "version": "99.9.9-dev"
+          },
+          "bundles": {
+            "play": {
+              "name": "play",
+              "active_revision": "b3BlbnBvbGljeWFnZW50Lm9yZw==",
+              "last_successful_activation": "2021-12-08T01:36:14.201927Z",
+              "last_successful_download": "2021-12-08T01:36:14.20038Z",
+              "last_successful_request": "2021-12-08T01:36:23.131346Z",
+              "last_request": "2021-12-08T01:36:23.131346Z",
+              "metrics": {
+                "timer_bundle_request_ns": 168273779
+              }
+            }
+          },
+          "plugins": {
+            "bundle": {
+              "state": "OK"
+            },
+            "decision_logs": {
+              "state": "OK"
+            },
+            "status": {
+              "state": "OK"
+            }
+          }
+        }
+      }
+order: 1000

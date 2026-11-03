@@ -1,0 +1,21 @@
+$kind: http-request
+description: >-
+  Get a policy module by management id.
+
+  Status codes: 200 no error; 404 not found; 500 server error.
+url: '{{base_url}}/v1/policies/{{policy_id}}'
+method: GET
+queryParams:
+  - key: pretty
+    value: 'true'
+    description: 'If true, response is formatted for humans.'
+    disabled: true
+scripts:
+  - type: afterResponse
+    language: text/javascript
+    code: |-
+      pm.test('Status code is 200', function () {
+        pm.response.to.have.status(200);
+      });
+examples: './.resources/Get a Policy.resources/examples'
+order: 2000

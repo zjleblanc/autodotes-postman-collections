@@ -1,0 +1,21 @@
+$kind: http-example
+name: '200 OK'
+request:
+  url: '{{base_url}}/v1/policies/{{policy_id}}'
+  method: GET
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    - key: Content-Type
+      value: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "result": {
+          "id": "example1",
+          "raw": "package opa.examples\n\nimport data.networks\nimport data.ports\nimport data.servers\n\npublic_servers contains server if {\n    some k, m\n    server := servers[_]\n    server.ports[_] == ports[k].id\n    ports[k].networks[_] == networks[m].id\n    networks[m].public == true\n}\n"
+        }
+      }
+order: 1000

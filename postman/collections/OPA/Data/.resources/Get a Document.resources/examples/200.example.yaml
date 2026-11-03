@@ -1,0 +1,31 @@
+$kind: http-example
+name: '200 OK'
+request:
+  url: '{{base_url}}/v1/data/{{document_path}}'
+  method: GET
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    - key: Content-Type
+      value: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "result": [
+          {
+            "id": "s1",
+            "name": "app",
+            "ports": ["p1", "p2", "p3"],
+            "protocols": ["https", "ssh"]
+          },
+          {
+            "id": "s4",
+            "name": "dev",
+            "ports": ["p1", "p2"],
+            "protocols": ["http"]
+          }
+        ]
+      }
+order: 1000

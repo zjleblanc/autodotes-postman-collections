@@ -1,0 +1,39 @@
+$kind: http-request
+name: 'Execute an Ad hoc Query (GET)'
+description: >-
+  Execute an ad hoc Rego query via the q query parameter (must be URL encoded).
+  Prefer POST for large JSON values.
+
+  Status codes: 200 no error; 400 bad request; 500 server error; 501 streaming
+  not implemented.
+url: '{{base_url}}/v1/query?q=data.servers[i].ports[_]%20=%20%22p2%22;%20data.servers[i].name%20=%20name'
+method: GET
+queryParams:
+  - key: q
+    value: 'data.servers[i].ports[_] = "p2"; data.servers[i].name = name'
+    description: 'Ad hoc query to parse, compile, and execute. GET only.'
+  - key: pretty
+    value: 'true'
+    description: 'If true, response is formatted for humans.'
+    disabled: true
+  - key: explain
+    value: notes
+    description: 'Return query explanation. Values: notes, fails, full, debug.'
+    disabled: true
+  - key: metrics
+    value: 'true'
+    description: 'Return query performance metrics in addition to result.'
+    disabled: true
+  - key: rule_labels
+    value: 'true'
+    description: 'If true, response includes merged METADATA labels of evaluated rules.'
+    disabled: true
+scripts:
+  - type: afterResponse
+    language: text/javascript
+    code: |-
+      pm.test('Status code is 200', function () {
+        pm.response.to.have.status(200);
+      });
+examples: './.resources/Execute an Ad hoc Query GET.resources/examples'
+order: 2000

@@ -1,0 +1,21 @@
+$kind: http-request
+description: >-
+  List policy modules loaded into OPA.
+
+  Status codes: 200 no error; 500 server error.
+url: '{{base_url}}/v1/policies'
+method: GET
+queryParams:
+  - key: pretty
+    value: 'true'
+    description: 'If true, response is formatted for humans.'
+    disabled: true
+scripts:
+  - type: afterResponse
+    language: text/javascript
+    code: |-
+      pm.test('Status code is 200', function () {
+        pm.response.to.have.status(200);
+      });
+examples: './.resources/List Policies.resources/examples'
+order: 1000

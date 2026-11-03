@@ -1,0 +1,5 @@
+$kind: collection
+description: >-
+  Pull-based status information (labels, bundles, plugins, metrics). Prefer
+  this over /health for fine-grained bundle monitoring after initial activation.
+order: 7000

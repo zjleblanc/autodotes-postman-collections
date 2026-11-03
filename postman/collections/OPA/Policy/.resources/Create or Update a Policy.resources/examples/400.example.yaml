@@ -1,0 +1,30 @@
+$kind: http-example
+name: '400 Bad Request'
+request:
+  url: '{{base_url}}/v1/policies/{{policy_id}}'
+  method: PUT
+response:
+  statusCode: 400
+  statusText: Bad Request
+  headers:
+    - key: Content-Type
+      value: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "code": "invalid_parameter",
+        "message": "error(s) occurred while compiling module(s)",
+        "errors": [
+          {
+            "code": "rego_unsafe_var_error",
+            "message": "var x is unsafe",
+            "location": {
+              "file": "example",
+              "row": 3,
+              "col": 1
+            }
+          }
+        ]
+      }
+order: 2000

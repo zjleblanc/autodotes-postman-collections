@@ -1,0 +1,34 @@
+$kind: http-request
+description: >-
+  Create or overwrite a base document. Missing parent paths are created
+  (mkdir -p style). If-None-Match: * prevents overwriting an existing document
+  (304). Virtual documents or conflicting base parents return 404.
+
+  Status codes: 204 success; 304 not modified; 400 bad request; 404 write
+  conflict; 500 server error.
+url: '{{base_url}}/v1/data/{{document_path}}'
+method: PUT
+headers:
+  - key: Content-Type
+    value: application/json
+  - key: If-None-Match
+    value: '*'
+    description: 'Do not overwrite an existing document at this path.'
+queryParams:
+  - key: metrics
+    value: 'true'
+    description: 'Return performance metrics in addition to result.'
+    disabled: true
+body:
+  type: json
+  content: |-
+    {}
+scripts:
+  - type: afterResponse
+    language: text/javascript
+    code: |-
+      pm.test('Status code is 204 or 304', function () {
+        pm.expect([204, 304]).to.include(pm.response.code);
+      });
+examples: './.resources/Create or Overwrite a Document.resources/examples'
+order: 4000

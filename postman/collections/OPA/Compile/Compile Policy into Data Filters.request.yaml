@@ -1,0 +1,46 @@
+$kind: http-request
+description: >-
+  Compile a Rego filter rule into data filters. The path is slash-delimited
+  (filters/include compiles data.filters.include). Accept selects the target
+  format: application/vnd.opa.sql.postgresql+json (default here),
+  application/vnd.opa.sql.mysql+json, application/vnd.opa.sql.sqlserver+json,
+  application/vnd.opa.sql.sqlite+json, application/vnd.opa.ucast.all+json,
+  application/vnd.opa.ucast.minimal+json, application/vnd.opa.ucast.linq+json,
+  application/vnd.opa.ucast.prisma+json, or
+  application/vnd.opa.multitarget+json.
+
+  Absent query in result means unconditional deny; empty string query means
+  unconditional include.
+
+  Status codes: 200 no error; 400 bad request; 500 server error.
+url: '{{base_url}}/v1/compile/{{filter_path}}'
+method: POST
+headers:
+  - key: Content-Type
+    value: application/json
+  - key: Accept
+    value: application/vnd.opa.sql.postgresql+json
+    description: >-
+      Target filter format. Also supports other SQL, UCAST, and multitarget
+      media types listed in the request description.
+  - key: Content-Encoding
+    value: gzip
+    description: 'Indicates the request body is gzip encoded.'
+    disabled: true
+body:
+  type: json
+  content: |-
+    {
+      "input": {
+        "favorite": "pineapple"
+      }
+    }
+scripts:
+  - type: afterResponse
+    language: text/javascript
+    code: |-
+      pm.test('Status code is 200', function () {
+        pm.response.to.have.status(200);
+      });
+examples: './.resources/Compile Policy into Data Filters.resources/examples'
+order: 2000

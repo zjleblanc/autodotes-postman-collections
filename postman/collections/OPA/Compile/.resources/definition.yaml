@@ -1,0 +1,5 @@
+$kind: collection
+description: >-
+  Partial evaluation and data-filter compilation. Use Accept to select SQL
+  or UCAST filter output formats for /v1/compile/{path}.
+order: 4000

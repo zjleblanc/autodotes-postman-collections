@@ -1,0 +1,62 @@
+$kind: http-example
+name: '200 OK'
+request:
+  url: '{{base_url}}/v1/compile'
+  method: POST
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    - key: Content-Type
+      value: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "result": {
+          "queries": [
+            [
+              {
+                "index": 0,
+                "terms": [
+                  {
+                    "type": "ref",
+                    "value": [
+                      {
+                        "type": "var",
+                        "value": "gte"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "number",
+                    "value": 4
+                  },
+                  {
+                    "type": "ref",
+                    "value": [
+                      {
+                        "type": "var",
+                        "value": "data"
+                      },
+                      {
+                        "type": "string",
+                        "value": "reports"
+                      },
+                      {
+                        "type": "var",
+                        "value": "i1"
+                      },
+                      {
+                        "type": "string",
+                        "value": "clearance_level"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          ]
+        }
+      }
+order: 1000

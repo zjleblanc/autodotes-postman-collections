@@ -1,0 +1,6 @@
+$kind: collection
+description: >-
+  CRUD for policy modules loaded into the OPA instance. Identifiers are for
+  management only and are unrelated to Rego package paths. Bundle-owned
+  packages cannot be overwritten through this API.
+order: 1000

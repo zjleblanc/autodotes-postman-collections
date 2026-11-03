@@ -1,0 +1,63 @@
+$kind: http-request
+description: >-
+  Partially evaluate a Rego query and return a simplified AST. Useful when
+  translating policy logic into another environment. Non-deterministic builtins
+  are not evaluated unless options.nondeterminsticBuiltins is true.
+
+  Status codes: 200 no error; 400 bad request; 500 server error.
+url: '{{base_url}}/v1/compile'
+method: POST
+headers:
+  - key: Content-Type
+    value: application/json
+  - key: Content-Encoding
+    value: gzip
+    description: 'Indicates the request body is gzip encoded.'
+    disabled: true
+  - key: Accept-Encoding
+    value: gzip
+    description: 'Ask for a gzip-encoded response when above the configured minimum length.'
+    disabled: true
+queryParams:
+  - key: pretty
+    value: 'true'
+    description: 'If true, response is formatted for humans.'
+    disabled: true
+  - key: explain
+    value: notes
+    description: 'Return query explanation. Values: notes, fails, full, debug.'
+    disabled: true
+  - key: metrics
+    value: 'true'
+    description: 'Return query performance metrics in addition to result.'
+    disabled: true
+  - key: instrument
+    value: 'true'
+    description: 'Instrument query evaluation and return a superset of performance metrics.'
+    disabled: true
+body:
+  type: json
+  content: |-
+    {
+      "query": "data.example.allow == true",
+      "input": {
+        "subject": {
+          "clearance_level": 4
+        }
+      },
+      "options": {
+        "disableInlining": []
+      },
+      "unknowns": [
+        "data.reports"
+      ]
+    }
+scripts:
+  - type: afterResponse
+    language: text/javascript
+    code: |-
+      pm.test('Status code is 200', function () {
+        pm.response.to.have.status(200);
+      });
+examples: './.resources/Partially Evaluate a Query.resources/examples'
+order: 1000

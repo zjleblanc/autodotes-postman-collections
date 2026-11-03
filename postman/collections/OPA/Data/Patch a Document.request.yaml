@@ -1,0 +1,36 @@
+$kind: http-request
+description: >-
+  Update a document with RFC 6902 JSON Patch operations. The effective path is
+  the URL path joined with each operation path. Parent of the effective path
+  must exist; remove/replace targets must exist.
+
+  Status codes: 204 success; 400 bad request; 404 not found; 500 server error.
+url: '{{base_url}}/v1/data/{{document_path}}'
+method: PATCH
+headers:
+  - key: Content-Type
+    value: application/json-patch+json
+body:
+  type: json
+  content: |-
+    [
+      {
+        "op": "add",
+        "path": "-",
+        "value": {
+          "id": "s5",
+          "name": "job",
+          "protocols": ["amqp"],
+          "ports": ["p3"]
+        }
+      }
+    ]
+scripts:
+  - type: afterResponse
+    language: text/javascript
+    code: |-
+      pm.test('Status code is 204', function () {
+        pm.response.to.have.status(204);
+      });
+examples: './.resources/Patch a Document.resources/examples'
+order: 5000

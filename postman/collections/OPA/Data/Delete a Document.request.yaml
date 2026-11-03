@@ -1,0 +1,22 @@
+$kind: http-request
+description: >-
+  Delete a document. Processed as a JSON Patch remove of the path. Returns 404
+  if the document does not exist.
+
+  Status codes: 204 success; 404 not found; 500 server error.
+url: '{{base_url}}/v1/data/{{document_path}}'
+method: DELETE
+queryParams:
+  - key: metrics
+    value: 'true'
+    description: 'Return performance metrics in addition to result.'
+    disabled: true
+scripts:
+  - type: afterResponse
+    language: text/javascript
+    code: |-
+      pm.test('Status code is 204', function () {
+        pm.response.to.have.status(204);
+      });
+examples: './.resources/Delete a Document.resources/examples'
+order: 6000

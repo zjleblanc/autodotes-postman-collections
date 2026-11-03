@@ -1,0 +1,5 @@
+$kind: collection
+description: >-
+  Execute the default decision (POST /) or ad hoc Rego queries
+  (GET/POST /v1/query).
+order: 3000

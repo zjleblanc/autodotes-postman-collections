@@ -1,0 +1,57 @@
+$kind: http-request
+description: >-
+  Get a document at the given path. Undefined documents return 200 without a
+  result property. Path segments that cannot be converted to integers are
+  treated as strings.
+
+  Status codes: 200 no error; 400 bad request (invalid input query param);
+  500 server error.
+url: '{{base_url}}/v1/data/{{document_path}}'
+method: GET
+headers:
+  - key: Accept-Encoding
+    value: gzip
+    description: 'Ask for a gzip-encoded response when above the configured minimum length.'
+    disabled: true
+queryParams:
+  - key: input
+    value: ''
+    description: 'JSON value used as the input document (query-string form). Prefer POST for large input.'
+    disabled: true
+  - key: pretty
+    value: 'true'
+    description: 'If true, response is formatted for humans.'
+    disabled: true
+  - key: provenance
+    value: 'true'
+    description: 'If true, response includes build/version info in addition to the result.'
+    disabled: true
+  - key: explain
+    value: notes
+    description: 'Return query explanation. Values: notes, fails, full, debug.'
+    disabled: true
+  - key: metrics
+    value: 'true'
+    description: 'Return query performance metrics in addition to result.'
+    disabled: true
+  - key: instrument
+    value: 'true'
+    description: 'Instrument query evaluation and return a superset of performance metrics.'
+    disabled: true
+  - key: strict-builtin-errors
+    value: 'true'
+    description: 'Treat built-in function call errors as fatal and return an error immediately.'
+    disabled: true
+  - key: rule_labels
+    value: 'true'
+    description: 'If true, response includes merged METADATA labels of evaluated rules.'
+    disabled: true
+scripts:
+  - type: afterResponse
+    language: text/javascript
+    code: |-
+      pm.test('Status code is 200', function () {
+        pm.response.to.have.status(200);
+      });
+examples: './.resources/Get a Document.resources/examples'
+order: 1000

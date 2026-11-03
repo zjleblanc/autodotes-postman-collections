@@ -1,0 +1,26 @@
+$kind: http-request
+description: >-
+  Delete a policy module. Returns 400 if other modules in the same package
+  depend on rules in the module being deleted.
+
+  Status codes: 200 no error; 400 bad request; 404 not found; 500 server error.
+url: '{{base_url}}/v1/policies/{{policy_id}}'
+method: DELETE
+queryParams:
+  - key: pretty
+    value: 'true'
+    description: 'If true, response is formatted for humans.'
+    disabled: true
+  - key: metrics
+    value: 'true'
+    description: 'Return compiler performance metrics in addition to result.'
+    disabled: true
+scripts:
+  - type: afterResponse
+    language: text/javascript
+    code: |-
+      pm.test('Status code is 200', function () {
+        pm.response.to.have.status(200);
+      });
+examples: './.resources/Delete a Policy.resources/examples'
+order: 4000

@@ -1,0 +1,32 @@
+$kind: http-request
+description: >-
+  Execute the default decision document (defaults to /data/system/main). The
+  request body becomes the input document. Returns 404 if the default decision
+  is undefined.
+
+  Status codes: 200 no error; 400 bad request; 404 not found; 500 server error.
+url: '{{base_url}}/'
+method: POST
+headers:
+  - key: Content-Type
+    value: application/json
+queryParams:
+  - key: pretty
+    value: 'true'
+    description: 'If true, response is formatted for humans.'
+    disabled: true
+body:
+  type: json
+  content: |-
+    {
+      "user": ["alice"]
+    }
+scripts:
+  - type: afterResponse
+    language: text/javascript
+    code: |-
+      pm.test('Status code is 200', function () {
+        pm.response.to.have.status(200);
+      });
+examples: './.resources/Execute a Simple Query.resources/examples'
+order: 1000

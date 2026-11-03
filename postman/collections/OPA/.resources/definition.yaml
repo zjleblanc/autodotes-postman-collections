@@ -1,0 +1,24 @@
+$kind: collection
+description: |-
+  Open Policy Agent REST API. Authoritative contract: https://www.openpolicyagent.org/docs/rest-api
+  Bundles are the preferred way to update policies for most deployments. The Policy API is useful for interactive management and testing.
+variables:
+  - key: base_url
+    secret: true
+    disabled: false
+  - key: opa_token
+    secret: true
+    disabled: false
+  - key: policy_id
+    value: example1
+    disabled: false
+  - key: document_path
+    value: opa/examples/public_servers
+    disabled: false
+  - key: filter_path
+    value: filters/include
+    disabled: false
+auth:
+  type: bearer
+  credentials:
+    token: "{{opa_token}}"

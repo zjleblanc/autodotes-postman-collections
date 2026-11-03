@@ -1,5 +1,17 @@
 # Changelog
 
+## 2026-11-03 — Add OPA REST API collection from official docs
+
+### Added
+
+- `postman/collections/OPA/`: Postman v3 collection for the Open Policy Agent REST API, authored from https://www.openpolicyagent.org/docs/rest-api. Seven folders — Policy, Data, Query, Compile, Health, Config, and Status — totaling 20 requests with saved response examples, optional bearer auth (`{{opa_token}}`), and collection variables for `base_url` (default `http://localhost:8181`), `policy_id`, `document_path`, and `filter_path`.
+- `postman/collections/OPA/README.md`: collection guide covering auth, variables, folder catalog, and usage notes (`opa run --server`, bundle-owned policies, undefined-document status codes, `system.health` for live/ready).
+- `.postman/resources.yaml`: registered the new OPA collection's workspace binding.
+
+### Changed
+
+- `README.md` and `postman/documents/WORKSPACE-README.md`: catalog updated from four to five collections with the OPA row and required variables.
+
 ## 2026-10-26 — Add collection documentation and README sync rule
 
 ### Added

@@ -1,0 +1,69 @@
+$kind: http-request
+description: |-
+  Get a document that requires input. Request body must include an input field. Additional top-level keys are request metadata for custom builtins. Undefined documents return 200 without a result property.
+  Status codes: 200 no error; 400 bad request; 500 server error.
+url: "{{base_url}}/v1/data/:document_path"
+method: POST
+headers:
+  - key: Content-Type
+    value: application/json
+  - key: Content-Encoding
+    value: gzip
+    disabled: true
+    description: Indicates the request body is gzip encoded.
+  - key: Accept-Encoding
+    value: gzip
+    disabled: true
+    description: Ask for a gzip-encoded response when above the configured minimum length.
+queryParams:
+  - key: pretty
+    value: "true"
+    disabled: true
+    description: If true, response is formatted for humans.
+  - key: provenance
+    value: "true"
+    disabled: true
+    description: If true, response includes build/version info in addition to the result.
+  - key: explain
+    value: notes
+    disabled: true
+    description: "Return query explanation. Values: notes, fails, full, debug."
+  - key: metrics
+    value: "true"
+    disabled: true
+    description: Return query performance metrics in addition to result.
+  - key: instrument
+    value: "true"
+    disabled: true
+    description: Instrument query evaluation and return a superset of performance metrics.
+  - key: strict-builtin-errors
+    value: "true"
+    disabled: true
+    description: Treat built-in function call errors as fatal and return an error immediately.
+  - key: rule_labels
+    value: "true"
+    disabled: true
+    description: If true, response includes merged METADATA labels of evaluated rules.
+pathVariables:
+  - key: document_path
+    value: autodotes_policy/deny
+    description: ""
+body:
+  type: json
+  content: |-
+    {
+      "input": {
+        "example": {
+          "flag": true
+        }
+      }
+    }
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test('Status code is 200', function () {
+        pm.response.to.have.status(200);
+      });
+    language: text/javascript
+examples: ./.resources/Get a Document with Input.resources/examples
+order: 2000

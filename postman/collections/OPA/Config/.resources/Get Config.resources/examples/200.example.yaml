@@ -1,0 +1,46 @@
+$kind: http-example
+name: '200 OK'
+request:
+  url: '{{base_url}}/v1/config'
+  method: GET
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    - key: Content-Type
+      value: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "result": {
+          "services": {
+            "acmecorp": {
+              "url": "https://example.com/control-plane-api/v1"
+            }
+          },
+          "labels": {
+            "id": "test-id",
+            "version": "0.27.0"
+          },
+          "keys": {
+            "global_key": {
+              "scope": "read"
+            }
+          },
+          "decision_logs": {
+            "service": "acmecorp"
+          },
+          "status": {
+            "service": "acmecorp"
+          },
+          "bundles": {
+            "authz": {
+              "service": "acmecorp"
+            }
+          },
+          "default_authorization_decision": "/system/authz/allow",
+          "default_decision": "/system/main"
+        }
+      }
+order: 1000

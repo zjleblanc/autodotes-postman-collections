@@ -1,0 +1,6 @@
+$kind: collection
+description: >-
+  Read and write documents in OPA. GET/POST evaluate virtual documents;
+  PUT/PATCH/DELETE manage base documents. Undefined GET/POST documents return
+  200 without a result property; the webhook API returns 404.
+order: 2000

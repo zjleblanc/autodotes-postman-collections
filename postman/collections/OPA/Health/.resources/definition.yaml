@@ -1,0 +1,5 @@
+$kind: collection
+description: >-
+  Operational health. /health/live and /health/ready require Rego rules under
+  package system.health and return 500 until that policy evaluates to true.
+order: 5000

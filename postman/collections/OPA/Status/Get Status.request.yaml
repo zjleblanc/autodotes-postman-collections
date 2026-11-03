@@ -1,0 +1,22 @@
+$kind: http-request
+description: >-
+  Pull-based status information including labels, bundle activation history,
+  plugins, and metrics.
+
+  Status codes: 200 no error; 500 server error.
+url: '{{base_url}}/v1/status'
+method: GET
+queryParams:
+  - key: pretty
+    value: 'true'
+    description: 'If true, response is formatted for humans.'
+    disabled: true
+scripts:
+  - type: afterResponse
+    language: text/javascript
+    code: |-
+      pm.test('Status code is 200', function () {
+        pm.response.to.have.status(200);
+      });
+examples: './.resources/Get Status.resources/examples'
+order: 1000

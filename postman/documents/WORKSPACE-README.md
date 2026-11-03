@@ -3,12 +3,13 @@
 Postman v3 Git-synced workspace assets for multiple APIs used in homelab and
 platform automation.
 
-This repository currently contains four collections:
+This repository currently contains five collections:
 
 - `AAP` (Ansible Automation Platform)
 - `Proxmox` (Proxmox VE REST API)
 - `AO` (Syntara Orchestration API)
 - `TMDB API` (The Movie Database API v3)
+- `OPA` (Open Policy Agent REST API)
 
 ## Collections
 
@@ -18,6 +19,7 @@ This repository currently contains four collections:
 | Proxmox | 680 | Cookie header (`PVEAuthCookie={{pve_ticket}}`) + CSRF token on writes | [`postman/collections/Proxmox/README.md`](postman/collections/Proxmox/README.md) |
 | AO | 189 | Bearer token (`{{ao_access_token}}`) with auto-login script | [`postman/collections/AO/README.md`](postman/collections/AO/README.md) |
 | TMDB API | 152 | Bearer token (`{{tmdb_bearer_token}}`) | [`postman/collections/TMDB API/README.md`](postman/collections/TMDB%20API/README.md) |
+| OPA | 20 | Optional bearer token (`{{opa_token}}`) | [`postman/collections/OPA/README.md`](postman/collections/OPA/README.md) |
 
 ## Use These Collections In Your Workspace
 
@@ -81,6 +83,14 @@ Set these in your Postman environment (or collection variables where noted):
 - `base_url` (default in collection: `https://api.themoviedb.org`)
 - `tmdb_bearer_token` (TMDB v3 Read Access Token)
 - Optional: `tmdb_api_key` if you need key-based flows in custom requests.
+
+### OPA
+
+- `base_url` (default in collection: `http://localhost:8181`)
+- `opa_token` (optional; required only with `--authentication=token`)
+- `policy_id` (default: `example1`)
+- `document_path` (default: `opa/examples/public_servers`)
+- `filter_path` (default: `filters/include`)
 
 ## Repository Layout
 

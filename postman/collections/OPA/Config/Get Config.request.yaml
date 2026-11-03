@@ -1,0 +1,23 @@
+$kind: http-request
+description: >-
+  Return OPA's active configuration. When discovery is enabled, returns the
+  last evaluated discovery-bundle configuration. Service credentials and key
+  private_key/key fields are omitted.
+
+  Status codes: 200 no error; 500 server error.
+url: '{{base_url}}/v1/config'
+method: GET
+queryParams:
+  - key: pretty
+    value: 'true'
+    description: 'If true, response is formatted for humans.'
+    disabled: true
+scripts:
+  - type: afterResponse
+    language: text/javascript
+    code: |-
+      pm.test('Status code is 200', function () {
+        pm.response.to.have.status(200);
+      });
+examples: './.resources/Get Config.resources/examples'
+order: 1000

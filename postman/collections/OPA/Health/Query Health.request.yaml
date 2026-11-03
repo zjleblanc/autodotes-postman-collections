@@ -1,0 +1,32 @@
+$kind: http-request
+description: >-
+  Built-in health check. Optionally account for initial bundle activation and
+  plugin status. Bundle activation is only checked for the initial load;
+  use Status API for subsequent bundle monitoring.
+
+  Status codes: 200 healthy; 500 unhealthy.
+url: '{{base_url}}/health'
+method: GET
+queryParams:
+  - key: bundles
+    value: 'true'
+    description: 'Account for bundle activation status in the response.'
+    disabled: true
+  - key: plugins
+    value: 'true'
+    description: 'Account for plugin status in the response.'
+    disabled: true
+  - key: exclude-plugin
+    value: decision-logs
+    description: >-
+      Exclude a plugin from status checks when plugins=true. May be repeated.
+    disabled: true
+scripts:
+  - type: afterResponse
+    language: text/javascript
+    code: |-
+      pm.test('Status code is 200', function () {
+        pm.response.to.have.status(200);
+      });
+examples: './.resources/Query Health.resources/examples'
+order: 1000

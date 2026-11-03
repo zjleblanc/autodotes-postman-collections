@@ -1,0 +1,12 @@
+$kind: http-example
+name: '204 No Content'
+request:
+  url: '{{base_url}}/v1/data/{{document_path}}'
+  method: PUT
+response:
+  statusCode: 204
+  statusText: No Content
+  body:
+    type: text
+    content: ''
+order: 1000
