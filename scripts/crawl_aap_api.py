@@ -193,8 +193,14 @@ def sanitize_filename(name: str, max_len: int = 80) -> str:
 def sanitize_folder_segment(seg: str, max_len: int = 50) -> str:
     """Some AAP resources (e.g. DAB authenticator plugin configs) use long
     slug-style primary keys instead of numeric IDs, which can exceed
-    filesystem-safe folder name lengths when sampled into a template."""
+    filesystem-safe folder name lengths when sampled into a template.
+
+    Postman local mode treats any path ending in ``.yaml``/``.yml`` as a
+    collection file. A folder with that suffix (Galaxy's ``openapi.yaml``
+    and Pulp's ``docs/api.yaml``) makes the parent folder fail to load.
+    """
     seg = INVALID_FS_CHARS.sub("-", seg).strip() or "item"
+    seg = re.sub(r"\.ya?ml$", lambda m: "-" + m.group(0)[1:], seg, flags=re.IGNORECASE)
     return _truncate_with_hash(seg, max_len)
 
 

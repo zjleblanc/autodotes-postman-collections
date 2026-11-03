@@ -1,11 +1,13 @@
 $kind: collection
-name: AAP
 description: Ansible Automation Platform (ansible.autodotes.com). One folder per federated top-level API discovered at /api/ (gateway, controller, eda, galaxy, lightspeed, metrics). Auth and base URL are scoped here so every nested request inherits them.
 variables:
-- key: aap_base_url
-  value: https://ansible.autodotes.com
+  - key: aap_base_url
+    value: https://ansible.autodotes.com
+    disabled: false
+  - key: aap_token
+    secret: true
+    disabled: false
 auth:
   type: bearer
   credentials:
-  - key: token
-    value: '{{aap_token}}'
+    token: "{{aap_token}}"

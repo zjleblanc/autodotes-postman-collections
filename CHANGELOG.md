@@ -1,5 +1,16 @@
 # Changelog
 
+## 2026-11-03 — Fix AAP collection load in Postman local mode
+
+### Fixed
+
+- `postman/collections/AAP/Galaxy API/v3/openapi.yaml` and `Galaxy API/pulp/api/v3/docs/api.yaml`: renamed these folders to `openapi-yaml` and `api-yaml`. Postman local mode treats a path ending in `.yaml` as a collection file, so the directories made their parent folders fail to load (`Invalid path` while expanding the sidebar). Request URLs and sidebar names (`Openapi.yaml`, `Api.yaml`) are unchanged.
+- `scripts/crawl_aap_api.py`: folder sanitization now rewrites a trailing `.yaml` or `.yml` segment (for example `openapi.yaml` becomes `openapi-yaml`) so a later crawl does not recreate the same folders.
+
+### Changed
+
+- `postman/collections/AAP/.resources/definition.yaml`: declared `aap_token` as a secret collection variable and switched bearer credentials to the `token: "{{aap_token}}"` shape. `aap_base_url` is unchanged.
+
 ## 2026-11-03 — Add OPA REST API collection from official docs
 
 ### Added
